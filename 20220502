@@ -48,8 +48,6 @@ proxies:
 - {name: sg.epicbrowser.net:8888, server: sg.epicbrowser.net, port: 8888, type: http, tls: true}
 
 - {name: sg2.epicbrowser.net:8888, server: sg2.epicbrowser.net, port: 8888, type: http, tls: true}
-
-- {name: рџ‡єрџ‡ё us19.tcdn.me:443, server: us19.tcdn.me, port: 443, type: http, tls: true}
   - name: 🚀 节点选择
     type: select
     proxies:
