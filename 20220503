@@ -3,14 +3,13 @@ socks-port: 7891
 allow-lan: true
 mode: Rule
 log-level: info
-external-controller::9090
+external-controller: 127.0.0.1:9090
 proxies:
 - {name: 秋高气爽 1, server: 185.167.117.171, port: 9000, type: ss, cipher: aes-256-cfb, password: a3GFYt36Sm82Vys9, udp: true}
 - {name: 秋高气爽 2, server: 185.167.117.171, port: 9010, type: ss, cipher: aes-256-cfb, password: f63gg8EruDnUrmz4, udp: true}- {name: 秋高气爽 3, server: 185.167.117.171, port: 9046, type: ss, cipher: aes-256-cfb, password: NvS8N4Vf8qAGPSCL, udp: true}
 - {name: 秋高气爽 4, server: 213.183.51.172, port: 9000, type: ss, cipher: aes-256-cfb, password: a3GFYt36Sm82Vys9, udp: true}
 - {name: 秋高气爽 5, server: 185.167.117.171, port: 9032, type: ss, cipher: aes-256-cfb, password: UWZQeLRWnkqgkseq, udp: true}
-- {name: 秋高气爽 6, server: sg3.31vpn.com, port: 80, type: vmess, uuid: ff382d09-becd-41cb-8e4f-3e256b27de47, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /fastssh/ntmdq/6267584ee4988/, headers: {Host: sg3.31vpn.com}}, udp: true}
-  - {name: 秋高气爽 7, server: usa-sr-106.mitoption.com, port: 443, type: trojan, password: e5d46365e25e31d94279c2bcf93390a2, skip-cert-verify: false, udp: true}
+- {name: 秋高气爽 6, server: sg3.31vpn.com, port: 80, type: vmess, uuid: ff382d09-becd-41cb-8e4f-3e256b27de47, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /fastssh/ntmdq/6267584ee4988/, headers: {Host: sg3.31vpn.com}}, udp: true}- {name: 秋高气爽 7, server: usa-sr-106.mitoption.com, port: 443, type: trojan, password: e5d46365e25e31d94279c2bcf93390a2, skip-cert-verify: false, udp: true}
 - {name: 秋高气爽 8, server: 185.167.117.171, port: 9020, type: ss, cipher: aes-256-cfb, password: BNmAXXxAHYpTRdzu, udp: true}
 - {name: 秋高气爽 9, server: zones.defun.us, port: 443, type: trojan, password: lpmMwDKeBbKKPq8K, skip-cert-verify: false, udp: true}
 - {name: 秋高气爽 10, server: 185.167.117.171, port: 9094, type: ss, cipher: aes-256-cfb, password: rpgbNnU9rDDU4aWZ, udp: true}
