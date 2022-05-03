@@ -49,7 +49,7 @@ proxies:
 
   - {name: 秋高气爽 22, server: sg2.epicbrowser.net, port: 8888, type: http, tls: true}
 
- - {name: 秋高气爽 23, server: sg2.epicbrowser.net, port: 8888, type: http, tls: true}
+  - {name: 秋高气爽 23, server: sg2.epicbrowser.net, port: 8888, type: http, tls: true}
 
   - {name: 秋高气爽 24, server: us19.tcdn.me, port: 443, type: http, tls: true}
 proxy-groups:
