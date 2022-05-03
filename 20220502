@@ -45,11 +45,6 @@ proxies:
 
 - {name: 秋高气爽 20, server: 14.29.124.168, port: 24003, type: ss, cipher: aes-128-cfb, password: QazEdcTgb159@$*, udp: true}
 
-- {name: sg.epicbrowser.net:8888, server: sg.epicbrowser.net, port: 8888, type: http, tls: true}
-
-- {name: sg2.epicbrowser.net:8888, server: sg2.epicbrowser.net, port: 8888, type: http, tls: true}
-
-- {name: us19.tcdn.me:443, server: us19.tcdn.me, port: 443, type: http, tls: true}
   - name: 🚀 节点选择
     type: select
     proxies:
@@ -75,9 +70,6 @@ proxies:
       - 秋高气爽 18
       - 秋高气爽 19
       - 秋高气爽 20
-      - sg.epicbrowser.net:8888
-      - sg2.epicbrowser.net:8888
-      - us19.tcdn.me:443
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -104,9 +96,6 @@ proxies:
       - 秋高气爽 18
       - 秋高气爽 19
       - 秋高气爽 20
-      - sg.epicbrowser.net:8888
-      - sg2.epicbrowser.net:8888
-      - us19.tcdn.me:443
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -133,9 +122,6 @@ proxies:
       - 秋高气爽 18
       - 秋高气爽 19
       - 秋高气爽 20
-      - sg.epicbrowser.net:8888
-      - sg2.epicbrowser.net:8888
-      - us19.tcdn.me:443
   - name: 📲 电报信息
     type: select
     proxies:
@@ -161,9 +147,6 @@ proxies:
       - 秋高气爽 18
       - 秋高气爽 19
       - 秋高气爽 20
-      - sg.epicbrowser.net:8888
-      - sg2.epicbrowser.net:8888
-      - us19.tcdn.me:443
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
@@ -189,9 +172,6 @@ proxies:
       - 秋高气爽 18
       - 秋高气爽 19
       - 秋高气爽 20
-      - sg.epicbrowser.net:8888
-      - sg2.epicbrowser.net:8888
-      - us19.tcdn.me:443
   - name: 🍎 苹果服务
     type: select
     proxies:
@@ -217,9 +197,6 @@ proxies:
       - 秋高气爽 18
       - 秋高气爽 19
       - 秋高气爽 20
-      - sg.epicbrowser.net:8888
-      - sg2.epicbrowser.net:8888
-      - us19.tcdn.me:443
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -262,9 +239,6 @@ proxies:
       - 秋高气爽 18
       - 秋高气爽 19
       - 秋高气爽 20
-      - sg.epicbrowser.net:8888
-      - sg2.epicbrowser.net:8888
-      - us19.tcdn.me:443
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
