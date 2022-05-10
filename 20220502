@@ -51,10 +51,10 @@ proxies:
 
   - {name: 秋高气爽 23, server: sg3.epicbrowser.net, port: 8888, type: http, tls: true}
 
-  - name：秋高气爽  24
-    server: h961359.droplet.today
-    port: 11445
+  - name: "秋高气爽 24"
     type: http
+    server: h3816tw.droplet.today
+    port: 20443
     username: dcf12c7e7d
     password: 26bae9b023
     tls: true
