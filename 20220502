@@ -51,7 +51,8 @@ proxies:
 
   - {name: 秋高气爽 23, server: sg3.epicbrowser.net, port: 8888, type: http, tls: true}
 
-  - {name: 秋高气爽 24, server: us19.tcdn.me, port: 443, type: http, tls: true}
+  - {name: 秋高气爽 24, server: 103.209.254.114, username: ncpbatim561010@namecheap
+    password: 0C3Wi7IumC type: pptp, tls: true}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
