@@ -40,9 +40,11 @@ proxies:
   - {name: 秋高气爽 17, server: 213.183.59.229, port: 9020, type: ss, cipher: aes-256-cfb, password: BNmAXXxAHYpTRdzu, udp: true}
 
   - {name: 秋高气爽 18, server: 213.183.51.171, port: 9097, type: ss, cipher: aes-256-cfb, password: Sn5B7jTqr76aCJT8, udp: true}
-  - {name: 秋高气爽 19, server: sg2.31vpn.com, port: 443, type: vmess, uuid: e715caca-c520-4388-bfc0-09707170867a, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: sg2.31vpn.com, network: ws, ws-opts: {path: /fastssh/a471686674/62c9a00a14c69/, headers: {Host: sg2.31vpn.com}}, udp: true}
+  
+  - {name: 秋高气爽 19, server: sg1.31vpn.com, port: 443, type: vmess, uuid: e715caca-c520-4388-bfc0-09707170867a, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: sg1.31vpn.com, network: ws, ws-opts: {path: /fastssh/a471686674/62c9a00a14c69/, headers: {Host: sg1.31vpn.com}}, udp: true}
 
-  - {"type":"vmess","name":"秋高气爽 20","ws-opts":{"path":"/fastssh/a471686674/62c9a00a14c69/","headers":{"host":"sg2.31vpn.com"}},"server":"sg2.31vpn.com","port":"80","uuid":"e715caca-c520-4388-bfc0-09707170867a","alterId":"0","cipher":"auto","network":"ws"}
+  - {name: 秋高气爽 20, server: sg1.31vpn.com, port: 80, type: vmess, uuid: e715caca-c520-4388-bfc0-09707170867a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /fastssh/a471686674/62c9a00a14c69/, headers: {Host: sg1.31vpn.com}}, udp: true}
+  
   - {name: 秋高气爽 21, server: sg.epicbrowser.net, port: 8888, type: http, tls: true}
 
   - {name: 秋高气爽 22, server: sg2.epicbrowser.net, port: 8888, type: http, tls: true}
