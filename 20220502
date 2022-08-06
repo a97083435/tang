@@ -52,10 +52,10 @@ proxies:
 
   - name: "秋高气爽 24"
     type: http
-    server: h3816tw.droplet.today
-    port: 20443
-    username: dcf12c7e7d
-    password: 26bae9b023
+    server: 37.252.1.197
+    port: 8010
+    username: 2597665
+    password: 8c3466
     tls: true
 proxy-groups:
   - name: 🚀 节点选择
