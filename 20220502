@@ -17,7 +17,7 @@ proxies:
 
   - {name: 秋高气爽 6, server: 37.252.1.197, port: 3000, type: vmess, uuid: 6f7ae49c-f5e2-4ec2-ac5e-38f057d51fee, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: tcp, udp: true}
 
-  -{"type":"socks5","name":"秋高气爽 7","server":"37.252.1.197","port":1080,"username":"9823439","password":"d993e5","udp":true}
+  - {"type":"socks5","name":"秋高气爽 7","server":"37.252.1.197","port":1080,"username":"9823439","password":"d993e5","udp":true}
 
   - {name: 秋高气爽 8, server: 185.167.117.171, port: 9020, type: ss, cipher: aes-256-cfb, password: BNmAXXxAHYpTRdzu, udp: true}
 
