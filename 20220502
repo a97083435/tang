@@ -13,7 +13,7 @@ proxies:
 
   - {name: 秋高气爽 4, server: 213.183.51.172, port: 9000, type: ss, cipher: aes-256-cfb, password: a3GFYt36Sm82Vys9, udp: true}
 
-  - {name: 秋高气爽 5, server: 185.167.117.171, port: 9032, type: ss, cipher: aes-256-cfb, password: UWZQeLRWnkqgkseq, udp: true}
+  - {name: 秋高气爽 5, server: ru.timevpn.com, port: 40793, type: ss, cipher: aes-256-cfb, password: z6QGQum, udp: true}
 
   - {name: 秋高气爽 6, server: 37.252.1.197, port: 3000, type: vmess, uuid: 6f7ae49c-f5e2-4ec2-ac5e-38f057d51fee, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: tcp, udp: true}
 
