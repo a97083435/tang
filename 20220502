@@ -52,7 +52,7 @@ proxies:
   - {name: 秋高气爽 23, server: sg3.epicbrowser.net, port: 8888, type: http, tls: true}
   
 
-  - {name: 秋高气爽 24, server: 37.252.1.197, port: 8010, username: 2597665, password: 8c3466, type: http, tls: true}
+  - {name: 秋高气爽 24, server: 37.252.1.197, port: 8010, username: 2597665, password: 8c3466, type: http, udp: true}
 
 proxy-groups:
   - name: 🚀 节点选择
