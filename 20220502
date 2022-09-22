@@ -23,7 +23,7 @@ proxies:
 
   - {name: 秋高气爽 9, server: pp1.zhengzhongfeizhu.xyz, port: 32002, type: trojan, password: eb2f8154-ff58-3b99-b393-28c8eecdbe64, sni: ip3884414509.mobgslb.tbcache.com, skip-cert-verify: true, udp: true}
 
-  - {name: 秋高气爽 10, server: 85.208.108.19, port: 5003, type: ss, cipher: aes-256-gcm, password: g5MeD6Ft3CWlJId, udp: true}
+  - {name: 秋高气爽 10, server: 85.208.108.19, port: 5003, type: ss, cipher: aes-256-gcm, password: g5MeD6Ft3CWlJId}
 
   - {name: 秋高气爽 11, server: bgroup.node2.v.nodelist-gfwairport.download, port: 50001, type: vmess, uuid: 5c9bdf2e-5925-451a-9f46-294eb6243756, alterId:0, cipher: auto, network: tcp}
 
