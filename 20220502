@@ -23,34 +23,34 @@ proxies:
 
   - {name: 秋高气爽 9, server: pp1.zhengzhongfeizhu.xyz, port: 32002, type: trojan, password: eb2f8154-ff58-3b99-b393-28c8eecdbe64, sni: ip3884414509.mobgslb.tbcache.com, skip-cert-verify: true, udp: true}
 
-  - {name: 秋高气爽 10, server: 64.112.42.72, port: 16999, type: vmess, uuid: b5a01f44-b981-421a-bdc0-6d9d53da07fd, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 秋高气爽 10, server: 85.208.108.19, port: 5003, type: ss, cipher: aes-256-gcm, password: g5MeD6Ft3CWlJId, udp: true}
 
-  - {name: 秋高气爽 11, server: bgroup.node2.v.nodelist-gfwairport.download, port: 50001, type: vmess, uuid: 5c9bdf2e-5925-451a-9f46-294eb6243756, alterId:0, cipher: auto, network: tcp}
+  - {name: 秋高气爽 11, server: sg3.31vpn.com, port: 443, type: vmess, uuid: ff382d09-becd-41cb-8e4f-3e256b27de47, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: sg3.31vpn.com, network: ws, ws-opts: {path: /fastssh/ntmdq/6267584ee4988/, headers: {Host: sg3.31vpn.com}}, udp: true}
 
-  - {name: 秋高气爽 12, server: 8.210.212.41, port: 22303, type: vmess, uuid: a0775aec-e4f8-4d5d-aad0-e50ccff0a7dc, alterId:0, cipher: auto, network: tcp}
+  - {name: 秋高气爽 12, server: 120.240.48.20, port: 38101, type: vmess, uuid: 79386685-16da-327c-9e14-aa6d702d86bc, alterId: 1, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /hls/cctv5phd.m3u8, headers: {Host: t.me/vpnhat}}, udp: true}
 
-  - {name: 秋高气爽 13, server: 4.hk.zz.xxxxx.x-t-fuckword.network, port: 36676, type: vmess, uuid: 244effd9-0204-3c4a-8537-0dca4e5fd9b5, alterId:0, cipher: auto, tls: false, skip-cert-verify: false, network: tcp, udp: true} 
-  
-  - {name: 秋高气爽 14, server: 103.173.178.110, port: 41443, type: vmess, uuid: 146F020E-8A44-6496-9C0A-485332654418, alterId:0, cipher: auto, tls: true, skip-cert-verify: false, network: tcp, udp: true }
-  
-  - {name: 秋高气爽 15, server: 152.70.85.99, port: 27829, type: vmess, uuid: ca70916a-963b-4ec4-ff0b-d87bf80bee1f, alterId:0,cipher:auto,path:9uWHZxtHXD,network: kcp}
+  - {name: 秋高气爽 13, server: 185.167.117.171, port: 9003, type: ss, cipher: aes-256-cfb, password: JdmRK9gMEqFgs8nP, udp: true}
+
+  - {name: 秋高气爽 14, server: fhcarm2.gaox.ml, port: 443, type: trojan, password: f39bd244-f5fe-415c-8b98-a1e5250bf178, skip-cert-verify: false, udp: true}
+
+  - {name: 秋高气爽 15, server: 180.163.62.91, port: 10064, type: ss, cipher: aes-128-cfb, password: QazEdcTgb159@$*, udp: true}
 
   - {name: 秋高气爽 16, server: 213.183.53.177, port: 9084, type: ss, cipher: aes-256-cfb, password: c3NtHJ5ujV2tGDfj, udp: true}
 
   - {name: 秋高气爽 17, server: 213.183.59.229, port: 9020, type: ss, cipher: aes-256-cfb, password: BNmAXXxAHYpTRdzu, udp: true}
 
   - {name: 秋高气爽 18, server: 213.183.51.171, port: 9097, type: ss, cipher: aes-256-cfb, password: Sn5B7jTqr76aCJT8, udp: true}
-  
-  - {name: 秋高气爽 19, server: sg1.31vpn.com, port: 443, type: vmess, uuid: dce4c472-6f3f-4c45-80e5-cbfe5ecad7ee, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: sg1.31vpn.com, network: ws, ws-opts: {path: /fastssh/a471686674/632caa9030f6a/, headers: {Host: sg1.31vpn.com}}, udp: true}
 
-  - {name: 秋高气爽 20, server: sg1.31vpn.com, port: 80, type: vmess, uuid: dce4c472-6f3f-4c45-80e5-cbfe5ecad7ee, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /fastssh/a471686674/632caa9030f6a/, headers: {Host: sg1.31vpn.com}}, udp: true}
-  
+  - {name: 秋高气爽 19, server: sg1.31vpn.com, port: 443, type: vmess, uuid: e715caca-c520-4388-bfc0-09707170867a, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: sg1.31vpn.com, network: ws, ws-opts: {path: /fastssh/a471686674/6321fbec4f0f8/, headers: {Host: sg1.31vpn.com}}, udp: true}
+
+  - {name: 秋高气爽 20, server: sg1.31vpn.com, port: 80, type: vmess, uuid: e715caca-c520-4388-bfc0-09707170867a, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /fastssh/a471686674/6321fbec4f0f8/, headers: {Host: sg1.31vpn.com}}, udp: true}
+
   - {name: 秋高气爽 21, server: sg.epicbrowser.net, port: 8888, type: http, tls: true}
 
   - {name: 秋高气爽 22, server: sg2.epicbrowser.net, port: 8888, type: http, tls: true}
 
   - {name: 秋高气爽 23, server: sg3.epicbrowser.net, port: 8888, type: http, tls: true}
-  
+
   - {name: 秋高气爽 24, server: 37.252.1.197, port: 8010, username: 2597665, password: 8c3466, type: http, udp: true}
 
 proxy-groups:
