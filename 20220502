@@ -31,7 +31,7 @@ proxies:
 
   - {name: 秋高气爽 13, server: 4.hk.zz.xxxxx.x-t-fuckword.network, port: 36676, type: vmess, uuid: 244effd9-0204-3c4a-8537-0dca4e5fd9b5, alterId: 0, cipher: auto,network: tcp} 
 
-  - {name: 秋高气爽 14, server: 103.173.178.110, port: 41443, type: vmess, uuid: 146F020E-8A44-6496-9C0A-485332654418, alterId: 0, cipher: auto, tls:false, network: tcp,}
+  - {name: 秋高气爽 14, server: 103.173.178.110, port: 41443, type: vmess, uuid: 146F020E-8A44-6496-9C0A-485332654418, alterId: 0, cipher: auto, tls:false, network: tcp}
 
   - {name: 秋高气爽 15, server: 152.70.85.99, port: 27829, type: vmess, uuid: ca70916a-963b-4ec4-ff0b-d87bf80bee1f, alterId:0,cipher:auto,path:9uWHZxtHXD,network: kcp}
   
