@@ -27,7 +27,7 @@ proxies:
 
   - {name: 秋高气爽 11, server: sg3.31vpn.com, port: 443, type: vmess, uuid: ff382d09-becd-41cb-8e4f-3e256b27de47, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: sg3.31vpn.com, network: ws, ws-opts: {path: /fastssh/ntmdq/6267584ee4988/, headers: {Host: sg3.31vpn.com}}, udp: true}
 
-  - {name: 秋高气爽 12, server: 120.240.48.20, port: 38101, type: vmess, uuid: 79386685-16da-327c-9e14-aa6d702d86bc, alterId:0, cipher: auto, tls: false, skip-cert-verify: false, network: tcp, udp: true}
+  - {name: 秋高气爽 12, server: 8.210.212.41, port: 22303, type: vmess, uuid: a0775aec-e4f8-4d5d-aad0-e50ccff0a7dc, alterId:0, cipher: auto, network: tcp}
 
   - {name: 秋高气爽 13, server: 4.hk.zz.xxxxx.x-t-fuckword.network, port: 36676, type: vmess, uuid: 244effd9-0204-3c4a-8537-0dca4e5fd9b5, alterId:0, cipher: auto, tls: false, skip-cert-verify: false, network: tcp, udp: true} 
   
