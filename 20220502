@@ -9,9 +9,9 @@ proxies:
 
   - {name: 秋高气爽 2, server: 3.sg.zz.xxxxx.x-t-fuckword.network, port: 36679, type: vmess, uuid: 244effd9-0204-3c4a-8537-0dca4e5fd9b5,  alterId:0, cipher: auto, network: tcp}
 
-  - {name: 秋高气爽 3, server: 85.208.108.19, port: 443, type: ss, cipher: aes-256-gcm, password: pKEW8JPByTVTLtM, udp: true}
+  - {name: 秋高气爽 3, server: 42.186.175.8, port: 443, type: vmess, uuid: a928a26c-2adb-45fe-e57d-8a27dade309e,alterId: 0, cipher: auto, network: tcp}
 
-  - {name: 秋高气爽 4, server: 85.208.108.19, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7, udp: true}
+  - {name: 秋高气爽 4, server: 85.208.108.19, port: 2376, type: vmess, cipher: aes-256-gcm, password: faBAoD54k87UJG7, udp: true}
 
   - {name: 秋高气爽 5, server: ru.timevpn.com, port: 40793, type: ss, cipher: aes-256-cfb, password: z6QGQum, udp: true}
 
