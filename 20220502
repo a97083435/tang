@@ -44,6 +44,35 @@ proxies:
 
   - {name: 秋高气爽 24, server: 37.252.1.197, port: 8010, username: 2597665, password: 8c3466, type: http, udp: true}
 
+  - {name: 秋高气爽 25, server: 31.184.207.7, port: 443, type: vmess, uuid: 146F020E-8A44-6496-9C0A-485332654418, alterId: 0, cipher: auto, tls: true, servername: gcore.v2ray.online, network: ws, ws-opts: {path: /, headers: {Host: gcore.v2ray.online}}}
+
+  - {name: 秋高气爽 26, server: 149.57.218.16, port: 41443, type: vmess, uuid: 146F020E-8A44-6496-9C0A-485332654418, alterId: 0, cipher: auto, tls: true, servername: node.napsternetv.com}
+
+  - {name: 秋高气爽 27, server: 88.210.37.106, port: 41443, type: vmess, uuid: 146F020E-8A44-6496-9C0A-485332654418, alterId: 0, cipher: auto, tls: true, servername: node.napsternetv.com}
+
+  - {name: 秋高气爽 28, server: 213.226.71.174, port: 41443, type: vmess, uuid: 146F020E-8A44-6496-9C0A-485332654418, alterId: 0, cipher: auto, tls: true, servername: node.napsternetv.com}
+
+  - {name: 秋高气爽 29, server: 103.173.178.110, port: 41443, type: vmess, uuid: 146F020E-8A44-6496-9C0A-485332654418, alterId: 0, cipher: auto, tls: true, servername: node.napsternetv.com}
+
+  - {name: 秋高气爽 30, server: 80.66.64.17, port: 41443, type: vmess, uuid: 146F020E-8A44-6496-9C0A-485332654418, alterId: 0, cipher: auto, tls: true, servername: node.napsternetv.com}
+
+  - {name: 秋高气爽 31, server: 89.208.105.63, port: 41443, type: vmess, uuid: 146F020E-8A44-6496-9C0A-485332654418, alterId: 0, cipher: auto, tls: true, servername: node.napsternetv.com}
+
+  - {name: 秋高气爽 32, server: 94.177.8.87, port: 41443, type: vmess, uuid: 146F020E-8A44-6496-9C0A-485332654418, alterId: 0, cipher: auto, tls: true, servername: node.napsternetv.com}
+
+  - {name: 秋高气爽 33, server: 91.230.211.4, port: 41443, type: vmess, uuid: 146F020E-8A44-6496-9C0A-485332654418, alterId: 0, cipher: auto, tls: true, servername: node.napsternetv.com}
+
+  - {name: 秋高气爽 34, server: 185.112.83.35, port: 41443, type: vmess, uuid: 146F020E-8A44-6496-9C0A-485332654418, alterId: 0, cipher: auto, tls: true, servername: node.napsternetv.com}
+
+  - {name: 秋高气爽 35, server: 185.194.30.40, port: 41443, type: vmess, uuid: 146F020E-8A44-6496-9C0A-485332654418, alterId: 0, cipher: auto, tls: true, servername: node.napsternetv.com}
+
+  - {name: 秋高气爽 36, server: seoul.napsternetv.com, port: 443, type: vmess, uuid: 146F020E-8A44-6496-9C0A-485332654418, alterId: 0, cipher: auto, tls: true, servername: seoul.napsternetv.com, network: ws, ws-opts: {path: /, headers: {Host: seoul.napsternetv.com}}}
+
+  - {name: 秋高气爽 37, server: 129.159.41.233, port: 32586, type: vmess, uuid: 341a9182-c423-499c-c46e-d17838b29037, alterId: 0, cipher: auto, tls: false}
+
+  - {name: 秋高气爽 38, server: free-godlikeanyone.koyeb.app, port: 443, type: vmess, uuid: b7b1f689-f82e-4ce4-97e7-8a8997370e44, alterId: 0, cipher: auto, tls: true, servername: free-godlikeanyone.koyeb.app, network: ws, ws-opts: {path: /b7b1f689-f82e-4ce4-97e7-8a8997370e44-vmess, headers: {Host: free-godlikeanyone.koyeb.app}}}
+
+  - {name: 秋高气爽 39, server: lms.uin-antasari.ac.id, port: 80, type: vmess, uuid: 46bfdb59-83c6-4710-877e-c809b5a90dff, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /vpnneo, headers: {Host: ctn.nextvpn.cc}}}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -74,6 +103,21 @@ proxy-groups:
       - 秋高气爽 22
       - 秋高气爽 23
       - 秋高气爽 24
+      - 秋高气爽 25
+      - 秋高气爽 26
+      - 秋高气爽 27
+      - 秋高气爽 28
+      - 秋高气爽 29
+      - 秋高气爽 30
+      - 秋高气爽 31
+      - 秋高气爽 32
+      - 秋高气爽 33
+      - 秋高气爽 34
+      - 秋高气爽 35
+      - 秋高气爽 36
+      - 秋高气爽 37
+      - 秋高气爽 38
+      - 秋高气爽 39
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -104,6 +148,21 @@ proxy-groups:
       - 秋高气爽 22
       - 秋高气爽 23
       - 秋高气爽 24
+      - 秋高气爽 25
+      - 秋高气爽 26
+      - 秋高气爽 27
+      - 秋高气爽 28
+      - 秋高气爽 29
+      - 秋高气爽 30
+      - 秋高气爽 31
+      - 秋高气爽 32
+      - 秋高气爽 33
+      - 秋高气爽 34
+      - 秋高气爽 35
+      - 秋高气爽 36
+      - 秋高气爽 37
+      - 秋高气爽 38
+      - 秋高气爽 39
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -134,6 +193,21 @@ proxy-groups:
       - 秋高气爽 22
       - 秋高气爽 23
       - 秋高气爽 24
+      - 秋高气爽 25
+      - 秋高气爽 26
+      - 秋高气爽 27
+      - 秋高气爽 28
+      - 秋高气爽 29
+      - 秋高气爽 30
+      - 秋高气爽 31
+      - 秋高气爽 32
+      - 秋高气爽 33
+      - 秋高气爽 34
+      - 秋高气爽 35
+      - 秋高气爽 36
+      - 秋高气爽 37
+      - 秋高气爽 38
+      - 秋高气爽 39
   - name: 📲 电报信息
     type: select
     proxies:
@@ -163,6 +237,21 @@ proxy-groups:
       - 秋高气爽 22
       - 秋高气爽 23
       - 秋高气爽 24
+      - 秋高气爽 25
+      - 秋高气爽 26
+      - 秋高气爽 27
+      - 秋高气爽 28
+      - 秋高气爽 29
+      - 秋高气爽 30
+      - 秋高气爽 31
+      - 秋高气爽 32
+      - 秋高气爽 33
+      - 秋高气爽 34
+      - 秋高气爽 35
+      - 秋高气爽 36
+      - 秋高气爽 37
+      - 秋高气爽 38
+      - 秋高气爽 39
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
@@ -192,6 +281,21 @@ proxy-groups:
       - 秋高气爽 22
       - 秋高气爽 23
       - 秋高气爽 24
+      - 秋高气爽 25
+      - 秋高气爽 26
+      - 秋高气爽 27
+      - 秋高气爽 28
+      - 秋高气爽 29
+      - 秋高气爽 30
+      - 秋高气爽 31
+      - 秋高气爽 32
+      - 秋高气爽 33
+      - 秋高气爽 34
+      - 秋高气爽 35
+      - 秋高气爽 36
+      - 秋高气爽 37
+      - 秋高气爽 38
+      - 秋高气爽 39
   - name: 🍎 苹果服务
     type: select
     proxies:
@@ -221,6 +325,21 @@ proxy-groups:
       - 秋高气爽 22
       - 秋高气爽 23
       - 秋高气爽 24
+      - 秋高气爽 25
+      - 秋高气爽 26
+      - 秋高气爽 27
+      - 秋高气爽 28
+      - 秋高气爽 29
+      - 秋高气爽 30
+      - 秋高气爽 31
+      - 秋高气爽 32
+      - 秋高气爽 33
+      - 秋高气爽 34
+      - 秋高气爽 35
+      - 秋高气爽 36
+      - 秋高气爽 37
+      - 秋高气爽 38
+      - 秋高气爽 39
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -267,6 +386,21 @@ proxy-groups:
       - 秋高气爽 22
       - 秋高气爽 23
       - 秋高气爽 24
+      - 秋高气爽 25
+      - 秋高气爽 26
+      - 秋高气爽 27
+      - 秋高气爽 28
+      - 秋高气爽 29
+      - 秋高气爽 30
+      - 秋高气爽 31
+      - 秋高气爽 32
+      - 秋高气爽 33
+      - 秋高气爽 34
+      - 秋高气爽 35
+      - 秋高气爽 36
+      - 秋高气爽 37
+      - 秋高气爽 38
+      - 秋高气爽 39
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
