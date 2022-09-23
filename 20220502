@@ -16,24 +16,15 @@ proxies:
   - {name: 秋高气爽 5, server: bgroup.node4.s.nodelist-gfwairport.download, port: 50001, type: ss, cipher: chacha20-ietf-poly1305, password: 5c9bdf2e-5925-451a-9f46-294eb6243756}
 
   - {name: 秋高气爽 6, server: 37.252.1.197, port: 3000, type: vmess, uuid: 6f7ae49c-f5e2-4ec2-ac5e-38f057d51fee, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: tcp, udp: true}
-
-  - {name: 秋高气爽 7, server: 37.252.1.197, port: 1080, type: socks5, username: 9823439, password: d993e5, udp: true}
-
-  - {name: 秋高气爽 8, server: 213.183.53.200, port: 9088, type: ss, cipher: aes-256-cfb, password: f8npKgNzdkss2ytn, udp: true}
-
-  - {name: 秋高气爽 9, server: pp1.zhengzhongfeizhu.xyz, port: 32002, type: trojan, password: eb2f8154-ff58-3b99-b393-28c8eecdbe64, sni: ip3884414509.mobgslb.tbcache.com, skip-cert-verify: true, udp: true}
-
-  - {name: 秋高气爽 10, server: 85.208.108.19, port: 5003, type: ss, cipher: aes-256-gcm, password: g5MeD6Ft3CWlJId, udp: true}
-
-  - {name: 秋高气爽 11, server: sg3.31vpn.com, port: 443, type: vmess, uuid: ff382d09-becd-41cb-8e4f-3e256b27de47, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: sg3.31vpn.com, network: ws, ws-opts: {path: /fastssh/ntmdq/6267584ee4988/, headers: {Host: sg3.31vpn.com}}, udp: true}
-
-  - {name: 秋高气爽 12, server: 120.240.48.20, port: 38101, type: vmess, uuid: 79386685-16da-327c-9e14-aa6d702d86bc, alterId: 1, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-opts: {path: /hls/cctv5phd.m3u8, headers: {Host: t.me/vpnhat}}, udp: true}
-
-  - {name: 秋高气爽 13, server: 185.167.117.171, port: 9003, type: ss, cipher: aes-256-cfb, password: JdmRK9gMEqFgs8nP, udp: true}
-
-  - {name: 秋高气爽 14, server: fhcarm2.gaox.ml, port: 443, type: trojan, password: f39bd244-f5fe-415c-8b98-a1e5250bf178, skip-cert-verify: false, udp: true}
-
-  - {name: 秋高气爽 15, server: 180.163.62.91, port: 10064, type: ss, cipher: aes-128-cfb, password: QazEdcTgb159@$*, udp: true}
+  - {name: 秋高气爽 7, server: bgroup.node2.s.nodelist-gfwairport.download, port: 50001, type: ss, cipher: chacha20-ietf-poly1305, password: 5c9bdf2e-5925-451a-9f46-294eb6243756, udp: true} 
+  - {name: 秋高气爽 8, server: bgroup.node2.v.nodelist-gfwairport.download, port: 50001, type: vmess, uuid: 5c9bdf2e-5925-451a-9f46-294eb6243756, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true} 
+  - {name: 秋高气爽 9, server: bgroup.node5.v.nodelist-gfwairport.download, port: 50001, type: vmess, uuid: 5c9bdf2e-5925-451a-9f46-294eb6243756, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true} 
+  - {name: 秋高气爽 10, server: bgroup.node5.s.nodelist-gfwairport.download, port: 50001, type: ss, cipher: chacha20-ietf-poly1305, password: 5c9bdf2e-5925-451a-9f46-294eb6243756, udp: true} 
+  - {name: 秋高气爽 11, server: youtube-bai-piao-wang-zhe-usa.98848.xyz, port: 17449, type: trojan, password: yBq0efi1j7, skip-cert-verify: false, udp: true} 
+  - {name: 秋高气爽 12, server: 89.185.85.145, port: 18888, type: ss, cipher: chacha20-ietf-poly1305, password: 5595f1cf-d7c0-4121-a3bf-19e423c1f9a1, udp: true} 
+  - {name: 秋高气爽 13, server: nnv.chitacdn.xyz, port: 54242, type: vmess, uuid: f2393d82-94c4-4b12-8267-293a7500e487, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true} 
+  - {name: 秋高气爽 14, server: 129.159.41.233, port: 32586, type: vmess, uuid: 341a9182-c423-499c-c46e-d17838b29037, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true} 
+  - {name: 秋高气爽 15, server: free-godlikeanyone.koyeb.app, port: 443, type: vmess, uuid: b7b1f689-f82e-4ce4-97e7-8a8997370e44, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: free-godlikeanyone.koyeb.app, network: ws, ws-opts: {path: /b7b1f689-f82e-4ce4-97e7-8a8997370e44-vmess, headers: {Host: free-godlikeanyone.koyeb.app}}, udp: true}
   
   - {name: 秋高气爽 16, server: 213.183.53.177, port: 9084, type: ss, cipher: aes-256-cfb, password: c3NtHJ5ujV2tGDfj, udp: true}
 
