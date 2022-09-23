@@ -5,7 +5,7 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 秋高气爽 1, server: 4.hk.zz.xxxxx.x-t-fuckword.network, port: 36676, type: vmess, uuid:244effd9-0204-3c4a-8537-0dca4e5fd9b5, alterId: 0, cipher: auto, network: tcp}
+  - {name: 秋高气爽 1, server: 4.hk.zz.xxxxx.x-t-fuckword.network, port: 36676, type: vmess, uuid: 244effd9-0204-3c4a-8537-0dca4e5fd9b5, alterId: 0, cipher: auto, network: tcp}
 
   - {name: 秋高气爽 2, server: 85.208.108.19, port: 6697, type: ss, cipher: aes-256-gcm, password: TEzjfAYq2IjtuoS, udp: true}
 
