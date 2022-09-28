@@ -43,6 +43,10 @@ proxies:
   - {"type":"vmess","name":"秋高气爽41","ws-opts":{"path":"/b7b1f689-f82e-4ce4-97e7-8a8997370e44-vmess","headers":{"host":"free-godlikeanyone.koyeb.app"}},"server":"free-godlikeanyone.koyeb.app","port":"443","uuid":"b7b1f689-f82e-4ce4-97e7-8a8997370e44","alterId":"0","cipher":"auto","network":"ws","tls":true}
   - {"type":"vless","name":"秋高气爽42","server":"ukibm.ptuu.ga","port":443,"uuid":"ab48d74d27bf45eca577b821c9a79577","skip-cert-verify":true,"udp":true,"tls":true,"network":"ws","servername":"ukibm.ptuu.ga","ws-opts":{"path":"PATH","headers":{"host":"ukibm.ptuu.ga"}}}
   - {"type":"vmess","name":"秋高气爽43","ws-opts":{"path":"/vpnneo","headers":{"host":"ctn.nextvpn.cc"}},"server":"lms.uin-antasari.ac.id","port":"80","uuid":"46bfdb59-83c6-4710-877e-c809b5a90dff","alterId":"0","cipher":"auto","network":"ws"}
+  - {name: 秋高气爽 44, server: 184.170.213.204, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: dqlr7JCgDrOK}
+  - {name: 秋高气爽 45, server: 45.78.66.108, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: ppOxjbvryQ49}
+  - {name: 秋高气爽 46, server: 104.129.185.132, port: 800, type: ss, cipher: chacha20-ietf-poly1305, password: Yh5Dv08n3Tlv}
+
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -87,6 +91,9 @@ proxy-groups:
       - 秋高气爽41
       - 秋高气爽42
       - 秋高气爽43
+      - 秋高气爽44
+      - 秋高气爽45
+      - 秋高气爽46
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -131,6 +138,9 @@ proxy-groups:
       - 秋高气爽41
       - 秋高气爽42
       - 秋高气爽43
+      - 秋高气爽44
+      - 秋高气爽45
+      - 秋高气爽46
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -175,6 +185,9 @@ proxy-groups:
       - 秋高气爽41
       - 秋高气爽42
       - 秋高气爽43
+      - 秋高气爽44
+      - 秋高气爽45
+      - 秋高气爽46
   - name: 📲 电报信息
     type: select
     proxies:
@@ -218,6 +231,9 @@ proxy-groups:
       - 秋高气爽41
       - 秋高气爽42
       - 秋高气爽43
+      - 秋高气爽44
+      - 秋高气爽45
+      - 秋高气爽46
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
@@ -261,6 +277,9 @@ proxy-groups:
       - 秋高气爽41
       - 秋高气爽42
       - 秋高气爽43
+      - 秋高气爽44
+      - 秋高气爽45
+      - 秋高气爽46
   - name: 🍎 苹果服务
     type: select
     proxies:
@@ -304,6 +323,9 @@ proxy-groups:
       - 秋高气爽41
       - 秋高气爽42
       - 秋高气爽43
+      - 秋高气爽44
+      - 秋高气爽45
+      - 秋高气爽46
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -364,6 +386,9 @@ proxy-groups:
       - 秋高气爽41
       - 秋高气爽42
       - 秋高气爽43
+      - 秋高气爽44
+      - 秋高气爽45
+      - 秋高气爽46
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
