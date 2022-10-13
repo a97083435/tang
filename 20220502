@@ -9,9 +9,9 @@ proxies:
 
   - {name: 秋高气爽 2, server: 3.sg.zz.xxxxx.x-t-fuckword.network, port: 36679, type: vmess, uuid: 244effd9-0204-3c4a-8537-0dca4e5fd9b5, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
 
-  - {name: 秋高气爽 3, server: 42.186.175.8, port: 443, type: vmess, uuid: a928a26c-2adb-45fe-e57d-8a27dade309e, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-opts: {path: /ray, headers: {Host: sgarm.ptuu.cf}}}
+  - {name: 秋高气爽 3, type: vmess, server: tk1.mybestjj.com, port: '443', uuid: c4639c0f-49fc-4b33-8d7f-e27575c16d7a, alterId: 0, cipher: auto, udp: true, tls: true, network: ws, ws-opts: { path: /1654431, headers: { Host: tk1.mybestjj.com } }, ws-path: /1654431, ws-headers: { Host: tk1.mybestjj.com } }
 
-  - {name: 秋高气爽 4, server: bgroup.node4.v.nodelist-gfwairport.download, port: 50001, type: vmess, uuid: 5c9bdf2e-5925-451a-9f46-294eb6243756, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 秋高气爽 4, type: vmess, server: us1.mybestjj.com, port: '443', uuid: c4639c0f-49fc-4b33-8d7f-e27575c16d7a, alterId: 0, cipher: auto, udp: true, tls: true, network: ws, ws-opts: { path: /1654431, headers: { Host: us1.mybestjj.com } }, ws-path: /1654431, ws-headers: { Host: us1.mybestjj.com } }
   - {name: 秋高气爽 5, server: trojan3.udpgw.com, port: 443, type: trojan, password: e001e9b0-411e-11ed-92ad-1239d0255272, skip-cert-verify: true}
   - {name: 秋高气爽 6, server: 37.252.1.197, port: 3000, type: vmess, uuid: 6f7ae49c-f5e2-4ec2-ac5e-38f057d51fee, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: tcp, udp: true}
   - {name: 秋高气爽 7, server: bgroup.node2.s.nodelist-gfwairport.download, port: 50001, type: ss, cipher: chacha20-ietf-poly1305, password: 5c9bdf2e-5925-451a-9f46-294eb6243756, udp: true} 
@@ -21,18 +21,22 @@ proxies:
   - {name: 秋高气爽 11, server: 154.38.91.147, port: 53590, type: ssr, cipher: chacha20-ietf, password: VsWqMoSE, protocol: auth_aes128_md5, obfs: tls1.2_ticket_auth, protocol-param: 22455:dN78k939awlaJkGj, obfs-param: 84d4f22455.microsoft.com}
   - {name: 秋高气爽 12, server: 192.252.180.104, port: 53590, type: ssr, cipher: chacha20-ietf, password: VsWqMoSE, protocol: auth_aes128_md5, obfs: tls1.2_ticket_auth, protocol-param: 22455:dN78k939awlaJkGj, obfs-param: 84d4f22455.microsoft.com}
   - {name: 秋高气爽 13, server: 45.136.197.134, port: 53590, type: ssr, cipher: chacha20-ietf, password: VsWqMoSE, protocol: auth_aes128_md5, obfs: tls1.2_ticket_auth, protocol-param: 22455:dN78k939awlaJkGj, obfs-param: 84d4f22455.microsoft.com}
-  - {name: 秋高气爽 14, server: 129.159.41.233, port: 32586, type: vmess, uuid: 341a9182-c423-499c-c46e-d17838b29037, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true} 
-  - {name: 秋高气爽 15, server: free-godlikeanyone.koyeb.app, port: 443, type: vmess, uuid: b7b1f689-f82e-4ce4-97e7-8a8997370e44, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: free-godlikeanyone.koyeb.app, network: ws, ws-opts: {path: /b7b1f689-f82e-4ce4-97e7-8a8997370e44-vmess, headers: {Host: free-godlikeanyone.koyeb.app}}, udp: true}
-  
-  - {name: 秋高气爽 16, server: 213.183.53.177, port: 9084, type: ss, cipher: aes-256-cfb, password: c3NtHJ5ujV2tGDfj, udp: true}
+  - {name: 秋高气爽 14, type: vmess, server: er2.mybestjj.com, port: '443', uuid: c4639c0f-49fc-4b33-8d7f-e27575c16d7a, alterId: 0, cipher: auto, udp: true, tls: true, network: ws, ws-opts: { path: /1653531, headers: { Host: er1.mybestjj.com } }, ws-path: /1653531, ws-headers: { Host: er1.mybestjj.com } }
 
-  - {name: 秋高气爽 17, server: 213.183.59.229, port: 9020, type: ss, cipher: aes-256-cfb, password: BNmAXXxAHYpTRdzu, udp: true}
 
-  - {name: 秋高气爽 18, server: 213.183.51.171, port: 9097, type: ss, cipher: aes-256-cfb, password: Sn5B7jTqr76aCJT8, udp: true}
 
-  - {name: 秋高气爽 19, server: sg1.31vpn.com, port: 443, type: vmess, uuid: dce4c472-6f3f-4c45-80e5-cbfe5ecad7ee, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, servername: sg1.31vpn.com, network: ws, ws-opts: {path: /fastssh/a471686674/632caa9030f6a/, headers: {Host: sg1.31vpn.com}}, udp: true}
 
-  - {name: 秋高气爽 20, server: sg1.31vpn.com, port: 80, type: vmess, uuid: dce4c472-6f3f-4c45-80e5-cbfe5ecad7ee, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /fastssh/a471686674/632caa9030f6a/, headers: {Host: sg1.31vpn.com}}, udp: true}
+  - {name: 秋高气爽 15, type: vmess, server: sjp1.mybestjj.com, port: '443', uuid: c4639c0f-49fc-4b33-8d7f-e27575c16d7a, alterId: 0, cipher: auto, udp: true, tls: true, network: ws, ws-opts: { path: /1654431, headers: { Host: sjp1.mybestjj.com } }, ws-path: /1654431, ws-headers: { Host: sjp1.mybestjj.com } }
+
+  - {name: 秋高气爽 16, type: vmess, server: er1.mybestjj.com, port: '443', uuid: c4639c0f-49fc-4b33-8d7f-e27575c16d7a, alterId: 0, cipher: auto, udp: true, tls: true, network: ws, ws-opts: { path: /1653531, headers: { Host: er1.mybestjj.com } }, ws-path: /1653531, ws-headers: { Host: er1.mybestjj.com } }
+
+  - {name: 秋高气爽 17, type: vmess, server: tk2.mybestjj.com, port: '443', uuid: c4639c0f-49fc-4b33-8d7f-e27575c16d7a, alterId: 0, cipher: auto, udp: true, tls: true, network: ws, ws-opts: { path: /1654431, headers: { Host: us1.mybestjj.com } }, ws-path: /1654431, ws-headers: { Host: us1.mybestjj.com } }
+
+  - {name: 秋高气爽 18, type: vmess, server: us2.mybestjj.com, port: '443', uuid: c4639c0f-49fc-4b33-8d7f-e27575c16d7a, alterId: 0, cipher: auto, udp: true, tls: true, network: ws, ws-opts: { path: /1654431, headers: { Host: us1.mybestjj.com } }, ws-path: /1654431, ws-headers: { Host: us1.mybestjj.com } }
+
+  - {name: 秋高气爽 19, type: vmess, server: sjp1.mybestjj.com, port: '443', uuid: c4639c0f-49fc-4b33-8d7f-e27575c16d7a, alterId: 0, cipher: auto, udp: true, tls: true, network: ws, ws-opts: { path: /1654431, headers: { Host: us1.mybestjj.com } }, ws-path: /1654431, ws-headers: { Host: us1.mybestjj.com } }
+
+  - {name: 秋高气爽 20, type: vmess, server: er2.mybestjj.com, port: '443', uuid: c4639c0f-49fc-4b33-8d7f-e27575c16d7a, alterId: 0, cipher: auto, udp: true, tls: true, network: ws, ws-opts: { path: /1653531, headers: { Host: er1.mybestjj.com } }, ws-path: /1653531, ws-headers: { Host: er1.mybestjj.com } }
 
   - {name: 秋高气爽 21, server: sg.epicbrowser.net, port: 8888, type: http, tls: true}
 
