@@ -15,12 +15,12 @@ proxies:
   - {name: 秋高气爽 5, server: trojan3.udpgw.com, port: 443, type: trojan, password: e001e9b0-411e-11ed-92ad-1239d0255272, skip-cert-verify: true}
   - {name: 秋高气爽 6, server: 37.252.1.197, port: 3000, type: vmess, uuid: 6f7ae49c-f5e2-4ec2-ac5e-38f057d51fee, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: tcp, udp: true}
   - {name: 秋高气爽 7, server: bgroup.node2.s.nodelist-gfwairport.download, port: 50001, type: ss, cipher: chacha20-ietf-poly1305, password: 5c9bdf2e-5925-451a-9f46-294eb6243756, udp: true} 
-  - {name: 秋高气爽 8, server: bgroup.node2.v.nodelist-gfwairport.download, port: 50001, type: vmess, uuid: 5c9bdf2e-5925-451a-9f46-294eb6243756, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true} 
-  - {name: 秋高气爽 9, server: bgroup.node5.v.nodelist-gfwairport.download, port: 50001, type: vmess, uuid: 5c9bdf2e-5925-451a-9f46-294eb6243756, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true} 
-  - {name: 秋高气爽 10, server: bgroup.node5.s.nodelist-gfwairport.download, port: 50001, type: ss, cipher: chacha20-ietf-poly1305, password: 5c9bdf2e-5925-451a-9f46-294eb6243756, udp: true} 
-  - {name: 秋高气爽 11, server: youtube-bai-piao-wang-zhe-usa.98848.xyz, port: 17449, type: trojan, password: yBq0efi1j7, skip-cert-verify: false, udp: true} 
-  - {name: 秋高气爽 12, server: 89.185.85.145, port: 18888, type: ss, cipher: chacha20-ietf-poly1305, password: 5595f1cf-d7c0-4121-a3bf-19e423c1f9a1, udp: true} 
-  - {name: 秋高气爽 13, server: nnv.chitacdn.xyz, port: 54242, type: vmess, uuid: f2393d82-94c4-4b12-8267-293a7500e487, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true} 
+  - {name: 秋高气爽 8, server: 185.143.220.45, port: 53590, type: ssr, cipher: chacha20-ietf, password: VsWqMoSE, protocol: auth_aes128_md5, obfs: tls1.2_ticket_auth, protocol-param: 22492:28VM8P3Q8xrWjipX, obfs-param: 347dc22492.microsoft.com}
+  - {name: 秋高气爽 9, server: 172.247.14.58, port: 53590, type: ssr, cipher: chacha20-ietf, password: VsWqMoSE, protocol: auth_aes128_md5, obfs: tls1.2_ticket_auth, protocol-param: 22492:28VM8P3Q8xrWjipX, obfs-param: 347dc22492.microsoft.com}
+  - {name: 秋高气爽 10, server: 179.61.154.58, port: 53590, type: ssr, cipher: chacha20-ietf, password: VsWqMoSE, protocol: auth_aes128_md5, obfs: tls1.2_ticket_auth, protocol-param: 22492:28VM8P3Q8xrWjipX, obfs-param: 347dc22492.microsoft.com}
+  - {name: 秋高气爽 11, server: 154.38.91.147, port: 53590, type: ssr, cipher: chacha20-ietf, password: VsWqMoSE, protocol: auth_aes128_md5, obfs: tls1.2_ticket_auth, protocol-param: 22492:28VM8P3Q8xrWjipX, obfs-param: 347dc22492.microsoft.com}
+  - {name: 秋高气爽 12, server: 192.252.180.104, port: 53590, type: ssr, cipher: chacha20-ietf, password: VsWqMoSE, protocol: auth_aes128_md5, obfs: tls1.2_ticket_auth, protocol-param: 22492:28VM8P3Q8xrWjipX, obfs-param: 347dc22492.microsoft.com}
+  - {name: 秋高气爽 13, server: 45.136.197.134, port: 53590, type: ssr, cipher: chacha20-ietf, password: VsWqMoSE, protocol: auth_aes128_md5, obfs: tls1.2_ticket_auth, protocol-param: 22492:28VM8P3Q8xrWjipX, obfs-param: 347dc22492.microsoft.com}
   - {name: 秋高气爽 14, server: 129.159.41.233, port: 32586, type: vmess, uuid: 341a9182-c423-499c-c46e-d17838b29037, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true} 
   - {name: 秋高气爽 15, server: free-godlikeanyone.koyeb.app, port: 443, type: vmess, uuid: b7b1f689-f82e-4ce4-97e7-8a8997370e44, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, servername: free-godlikeanyone.koyeb.app, network: ws, ws-opts: {path: /b7b1f689-f82e-4ce4-97e7-8a8997370e44-vmess, headers: {Host: free-godlikeanyone.koyeb.app}}, udp: true}
   
