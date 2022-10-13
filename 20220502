@@ -12,9 +12,7 @@ proxies:
   - {name: 秋高气爽 3, server: 42.186.175.8, port: 443, type: vmess, uuid: a928a26c-2adb-45fe-e57d-8a27dade309e, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-opts: {path: /ray, headers: {Host: sgarm.ptuu.cf}}}
 
   - {name: 秋高气爽 4, server: bgroup.node4.v.nodelist-gfwairport.download, port: 50001, type: vmess, uuid: 5c9bdf2e-5925-451a-9f46-294eb6243756, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-
-  - {name: 秋高气爽 5, server: bgroup.node4.s.nodelist-gfwairport.download, port: 50001, type: ss, cipher: chacha20-ietf-poly1305, password: 5c9bdf2e-5925-451a-9f46-294eb6243756}
-
+  - {name: 秋高气爽 5, server: trojan3.udpgw.com, port: 443, type: trojan, password: e001e9b0-411e-11ed-92ad-1239d0255272, skip-cert-verify: true}
   - {name: 秋高气爽 6, server: 37.252.1.197, port: 3000, type: vmess, uuid: 6f7ae49c-f5e2-4ec2-ac5e-38f057d51fee, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: tcp, udp: true}
   - {name: 秋高气爽 7, server: bgroup.node2.s.nodelist-gfwairport.download, port: 50001, type: ss, cipher: chacha20-ietf-poly1305, password: 5c9bdf2e-5925-451a-9f46-294eb6243756, udp: true} 
   - {name: 秋高气爽 8, server: bgroup.node2.v.nodelist-gfwairport.download, port: 50001, type: vmess, uuid: 5c9bdf2e-5925-451a-9f46-294eb6243756, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, udp: true} 
