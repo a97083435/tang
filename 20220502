@@ -45,8 +45,9 @@ proxies:
   - {name: 秋高气爽 23, server: sg3.epicbrowser.net, port: 8888, type: http, tls: true}
 
   - {name: 秋高气爽 24, server: 37.252.1.197, port: 8010, username: 2597665, password: 8c3466, type: http, udp: true}
-  - {name: 秋高气爽 25, type: vmess, server: 13.212.233.117, port: 43632, uuid: 1d2978ba-30ba-4b64-8699-9ba6ba3cd4e8, alterId: 0, cipher: auto, udp: true }
-  - {name: 秋高气爽 26, type: vmess, server: 52.221.225.11, port: 43632, uuid: 1d2978ba-30ba-4b64-8699-9ba6ba3cd4e8, alterId: 0, cipher: auto, udp: true }
+  - {name: 秋高气爽 25, type: trojan, server: 112.fastea.top, port: 53316, password: 38bafedf-2394-4380-aa1e-d1c5b8b49457, udp: true, skip-cert-verify: true }
+
+  - {name: 秋高气爽 26, type: trojan, server: 113.fastea.top, port: 53313, password: 38bafedf-2394-4380-aa1e-d1c5b8b49457, udp: true, skip-cert-verify: true }
   - {name: 秋高气爽 27, type: vmess, server: 54.169.79.93, port: 43632, uuid: 1d2978ba-30ba-4b64-8699-9ba6ba3cd4e8, alterId: 0, cipher: auto, udp: true }
   - {name: 秋高气爽 28, type: vmess, server: 3.34.132.171, port: 43632, uuid: 1d2978ba-30ba-4b64-8699-9ba6ba3cd4e8, alterId: 0, cipher: auto, udp: true }
   - {name: 秋高气爽 29, type: vmess, server: 3.36.113.92, port: 43632, uuid: 1d2978ba-30ba-4b64-8699-9ba6ba3cd4e8, alterId: 0, cipher: auto, udp: true }
