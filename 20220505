@@ -11,7 +11,7 @@ proxies:
   - {"type":"vmess","name":"秋高气爽3","ws-opts":{"path":"/ray","headers":{"host":"sgarm.ptuu.cf"}},"server":"42.186.175.8","port":"443","uuid":"a928a26c-2adb-45fe-e57d-8a27dade309e","alterId":"0","cipher":"auto","network":"ws","tls":true}
   - {"type":"vmess","name":"秋高气爽4","server":"bgroup.node4.v.nodelist-gfwairport.download","port":"50001","uuid":"5c9bdf2e-5925-451a-9f46-294eb6243756","alterId":"0","cipher":"auto","network":"tcp"}
   - {"type":"ss","name":"秋高气爽5","server":"bgroup.node4.s.nodelist-gfwairport.download","port":50001,"cipher":"chacha20-ietf-poly1305","password":"5c9bdf2e-5925-451a-9f46-294eb6243756"}
-  - {"type":"vless","name":"秋高气爽7","server":"sdscb.ml","port":24683,"uuid":"153a0c4d-d6c1-4d6f-f291-afbbb41ae9d3","skip-cert-verify":true}
+  - {"type":"vless","name":"秋高气爽7","server":"sdscb.ml","port":24683,"uuid":"153a0c4d-d6c1-4d6f-f291-afbbb41ae9d3","skip-cert-verify":true,"udp":true,"tls":true,"network":"ws","servername":"down.dingtalk.com","ws-opts":{"path":"/","headers":{"host":"down.dingtalk.com"}}}
   - {"type":"vmess","name":"秋高气爽8","server":"youtube-bai-piao-wang-zhe-usa.98848.xyz","port":"42865","uuid":"432d5d8c-13f5-45c5-9343-dad073495fc3","alterId":"0","cipher":"auto","network":"kcp"}
   - {"type":"vless","name":"秋高气爽9","server":"sdscb.ml","port":24683,"uuid":"153a0c4d-d6c1-4d6f-f291-afbbb41ae9d3","skip-cert-verify":true}
   - {"type":"ss","name":"秋高气爽10","server":"bgroup.node2.s.nodelist-gfwairport.download","port":50001,"cipher":"chacha20-ietf-poly1305","password":"5c9bdf2e-5925-451a-9f46-294eb6243756"}
