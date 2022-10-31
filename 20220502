@@ -123,7 +123,7 @@ proxy-groups:
       - 秋高气爽 39
   - name: ♻️ 自动选择
     type: url-test
-    url: http://www.gstatic.com/generate_204
+    url: https://www.apple.com/library/test/success.html
     interval: 300
     tolerance: 50
     proxies:
