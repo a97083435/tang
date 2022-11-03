@@ -50,14 +50,13 @@ proxies:
 
   - {name: 秋高气爽 24, server: 37.252.1.197, port: 8010, username: 2597665, password: 8c3466, type: http, udp: true}
   - {name: 秋高气爽 25, type: trojan, server: 112.fastea.top, port: 53316, password: 38bafedf-2394-4380-aa1e-d1c5b8b49457, udp: true, skip-cert-verify: true }
+  - {name: 秋高气爽 26, server: uk2.epicbrowser.net, port: 8888, type: http, tls: true, skip-cert-verify: false, udp: true}
 
-  - {"type":"http","name":"秋高气爽 26","server":"h3816tw.strongpipe.live","port":20448,"username":"dcf12c7e7d","password":"26bae9b023","tls":true,"skip-cert-verify":true,"udp":true}
+  - {name: 秋高气爽 27, server: ca.epicbrowser.net, port: 8888, type: http, tls: true, skip-cert-verify: false, udp: true}
 
-  - {"type":"http","name":"秋高气爽 27","server":"h3816tw.strongpipe.live","port":20443,"username":"dcf12c7e7d","password":"26bae9b023","tls":true,"skip-cert-verify":true,"udp":true}
+  - {name: 秋高气爽 28, server: ca2.epicbrowser.net, port: 8888, type: http, tls: true, skip-cert-verify: false, udp: true}
 
-  - {"type":"http","name":"秋高气爽 28","server":"h3816tw.strongpipe.live","port":20445,"username":"dcf12c7e7d","password":"26bae9b023","tls":true,"skip-cert-verify":true,"udp":true}
-
-  - {"type":"http","name":"秋高气爽 29","server":"h3816tw.strongpipe.live","port":20446,"username":"dcf12c7e7d","password":"26bae9b023","tls":true,"skip-cert-verify":true,"udp":true}
+  - {name: 秋高气爽 29, server: ca3.epicbrowser.net, port: 8888, type: http, tls: true, skip-cert-verify: false, udp: true}
 
   - {"type":"http","name":"秋高气爽 30","server":"h3816tw.strongpipe.live","port":20444,"username":"dcf12c7e7d","password":"26bae9b023","tls":true,"skip-cert-verify":true,"udp":true}
 
