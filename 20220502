@@ -17,13 +17,13 @@ proxies:
   - {name: 秋高气爽 6, server: 37.252.1.197, port: 3000, type: vmess, uuid: 6f7ae49c-f5e2-4ec2-ac5e-38f057d51fee, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: tcp, udp: true}
   - {"type":"vmess","name":"秋高气爽 7","server":"pf.napsternetv.com","port":"40046","uuid":"2F094845-E2BD-EBF7-DEB7-995992436FAF","alterId":"0","cipher":"auto","network":"tcp","tls":true}
 
-  - {"type":"vmess","name":"秋高气爽 8","ws-opts":{"path":"/je5x3pBN1vez3NQudNkB","headers":{"host":"node.inforun.work"}},"server":"asswb-1036-v2-1.hkg-d-kcd.nd.cjhh.mom","port":"888","uuid":"caac6285-511c-4a07-b6db-edfbdcfe3889","alterId":"0","cipher":"auto","network":"ws","tls":true}
+  - {name: 秋高气爽 8, server: 141.101.114.120, port: 443, type: vmess, uuid: 33aa57df-1c93-4318-9fce-e850437ee781, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /dongtaiwang.com, headers: {Host: lg1.cfcdn3.xyz}}}
 
-  - {"type":"vmess","name":"秋高气爽 9","server":"221.181.185.153","port":"16111","uuid":"f1d39fe1-bfa3-34ff-86a2-29250af03183","alterId":"0","cipher":"auto","network":"tcp"}
+  - {name: 秋高气爽 9, server: 198.41.212.100, port: 443, type: vmess, uuid: 33aa57df-1c93-4318-9fce-e850437ee781, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /dongtaiwang.com, headers: {Host: lg1.cfcdn3.xyz}}}
 
-  - {"type":"vmess","name":"秋高气爽 10","server":"pf.napsternetv.com","port":"40044","uuid":"146F020E-8A44-6496-9C0A-485332654418","alterId":"0","cipher":"auto","network":"tcp","tls":true}
+  - {name: 秋高气爽 10, server: 198.41.212.100, port: 443, type: vmess, uuid: 176b598f-445b-41ac-9d2a-430c5c4df26a, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /dongtaiwang.com, headers: {Host: clash1.trump2023.net}}}
 
-  - {"type":"vmess","name":"秋高气爽 11","ws-opts":{"path":"/v2ray","headers":{"host":"idnusa2.vpn-akcelluler.my.id"}},"server":"idnusa2.vpn-akcelluler.my.id","port":"443","uuid":"fc9c12e0-f4f2-4fc4-a30e-fc488bac7121","alterId":"0","cipher":"auto","network":"ws","tls":true}
+  - {name: 秋高气爽 11, server: 141.101.115.20, port: 443, type: vmess, uuid: 176b598f-445b-41ac-9d2a-430c5c4df26a, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /dongtaiwang.com, headers: {Host: clash1.trump2023.net}}}
 
   - {"type":"vmess","name":"秋高气爽 12","ws-opts":{"path":"/guolicheng/us1","headers":{"host":"www.189.cn"}},"server":"223.111.122.199","port":"38080","uuid":"6248895b-4255-4f07-9479-d198bc1eb8db","alterId":"0","cipher":"auto","network":"ws"}
   - {"type":"vmess","name":"秋高气爽 13","server":"37.252.1.197","port":"3000","uuid":"6f7ae49c-f5e2-4ec2-ac5e-38f057d51fee","alterId":"0","cipher":"auto","network":"tcp"}
