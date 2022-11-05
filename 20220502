@@ -58,23 +58,31 @@ proxies:
 
   - {name: 秋高气爽 29, server: ca3.epicbrowser.net, port: 8888, type: http, tls: true, skip-cert-verify: false, udp: true}
 
-  - {name: 秋高气爽 30, server: uk.epicbrowser.net, port: 8888, type: http, tls: true, skip-cert-verify: false, udp: true}
+  - {name: 秋高气爽 30, type: trojan, server: sg.520748.xyz, port: 10002, password: dffb4522-2ead-4b92-9ac3-001c88f53f79, udp: true, sni: sg.520748.xyz, skip-cert-verify: true }
 
-  - {"type":"http","name":"秋高气爽 31","server":"h961359.strongpipe.live","port":11544,"username":"dcf12c7e7d","password":"26bae9b023","tls":true,"skip-cert-verify":true,"udp":true}
+  - {name: 秋高气爽 31, type: ss, server: gzct.daodecloud.com, port: 38332, cipher: chacha20-ietf-poly1305, password: dffb4522-2ead-4b92-9ac3-001c88f53f79, udp: true }
 
-  - {"type":"http","name":"秋高气爽 32","server":"h3816tw.strongpipe.live","port":20449,"username":"dcf12c7e7d","password":"26bae9b023","tls":true,"skip-cert-verify":true,"udp":true}
-  - {name: 秋高气爽 33, type: vmess, server: 3.145.97.59, port: 43632, uuid: 1d2978ba-30ba-4b64-8699-9ba6ba3cd4e8, alterId: 0, cipher: auto, udp: true }
-  - {"type":"http","name":"秋高气爽 34","server":"h961359.strongpipe.live","port":11543,"username":"dcf12c7e7d","password":"26bae9b023","tls":true,"skip-cert-verify":true,"udp":true}
+  - {name: 秋高气爽 32, type: trojan, server: sg2.520748.xyz, port: 10002, password: dffb4522-2ead-4b92-9ac3-001c88f53f79, udp: true, sni: sg.520748.xyz, skip-cert-verify: true }
 
-  - {"type":"http","name":"秋高气爽 35","server":"h961359.strongpipe.live","port":11545,"username":"dcf12c7e7d","password":"26bae9b023","tls":true,"skip-cert-verify":true,"udp":true}
+  - {name: 秋高气爽 33, type: ss, server: gzct.daodecloud.com, port: 38332, cipher: chacha20-ietf-poly1305, password: dffb4522-2ead-4b92-9ac3-001c88f53f79, udp: true }
 
-  - {"type":"http","name":"秋高气爽 36","server":"h961359.strongpipe.live","port":11243,"username":"dcf12c7e7d","password":"26bae9b023","tls":true,"skip-cert-verify":true,"udp":true}
+  - {name: 秋高气爽 34, type: trojan, server: us1.520748.xyz, port: 10002, password: dffb4522-2ead-4b92-9ac3-001c88f53f79, udp: true, sni: us1.520748.xyz, skip-cert-verify: true }
 
-  - {"type":"http","name":"秋高气爽 37","server":"h961359.strongpipe.live","port":11443,"username":"dcf12c7e7d","password":"26bae9b023","tls":true,"skip-cert-verify":true,"udp":true}
+  - {name: 秋高气爽 35, type: ss, server: gzct.daodecloud.com, port: 16666, cipher: chacha20-ietf-poly1305, password: dffb4522-2ead-4b92-9ac3-001c88f53f79, udp: true }
 
-  - {"type":"http","name":"秋高气爽 38","server":"h961359.strongpipe.live","port":11444,"username":"dcf12c7e7d","password":"26bae9b023","tls":true,"skip-cert-verify":true,"udp":true}
+  - {name: 秋高气爽 36, type: trojan, server: us2.520748.xyz, port: 10002, password: dffb4522-2ead-4b92-9ac3-001c88f53f79, udp: true, sni: us2.520748.xyz, skip-cert-verify: true }
 
-  - {name: 秋高气爽 39, server: lms.uin-antasari.ac.id, port: 80, type: vmess, uuid: 46bfdb59-83c6-4710-877e-c809b5a90dff, alterId: 0, cipher: auto, tls: false, network: ws, ws-opts: {path: /vpnneo, headers: {Host: ctn.nextvpn.cc}}}
+  - {name: 秋高气爽 37, type: ss, server: gzct.daodecloud.com, port: 15875, cipher: chacha20-ietf-poly1305, password: dffb4522-2ead-4b92-9ac3-001c88f53f79, udp: true }
+
+  - {name: 秋高气爽 38, type: ss, server: gzct.daodecloud.com, port: 12058, cipher: chacha20-ietf-poly1305, password: dffb4522-2ead-4b92-9ac3-001c88f53f79, udp: true }
+
+  - {name: 秋高气爽 39, type: ss, server: gzct.daodecloud.com, port: 25863, cipher: chacha20-ietf-poly1305, password: dffb4522-2ead-4b92-9ac3-001c88f53f79, udp: true }
+
+  - {name: 秋高气爽 40, type: ss, server: gzct.daodecloud.com, port: 21872, cipher: chacha20-ietf-poly1305, password: dffb4522-2ead-4b92-9ac3-001c88f53f79, udp: true }
+
+  - {name: 秋高气爽 41, type: ss, server: gzct.daodecloud.com, port: 30780, cipher: chacha20-ietf-poly1305, password: dffb4522-2ead-4b92-9ac3-001c88f53f79, udp: true }
+
+  - {name: 秋高气爽 42, type: ss, server: gzct.daodecloud.com, port: 41169, cipher: chacha20-ietf-poly1305, password: dffb4522-2ead-4b92-9ac3-001c88f53f79, udp: true }
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -120,6 +128,9 @@ proxy-groups:
       - 秋高气爽 37
       - 秋高气爽 38
       - 秋高气爽 39
+      - 秋高气爽 40
+      - 秋高气爽 41
+      - 秋高气爽 42
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -165,6 +176,9 @@ proxy-groups:
       - 秋高气爽 37
       - 秋高气爽 38
       - 秋高气爽 39
+      - 秋高气爽 40
+      - 秋高气爽 41
+      - 秋高气爽 42
   - name: 🌍 国外媒体
     type: select
     proxies:
@@ -210,6 +224,9 @@ proxy-groups:
       - 秋高气爽 37
       - 秋高气爽 38
       - 秋高气爽 39
+      - 秋高气爽 40
+      - 秋高气爽 41
+      - 秋高气爽 42
   - name: 📲 电报信息
     type: select
     proxies:
@@ -254,6 +271,9 @@ proxy-groups:
       - 秋高气爽 37
       - 秋高气爽 38
       - 秋高气爽 39
+      - 秋高气爽 40
+      - 秋高气爽 41
+      - 秋高气爽 42
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
@@ -298,6 +318,9 @@ proxy-groups:
       - 秋高气爽 37
       - 秋高气爽 38
       - 秋高气爽 39
+      - 秋高气爽 40
+      - 秋高气爽 41
+      - 秋高气爽 42
   - name: 🍎 苹果服务
     type: select
     proxies:
@@ -342,6 +365,9 @@ proxy-groups:
       - 秋高气爽 37
       - 秋高气爽 38
       - 秋高气爽 39
+      - 秋高气爽 40
+      - 秋高气爽 41
+      - 秋高气爽 42
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -403,6 +429,9 @@ proxy-groups:
       - 秋高气爽 37
       - 秋高气爽 38
       - 秋高气爽 39
+      - 秋高气爽 40
+      - 秋高气爽 41
+      - 秋高气爽 42
 rules:
   - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
   - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
