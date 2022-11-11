@@ -56,13 +56,138 @@ proxies:
 
   - {name: 秋高气爽 29, server: ca3.epicbrowser.net, port: 8888, type: http, tls: true, skip-cert-verify: false, udp: true}
 
-  - {name: 秋高气爽 30, type: vmess, server: jjs.xbywwcp.us, port: 80, uuid: 5455ca11-c8d3-3231-b0c6-45c739786b2a, alterId: 0, cipher: auto, udp: true，servername: a.189.cn, network: ws, ws-path: /by.xbygood.xyz, ws-headers:, Host: a.189.cn, ws-opts:, path: /by.xbygood.xyz, headers: { Host: a.189.cn }}
+  -
 
-  - {name: 秋高气爽 31, type: ss, server: gzct.daodecloud.com, port: 38332, cipher: chacha20-ietf-poly1305, password: dffb4522-2ead-4b92-9ac3-001c88f53f79, udp: true }
+    name: 秋高气爽 30
 
-  - {name: 秋高气爽 32, type: trojan, server: sg2.520748.xyz, port: 10002, password: dffb4522-2ead-4b92-9ac3-001c88f53f79, udp: true, sni: sg.520748.xyz, skip-cert-verify: true }
+    type: vmess
 
-  - {name: 秋高气爽 33, type: ss, server: gzct.daodecloud.com, port: 38332, cipher: chacha20-ietf-poly1305, password: dffb4522-2ead-4b92-9ac3-001c88f53f79, udp: true }
+    server: ld.xbywwcp.us
+
+    port: 25800
+
+    uuid: 5455ca11-c8d3-3231-b0c6-45c739786b2a
+
+    alterId: 0
+
+    cipher: auto
+
+    udp: true
+
+    network: ws
+
+    ws-path: /by.xbygood.xyz
+
+    ws-headers:
+
+      Host: ld.xbywwcp.us
+
+    ws-opts:
+
+      path: /by.xbygood.xyz
+
+      headers: { Host: ld.xbywwcp.us }
+
+  -
+
+    name: 秋高气爽 31
+
+    type: vmess
+
+    server: jjs.xbywwcp.us
+
+    port: 80
+
+    uuid: 5455ca11-c8d3-3231-b0c6-45c739786b2a
+
+    alterId: 0
+
+    cipher: auto
+
+    udp: true
+
+    servername: a.189.cn
+
+    network: ws
+
+    ws-path: /by.xbygood.xyz
+
+    ws-headers:
+
+      Host: a.189.cn
+
+    ws-opts:
+
+      path: /by.xbygood.xyz
+
+      headers: { Host: a.189.cn }
+
+  -
+
+    name: 秋高气爽 32
+
+    type: vmess
+
+    server: mgny2.xbywwcp.us
+
+    port: 80
+
+    uuid: 5455ca11-c8d3-3231-b0c6-45c739786b2a
+
+    alterId: 0
+
+    cipher: auto
+
+    udp: true
+
+    servername: a.189.cn
+
+    network: ws
+
+    ws-path: /by.xbygood.xyz
+
+    ws-headers:
+
+      Host: a.189.cn
+
+    ws-opts:
+
+      path: /by.xbygood.xyz
+
+      headers: { Host: a.189.cn }
+
+  -
+
+    name: 秋高气爽 33
+
+    type: vmess
+
+    server: mg1.xbywwcp.us
+
+    port: 80
+
+    uuid: 5455ca11-c8d3-3231-b0c6-45c739786b2a
+
+    alterId: 0
+
+    cipher: auto
+
+    udp: true
+
+    network: ws
+
+    ws-path: /by.xbygood.xyz
+
+    ws-headers:
+
+      Host: mg1.xbywwcp.us
+
+    ws-opts:
+
+      path: /by.xbygood.xyz
+
+      headers: { Host: mg1.xbywwcp.us }
+
 
   - {name: 秋高气爽 34, type: trojan, server: us1.520748.xyz, port: 10002, password: dffb4522-2ead-4b92-9ac3-001c88f53f79, udp: true, sni: us1.520748.xyz, skip-cert-verify: true }
 
