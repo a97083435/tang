@@ -56,148 +56,23 @@ proxies:
 
   - {name: 秋高气爽 29, server: ca3.epicbrowser.net, port: 8888, type: http, tls: true, skip-cert-verify: false, udp: true}
 
-  -
+  - {name: 秋高气爽 30, type: vmess, server: v1.583181.xyz, port: '125', uuid: 9ccfcf7b-42e5-4221-8c97-ec10ddef370f, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /, headers: { Host: pull.free.video.10010.com } }, ws-path: /, ws-headers: { Host: pull.free.video.10010.com } }
 
-    name: 秋高气爽 30
+  - {name: 秋高气爽 31, type: vmess, server: v131.583181.xyz, port: '4431', uuid: 9ccfcf7b-42e5-4221-8c97-ec10ddef370f, alterId: 0, cipher: auto, udp: true, tls: true, skip-cert-verify: true, servername: v13.583181.xyz, network: ws, ws-opts: { path: /, headers: { Host: v13.583181.xyz } }, ws-path: /, ws-headers: { Host: v13.583181.xyz } }
 
-    type: vmess
+  - {name: 秋高气爽 32, type: vmess, server: v14.583181.xyz, port: '8443', uuid: 9ccfcf7b-42e5-4221-8c97-ec10ddef370f, alterId: 0, cipher: auto, udp: true, tls: true, skip-cert-verify: true, servername: v14.583181.xyz, network: ws, ws-opts: { path: /, headers: { Host: v14.583181.xyz } }, ws-path: /, ws-headers: { Host: v14.583181.xyz } }
 
-    server: ld.xbywwcp.us
+  - {name: 秋高气爽 33, type: vmess, server: v151.583181.xyz, port: '4432', uuid: 9ccfcf7b-42e5-4221-8c97-ec10ddef370f, alterId: 0, cipher: auto, udp: true, tls: true, skip-cert-verify: true, servername: v15.583181.xyz, network: ws, ws-opts: { path: /, headers: { Host: v15.583181.xyz } }, ws-path: /, ws-headers: { Host: v15.583181.xyz } }
 
-    port: 25800
+  - {name: 秋高气爽 34, type: vmess, server: v161.583181.xyz, port: '8443', uuid: 9ccfcf7b-42e5-4221-8c97-ec10ddef370f, alterId: 0, cipher: auto, udp: true, tls: true, skip-cert-verify: true, servername: v16.583181.xyz, network: ws, ws-opts: { path: /, headers: { Host: v16.583181.xyz } }, ws-path: /, ws-headers: { Host: v16.583181.xyz } }
 
-    uuid: 5455ca11-c8d3-3231-b0c6-45c739786b2a
+  - {name: 秋高气爽 35, type: vmess, server: v3.583181.xyz, port: '125', uuid: 9ccfcf7b-42e5-4221-8c97-ec10ddef370f, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /, headers: { Host: pull.free.video.10010.com } }, ws-path: /, ws-headers: { Host: pull.free.video.10010.com } }
 
-    alterId: 0
+  - {name: 秋高气爽 36, type: vmess, server: v4.583181.xyz, port: '126', uuid: 9ccfcf7b-42e5-4221-8c97-ec10ddef370f, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /, headers: { Host: pull.free.video.10010.com } }, ws-path: /, ws-headers: { Host: pull.free.video.10010.com } }
 
-    cipher: auto
+  - {name: 秋高气爽 37, type: vmess, server: v5.583181.xyz, port: '443', uuid: 9ccfcf7b-42e5-4221-8c97-ec10ddef370f, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /, headers: { Host: pull.free.video.10010.com } }, ws-path: /, ws-headers: { Host: pull.free.video.10010.com } }
 
-    udp: true
-
-    network: ws
-
-    ws-path: /by.xbygood.xyz
-
-    ws-headers:
-
-      Host: ld.xbywwcp.us
-
-    ws-opts:
-
-      path: /by.xbygood.xyz
-
-      headers: { Host: ld.xbywwcp.us }
-
-  -
-
-    name: 秋高气爽 31
-
-    type: vmess
-
-    server: jjs.xbywwcp.us
-
-    port: 80
-
-    uuid: 5455ca11-c8d3-3231-b0c6-45c739786b2a
-
-    alterId: 0
-
-    cipher: auto
-
-    udp: true
-
-    servername: a.189.cn
-
-    network: ws
-
-    ws-path: /by.xbygood.xyz
-
-    ws-headers:
-
-      Host: a.189.cn
-
-    ws-opts:
-
-      path: /by.xbygood.xyz
-
-      headers: { Host: a.189.cn }
-
-  -
-
-    name: 秋高气爽 32
-
-    type: vmess
-
-    server: mgny2.xbywwcp.us
-
-    port: 80
-
-    uuid: 5455ca11-c8d3-3231-b0c6-45c739786b2a
-
-    alterId: 0
-
-    cipher: auto
-
-    udp: true
-
-    servername: a.189.cn
-
-    network: ws
-
-    ws-path: /by.xbygood.xyz
-
-    ws-headers:
-
-      Host: a.189.cn
-
-    ws-opts:
-
-      path: /by.xbygood.xyz
-
-      headers: { Host: a.189.cn }
-
-  -
-
-    name: 秋高气爽 33
-
-    type: vmess
-
-    server: mg1.xbywwcp.us
-
-    port: 80
-
-    uuid: 5455ca11-c8d3-3231-b0c6-45c739786b2a
-
-    alterId: 0
-
-    cipher: auto
-
-    udp: true
-
-    network: ws
-
-    ws-path: /by.xbygood.xyz
-
-    ws-headers:
-
-      Host: mg1.xbywwcp.us
-
-    ws-opts:
-
-      path: /by.xbygood.xyz
-
-      headers: { Host: mg1.xbywwcp.us }
-
-
-  - {name: 秋高气爽 34, type: trojan, server: us1.520748.xyz, port: 10002, password: dffb4522-2ead-4b92-9ac3-001c88f53f79, udp: true, sni: us1.520748.xyz, skip-cert-verify: true }
-
-  - {name: 秋高气爽 35, type: ss, server: gzct.daodecloud.com, port: 16666, cipher: chacha20-ietf-poly1305, password: dffb4522-2ead-4b92-9ac3-001c88f53f79, udp: true }
-
-  - {name: 秋高气爽 36, type: trojan, server: us2.520748.xyz, port: 10002, password: dffb4522-2ead-4b92-9ac3-001c88f53f79, udp: true, sni: us2.520748.xyz, skip-cert-verify: true }
-
-  - {name: 秋高气爽 37, type: ss, server: gzct.daodecloud.com, port: 15875, cipher: chacha20-ietf-poly1305, password: dffb4522-2ead-4b92-9ac3-001c88f53f79, udp: true }
-
-  - {name: 秋高气爽 38, type: ss, server: gzct.daodecloud.com, port: 12058, cipher: chacha20-ietf-poly1305, password: dffb4522-2ead-4b92-9ac3-001c88f53f79, udp: true }
+  - {name: 秋高气爽 38, type: vmess, server: v2.583181.xyz, port: '80', uuid: 9ccfcf7b-42e5-4221-8c97-ec10ddef370f, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /, headers: { Host: pull.free.video.10010.com } }, ws-path: /, ws-headers: { Host: pull.free.video.10010.com } }
 
   - {name: 秋高气爽 39, type: ss, server: gzct.daodecloud.com, port: 25863, cipher: chacha20-ietf-poly1305, password: dffb4522-2ead-4b92-9ac3-001c88f53f79, udp: true }
 
