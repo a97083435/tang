@@ -52,17 +52,17 @@ proxies:
 
   - {name: 秋高气爽 29, server: ca3.epicbrowser.net, port: 8888, type: http, tls: true, skip-cert-verify: false, udp: true}
 
-  - {name: 秋高气爽 30, type: vmess, server: v1.583181.xyz, port: '125', uuid: 9ccfcf7b-42e5-4221-8c97-ec10ddef370f, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /, headers: { Host: pull.free.video.10010.com } }, ws-path: /, ws-headers: { Host: pull.free.video.10010.com } }
+  - {name: 秋高气爽 30, server: 183.255.114.164, port: 21005, type: trojan, password: f97edc29-1c8b-49d7-80b2-c246984a6f64, sni: 65-108-102-32.nhost.00cdn.com, skip-cert-verify: true}
 
-  - {name: 秋高气爽 31, type: vmess, server: v131.583181.xyz, port: '4431', uuid: 9ccfcf7b-42e5-4221-8c97-ec10ddef370f, alterId: 0, cipher: auto, udp: true, tls: true, skip-cert-verify: true, servername: v13.583181.xyz, network: ws, ws-opts: { path: /, headers: { Host: v13.583181.xyz } }, ws-path: /, ws-headers: { Host: v13.583181.xyz } }
+  - {name: 秋高气爽 31, server: 183.255.114.164, port: 21002, type: trojan, password: f97edc29-1c8b-49d7-80b2-c246984a6f64, sni: 65-108-102-32.nhost.00cdn.com, skip-cert-verify: true}
 
-  - {name: 秋高气爽 32, type: vmess, server: v14.583181.xyz, port: '8443', uuid: 9ccfcf7b-42e5-4221-8c97-ec10ddef370f, alterId: 0, cipher: auto, udp: true, tls: true, skip-cert-verify: true, servername: v14.583181.xyz, network: ws, ws-opts: { path: /, headers: { Host: v14.583181.xyz } }, ws-path: /, ws-headers: { Host: v14.583181.xyz } }
+  - {name: 秋高气爽 32, server: 110.80.3.24, port: 21004, type: trojan, password: f97edc29-1c8b-49d7-80b2-c246984a6f64, sni: 65-108-102-32.nhost.00cdn.com, skip-cert-verify: true}
 
-  - {name: 秋高气爽 33, type: vmess, server: v151.583181.xyz, port: '4432', uuid: 9ccfcf7b-42e5-4221-8c97-ec10ddef370f, alterId: 0, cipher: auto, udp: true, tls: true, skip-cert-verify: true, servername: v15.583181.xyz, network: ws, ws-opts: { path: /, headers: { Host: v15.583181.xyz } }, ws-path: /, ws-headers: { Host: v15.583181.xyz } }
+  - {name: 秋高气爽 33, server: 110.80.3.24, port: 21003, type: trojan, password: f97edc29-1c8b-49d7-80b2-c246984a6f64, sni: 65-108-102-32.nhost.00cdn.com, skip-cert-verify: true}
 
-  - {name: 秋高气爽 34, type: vmess, server: v161.583181.xyz, port: '8443', uuid: 9ccfcf7b-42e5-4221-8c97-ec10ddef370f, alterId: 0, cipher: auto, udp: true, tls: true, skip-cert-verify: true, servername: v16.583181.xyz, network: ws, ws-opts: { path: /, headers: { Host: v16.583181.xyz } }, ws-path: /, ws-headers: { Host: v16.583181.xyz } }
+  - {name: 秋高气爽 34, server: 110.80.3.24, port: 21002, type: trojan, password: f97edc29-1c8b-49d7-80b2-c246984a6f64, sni: 65-108-102-32.nhost.00cdn.com, skip-cert-verify: true}
 
-  - {name: 秋高气爽 35, type: vmess, server: v3.583181.xyz, port: '125', uuid: 9ccfcf7b-42e5-4221-8c97-ec10ddef370f, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /, headers: { Host: pull.free.video.10010.com } }, ws-path: /, ws-headers: { Host: pull.free.video.10010.com } }
+  - {name: 秋高气爽 35, server: 183.255.114.164, port: 61004, type: trojan, password: f97edc29-1c8b-49d7-80b2-c246984a6f64, sni: 65-108-102-32.nhost.00cdn.com, skip-cert-verify: true}
 
   - {name: 秋高气爽 36, type: vmess, server: v4.583181.xyz, port: '126', uuid: 9ccfcf7b-42e5-4221-8c97-ec10ddef370f, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /, headers: { Host: pull.free.video.10010.com } }, ws-path: /, ws-headers: { Host: pull.free.video.10010.com } }
 
