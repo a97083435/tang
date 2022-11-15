@@ -28,7 +28,7 @@ proxies:
   - {name: 秋高气爽 14, server: 51.81.220.195, port: 80, type: vmess, uuid: 6fea1649-425b-4092-bf53-29792152c925, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /sshkit/Variu88/634dab7abadf1/, headers: {Host: "%7B%22Host%22:%2251.81.220.195%22%7D"}}, udp: true}
   - {name: 秋高气爽 15, server: 119.247.119.212, port: 443, type: trojan, password: !<str> 123456, sni: trojan-ctb-sg01.globalssh.xyz, skip-cert-verify: true, udp: true}
   - {name: 秋高气爽 16, server: 128.14.140.254, port: 443, type: vmess, uuid: 02ddd27e-cb08-424d-8279-d02bf11b0342, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /123, headers: {Host: zz1.wblogw1.tk}}, udp: true}
-  - {"type":"vmess","name":"秋高气爽 17","ws-opts":{"path":"/sshocean","headers":{"host":"ca2.v2rayserv.com"}},"server":"ca2.v2rayserv.com","port":"80","uuid":"e3eba3ac-5bea-409f-ac5c-6c964e04d0c4","alterId":"0","cipher":"auto","network":"ws"}
+  - {name: 秋高气爽 17, server: jp3.elknode.top, port: 10000, type: trojan, password: 1eded6fc-8b28-33df-a93f-6491de5f7a12, sni: jp3.elknode.top, skip-cert-verify: false}
 
   - {name: 秋高气爽 18, type: vmess, server: us2.mybestjj.com, port: '443', uuid: c4639c0f-49fc-4b33-8d7f-e27575c16d7a, alterId: 0, cipher: auto, udp: true, tls: true, network: ws, ws-opts: { path: /1654431, headers: { Host: us1.mybestjj.com } }, ws-path: /1654431, ws-headers: { Host: us1.mybestjj.com } }
 
@@ -64,10 +64,8 @@ proxies:
 
   - {name: 秋高气爽 35, server: 183.255.114.164, port: 61004, type: trojan, password: f97edc29-1c8b-49d7-80b2-c246984a6f64, sni: 65-108-102-32.nhost.00cdn.com, skip-cert-verify: true}
 
-  - {name: 秋高气爽 36, type: vmess, server: v4.583181.xyz, port: '126', uuid: 9ccfcf7b-42e5-4221-8c97-ec10ddef370f, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /, headers: { Host: pull.free.video.10010.com } }, ws-path: /, ws-headers: { Host: pull.free.video.10010.com } }
-
-  - {name: 秋高气爽 37, type: vmess, server: v5.583181.xyz, port: '443', uuid: 9ccfcf7b-42e5-4221-8c97-ec10ddef370f, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /, headers: { Host: pull.free.video.10010.com } }, ws-path: /, ws-headers: { Host: pull.free.video.10010.com } }
-
+  - {name: 秋高气爽 36, server: kr3.sexoo.xyz, port: 60666, type: trojan, password: 473def74-c926-4007-81a4-e692a051c9ab, sni: kr3.sexoo.xyz, skip-cert-verify: false}
+  - {name: 秋高气爽 37, server: myjp.brucean.cn, port: 443, type: vmess, uuid: e093b2a2-a8f3-4fca-bfe9-00583387e767, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: myjp.brucean.cn}}}
   - {name: 秋高气爽 38, type: vmess, server: v2.583181.xyz, port: '80', uuid: 9ccfcf7b-42e5-4221-8c97-ec10ddef370f, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /, headers: { Host: pull.free.video.10010.com } }, ws-path: /, ws-headers: { Host: pull.free.video.10010.com } }
 
   - {name: 秋高气爽 39, type: ss, server: gzct.daodecloud.com, port: 25863, cipher: chacha20-ietf-poly1305, password: dffb4522-2ead-4b92-9ac3-001c88f53f79, udp: true }
