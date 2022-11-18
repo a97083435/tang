@@ -14,9 +14,8 @@ proxies:
   - {name: 秋高气爽 4, server: ap-northeast.6641634715834932.me, port: 443, type: trojan, password: 89cd0b3e-b9c1-4f76-8a96-0a6c6d1e8f71, sni: wel-hk.optage.moe, skip-cert-verify: true}
 
   - {name: 秋高气爽 5, server: ap-northeast.6641634715834932.me, port: 443, type: trojan, password: 89cd0b3e-b9c1-4f76-8a96-0a6c6d1e8f71, sni: wel-us.optage.moe, skip-cert-verify: true} 
-  - {name: 秋高气爽 6, server: 37.252.1.197, port: 3000, type: vmess, uuid: 6f7ae49c-f5e2-4ec2-ac5e-38f057d51fee, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: tcp, udp: true}
-  - {name: 秋高气爽 7, server: sg.ipv6.securevpn.cc, port: 1020, type: ss, cipher: aes-128-gcm, password: !<str> 202211000000000000000020, plugin: obfs, plugin-opts: {mode: http, host: securevpn.cc}}
-
+  - {name: 秋高气爽 6, server: ap-northeast.6641634715834932.me, port: 443, type: trojan, password: 89cd0b3e-b9c1-4f76-8a96-0a6c6d1e8f71, sni: wel-hk.optage.moe, skip-cert-verify: true}
+  - {name: 秋高气爽 7, server: ap-northeast.6641634715834932.me, port: 443, type: trojan, password: 89cd0b3e-b9c1-4f76-8a96-0a6c6d1e8f71, sni: wel-jp.optage.moe, skip-cert-verify: true}
   - {name: 秋高气爽 8, server: dosg.securevpn.cc, port: 1020, type: ss, cipher: aes-128-gcm, password: !<str> 202211000000000000000020, plugin: obfs, plugin-opts: {mode: http, host: securevpn.cc}}
 
   - {name: 秋高气爽 9, server: 198.41.212.100, port: 443, type: vmess, uuid: 33aa57df-1c93-4318-9fce-e850437ee781, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /dongtaiwang.com, headers: {Host: lg1.cfcdn3.xyz}}}
