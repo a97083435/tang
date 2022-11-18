@@ -81,7 +81,6 @@ proxies:
   - {name: 秋高气爽44, server: 184.170.213.204, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: dqlr7JCgDrOK}
   - {name: 秋高气爽45, server: 45.78.66.108, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: ppOxjbvryQ49}
   - {name: 秋高气爽46, server: 104.128.80.237, port: 443, type: ss, cipher: chacha20-ietf-poly1305, password: ZtoIGrJDMA95}
-
 proxy-groups:
   - name: 🚀 节点选择
     type: select
