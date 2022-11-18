@@ -5,38 +5,73 @@ mode: Rule
 log-level: info
 external-controller: 0.0.0.0:9090
 proxies:
-  - {"type":"vmess","name":"Alien","server":"37.252.1.197","port":"3000","uuid":"6f7ae49c-f5e2-4ec2-ac5e-38f057d51fee","alterId":"0","cipher":"auto","network":"tcp"}
-  - {"type":"vmess","name":"秋高气爽1","server":"4.hk.zz.xxxxx.x-t-fuckword.network","port":"36676","uuid":"244effd9-0204-3c4a-8537-0dca4e5fd9b5","alterId":"0","cipher":"auto","network":"tcp"}
-  - {"type":"vmess","name":"秋高气爽2","server":"3.sg.zz.xxxxx.x-t-fuckword.network","port":"36679","uuid":"244effd9-0204-3c4a-8537-0dca4e5fd9b5","alterId":"0","cipher":"auto","network":"tcp"}
-  - {"type":"vmess","name":"秋高气爽3","ws-opts":{"path":"/ray","headers":{"host":"sgarm.ptuu.cf"}},"server":"42.186.175.8","port":"443","uuid":"a928a26c-2adb-45fe-e57d-8a27dade309e","alterId":"0","cipher":"auto","network":"ws","tls":true}
-  - {"type":"vmess","name":"秋高气爽4","server":"bgroup.node4.v.nodelist-gfwairport.download","port":"50001","uuid":"5c9bdf2e-5925-451a-9f46-294eb6243756","alterId":"0","cipher":"auto","network":"tcp"}
-  - {"type":"ss","name":"秋高气爽5","server":"bgroup.node4.s.nodelist-gfwairport.download","port":50001,"cipher":"chacha20-ietf-poly1305","password":"5c9bdf2e-5925-451a-9f46-294eb6243756"}
-  - {"type":"vless","name":"秋高气爽7","server":"sdscb.ml","port":24683,"uuid":"153a0c4d-d6c1-4d6f-f291-afbbb41ae9d3","skip-cert-verify":true,"udp":true,"tls":true,"network":"ws","servername":"down.dingtalk.com","ws-opts":{"path":"/","headers":{"host":"down.dingtalk.com"}}}
-  - {"type":"vmess","name":"秋高气爽8","server":"youtube-bai-piao-wang-zhe-usa.98848.xyz","port":"42865","uuid":"432d5d8c-13f5-45c5-9343-dad073495fc3","alterId":"0","cipher":"auto","network":"kcp"}
-  - {"type":"vless","name":"秋高气爽9","server":"sdscb.ml","port":24683,"uuid":"153a0c4d-d6c1-4d6f-f291-afbbb41ae9d3","skip-cert-verify":true}
-  - {"type":"ss","name":"秋高气爽10","server":"bgroup.node2.s.nodelist-gfwairport.download","port":50001,"cipher":"chacha20-ietf-poly1305","password":"5c9bdf2e-5925-451a-9f46-294eb6243756"}
-  - {"type":"vmess","name":"秋高气爽11","server":"bgroup.node2.v.nodelist-gfwairport.download","port":"50001","uuid":"5c9bdf2e-5925-451a-9f46-294eb6243756","alterId":"0","cipher":"auto","network":"tcp"}
-  - {"type":"vmess","name":"秋高气爽12","server":"bgroup.node5.v.nodelist-gfwairport.download","port":"50001","uuid":"5c9bdf2e-5925-451a-9f46-294eb6243756","alterId":"0","cipher":"auto","network":"tcp"}
-  - {"type":"ss","name":"秋高气爽13","server":"bgroup.node5.s.nodelist-gfwairport.download","port":50001,"cipher":"chacha20-ietf-poly1305","password":"5c9bdf2e-5925-451a-9f46-294eb6243756"}
-  - {"type":"trojan","name":"秋高气爽14","server":"youtube-bai-piao-wang-zhe-usa.98848.xyz","port":17449,"password":"yBq0efi1j7","udp":true,"skip-cert-verify":true}
-  - {"type":"ss","name":"秋高气爽15","server":"89.185.85.145","port":18888,"cipher":"chacha20-ietf-poly1305","password":"5595f1cf-d7c0-4121-a3bf-19e423c1f9a1"}
-  - {"type":"vmess","name":"秋高气爽16","server":"nnv.chitacdn.xyz","port":"54242","uuid":"f2393d82-94c4-4b12-8267-293a7500e487","alterId":"0","cipher":"auto","network":"tcp"}
-  - {"type":"vless","name":"秋高气爽17","server":"ukibm.ptuu.ga","port":443,"uuid":"ab48d74d27bf45eca577b821c9a79577","skip-cert-verify":true,"udp":true,"tls":true,"network":"ws","servername":"ukibm.ptuu.ga","ws-opts":{"path":"PATH","headers":{"host":"ukibm.ptuu.ga"}}}
-  - {"type":"vmess","name":"秋高气爽18","server":"129.159.41.233","port":"32586","uuid":"341a9182-c423-499c-c46e-d17838b29037","alterId":"0","cipher":"auto","network":"tcp"}
-  - {"type":"vmess","name":"秋高气爽25","ws-opts":{"path":"/b7b1f689-f82e-4ce4-97e7-8a8997370e44-vmess","headers":{"host":"free-godlikeanyone.koyeb.app"}},"server":"free-godlikeanyone.koyeb.app","port":"443","uuid":"b7b1f689-f82e-4ce4-97e7-8a8997370e44","alterId":"0","cipher":"auto","network":"ws","tls":true}
-  - {"type":"vmess","name":"sg1.31vpn.com","ws-opts":{"path":"/fastssh/a471686674/632caa9030f6a/"},"server":"sg1.31vpn.com","port":"80","uuid":"dce4c472-6f3f-4c45-80e5-cbfe5ecad7ee","alterId":"0","cipher":"auto","network":"ws"}
-  - {"type":"vmess","name":"秋高气爽26","ws-opts":{"path":"/","headers":{"host":"gcore.v2ray.online"}},"server":"31.184.207.7","port":"443","uuid":"146F020E-8A44-6496-9C0A-485332654418","alterId":"0","cipher":"auto","network":"ws","tls":true}
-  - {"type":"vmess","name":"秋高气爽27","server":"149.57.218.16","port":"41443","uuid":"146F020E-8A44-6496-9C0A-485332654418","alterId":"0","cipher":"auto","network":"tcp","tls":true}
-  - {"type":"vmess","name":"秋高气爽28","server":"88.210.37.106","port":"41443","uuid":"146F020E-8A44-6496-9C0A-485332654418","alterId":"0","cipher":"auto","network":"tcp","tls":true}
-  - {"type":"vmess","name":"秋高气爽29","server":"213.226.71.174","port":"41443","uuid":"146F020E-8A44-6496-9C0A-485332654418","alterId":"0","cipher":"auto","network":"tcp","tls":true}
-  - {"type":"vmess","name":"秋高气爽30","server":"103.173.178.110","port":"41443","uuid":"146F020E-8A44-6496-9C0A-485332654418","alterId":"0","cipher":"auto","network":"tcp","tls":true}
-  - {"type":"vmess","name":"秋高气爽32","server":"80.66.64.17","port":"41443","uuid":"146F020E-8A44-6496-9C0A-485332654418","alterId":"0","cipher":"auto","network":"tcp","tls":true}
-  - {"type":"vmess","name":"秋高气爽31","server":"89.208.105.63","port":"41443","uuid":"146F020E-8A44-6496-9C0A-485332654418","alterId":"0","cipher":"auto","network":"tcp","tls":true}
-  - {"type":"vmess","name":"秋高气爽33","server":"94.177.8.87","port":"41443","uuid":"146F020E-8A44-6496-9C0A-485332654418","alterId":"0","cipher":"auto","network":"tcp","tls":true}
+  - {name: 秋高气爽 1, server: 183.60.211.67, port: 6017, type: ssr, cipher: rc4-md5, password: di15PV, protocol: auth_aes128_md5, obfs: plain, protocol-param: 87993:SkSHlj, obfs-param: t.me/vpnhat}
+
+  - {name: 秋高气爽 2, server: 183.60.211.70, port: 6017, type: ssr, cipher: rc4-md5, password: di15PV, protocol: auth_aes128_md5, obfs: plain, protocol-param: 87993:SkSHlj, obfs-param: t.me/vpnhat}
+
+  - {name: 秋高气爽 3, server: 183.60.211.66, port: 6017, type: ssr, cipher: rc4-md5, password: di15PV, protocol: auth_aes128_md5, obfs: plain, protocol-param: 87993:SkSHlj, obfs-param: t.me/vpnhat}
+
+  - {name: 秋高气爽 4, server: 183.60.211.67, port: 6014, type: ssr, cipher: chacha20-ietf, password: di15PV, protocol: auth_aes128_md5, obfs: tls1.2_ticket_auth, protocol-param: 87993:SkSHlj, obfs-param: t.me/vpnhat}
+
+  - {name: 秋高气爽 5, server: 183.60.211.69, port: 2108, type: ssr, cipher: aes-256-cfb, password: di15PV, protocol: auth_aes128_md5, obfs: tls1.2_ticket_auth, protocol-param: 87993:SkSHlj, obfs-param: t.me/vpnhat}
+
+  - {name: 秋高气爽 6 , server: 183.60.211.66, port: 6012, type: ssr, cipher: chacha20-ietf, password: di15PV, protocol: auth_aes128_md5, obfs: tls1.2_ticket_auth, protocol-param: 87993:SkSHlj, obfs-param: t.me/vpnhat}
+
+  - {name: 秋高气爽 7, server: 183.60.211.66, port: 3725, type: ssr, cipher: aes-256-cfb, password: di15PV, protocol: auth_aes128_md5, obfs: tls1.2_ticket_auth, protocol-param: 87993:SkSHlj, obfs-param: t.me/vpnhat}
+
+  - {name: 秋高气爽 8, server: 183.60.211.66, port: 2107, type: ssr, cipher: aes-256-cfb, password: di15PV, protocol: auth_aes128_md5, obfs: tls1.2_ticket_auth, protocol-param: 87993:SkSHlj, obfs-param: t.me/vpnhat}
+
+  - {name: 秋高气爽 9, server: 183.60.211.66, port: 6020, type: ssr, cipher: rc4-md5, password: di15PV, protocol: auth_aes128_md5, obfs: tls1.2_ticket_auth, protocol-param: 87993:SkSHlj, obfs-param: t.me/vpnhat}
+
+  - {name: 秋高气爽 10, server: 183.60.211.66, port: 6010, type: ssr, cipher: chacha20-ietf, password: di15PV, protocol: auth_aes128_md5, obfs: tls1.2_ticket_auth, protocol-param: 87993:SkSHlj, obfs-param: t.me/vpnhat}
+
+  - {name: 秋高气爽 11, server: 183.60.211.66, port: 3726, type: ssr, cipher: aes-256-cfb, password: di15PV, protocol: auth_aes128_md5, obfs: tls1.2_ticket_auth, protocol-param: 87993:SkSHlj, obfs-param: t.me/vpnhat}
+
+  - {name: 秋高气爽 12, server: 183.60.211.67, port: 6008, type: ssr, cipher: rc4-md5, password: di15PV, protocol: auth_aes128_md5, obfs: tls1.2_ticket_auth, protocol-param: 87993:SkSHlj, obfs-param: t.me/vpnhat}
+
+  - {name: 秋高气爽 13, server: 183.60.211.68, port: 6003, type: ssr, cipher: rc4-md5, password: di15PV, protocol: auth_aes128_md5, obfs: tls1.2_ticket_auth, protocol-param: 87993:SkSHlj, obfs-param: t.me/vpnhat}
+
+  - {name: 秋高气爽 14, server: 183.60.211.69, port: 2103, type: ssr, cipher: aes-256-cfb, password: di15PV, protocol: auth_aes128_md5, obfs: tls1.2_ticket_auth, protocol-param: 87993:SkSHlj, obfs-param: t.me/vpnhat}
+
+  - {name: 秋高气爽 15, server: 183.60.211.68, port: 2108, type: ssr, cipher: aes-256-cfb, password: di15PV, protocol: auth_aes128_md5, obfs: tls1.2_ticket_auth, protocol-param: 87993:SkSHlj, obfs-param: t.me/vpnhat}
+
+  - {name: 秋高气爽 16, server: 183.60.211.69, port: 2112, type: ssr, cipher: chacha20-ietf, password: di15PV, protocol: auth_aes128_md5, obfs: tls1.2_ticket_auth, protocol-param: 87993:SkSHlj, obfs-param: t.me/vpnhat}
+
+  - {name: 秋高气爽 17, server: 183.60.211.70, port: 6010, type: ssr, cipher: chacha20-ietf, password: di15PV, protocol: auth_aes128_md5, obfs: tls1.2_ticket_auth, protocol-param: 87993:SkSHlj, obfs-param: t.me/vpnhat}
+
+  - {name: 秋高气爽 18, server: 183.60.211.70, port: 6006, type: ssr, cipher: chacha20-ietf, password: di15PV, protocol: auth_aes128_md5, obfs: tls1.2_ticket_auth, protocol-param: 87993:SkSHlj, obfs-param: t.me/vpnhat}
+
+  - {name: 秋高气爽 20, server: 183.60.211.66, port: 6013, type: ssr, cipher: chacha20-ietf, password: di15PV, protocol: auth_aes128_md5, obfs: tls1.2_ticket_auth, protocol-param: 87993:SkSHlj, obfs-param: t.me/vpnhat}
+
+  - {name: 秋高气爽 21, server: 183.60.211.67, port: 6020, type: ssr, cipher: rc4-md5, password: di15PV, protocol: auth_aes128_md5, obfs: tls1.2_ticket_auth, protocol-param: 87993:SkSHlj, obfs-param: t.me/vpnhat}
+
+  - {name: 秋高气爽 22, server: 183.60.211.67, port: 3725, type: ssr, cipher: aes-256-cfb, password: di15PV, protocol: auth_aes128_md5, obfs: tls1.2_ticket_auth, protocol-param: 87993:SkSHlj, obfs-param: t.me/vpnhat}
+
+  - {name: 秋高气爽 23, server: 183.60.211.68, port: 6017, type: ssr, cipher: rc4-md5, password: di15PV, protocol: auth_aes128_md5, obfs: plain, protocol-param: 87993:SkSHlj, obfs-param: t.me/vpnhat}
+
+  - {name: 秋高气爽 24, server: 183.60.211.70, port: 6012, type: ssr, cipher: chacha20-ietf, password: di15PV, protocol: auth_aes128_md5, obfs: tls1.2_ticket_auth, protocol-param: 87993:SkSHlj, obfs-param: t.me/vpnhat}
+
+  - {name: 秋高气爽 25, server: 183.60.211.66, port: 6003, type: ssr, cipher: rc4-md5, password: di15PV, protocol: auth_aes128_md5, obfs: tls1.2_ticket_auth, protocol-param: 87993:SkSHlj, obfs-param: t.me/vpnhat}
+
+  - {name: 秋高气爽 26, server: 183.60.211.68, port: 6001, type: ssr, cipher: rc4-md5, password: di15PV, protocol: auth_aes128_md5, obfs: tls1.2_ticket_auth, protocol-param: 87993:SkSHlj, obfs-param: t.me/vpnhat}
+
+  - {name: 秋高气爽 27, server: 183.60.211.69, port: 6009, type: ssr, cipher: chacha20-ietf, password: di15PV, protocol: auth_aes128_md5, obfs: tls1.2_ticket_auth, protocol-param: 87993:SkSHlj, obfs-param: t.me/vpnhat}
+
+  - {name: 秋高气爽 28, server: 183.60.211.70, port: 2109, type: ssr, cipher: aes-256-cfb, password: di15PV, protocol: auth_aes128_md5, obfs: tls1.2_ticket_auth, protocol-param: 87993:SkSHlj, obfs-param: t.me/vpnhat}
+
+  - {name: 秋高气爽 29, server: 183.60.211.66, port: 6019, type: ssr, cipher: chacha20-ietf, password: di15PV, protocol: auth_aes128_md5, obfs: tls1.2_ticket_auth, protocol-param: 87993:SkSHlj, obfs-param: t.me/vpnhat}
+
+  - {name: 秋高气爽 30, server: 183.60.211.66, port: 2102, type: ssr, cipher: aes-256-cfb, password: di15PV, protocol: auth_aes128_md5, obfs: tls1.2_ticket_auth, protocol-param: 87993:SkSHlj, obfs-param: t.me/vpnhat}
+
+  - {name: 秋高气爽 31, server: 183.60.211.67, port: 6018, type: ssr, cipher: rc4-md5, password: di15PV, protocol: auth_aes128_md5, obfs: tls1.2_ticket_auth, protocol-param: 87993:SkSHlj, obfs-param: t.me/vpnhat}
+
+  - {name: 秋高气爽 32, server: 183.60.211.67, port: 3726, type: ssr, cipher: aes-256-cfb, password: di15PV, protocol: auth_aes128_md5, obfs: tls1.2_ticket_auth, protocol-param: 87993:SkSHlj, obfs-param: t.me/vpnhat}
+
+  - {name: 秋高气爽 33, server: 183.60.211.67, port: 6012, type: ssr, cipher: chacha20-ietf, password: di15PV, protocol: auth_aes128_md5, obfs: tls1.2_ticket_auth, protocol-param: 87993:SkSHlj, obfs-param: t.me/vpnhat}
   - {"type":"vmess","name":"秋高气爽34","server":"91.230.211.4","port":"41443","uuid":"146F020E-8A44-6496-9C0A-485332654418","alterId":"0","cipher":"auto","network":"tcp","tls":true}
   - {"type":"vmess","name":"秋高气爽35","server":"185.112.83.35","port":"41443","uuid":"146F020E-8A44-6496-9C0A-485332654418","alterId":"0","cipher":"auto","network":"tcp","tls":true}
   - {"type":"vmess","name":"秋高气爽36","server":"185.194.30.40","port":"41443","uuid":"146F020E-8A44-6496-9C0A-485332654418","alterId":"0","cipher":"auto","network":"tcp","tls":true}
-  - {"type":"vmess","name":"秋高气爽37","ws-opts":{"path":"/","headers":{"host":"seoul.napsternetv.com"}},"server":"seoul.napsternetv.com","port":"443","uuid":"146F020E-8A44-6496-9C0A-485332654418","alterId":"0","cipher":"auto","network":"ws","tls":true}
+  - {"type":"vless","name":"秋高气爽37","server":"ukibm.ptuu.ga","port":443,"uuid":"ab48d74d27bf45eca577b821c9a79577","skip-cert-verify":true,"udp":true,"tls":true,"network":"ws","servername":"ukibm.ptuu.ga","ws-opts":{"path":"PATH","headers":{"host":"ukibm.ptuu.ga"}}}
   - {"type":"vless","name":"秋高气爽38","server":"ukibm.ptuu.ga","port":443,"uuid":"ab48d74d27bf45eca577b821c9a79577","skip-cert-verify":true,"udp":true,"tls":true,"network":"ws","servername":"ukibm.ptuu.ga","ws-opts":{"path":"PATH","headers":{"host":"ukibm.ptuu.ga"}}}
   - {"type":"vless","name":"秋高气爽39","server":"usibm.ptuu.tk","port":443,"uuid":"e22b5c17bc0b47d78d3d62090d174765","skip-cert-verify":true,"udp":true,"tls":true,"network":"ws","servername":"usibm.ptuu.tk","ws-opts":{"path":"PATH","headers":{"host":"usibm.ptuu.tk"}}}
   - {"type":"vmess","name":"秋高气爽40","server":"129.159.41.233","port":"32586","uuid":"341a9182-c423-499c-c46e-d17838b29037","alterId":"0","cipher":"auto","network":"tcp"}
@@ -53,12 +88,12 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - Alien
       - 秋高气爽1
       - 秋高气爽2
       - 秋高气爽3
       - 秋高气爽4
       - 秋高气爽5
+      - 秋高气爽6
       - 秋高气爽7
       - 秋高气爽8
       - 秋高气爽9
@@ -71,15 +106,20 @@ proxy-groups:
       - 秋高气爽16
       - 秋高气爽17
       - 秋高气爽18
+      - 秋高气爽19
+      - 秋高气爽20
+      - 秋高气爽21
+      - 秋高气爽22
+      - 秋高气爽23
+      - 秋高气爽24
       - 秋高气爽25
-      - sg1.31vpn.com
       - 秋高气爽26
       - 秋高气爽27
       - 秋高气爽28
       - 秋高气爽29
       - 秋高气爽30
-      - 秋高气爽32
       - 秋高气爽31
+      - 秋高气爽32
       - 秋高气爽33
       - 秋高气爽34
       - 秋高气爽35
@@ -100,12 +140,12 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
-      - Alien
       - 秋高气爽1
       - 秋高气爽2
       - 秋高气爽3
       - 秋高气爽4
       - 秋高气爽5
+      - 秋高气爽6
       - 秋高气爽7
       - 秋高气爽8
       - 秋高气爽9
@@ -118,15 +158,20 @@ proxy-groups:
       - 秋高气爽16
       - 秋高气爽17
       - 秋高气爽18
+      - 秋高气爽19
+      - 秋高气爽20
+      - 秋高气爽21
+      - 秋高气爽22
+      - 秋高气爽23
+      - 秋高气爽24
       - 秋高气爽25
-      - sg1.31vpn.com
       - 秋高气爽26
       - 秋高气爽27
       - 秋高气爽28
       - 秋高气爽29
       - 秋高气爽30
-      - 秋高气爽32
       - 秋高气爽31
+      - 秋高气爽32
       - 秋高气爽33
       - 秋高气爽34
       - 秋高气爽35
@@ -140,19 +185,19 @@ proxy-groups:
       - 秋高气爽43
       - 秋高气爽44
       - 秋高气爽45
-      - 秋高气爽46
+      - 秋高气爽46     
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - Alien
       - 秋高气爽1
       - 秋高气爽2
       - 秋高气爽3
       - 秋高气爽4
       - 秋高气爽5
+      - 秋高气爽6 
       - 秋高气爽7
       - 秋高气爽8
       - 秋高气爽9
@@ -165,15 +210,20 @@ proxy-groups:
       - 秋高气爽16
       - 秋高气爽17
       - 秋高气爽18
+      - 秋高气爽19
+      - 秋高气爽20
+      - 秋高气爽21
+      - 秋高气爽22
+      - 秋高气爽23
+      - 秋高气爽24    
       - 秋高气爽25
-      - sg1.31vpn.com
       - 秋高气爽26
       - 秋高气爽27
       - 秋高气爽28
       - 秋高气爽29
       - 秋高气爽30
-      - 秋高气爽32
       - 秋高气爽31
+      - 秋高气爽32
       - 秋高气爽33
       - 秋高气爽34
       - 秋高气爽35
@@ -193,12 +243,12 @@ proxy-groups:
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - Alien
       - 秋高气爽1
       - 秋高气爽2
       - 秋高气爽3
       - 秋高气爽4
       - 秋高气爽5
+      - 秋高气爽6
       - 秋高气爽7
       - 秋高气爽8
       - 秋高气爽9
@@ -211,15 +261,20 @@ proxy-groups:
       - 秋高气爽16
       - 秋高气爽17
       - 秋高气爽18
+      - 秋高气爽19
+      - 秋高气爽20
+      - 秋高气爽21
+      - 秋高气爽22
+      - 秋高气爽23
+      - 秋高气爽24
       - 秋高气爽25
-      - sg1.31vpn.com
       - 秋高气爽26
       - 秋高气爽27
       - 秋高气爽28
       - 秋高气爽29
       - 秋高气爽30
-      - 秋高气爽32
       - 秋高气爽31
+      - 秋高气爽32
       - 秋高气爽33
       - 秋高气爽34
       - 秋高气爽35
@@ -239,12 +294,12 @@ proxy-groups:
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - Alien
       - 秋高气爽1
       - 秋高气爽2
       - 秋高气爽3
       - 秋高气爽4
       - 秋高气爽5
+      - 秋高气爽6
       - 秋高气爽7
       - 秋高气爽8
       - 秋高气爽9
@@ -257,15 +312,20 @@ proxy-groups:
       - 秋高气爽16
       - 秋高气爽17
       - 秋高气爽18
+      - 秋高气爽19
+      - 秋高气爽20
+      - 秋高气爽21
+      - 秋高气爽22
+      - 秋高气爽23
+      - 秋高气爽24
       - 秋高气爽25
-      - sg1.31vpn.com
       - 秋高气爽26
       - 秋高气爽27
       - 秋高气爽28
       - 秋高气爽29
       - 秋高气爽30
-      - 秋高气爽32
       - 秋高气爽31
+      - 秋高气爽32
       - 秋高气爽33
       - 秋高气爽34
       - 秋高气爽35
@@ -285,12 +345,12 @@ proxy-groups:
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - Alien
       - 秋高气爽1
       - 秋高气爽2
       - 秋高气爽3
       - 秋高气爽4
       - 秋高气爽5
+      - 秋高气爽6
       - 秋高气爽7
       - 秋高气爽8
       - 秋高气爽9
@@ -303,15 +363,20 @@ proxy-groups:
       - 秋高气爽16
       - 秋高气爽17
       - 秋高气爽18
+      - 秋高气爽19
+      - 秋高气爽20
+      - 秋高气爽21
+      - 秋高气爽22
+      - 秋高气爽23
+      - 秋高气爽24
       - 秋高气爽25
-      - sg1.31vpn.com
       - 秋高气爽26
       - 秋高气爽27
       - 秋高气爽28
       - 秋高气爽29
       - 秋高气爽30
-      - 秋高气爽32
       - 秋高气爽31
+      - 秋高气爽32
       - 秋高气爽33
       - 秋高气爽34
       - 秋高气爽35
@@ -348,12 +413,12 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - Alien
       - 秋高气爽1
       - 秋高气爽2
       - 秋高气爽3
       - 秋高气爽4
       - 秋高气爽5
+      - 秋高气爽6
       - 秋高气爽7
       - 秋高气爽8
       - 秋高气爽9
@@ -366,15 +431,20 @@ proxy-groups:
       - 秋高气爽16
       - 秋高气爽17
       - 秋高气爽18
+      - 秋高气爽19
+      - 秋高气爽20
+      - 秋高气爽21
+      - 秋高气爽22
+      - 秋高气爽23
+      - 秋高气爽24
       - 秋高气爽25
-      - sg1.31vpn.com
       - 秋高气爽26
       - 秋高气爽27
       - 秋高气爽28
       - 秋高气爽29
       - 秋高气爽30
-      - 秋高气爽32
       - 秋高气爽31
+      - 秋高气爽32
       - 秋高气爽33
       - 秋高气爽34
       - 秋高气爽35
