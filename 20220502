@@ -53,18 +53,19 @@ proxies:
 
   - {name: 秋高气爽 29, server: ca3.epicbrowser.net, port: 8888, type: http, tls: true, skip-cert-verify: false, udp: true}
   - {name: 秋高气爽 30, server: 183.60.211.67, port: 6017, type: ssr, cipher: rc4-md5, password: di15PV, protocol: auth_aes128_md5, obfs: plain, protocol-param: 87993:SkSHlj, obfs-param: t.me/vpnhat}
-  - {name: 秋高气爽 31, type: vmess, server: hk2.czs1000.com, port: '8885', uuid: 5c71f68c-727f-4331-abdc-f14e18d13d01, alterId: 0, cipher: auto, udp: true, tls: true, servername: hk2.czs1000.com }   - { name: 新加坡03, type: vmess, server: sg3.czs1000.com, port: '8883', uuid: 5c71f68c-727f-4331-abdc-f14e18d13d01, alterId: 0, cipher: auto, udp: true, tls: true, servername: sg3.czs1000.com }
+  - {name: 秋高气爽 31, type: vmess, server: hk2.czs1000.com, port: '8885', uuid: 5c71f68c-727f-4331-abdc-f14e18d13d01, alterId: 0, cipher: auto, udp: true, tls: true, servername: hk2.czs1000.com }   
+  - {name: 秋高气爽 32, type: vmess, server: sg3.czs1000.com, port: '8883', uuid: 5c71f68c-727f-4331-abdc-f14e18d13d01, alterId: 0, cipher: auto, udp: true, tls: true, servername: sg3.czs1000.com }
 
-  - {name: 秋高气爽 32, type: vmess, server: kr1.czs1000.com, port: '8887', uuid: 5c71f68c-727f-4331-abdc-f14e18d13d01, alterId: 0, cipher: auto, udp: true, tls: true, servername: kr1.czs1000.com }
+  - {name: 秋高气爽 33, type: vmess, server: kr1.czs1000.com, port: '8887', uuid: 5c71f68c-727f-4331-abdc-f14e18d13d01, alterId: 0, cipher: auto, udp: true, tls: true, servername: kr1.czs1000.com }
 
-  - {name: 秋高气爽 33, type: vmess, server: jp3.czs1000.com, port: '8886', uuid: 5c71f68c-727f-4331-abdc-f14e18d13d01, alterId: 0, cipher: auto, udp: true, tls: true, servername: jp3.czs1000.com }
+  - {name: 秋高气爽 34, type: vmess, server: jp3.czs1000.com, port: '8886', uuid: 5c71f68c-727f-4331-abdc-f14e18d13d01, alterId: 0, cipher: auto, udp: true, tls: true, servername: jp3.czs1000.com }
 
-  - {name: 秋高气爽 34, type: vmess, server: hk1.czs1000.com, port: '8885', uuid: 5c71f68c-727f-4331-abdc-f14e18d13d01, alterId: 0, cipher: auto, udp: true, tls: true, servername: hk1.czs1000.com }  
+  - {name: 秋高气爽 35, type: vmess, server: hk1.czs1000.com, port: '8885', uuid: 5c71f68c-727f-4331-abdc-f14e18d13d01, alterId: 0, cipher: auto, udp: true, tls: true, servername: hk1.czs1000.com }  
 
-  - {name: 秋高气爽 35, type: vmess, server: jp3.czs1000.com, port: '8886', uuid: c478f928-1151-4deb-88cb-13a1acb3ed07, alterId: 0, cipher: auto, udp: true, tls: true, servername: jp3.czs1000.com }
+  - {name: 秋高气爽 36, type: vmess, server: jp3.czs1000.com, port: '8886', uuid: c478f928-1151-4deb-88cb-13a1acb3ed07, alterId: 0, cipher: auto, udp: true, tls: true, servername: jp3.czs1000.com }
 
-  - {name: 秋高气爽 36, type: vmess, server: hk1.czs1000.com, port: '8885', uuid: c478f928-1151-4deb-88cb-13a1acb3ed07, alterId: 0, cipher: auto, udp: true, tls: true, servername: hk1.czs1000.com }
-  - {name: 秋高气爽 37, server: myjp.brucean.cn, port: 443, type: vmess, uuid: e093b2a2-a8f3-4fca-bfe9-00583387e767, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-opts: {path: /, headers: {Host: myjp.brucean.cn}}}
+  - {name: 秋高气爽 37, type: vmess, server: hk1.czs1000.com, port: '8885', uuid: c478f928-1151-4deb-88cb-13a1acb3ed07, alterId: 0, cipher: auto, udp: true, tls: true, servername: hk1.czs1000.com }
+  
   - {name: 秋高气爽 38, type: vmess, server: v2.583181.xyz, port: '80', uuid: 9ccfcf7b-42e5-4221-8c97-ec10ddef370f, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /, headers: { Host: pull.free.video.10010.com } }, ws-path: /, ws-headers: { Host: pull.free.video.10010.com } }
 
   - {name: 秋高气爽 39, type: ss, server: gzct.daodecloud.com, port: 25863, cipher: chacha20-ietf-poly1305, password: dffb4522-2ead-4b92-9ac3-001c88f53f79, udp: true }
