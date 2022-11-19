@@ -179,7 +179,7 @@ proxy-groups:
 
     url: http://www.gstatic.com/generate_204
 
-    interval: 50
+    interval: 100
 
     strategy: consistent-hashing
 
@@ -211,7 +211,7 @@ proxy-groups:
 
     url: http://www.gstatic.com/generate_204
 
-    interval: 50
+    interval: 100
 
     strategy: round-robin
 
