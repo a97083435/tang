@@ -53,31 +53,31 @@ proxies:
   - {name: 秋高气爽 28, server: ca2.epicbrowser.net, port: 8888, type: http, tls: true, skip-cert-verify: false, udp: true}
 
   - {name: 秋高气爽 29, server: ca3.epicbrowser.net, port: 8888, type: http, tls: true, skip-cert-verify: false, udp: true}
-  - {name: 秋高气爽 30, server: cn01.mynode.me, port: 8102, type: ssr, cipher: rc4-md5, password: passwd, protocol: origin, obfs: http_simple, protocol-param: "", obfs-param: 18950-Guhaijun1979.download.microsoft.com, udp: true}
+  - {name: 秋高气爽 30, server: cos-ap-guangzhou.westdatacloud.top, port: 20016, type: trojan, password: 0A7F7256-1D67-4A3F-31DF-C71302D0B146, sni: cos-ap-guangzhou.westdatacloud.top, skip-cert-verify: true, udp: true}
 
-  - {name: 秋高气爽 31, server: cn03.mynode.me, port: 8112, type: ssr, cipher: rc4-md5, password: passwd, protocol: origin, obfs: http_simple, protocol-param: "", obfs-param: 18950-Guhaijun1979.download.microsoft.com, udp: true}
+  - {name: 秋高气爽 31, server: cos-ap-guangzhou.westdatacloud.top, port: 20017, type: trojan, password: 0A7F7256-1D67-4A3F-31DF-C71302D0B146, sni: cos-ap-guangzhou.westdatacloud.top, skip-cert-verify: true, udp: true}
 
-  - {name: 秋高气爽 32, server: cn04.mynode.me, port: 8116, type: ssr, cipher: rc4-md5, password: passwd, protocol: origin, obfs: http_simple, protocol-param: "", obfs-param: 18950-Guhaijun1979.download.microsoft.com, udp: true}
+  - {name: 秋高气爽 32, server: cos-ap-guangzhou.westdatacloud.top, port: 20024, type: trojan, password: 0A7F7256-1D67-4A3F-31DF-C71302D0B146, sni: cos-ap-guangzhou.westdatacloud.top, skip-cert-verify: true, udp: true}
 
-  - {name: 秋高气爽 33, server: cn04.mynode.me, port: 8117, type: ssr, cipher: rc4-md5, password: passwd, protocol: origin, obfs: http_simple, protocol-param: "", obfs-param: 18950-Guhaijun1979.download.microsoft.com, udp: true}
+  - {name: 秋高气爽 33, server: cos-ap-guangzhou.westdatacloud.top, port: 20025, type: trojan, password: 09CF6FCF-2EF1-0124-70D7-EADB516E747F, sni: cos-ap-guangzhou.westdatacloud.top, skip-cert-verify: true, udp: true}
 
-  - {name: 秋高气爽 34, server: cn04.mynode.me, port: 8118, type: ssr, cipher: rc4-md5, password: passwd, protocol: origin, obfs: http_simple, protocol-param: "", obfs-param: 18950-Guhaijun1979.download.microsoft.com, udp: true}
+  - {name: 秋高气爽 34, server: cos-ap-guangzhou.westdatacloud.top, port: 20026, type: trojan, password: 7AC49280-AB00-8781-1F03-2D087F41A265, sni: cos-ap-guangzhou.westdatacloud.top, skip-cert-verify: true, udp: true}
 
-  - {name: 秋高气爽 35, server: cn04.mynode.me, port: 8119, type: ssr, cipher: rc4-md5, password: passwd, protocol: origin, obfs: http_simple, protocol-param: "", obfs-param: 18950-Guhaijun1979.download.microsoft.com, udp: true}
+  - {name: 秋高气爽 35, server: oss-cn-shanghai.westdatacloud.top, port: 20031, type: trojan, password: 7AC49280-AB00-8781-1F03-2D087F41A265, sni: oss-cn-shanghai.westdatacloud.top, skip-cert-verify: true, udp: true}
 
-  - {name: 秋高气爽 36, server: cn05.mynode.me, port: 8121, type: ssr, cipher: rc4-md5, password: passwd, protocol: origin, obfs: http_simple, protocol-param: "", obfs-param: 18950-Guhaijun1979.download.microsoft.com, udp: true}
+  - {name: 秋高气爽 36, server: oss-cn-shanghai.westdatacloud.top, port: 20032, type: trojan, password: 4232F98B-C7A6-FC46-26C1-23E2EBD14CE1, sni: oss-cn-shanghai.westdatacloud.top, skip-cert-verify: true, udp: true}
 
-  - {name: 秋高气爽 37, server: cn05.mynode.me, port: 8123, type: ssr, cipher: rc4-md5, password: passwd, protocol: origin, obfs: http_simple, protocol-param: "", obfs-param: 18950-Guhaijun1979.download.microsoft.com, udp: true}
+  - {name: 秋高气爽 37, server: oss-cn-shanghai.westdatacloud.top, port: 20033, type: trojan, password: 09CF6FCF-2EF1-0124-70D7-EADB516E747F, sni: oss-cn-shanghai.westdatacloud.top, skip-cert-verify: true, udp: true}
 
-  - {name: 秋高气爽 38, server: cn05.mynode.me, port: 8124, type: ssr, cipher: rc4-md5, password: passwd, protocol: origin, obfs: http_simple, protocol-param: "", obfs-param: 18950-Guhaijun1979.download.microsoft.com, udp: true}
+  - {name: 秋高气爽 38, server: oss-cn-shanghai.westdatacloud.top, port: 20034, type: trojan, password: 221DD523-3935-CB1B-220C-18FC6E2534B9, sni: oss-cn-shanghai.westdatacloud.top, skip-cert-verify: true, udp: true}
 
-  - {name: 秋高气爽 39, server: frontend.yijianlian.app, port: 54530, type: trojan, password: d0025bab-eee4-4b2b-970f-9a8e05bafd30, skip-cert-verify: true, udp: true}
+  - {name: 秋高气爽 39, server: oss-cn-shanghai.westdatacloud.top, port: 20035, type: trojan, password: 4232F98B-C7A6-FC46-26C1-23E2EBD14CE1, sni: oss-cn-shanghai.westdatacloud.top, skip-cert-verify: true, udp: true}
 
-  - {name: 秋高气爽 40, server: frontend.yijianlian.app, port: 54540, type: trojan, password: d0025bab-eee4-4b2b-970f-9a8e05bafd30, skip-cert-verify: true, udp: true}
+  - {name: 秋高气爽 40, server: oss-cn-shanghai.westdatacloud.top, port: 20036, type: trojan, password: 4232F98B-C7A6-FC46-26C1-23E2EBD14CE1, sni: oss-cn-shanghai.westdatacloud.top, skip-cert-verify: true, udp: true}
 
-  - {name: 秋高气爽 41, server: frontend.yijianlian.app, port: 54580, type: trojan, password: d0025bab-eee4-4b2b-970f-9a8e05bafd30, skip-cert-verify: true, udp: true}
+  - {name: 秋高气爽 41, server: oss-cn-shanghai.westdatacloud.top, port: 20037, type: trojan, password: 7AC49280-AB00-8781-1F03-2D087F41A265, sni: oss-cn-shanghai.westdatacloud.top, skip-cert-verify: true, udp: true}
 
-  - {name: 秋高气爽 42, server: frontend.yijianlian.app, port: 54420, type: trojan, password: d0025bab-eee4-4b2b-970f-9a8e05bafd30, skip-cert-verify: true, udp: true}
+  - {name: 秋高气爽 42, server: oss-cn-shanghai.westdatacloud.top, port: 20038, type: trojan, password: 0A7F7256-1D67-4A3F-31DF-C71302D0B146, sni: oss-cn-shanghai.westdatacloud.top, skip-cert-verify: true, udp: true}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
