@@ -25,18 +25,23 @@ proxies:
 
   - {name: 秋高气爽 11, server: 141.101.115.20, port: 443, type: vmess, uuid: 176b598f-445b-41ac-9d2a-430c5c4df26a, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /dongtaiwang.com, headers: {Host: clash1.trump2023.net}}}
 
-  - {name: 秋高气爽 12, server: sg.securevpn.cc, port: 1020, type: ss, cipher: aes-128-gcm, password: !<str> 202211000000000000000020, plugin: obfs, plugin-opts: {mode: http, host: securevpn.cc}, udp: true}
-  - {name: 秋高气爽 13, server: dosg.securevpn.cc, port: 1020, type: ss, cipher: aes-128-gcm, password: !<str> 202211000000000000000020, plugin: obfs, plugin-opts: {mode: http, host: securevpn.cc}, udp: true}
-  - {name: 秋高气爽 14, server: 51.81.220.195, port: 80, type: vmess, uuid: 6fea1649-425b-4092-bf53-29792152c925, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-opts: {path: /sshkit/Variu88/634dab7abadf1/, headers: {Host: "%7B%22Host%22:%2251.81.220.195%22%7D"}}, udp: true}
-  - {name: 秋高气爽 15, server: 119.247.119.212, port: 443, type: trojan, password: !<str> 123456, sni: trojan-ctb-sg01.globalssh.xyz, skip-cert-verify: true, udp: true}
-  - {name: 秋高气爽 16, server: 128.14.140.254, port: 443, type: vmess, uuid: 02ddd27e-cb08-424d-8279-d02bf11b0342, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /123, headers: {Host: zz1.wblogw1.tk}}, udp: true}
-  - {name: 秋高气爽 17, server: jp3.elknode.top, port: 10000, type: trojan, password: 1eded6fc-8b28-33df-a93f-6491de5f7a12, sni: jp3.elknode.top, skip-cert-verify: false}
+  - {name: 秋高气爽 12, server: jp.liangyuandian.top, port: 443, type: trojan, password: ceaea123-1b4b-469b-8358-bcd5f5529305, sni: jp.liangyuandian.top, skip-cert-verify: true, udp: true}
 
-  - {name: 秋高气爽 18, type: vmess, server: us2.mybestjj.com, port: '443', uuid: c4639c0f-49fc-4b33-8d7f-e27575c16d7a, alterId: 0, cipher: auto, udp: true, tls: true, network: ws, ws-opts: { path: /1654431, headers: { Host: us1.mybestjj.com } }, ws-path: /1654431, ws-headers: { Host: us1.mybestjj.com } }
+  - {name: 秋高气爽 13, server: cos-ap-guangzhou.westdatacloud.top, port: 20006, type: trojan, password: 0A7F7256-1D67-4A3F-31DF-C71302D0B146, sni: cos-ap-guangzhou.westdatacloud.top, skip-cert-verify: true, udp: true}
 
-  - {name: 秋高气爽 19, type: vmess, server: sjp1.mybestjj.com, port: '443', uuid: c4639c0f-49fc-4b33-8d7f-e27575c16d7a, alterId: 0, cipher: auto, udp: true, tls: true, network: ws, ws-opts: { path: /1654431, headers: { Host: us1.mybestjj.com } }, ws-path: /1654431, ws-headers: { Host: us1.mybestjj.com } }
+  - {name: 秋高气爽 14, server: cos-ap-guangzhou.westdatacloud.top, port: 20014, type: trojan, password: 4232F98B-C7A6-FC46-26C1-23E2EBD14CE1, sni: cos-ap-guangzhou.westdatacloud.top, skip-cert-verify: true, udp: true}
 
-  - {name: 秋高气爽 20, type: vmess, server: er2.mybestjj.com, port: '443', uuid: c4639c0f-49fc-4b33-8d7f-e27575c16d7a, alterId: 0, cipher: auto, udp: true, tls: true, network: ws, ws-opts: { path: /1653531, headers: { Host: er1.mybestjj.com } }, ws-path: /1653531, ws-headers: { Host: er1.mybestjj.com } }
+  - {name: 秋高气爽 15, server: cos-ap-guangzhou.westdatacloud.top, port: 20015, type: trojan, password: 0A7F7256-1D67-4A3F-31DF-C71302D0B146, sni: cos-ap-guangzhou.westdatacloud.top, skip-cert-verify: true, udp: true}
+
+  - {name: 秋高气爽 16, server: cos-ap-guangzhou.westdatacloud.top, port: 20016, type: trojan, password: 0A7F7256-1D67-4A3F-31DF-C71302D0B146, sni: cos-ap-guangzhou.westdatacloud.top, skip-cert-verify: true, udp: true}
+
+  - {name: 秋高气爽 17, server: cos-ap-guangzhou.westdatacloud.top, port: 20017, type: trojan, password: 0A7F7256-1D67-4A3F-31DF-C71302D0B146, sni: cos-ap-guangzhou.westdatacloud.top, skip-cert-verify: true, udp: true}
+
+  - {name: 秋高气爽 18, server: cos-ap-guangzhou.westdatacloud.top, port: 20024, type: trojan, password: 0A7F7256-1D67-4A3F-31DF-C71302D0B146, sni: cos-ap-guangzhou.westdatacloud.top, skip-cert-verify: true, udp: true}
+
+  - {name: 秋高气爽 19, server: oss-cn-shanghai.westdatacloud.top, port: 20032, type: trojan, password: 4232F98B-C7A6-FC46-26C1-23E2EBD14CE1, sni: oss-cn-shanghai.westdatacloud.top, skip-cert-verify: true, udp: true}
+
+  - {name: 秋高气爽 20, server: oss-cn-shanghai.westdatacloud.top, port: 20034, type: trojan, password: 221DD523-3935-CB1B-220C-18FC6E2534B9, sni: oss-cn-shanghai.westdatacloud.top, skip-cert-verify: true, udp: true}, port: '443', uuid: c4639c0f-49fc-4b33-8d7f-e27575c16d7a, alterId: 0, cipher: auto, udp: true, tls: true, network: ws, ws-opts: { path: /1653531, headers: { Host: er1.mybestjj.com } }, ws-path: /1653531, ws-headers: { Host: er1.mybestjj.com } }
 
   - {name: 秋高气爽 21, server: sg.epicbrowser.net, port: 8888, type: http, tls: true}
 
