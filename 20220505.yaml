@@ -26,25 +26,15 @@ proxies:
   - {name: 秋高气爽 11, server: 141.101.115.20, port: 443, type: vmess, uuid: 176b598f-445b-41ac-9d2a-430c5c4df26a, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /dongtaiwang.com, headers: {Host: clash1.trump2023.net}}}
 
   - {name: 秋高气爽 12, server: jp.liangyuandian.top, port: 443, type: trojan, password: ceaea123-1b4b-469b-8358-bcd5f5529305, sni: jp.liangyuandian.top, skip-cert-verify: true, udp: true}
-
   - {name: 秋高气爽 13, server: cos-ap-guangzhou.westdatacloud.top, port: 20006, type: trojan, password: 0A7F7256-1D67-4A3F-31DF-C71302D0B146, sni: cos-ap-guangzhou.westdatacloud.top, skip-cert-verify: true, udp: true}
-
   - {name: 秋高气爽 14, server: cos-ap-guangzhou.westdatacloud.top, port: 20014, type: trojan, password: 4232F98B-C7A6-FC46-26C1-23E2EBD14CE1, sni: cos-ap-guangzhou.westdatacloud.top, skip-cert-verify: true, udp: true}
-
   - {name: 秋高气爽 15, server: cos-ap-guangzhou.westdatacloud.top, port: 20015, type: trojan, password: 0A7F7256-1D67-4A3F-31DF-C71302D0B146, sni: cos-ap-guangzhou.westdatacloud.top, skip-cert-verify: true, udp: true}
-
   - {name: 秋高气爽 16, server: cos-ap-guangzhou.westdatacloud.top, port: 20016, type: trojan, password: 0A7F7256-1D67-4A3F-31DF-C71302D0B146, sni: cos-ap-guangzhou.westdatacloud.top, skip-cert-verify: true, udp: true}
-
   - {name: 秋高气爽 17, server: cos-ap-guangzhou.westdatacloud.top, port: 20017, type: trojan, password: 0A7F7256-1D67-4A3F-31DF-C71302D0B146, sni: cos-ap-guangzhou.westdatacloud.top, skip-cert-verify: true, udp: true}
-
   - {name: 秋高气爽 18, server: cos-ap-guangzhou.westdatacloud.top, port: 20024, type: trojan, password: 0A7F7256-1D67-4A3F-31DF-C71302D0B146, sni: cos-ap-guangzhou.westdatacloud.top, skip-cert-verify: true, udp: true}
-
   - {name: 秋高气爽 19, server: oss-cn-shanghai.westdatacloud.top, port: 20032, type: trojan, password: 4232F98B-C7A6-FC46-26C1-23E2EBD14CE1, sni: oss-cn-shanghai.westdatacloud.top, skip-cert-verify: true, udp: true}
-
-  - {name: 秋高气爽 20, server: oss-cn-shanghai.westdatacloud.top, port: 20034, type: trojan, password: 221DD523-3935-CB1B-220C-18FC6E2534B9, sni: oss-cn-shanghai.westdatacloud.top, skip-cert-verify: true, udp: true}, port: '443', uuid: c4639c0f-49fc-4b33-8d7f-e27575c16d7a, alterId: 0, cipher: auto, udp: true, tls: true, network: ws, ws-opts: { path: /1653531, headers: { Host: er1.mybestjj.com } }, ws-path: /1653531, ws-headers: { Host: er1.mybestjj.com } }
-
+  - {name: 秋高气爽 20, server: oss-cn-shanghai.westdatacloud.top, port: 20034, type: trojan, password: 221DD523-3935-CB1B-220C-18FC6E2534B9, sni: oss-cn-shanghai.westdatacloud.top, skip-cert-verify: true, udp: true}
   - {name: 秋高气爽 21, server: sg.epicbrowser.net, port: 8888, type: http, tls: true}
-
   - {name: 秋高气爽 22, server: sg2.epicbrowser.net, port: 8888, type: http, tls: true}
 
   - {name: 秋高气爽 23, server: sg3.epicbrowser.net, port: 8888, type: http, tls: true}
@@ -7624,7 +7614,7 @@ rules:
  - DOMAIN-SUFFIX,tuanxue360.net,🛑 全球拦截
  - DOMAIN-SUFFIX,tui.gtimg.com,🛑 全球拦截
  - DOMAIN-SUFFIX,tui1999.com,🛑 全球拦截
- - DOMAIN-SUFFIX,tui98.cn,🛑 全球拦截
+ - DOMAIN-SUFFIX,tui98.cn,?? 全球拦截
  - DOMAIN-SUFFIX,tuigoo.com,🛑 全球拦截
  - DOMAIN-SUFFIX,tuiguang.178.com,🛑 全球拦截
  - DOMAIN-SUFFIX,tuiguang.meitu.com,🛑 全球拦截
