@@ -55,31 +55,31 @@ proxies:
   - {name: 秋高气爽 28, server: ca2.epicbrowser.net, port: 8888, type: http, tls: true, skip-cert-verify: false, udp: true}
 
   - {name: 秋高气爽 29, server: ca3.epicbrowser.net, port: 8888, type: http, tls: true, skip-cert-verify: false, udp: true}
-  - {name: 秋高气爽 30, server: cos-ap-guangzhou.westdatacloud.top, port: 20016, type: trojan, password: 0A7F7256-1D67-4A3F-31DF-C71302D0B146, sni: cos-ap-guangzhou.westdatacloud.top, skip-cert-verify: true, udp: true}
+  - {"name":"秋高气爽 30","type":"vmess","server":"58.254.132.73","port":"80","uuid":"57c0f85d-e8c5 -4eba-99cb-1a4521e0172a","alterId":0,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"headers":{"Host ":"a.189.cn"},"path":"/"},"ws-path":"/gd.unicommusic.gtimg.com//ad.tencentmusic.com/posconfig?posid=4063007733663510363&appName=com .tencent.qqmusic&version=11100108&sdkName=com.tencentmusic.ad&sdkVersion=1.23.0&userId=10001&userIdType=7&vkey=E186CDB5706B9ACC7133EA8FB9B7F2DFBAB258596B487C6E097D045C8B175D00572FF7D29CA30E9312859DE979D85F7176FA3B76A7914E75&guid=ffffffffe316a1e80000018438bfe5ff&fromtag=48&pno=10000&sig=BE9E6CEB60E5C450F59131E9C03E1353&pw=BED4CE39AC8AE02FA790E912494B04BB347F2F4F7F5B0EE0A305AA9479758D9AF50102835D267A1DD49EF11913A40EA29B80272AE1C7B81135B3A4BA04B1A015","ws-headers":{"Host":"20.239.177.38"}}
 
-  - {name: 秋高气爽 31, server: cos-ap-guangzhou.westdatacloud.top, port: 20017, type: trojan, password: 0A7F7256-1D67-4A3F-31DF-C71302D0B146, sni: cos-ap-guangzhou.westdatacloud.top, skip-cert-verify: true, udp: true}
+  - {"name":"秋高气爽 31","type":"vmess","server":"20.205.0.167","port":"80","uuid":" 57c0f85d-e8c5-4eba-99cb-1a4521e0172a","alterId":0,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"headers": {"Host":"a.189.cn"},"path":"/"},"ws-path":"/","ws-headers":{"Host":"a.189.cn "}}
 
-  - {name: 秋高气爽 32, server: cos-ap-guangzhou.westdatacloud.top, port: 20024, type: trojan, password: 0A7F7256-1D67-4A3F-31DF-C71302D0B146, sni: cos-ap-guangzhou.westdatacloud.top, skip-cert-verify: true, udp: true}
+  - {"name":"秋高气爽 32","type":"vmess","server":"20.255.248.234","port":"80","uuid":" 57c0f85d-e8c5-4eba-99cb-1a4521e0172a","alterId":0,"cipher":"auto","udp":true,"network":"http","http-opts":{"headers": {"方法":["GET"],"主机":["a.189.cn"]},"路径":["/"]}}
 
-  - {name: 秋高气爽 33, server: cos-ap-guangzhou.westdatacloud.top, port: 20025, type: trojan, password: 09CF6FCF-2EF1-0124-70D7-EADB516E747F, sni: cos-ap-guangzhou.westdatacloud.top, skip-cert-verify: true, udp: true}
+  - {"name":"秋高气爽 33","type":"vmess","server":"20.239.193.51","port":"80","uuid":" 57c0f85d-e8c5-4eba-99cb-1a4521e0172a","alterId":0,"cipher":"auto","udp":true,"network":"http","http-opts":{"headers": {"方法":["GET"],"主机":["a.189.cn"]},"路径":["/"]}}
 
-  - {name: 秋高气爽 34, server: cos-ap-guangzhou.westdatacloud.top, port: 20026, type: trojan, password: 7AC49280-AB00-8781-1F03-2D087F41A265, sni: cos-ap-guangzhou.westdatacloud.top, skip-cert-verify: true, udp: true}
+  - {"name":"秋高气爽 34","type":"vmess","server":"104.208.69.27","port":"80","uuid":" 57c0f85d-e8c5-4eba-99cb-1a4521e0172a","alterId":0,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"headers": {"Host":"a.189.cn"},"path":"/"},"ws-path":"/","ws-headers":{"Host":"a.189.cn "}}
 
-  - {name: 秋高气爽 35, server: oss-cn-shanghai.westdatacloud.top, port: 20031, type: trojan, password: 7AC49280-AB00-8781-1F03-2D087F41A265, sni: oss-cn-shanghai.westdatacloud.top, skip-cert-verify: true, udp: true}
+  - {"name":"秋高气爽 35","type":"vmess","server":"20.239.177.38","port":"80","uuid":" 57c0f85d-e8c5-4eba-99cb-1a4521e0172a","alterId":0,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"headers": {"Host":"a.189.cn"},"path":"/"},"ws-path":"/","ws-headers":{"Host":"dm.toutiao.com "}}
 
-  - {name: 秋高气爽 36, server: oss-cn-shanghai.westdatacloud.top, port: 20032, type: trojan, password: 4232F98B-C7A6-FC46-26C1-23E2EBD14CE1, sni: oss-cn-shanghai.westdatacloud.top, skip-cert-verify: true, udp: true}
+  - {"name":"秋高气爽 36","type":"vmess","server":"20.24.87.220","port":"80","uuid":"57c0f85d -e8c5-4eba-99cb-1a4521e0172a","alterId":0,"cipher":"auto","udp":true,"network":"http","http-opts":{"headers":{ "method":["GET"],"Host":["a.189.cn"]},"path":["/"]}}
 
-  - {name: 秋高气爽 37, server: oss-cn-shanghai.westdatacloud.top, port: 20033, type: trojan, password: 09CF6FCF-2EF1-0124-70D7-EADB516E747F, sni: oss-cn-shanghai.westdatacloud.top, skip-cert-verify: true, udp: true}
+  - {"name":"秋高气爽 37","type":"vmess","server":"20.24.83.152","port":"80","uuid":" 57c0f85d-e8c5-4eba-99cb-1a4521e0172a","alterId":0,"cipher":"auto","udp":true,"network":"http","http-opts":{"headers": {"方法":["GET"],"主机":["a.189.cn"]},"路径":["/"]}}
 
-  - {name: 秋高气爽 38, server: oss-cn-shanghai.westdatacloud.top, port: 20034, type: trojan, password: 221DD523-3935-CB1B-220C-18FC6E2534B9, sni: oss-cn-shanghai.westdatacloud.top, skip-cert-verify: true, udp: true}
+  - {"name":"秋高气爽 38","type":"vmess","server":"20.24.201.242","port":"80","uuid":"57c0f85d -e8c5-4eba-99cb-1a4521e0172a","alterId":0,"cipher":"auto","udp":true,"network":"http","http-opts":{"headers":{ "method":["GET"],"Host":["a.189.cn"]},"path":["/"]}}
 
-  - {name: 秋高气爽 39, server: oss-cn-shanghai.westdatacloud.top, port: 20035, type: trojan, password: 4232F98B-C7A6-FC46-26C1-23E2EBD14CE1, sni: oss-cn-shanghai.westdatacloud.top, skip-cert-verify: true, udp: true}
+  - {"name":"秋高气爽 39","type":"vmess","server":"20.2.128.120","port":"80","uuid":"57c0f85d -e8c5-4eba-99cb-1a4521e0172a","alterId":0,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"headers":{ "Host":"a.189.cn"},"path":"/"},"ws-path":"/","ws-headers":{"Host":"dm.toutiao.com" }}
 
-  - {name: 秋高气爽 40, server: oss-cn-shanghai.westdatacloud.top, port: 20036, type: trojan, password: 4232F98B-C7A6-FC46-26C1-23E2EBD14CE1, sni: oss-cn-shanghai.westdatacloud.top, skip-cert-verify: true, udp: true}
+  - {"name":"秋高气爽 40","type":"vmess","server":"20.2.84.116","port":"80","uuid":" 57c0f85d-e8c5-4eba-99cb-1a4521e0172a","alterId":0,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"headers": {"Host":"a.189.cn"},"path":"/"},"ws-path":"/","ws-headers":{"Host":"ali2.a.yximgs .com"}}
 
-  - {name: 秋高气爽 41, server: oss-cn-shanghai.westdatacloud.top, port: 20037, type: trojan, password: 7AC49280-AB00-8781-1F03-2D087F41A265, sni: oss-cn-shanghai.westdatacloud.top, skip-cert-verify: true, udp: true}
+  - {"name":"秋高气爽 41","type":"vmess","server":"20.2.81.214","port":"80","uuid":" 57c0f85d-e8c5-4eba-99cb-1a4521e0172a","alterId":0,"cipher":"auto","udp":true,"network":"http","http-opts":{"headers": {"方法":["GET"],"主机":["a.189.cn"]},"路径":["/"]}}
 
-  - {name: 秋高气爽 42, server: oss-cn-shanghai.westdatacloud.top, port: 20038, type: trojan, password: 0A7F7256-1D67-4A3F-31DF-C71302D0B146, sni: oss-cn-shanghai.westdatacloud.top, skip-cert-verify: true, udp: true}
+  - {"name":"秋高气爽 42","type":"vmess","server":"20.187.121.30","port":"80","uuid":"57c0f85d -e8c5-4eba-99cb-1a4521e0172a","alterId":0,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"headers":{ "Host":"a.189.cn"},"path":"/"},"ws-path":"/","ws-headers":{"Host":"ali2.a.yximgs. com"}}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
