@@ -59,9 +59,9 @@ proxies:
 
   - {"name":"秋高气爽 31","type":"vmess","server":"20.205.0.167","port":"80","uuid":" 57c0f85d-e8c5-4eba-99cb-1a4521e0172a","alterId":0,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"headers": {"Host":"a.189.cn"},"path":"/"},"ws-path":"/","ws-headers":{"Host":"a.189.cn "}}
 
-  - {"name":"秋高气爽 32","type":"vmess","server":"20.255.248.234","port":"80","uuid":" 57c0f85d-e8c5-4eba-99cb-1a4521e0172a","alterId":0,"cipher":"auto","udp":true,"network":"http","http-opts":{"headers": {"方法":["GET"],"主机":["a.189.cn"]},"路径":["/"]}}
+  - {"name":"秋高气爽 32","type":"vmess","server":"20.255.248.234","port":"80","uuid":" 57c0f85d-e8c5-4eba-99cb-1a4521e0172a","alterId":0,"cipher":"auto","udp":true,"network":"http","http-opts":{"headers": {"method":["GET"],"path":["a.189.cn"]},"path":["/"]}}
 
-  - {"name":"秋高气爽 33","type":"vmess","server":"20.239.193.51","port":"80","uuid":" 57c0f85d-e8c5-4eba-99cb-1a4521e0172a","alterId":0,"cipher":"auto","udp":true,"network":"http","http-opts":{"headers": {"方法":["GET"],"主机":["a.189.cn"]},"路径":["/"]}}
+  - {"name":"秋高气爽 33","type":"vmess","server":"20.239.193.51","port":"80","uuid":" 57c0f85d-e8c5-4eba-99cb-1a4521e0172a","alterId":0,"cipher":"auto","udp":true,"network":"http","http-opts":{"headers": {"method":["GET"],"path":["a.189.cn"]},"path":["/"]}}
 
   - {"name":"秋高气爽 34","type":"vmess","server":"104.208.69.27","port":"80","uuid":" 57c0f85d-e8c5-4eba-99cb-1a4521e0172a","alterId":0,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"headers": {"Host":"a.189.cn"},"path":"/"},"ws-path":"/","ws-headers":{"Host":"a.189.cn "}}
 
@@ -69,7 +69,7 @@ proxies:
 
   - {"name":"秋高气爽 36","type":"vmess","server":"20.24.87.220","port":"80","uuid":"57c0f85d -e8c5-4eba-99cb-1a4521e0172a","alterId":0,"cipher":"auto","udp":true,"network":"http","http-opts":{"headers":{ "method":["GET"],"Host":["a.189.cn"]},"path":["/"]}}
 
-  - {"name":"秋高气爽 37","type":"vmess","server":"20.24.83.152","port":"80","uuid":" 57c0f85d-e8c5-4eba-99cb-1a4521e0172a","alterId":0,"cipher":"auto","udp":true,"network":"http","http-opts":{"headers": {"方法":["GET"],"主机":["a.189.cn"]},"路径":["/"]}}
+  - {"name":"秋高气爽 37","type":"vmess","server":"20.24.83.152","port":"80","uuid":" 57c0f85d-e8c5-4eba-99cb-1a4521e0172a","alterId":0,"cipher":"auto","udp":true,"network":"http","http-opts":{"headers": {"method":["GET"],"path":["a.189.cn"]},"path":["/"]}}
 
   - {"name":"秋高气爽 38","type":"vmess","server":"20.24.201.242","port":"80","uuid":"57c0f85d -e8c5-4eba-99cb-1a4521e0172a","alterId":0,"cipher":"auto","udp":true,"network":"http","http-opts":{"headers":{ "method":["GET"],"Host":["a.189.cn"]},"path":["/"]}}
 
@@ -77,7 +77,7 @@ proxies:
 
   - {"name":"秋高气爽 40","type":"vmess","server":"20.2.84.116","port":"80","uuid":" 57c0f85d-e8c5-4eba-99cb-1a4521e0172a","alterId":0,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"headers": {"Host":"a.189.cn"},"path":"/"},"ws-path":"/","ws-headers":{"Host":"ali2.a.yximgs .com"}}
 
-  - {"name":"秋高气爽 41","type":"vmess","server":"20.2.81.214","port":"80","uuid":" 57c0f85d-e8c5-4eba-99cb-1a4521e0172a","alterId":0,"cipher":"auto","udp":true,"network":"http","http-opts":{"headers": {"方法":["GET"],"主机":["a.189.cn"]},"路径":["/"]}}
+  - {"name":"秋高气爽 41","type":"vmess","server":"20.2.81.214","port":"80","uuid":" 57c0f85d-e8c5-4eba-99cb-1a4521e0172a","alterId":0,"cipher":"auto","udp":true,"network":"http","http-opts":{"headers": {"method":["GET"],"path":["a.189.cn"]},"path":["/"]}}
 
   - {"name":"秋高气爽 42","type":"vmess","server":"20.187.121.30","port":"80","uuid":"57c0f85d -e8c5-4eba-99cb-1a4521e0172a","alterId":0,"cipher":"auto","udp":true,"network":"ws","ws-opts":{"headers":{ "Host":"a.189.cn"},"path":"/"},"ws-path":"/","ws-headers":{"Host":"ali2.a.yximgs. com"}}
 proxy-groups:
