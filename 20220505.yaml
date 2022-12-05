@@ -28,28 +28,25 @@ proxies:
   - {name: 秋高气爽 21, server: sg.epicbrowser.net, port: 8888, type: http, tls: true}
   - {name: 秋高气爽 22, server: sg2.epicbrowser.net, port: 8888, type: http, tls: true}
   - {name: 秋高气爽 23, server: sg3.epicbrowser.net, port: 8888, type: http, tls: true}
-  - {name: 秋高气爽 24, server: 37.252.1.197, port: 8010, username: 2597665, password: 8c3466, type: http, udp: true}
-  - {name: 秋高气爽 25, type: trojan, server: 112.fastea.top, port: 53316, password: 38bafedf-2394-4380-aa1e-d1c5b8b49457, udp: true, skip-cert-verify: true }
-  - {name: 秋高气爽 26, server: uk2.epicbrowser.net, port: 8888, type: http, tls: true, skip-cert-verify: false, udp: true}
-  - {name: 秋高气爽 27, server: ca.epicbrowser.net, port: 8888, type: http, tls: true, skip-cert-verify: false, udp: true}
-  - {name: 秋高气爽 28, server: ca2.epicbrowser.net, port: 8888, type: http, tls: true, skip-cert-verify: false, udp: true}
-  - {name: 秋高气爽 29, server: ca3.epicbrowser.net, port: 8888, type: http, tls: true, skip-cert-verify: false, udp: true}
-  - {name: 秋高气爽 30, type: trojan, server: hk3.520748.xyz, port: 10002, password: dffb4522-2ead-4b92-9ac3-001c88f53f79, udp: true, sni: hk3.520748.xyz, skip-cert-verify: true }
-  - {name: 秋高气爽 31, type: trojan, server: jp2.520748.xyz, port: 10006, password: dffb4522-2ead-4b92-9ac3-001c88f53f79, udp: true, sni: jp2.520748.xyz, skip-cert-verify: true }
-  - {name: 秋高气爽 32, type: trojan, server: kr2.520748.xyz, port: 10009, password: dffb4522-2ead-4b92-9ac3-001c88f53f79, udp: true, sni: kr2.520748.xyz, skip-cert-verify: true }
-  - {name: 秋高气爽 33, type: trojan, server: sg.520748.xyz, port: 10006, password: dffb4522-2ead-4b92-9ac3-001c88f53f79, udp: true, sni: sg.520748.xyz, skip-cert-verify: true }
-  - {name: 秋高气爽 34, type: trojan, server: us1.520748.xyz, port: 10002, password: dffb4522-2ead-4b92-9ac3-001c88f53f79, udp: true, sni: us1.520748.xyz, skip-cert-verify: true }
-  - {name: 秋高气爽 35, type: trojan, server: in.520748.xyz, port: 10001, password: dffb4522-2ead-4b92-9ac3-001c88f53f79, udp: true, sni: in.520748.xyz, skip-cert-verify: true }
-  - {name: 秋高气爽 36, type: trojan, server: aus.520748.xyz, port: 10001, password: dffb4522-2ead-4b92-9ac3-001c88f53f79, udp: true, sni: aus.520748.xyz, skip-cert-verify: true }
-  - {name: 秋高气爽 37, type: trojan, server: uk.520748.xyz, port: 10002, password: dffb4522-2ead-4b92-9ac3-001c88f53f79, udp: true, sni: uk.520748.xyz, skip-cert-verify: true }
-  - {name: 秋高气爽 38, type: trojan, server: ge.520748.xyz, port: 10002, password: dffb4522-2ead-4b92-9ac3-001c88f53f79, udp: true, sni: ge.520748.xyz, skip-cert-verify: true }
-  - {name: 秋高气爽 39, type: trojan, server: nl.520748.xyz, port: 10001, password: dffb4522-2ead-4b92-9ac3-001c88f53f79, udp: true, sni: nl.520748.xyz, skip-cert-verify: true }
-
-  - {name: 秋高气爽 40, server: oss-cn-shanghai.westdatacloud.top, port: 20036, type: trojan, password: 4232F98B-C7A6-FC46-26C1-23E2EBD14CE1, sni: oss-cn-shanghai.westdatacloud.top, skip-cert-verify: true, udp: true}
-
-  - {name: 秋高气爽 41, server: oss-cn-shanghai.westdatacloud.top, port: 20037, type: trojan, password: 7AC49280-AB00-8781-1F03-2D087F41A265, sni: oss-cn-shanghai.westdatacloud.top, skip-cert-verify: true, udp: true}
-
-  - {name: 秋高气爽 42, server: oss-cn-shanghai.westdatacloud.top, port: 20038, type: trojan, password: 0A7F7256-1D67-4A3F-31DF-C71302D0B146, sni: oss-cn-shanghai.westdatacloud.top, skip-cert-verify: true, udp: true}
+  - {name: 秋高气爽 24, server: uk2.epicbrowser.net, port: 8888, type: http, tls: true, skip-cert-verify: false, udp: true}
+  - {name: 秋高气爽 25, server: ca.epicbrowser.net, port: 8888, type: http, tls: true, skip-cert-verify: false, udp: true}
+  - {name: 秋高气爽 26, server: ca2.epicbrowser.net, port: 8888, type: http, tls: true, skip-cert-verify: false, udp: true}
+  - {name: 秋高气爽 27, server: ca3.epicbrowser.net, port: 8888, type: http, tls: true, skip-cert-verify: false, udp: true}
+  - {name: 秋高气爽 28, server: 203.30.188.120, port: 443, type: vmess, uuid: 4612618c-24cd-4379-9924-cfdf3d61fa5a, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /IYKLD53M, headers: {Host: opfr1.v2rayfree1.xyz}}}
+  - {name: 秋高气爽 29, server: 203.24.108.9, port: 443, type: vmess, uuid: 4612618c-24cd-4379-9924-cfdf3d61fa5a, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /IYKLD53M, headers: {Host: opfr1.v2rayfree1.xyz}}}
+  - {name: 秋高气爽 30, server: 66.235.200.21, port: 443, type: vmess, uuid: 4612618c-24cd-4379-9924-cfdf3d61fa5a, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /IYKLD53M, headers: {Host: opfr1.v2rayfree1.xyz}}}
+  - {name: 秋高气爽 31, server: 185.162.228.229, port: 443, type: vmess, uuid: 4612618c-24cd-4379-9924-cfdf3d61fa5a, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /IYKLD53M, headers: {Host: opfr1.v2rayfree1.xyz}}}
+  - {name: 秋高气爽 32, server: 66.235.200.21, port: 443, type: vmess, uuid: 4612618c-24cd-4379-9924-cfdf3d61fa5a, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /IYKLD53M, headers: {Host: opfr1.v2rayfree1.xyz}}}
+  - {name: 秋高气爽 33, server: 141.101.114.134, port: 443, type: vmess, uuid: 4612618c-24cd-4379-9924-cfdf3d61fa5a, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /IYKLD53M, headers: {Host: opfr1.v2rayfree1.xyz}}}
+  - {name: 秋高气爽 34, server: 141.101.115.134, port: 443, type: vmess, uuid: 4612618c-24cd-4379-9924-cfdf3d61fa5a, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /IYKLD53M, headers: {Host: opfr1.v2rayfree1.xyz}}}
+  - {name: 秋高气爽 35, server: 198.41.203.5, port: 443, type: vmess, uuid: 4612618c-24cd-4379-9924-cfdf3d61fa5a, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /IYKLD53M, headers: {Host: opfr1.v2rayfree1.xyz}}}
+  - {name: 秋高气爽 36, server: 190.93.246.195, port: 443, type: vmess, uuid: 4612618c-24cd-4379-9924-cfdf3d61fa5a, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /IYKLD53M, headers: {Host: opfr1.v2rayfree1.xyz}}}
+  - {name: 秋高气爽 37, server: 190.93.245.170, port: 443, type: vmess, uuid: 4612618c-24cd-4379-9924-cfdf3d61fa5a, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /IYKLD53M, headers: {Host: opfr1.v2rayfree1.xyz}}}
+  - {name: 秋高气爽 38, server: 190.93.244.200, port: 443, type: vmess, uuid: 4612618c-24cd-4379-9924-cfdf3d61fa5a, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /IYKLD53M, headers: {Host: opfr1.v2rayfree1.xyz}}}
+  - {name: 秋高气爽 39, server: 203.30.191.192, port: 443, type: vmess, uuid: 4612618c-24cd-4379-9924-cfdf3d61fa5a, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /IYKLD53M, headers: {Host: opfr1.v2rayfree1.xyz}}}
+  - {name: 秋高气爽 40, server: 188.114.99.10, port: 443, type: vmess, uuid: 4612618c-24cd-4379-9924-cfdf3d61fa5a, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /IYKLD53M, headers: {Host: opfr1.v2rayfree1.xyz}}}
+  - {name: 秋高气爽 41, server: 23.227.38.39, port: 443, type: vmess, uuid: 4612618c-24cd-4379-9924-cfdf3d61fa5a, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /IYKLD53M, headers: {Host: opfr1.v2rayfree1.xyz}}}
+  - {name: 秋高气爽 42, server: 198.41.212.123, port: 443, type: vmess, uuid: 4612618c-24cd-4379-9924-cfdf3d61fa5a, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /IYKLD53M, headers: {Host: opfr1.v2rayfree1.xyz}}}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
