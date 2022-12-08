@@ -5,9 +5,9 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 秋高气爽 1, server: sg.securevpn.cc, port: 1020, type: ss, cipher: aes-128-gcm, password: !<str> 202211000000000000000020, plugin: obfs, plugin-opts: {mode: http, host: securevpn.cc}, udp: true}
-  - {name: 秋高气爽 2, server: sg.securevpn.cc, port: 1020, type: ss, cipher: aes-128-gcm, password: !<str> 202211000000000000000020, plugin: obfs, plugin-opts: {mode: http, host: securevpn.cc}, udp: true}
-  - {name: 秋高气爽 3, server: jp.securevpn.cc, port: 1020, type: ss, cipher: aes-128-gcm, password: !<str> 202211000000000000000020, plugin: obfs, plugin-opts: {mode: http, host: securevpn.cc}, udp: true}
+  - {name: 秋高气爽 1, type: vmess, server: csavietnam3.csadata4g.me, port: '80', uuid: 8a678b26-e4c1-4fe0-b0a4-ec36e3f41996, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /csadata4g.me, headers: { Host: dl.kgvn.garenanow.com } }, ws-path: /csadata4g.me, ws-headers: { Host: dl.kgvn.garenanow.com } }
+  - {name: 秋高气爽 2, type: vmess, server: singapore1.csadata4g.me, port: '80', uuid: 8a678b26-e4c1-4fe0-b0a4-ec36e3f41996, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /csadata4g.me, headers: { Host: dl.kgvn.garenanow.com } }, ws-path: /csadata4g.me, ws-headers: { Host: dl.kgvn.garenanow.com } }
+  - {name: 秋高气爽 3, type: vmess, server: singapore1.csadata4g.me, port: '80', uuid: 8a678b26-e4c1-4fe0-b0a4-ec36e3f41996, alterId: 0, cipher: auto, udp: true, network: ws, ws-opts: { path: /csadata4g.me, headers: { Host: v9-vn.tiktokcdn.com } }, ws-path: /csadata4g.me, ws-headers: { Host: v9-vn.tiktokcdn.com } }
   - {name: 秋高气爽 4, server: 141.101.114.120, port: 443, type: vmess, uuid: 33aa57df-1c93-4318-9fce-e850437ee781, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /dongtaiwang.com, headers: {Host: lg1.cfcdn3.xyz}}}
   - {name: 秋高气爽 5, server: 198.41.212.100, port: 443, type: vmess, uuid: 33aa57df-1c93-4318-9fce-e850437ee781, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /dongtaiwang.com, headers: {Host: lg1.cfcdn3.xyz}}}
   - {name: 秋高气爽 6, server: 198.41.212.100, port: 443, type: vmess, uuid: 176b598f-445b-41ac-9d2a-430c5c4df26a, alterId: 0, cipher: auto, tls: true, network: ws, ws-opts: {path: /dongtaiwang.com, headers: {Host: clash1.trump2023.net}}}
