@@ -1,0 +1,539 @@
+#EXTM3U
+#EXTINF:-1 ,亚洲新闻
+http://d2e1asnsl7br7b.cloudfront.net/7782e205e72f43aeb4a48ec97f66ebbe/index_4.m3u8
+#EXTINF:-1 ,澳门奥视
+http://61.244.22.5/ch1/ch1.live/playelist.m3u8
+#EXTINF:-1 ,澳门葡语
+http://61.244.22.5/ch2/ch2.live/chunklist_w1632175875.m3u8
+#EXTINF:-1 ,澳视澳门
+http://61.244.22.5/ch1/_definst_/ch1.live/playlist.m3u8
+#EXTINF:-1 ,澳视综艺
+http://61.244.22.5/ch6/_definst_/hd_ch6.live/playlist.m3u8
+#EXTINF:-1 ,澳门卫星
+http://61.244.22.5/ch3/_definst_/ch3.live/playlist.m3u8
+#EXTINF:-1 ,澳门资讯
+http://61.244.22.5/ch5/_definst_/info_ch5.live/playlist.m3u8
+#EXTINF:-1 ,仙都风景区
+http://gccncc.v.wscdns.com/gc/xdfjq01_1/index.m3u8
+#EXTINF:-1 ,CCTV4 540
+http://140.207.241.2:8080/live/program/live/cctv4/1300000/mnf.m3u8
+#EXTINF:-1 ,CCTV11 540
+http://140.207.241.2:8080/live/program/live/cctv11/1300000/mnf.m3u8
+#EXTINF:-1 ,CCTV7 540
+http://140.207.241.2:8080/live/program/live/cctv7/1300000/mnf.m3u8
+#EXTINF:-1 ,九华山花台
+http://gccncc.v.wscdns.com/gc/jhs01_1/index.m3u8
+#EXTINF:-1 ,CCTV1 1080
+http://140.207.241.2:8080/live/program/live/cctv1hd/4000000/mnf.m3u8
+#EXTINF:-1 ,澳视综艺
+http://103.233.191.132:1935/ch6/hd_ch6.live/playlist.m3u8
+#EXTINF:-1 ,澳视体育
+http://103.233.191.132:1935/ch4/sport_ch4.live/playlist.m3u8
+#EXTINF:-1 ,澳视澳门
+http://103.233.191.132:1935/ch1/ch1.live/playlist.m3u8
+#EXTINF:-1 ,澳视资讯
+http://103.233.191.132:1935/ch5/info_ch5.live/playlist.m3u8
+#EXTINF:-1 ,澳视葡文
+http://103.233.191.132:1935/ch2/ch2.live/playlist.m3u8
+#EXTINF:-1 ,CCTV12 540
+http://140.207.241.2:8080/live/program/live/cctv12/1300000/mnf.m3u8
+#EXTINF:-1 ,澳视卫星
+http://103.233.191.132:1935/ch3/ch3.live/playlist.m3u8
+#EXTINF:-1 ,CCTV13 540
+http://140.207.241.2:8080/live/program/live/cctvxw/1300000/mnf.m3u8
+#EXTINF:-1 ,天界山-桃花湾瀑布
+http://gccncc.v.wscdns.com/gc/blg05_1/index.m3u8
+#EXTINF:-1 ,CCTV15 540
+http://140.207.241.2:8080/live/program/live/cctvyy/1300000/mnf.m3u8
+#EXTINF:-1 ,上海五星体育 1080
+http://140.207.241.2:8080/live/program/live/ssty/4000000/mnf.m3u8
+#EXTINF:-1 ,CCTV3 1080
+http://140.207.241.2:8080/live/program/live/cctv3hd/4000000/mnf.m3u8
+#EXTINF:-1 ,上海东方影视 1080
+http://140.207.241.2:8080/live/program/live/dsjpdhd/4000000/mnf.m3u8
+#EXTINF:-1 ,广东卫视 1080
+http://140.207.241.2:8080/live/program/live/gdwshd/4000000/mnf.m3u8
+#EXTINF:-1 ,CCTV14 1080
+http://140.207.241.2:8080/live/program/live/cctvsehd/4000000/mnf.m3u8
+#EXTINF:-1 ,云台山-百家岩
+http://gccncc.v.wscdns.com/gc/ytsbjy_1/index.m3u8
+#EXTINF:-1 ,湖南卫视 1080
+http://140.207.241.2:8080/live/program/live/hnwshd/4000000/mnf.m3u8
+#EXTINF:-1 ,张家界-水绕四门
+http://gccncc.v.wscdns.com/gc/zjjsrsm_1/index.m3u8
+#EXTINF:-1 ,吉林卫视 540
+http://140.207.241.2:8080/live/program/live/jlws/1300000/mnf.m3u8
+#EXTINF:-1 ,黄花城水长城04
+http://gccncc.v.wscdns.com/gc/wgw04_1/index.m3u8
+#EXTINF:-1 ,SiTV幸福彩 1080
+http://140.207.241.2:8080/live/program/live/xfchd/4000000/mnf.m3u8
+#EXTINF:-1 ,坝达景点观景台
+http://gccncc.v.wscdns.com/gc/hnttbdjd_1/index.m3u8
+#EXTINF:-1 ,SiTV劲爆体育 1080
+http://140.207.241.2:8080/live/program/live/jbtyhd/4000000/mnf.m3u8
+#EXTINF:-1 ,东方卫视 1080
+http://140.207.241.2:8080/live/program/live/hddfws/4000000/mnf.m3u8
+#EXTINF:-1 ,CCTV2 540
+http://140.207.241.2:8080/live/program/live/cctv2/1300000/mnf.m3u8
+#EXTINF:-1 ,SiTV七彩戏剧 540
+http://140.207.241.2:8080/live/program/live/qcxj/1300000/mnf.m3u8
+#EXTINF:-1 ,万古楼遥望玉龙雪山
+http://gccncc.v.wscdns.com/gc/ljgcwglytylxs_1/index.m3u8
+#EXTINF:-1 ,CCTV8 1080
+http://140.207.241.2:8080/live/program/live/cctv8hd/4000000/mnf.m3u8
+#EXTINF:-1 ,湖南金鹰卡通 540
+http://140.207.241.2:8080/live/program/live/jykt/1300000/mnf.m3u8
+#EXTINF:-1 ,CCTV5+ 1080
+http://140.207.241.2:8080/live/program/live/cctv5phd/4000000/mnf.m3u8
+#EXTINF:-1 ,SiTV动漫秀场 1080
+http://140.207.241.2:8080/live/program/live/dmxchd/4000000/mnf.m3u8
+#EXTINF:-1 ,SiTV魅力足球 1080
+http://140.207.241.2:8080/live/program/live/mlyyhd/4000000/mnf.m3u8
+#EXTINF:-1 ,陕西卫视 540
+http://140.207.241.2:8080/live/program/live/sxws/1300000/mnf.m3u8
+#EXTINF:-1 ,上海教育 540
+http://140.207.241.2:8080/live/program/live/setv/1300000/mnf.m3u8
+#EXTINF:-1 ,上海ICS外语 1080
+http://140.207.241.2:8080/live/program/live/wypdhd/4000000/mnf.m3u8
+#EXTINF:-1 ,广西卫视 540
+http://140.207.241.2:8080/live/program/live/gxws/1300000/mnf.m3u8
+#EXTINF:-1 ,五彩池
+http://gccncc.v.wscdns.com/gc/hlwcc_1/index.m3u8
+#EXTINF:-1 ,东南卫视 1080
+http://140.207.241.2:8080/live/program/live/dnwshd/4000000/mnf.m3u8
+#EXTINF:-1 ,中国天气 576
+http://140.207.241.2:8080/live/program/live/zgqx/1300000/mnf.m3u8
+#EXTINF:-1 ,厦门卫视 540
+http://140.207.241.2:8080/live/program/live/xmws/1300000/mnf.m3u8
+#EXTINF:-1 ,上海哈哈炫动 1080
+http://140.207.241.2:8080/live/program/live/hhxdhd/4000000/mnf.m3u8
+#EXTINF:-1 ,上海新闻综合 1080
+http://140.207.241.2:8080/live/program/live/xwzhhd/4000000/mnf.m3u8
+#EXTINF:-1 ,河北卫视 540
+http://140.207.241.2:8080/live/program/live/hbws/1300000/mnf.m3u8
+#EXTINF:-1 ,湖北卫视 1080
+http://140.207.241.2:8080/live/program/live/hbwshd/4000000/mnf.m3u8
+#EXTINF:-1 ,嵩山峻极峰
+http://gccncc.v.wscdns.com/gc/zsslsjjfsd_1/index.m3u8
+#EXTINF:-1 ,北京卫视 1080
+http://140.207.241.2:8080/live/program/live/bjwshd/4000000/mnf.m3u8
+#EXTINF:-1 ,天津卫视 1080
+http://140.207.241.2:8080/live/program/live/tjwshd/4000000/mnf.m3u8
+#EXTINF:-1 ,上海都市 1080
+http://140.207.241.2:8080/live/program/live/ylpdhd/4000000/mnf.m3u8
+#EXTINF:-1 ,黑龙江卫视 1080
+http://140.207.241.2:8080/live/program/live/hljwshd/4000000/mnf.m3u8
+#EXTINF:-1 ,内蒙古卫视 540
+http://140.207.241.2:8080/live/program/live/nmgws/1300000/mnf.m3u8
+#EXTINF:-1 ,新疆卫视 540
+http://140.207.241.2:8080/live/program/live/xjws/1300000/mnf.m3u8
+#EXTINF:-1 ,SiTV东方财经 540
+http://140.207.241.2:8080/live/program/live/dfcj/1300000/mnf.m3u8
+#EXTINF:-1 ,浙江卫视 1080
+http://140.207.241.2:8080/live/program/live/zjwshd/4000000/mnf.m3u8
+#EXTINF:-1 ,CCTV5 1080
+http://140.207.241.2:8080/live/program/live/cctv5hd/4000000/mnf.m3u8
+#EXTINF:-1 ,SiTV生活时尚 1080
+http://140.207.241.2:8080/live/program/live/shsshd/4000000/mnf.m3u8
+#EXTINF:-1 ,四川卫视 540
+http://140.207.241.2:8080/live/program/live/scws/1300000/mnf.m3u8
+#EXTINF:-1 ,百事通体育 1080
+http://140.207.241.2:8080/live/program/live/hdnba2/4000000/mnf.m3u8
+#EXTINF:-1 ,上海第一财经 1080
+http://140.207.241.2:8080/live/program/live/dycjhd/4000000/mnf.m3u8
+#EXTINF:-1 ,SiTV法治天地 540
+http://140.207.241.2:8080/live/program/live/fztd/1300000/mnf.m3u8
+#EXTINF:-1 ,SiTV游戏风云 1080
+http://140.207.241.2:8080/live/program/live/yxfyhd/4000000/mnf.m3u8
+#EXTINF:-1 ,重庆卫视 540
+http://140.207.241.2:8080/live/program/live/cqws/1300000/mnf.m3u8
+#EXTINF:-1 ,深圳卫视 1080
+http://140.207.241.2:8080/live/program/live/szwshd/4000000/mnf.m3u8
+#EXTINF:-1 ,贵州卫视 540
+http://140.207.241.2:8080/live/program/live/gzws/1300000/mnf.m3u8
+#EXTINF:-1 ,上海纪实人文 1080
+http://140.207.241.2:8080/live/program/live/jspdhd/4000000/mnf.m3u8
+#EXTINF:-1 ,SiTV新视觉 1080
+http://140.207.241.2:8080/live/program/live/xsjhd/4000000/mnf.m3u8
+#EXTINF:-1 ,河南卫视 540
+http://140.207.241.2:8080/live/program/live/hnws/1300000/mnf.m3u8
+#EXTINF:-1 ,SiTV极速汽车 1080
+http://140.207.241.2:8080/live/program/live/jsqchd/4000000/mnf.m3u8
+#EXTINF:-1 ,江西卫视 1080
+http://140.207.241.2:8080/live/program/live/jxwshd/4000000/mnf.m3u8
+#EXTINF:-1 ,CCTV10 1080
+http://140.207.241.2:8080/live/program/live/cctv10hd/4000000/mnf.m3u8
+#EXTINF:-1 ,江苏卫视 1080
+http://140.207.241.2:8080/live/program/live/jswshd/4000000/mnf.m3u8
+#EXTINF:-1 ,海南卫视 540
+http://140.207.241.2:8080/live/program/live/lyws/1300000/mnf.m3u8
+#EXTINF:-1 ,百事通体育 1080
+http://140.207.241.2:8080/live/program/live/hdnba6/4000000/mnf.m3u8
+#EXTINF:-1 ,SiTV欢笑剧场 1080
+http://140.207.241.2:8080/live/program/live/hxjchd/4000000/mnf.m3u8
+#EXTINF:-1 ,百事通体育 1080
+http://140.207.241.2:8080/live/program/live/hdnba1/4000000/mnf.m3u8
+#EXTINF:-1 ,广东嘉佳卡通 540
+http://140.207.241.2:8080/live/program/live/jjkt/1300000/mnf.m3u8
+#EXTINF:-1 ,青海卫视 540
+http://140.207.241.2:8080/live/program/live/qhws/1300000/mnf.m3u8
+#EXTINF:-1 ,SiTV都市剧场 1080
+http://140.207.241.2:8080/live/program/live/dsjchd/4000000/mnf.m3u8
+#EXTINF:-1 ,辽宁卫视 1080
+http://140.207.241.2:8080/live/program/live/lnwshd/4000000/mnf.m3u8
+#EXTINF:-1 ,宁夏卫视 540
+http://140.207.241.2:8080/live/program/live/nxws/1300000/mnf.m3u8
+#EXTINF:-1 ,百事通体育 1080
+http://140.207.241.2:8080/live/program/live/hdnba5/4000000/mnf.m3u8
+#EXTINF:-1 ,兵团卫视 540
+http://140.207.241.2:8080/live/program/live/btws/1300000/mnf.m3u8
+#EXTINF:-1 ,SiTV金色频道 540
+http://140.207.241.2:8080/live/program/live/jingsepd/1300000/mnf.m3u8
+#EXTINF:-1 ,百事通体育 1080
+http://140.207.241.2:8080/live/program/live/hdnba4/4000000/mnf.m3u8
+#EXTINF:-1 ,云南卫视 540
+http://140.207.241.2:8080/live/program/live/ynws/1300000/mnf.m3u8
+#EXTINF:-1 ,百事通体育 1080
+http://140.207.241.2:8080/live/program/live/hdnba3/4000000/mnf.m3u8
+#EXTINF:-1 ,甘肃卫视 540
+http://140.207.241.2:8080/live/program/live/gsws/1300000/mnf.m3u8
+#EXTINF:-1 ,SiTV游戏风云蓝光
+http://shbu.live.bestvcdn.com.cn:8080/live/program/live/yxfyhd/4000000/mnf.m3u8
+#EXTINF:-1 ,SiTV极速汽车蓝光
+http://shbu.live.bestvcdn.com.cn:8080/live/program/live/jsqchd/4000000/mnf.m3u8
+#EXTINF:-1 ,SiTV生活时尚蓝光
+http://shbu.live.bestvcdn.com.cn:8080/live/program/live/shsshd/4000000/mnf.m3u8
+#EXTINF:-1 ,东方影视
+http://shbu.live.bestvcdn.com.cn:8080/live/program/live/dsjpdhd/2300000/mnf.m3u8
+#EXTINF:-1 ,BesTV体育蓝光
+http://shbu.live.bestvcdn.com.cn:8080/live/program/live/hdnba7/4000000/mnf.m3u8
+#EXTINF:-1 ,CCTV6 1080
+http://140.207.241.2:8080/live/program/live/cctv6hd/4000000/mnf.m3u8
+#EXTINF:-1 ,美食李子柒
+http://hls-ott-zhibo.wasu.tv/live/443/index.m3u8
+#EXTINF:-1 ,朱鹮02
+http://gcbsc.v.live.baishancdnx.cn/gc/zh02_1/index.m3u8
+#EXTINF:-1 ,大研花巷观景
+http://gcbsc.v.live.baishancdnx.cn/gc/ljgcdyhxgjt_1/index.m3u8
+#EXTINF:-1 ,四姑娘山幺妹峰
+http://gcbsc.v.live.baishancdnx.cn/gc/sgns01_1/index.m3u8
+#EXTINF:-1 ,中央电视塔南
+http://gcbsc.v.live.baishancdnx.cn/gc/ztn_1/index.m3u8
+#EXTINF:-1 ,西递牌坊
+http://gcbsc.v.live.baishancdnx.cn/gc/yxxdpf_1/index.m3u8
+#EXTINF:-1 ,黄花城水长城03
+http://gcbsc.v.live.baishancdnx.cn/gc/wgw03_1/index.m3u8
+#EXTINF:-1 ,崇圣寺三塔远景
+http://gcbsc.v.live.baishancdnx.cn/gc/dlst01_1/index.m3u8
+#EXTINF:-1 ,恒山悬空寺全景
+http://gcbsc.v.live.baishancdnx.cn/gc/hsxksqj_1/index.m3u8
+#EXTINF:-1 ,崂山-双福
+http://gcbsc.v.live.baishancdnx.cn/gc/qdls03_1/index.m3u8
+#EXTINF:-1 ,印象大红袍
+http://gcbsc.v.live.baishancdnx.cn/gc/wysyxdhp_1/index.m3u8
+#EXTINF:-1 ,天涯石
+http://gcbsc.v.live.baishancdnx.cn/gc/tyhjtys_1/index.m3u8
+#EXTINF:-1 ,婺源01
+http://gcbsc.v.live.baishancdnx.cn/gc/wygjt1_1/index.m3u8
+#EXTINF:-1 ,崂山-八水河
+http://gcalic.v.myalicdn.com/gc/qdls02_1/index.m3u8
+#EXTINF:-1 ,云台山-红石峡
+http://gcalic.v.myalicdn.com/gc/ytshsx_1/index.m3u8
+#EXTINF:-1 ,峨眉山-普贤菩萨铜像
+http://gcalic.v.myalicdn.com/gc/emspxps_1/index.m3u8
+#EXTINF:-1 ,哈尼梯田·普高老寨
+http://gcalic.v.myalicdn.com/gc/hnttpgsz_1/index.m3u8
+#EXTINF:-1 ,雪乡梦幻大石碑
+http://gcalic.v.myalicdn.com/gc/mdjxxdsb_1/index.m3u8
+#EXTINF:-1 ,泰山-拱北石
+http://gcalic.v.myalicdn.com/gc/taishan04_1/index.m3u8
+#EXTINF:-1 ,泰山-望人松
+http://gcalic.v.myalicdn.com/gc/taishan02_1/index.m3u8
+#EXTINF:-1 ,普陀山
+http://gcalic.v.myalicdn.com/gc/pts01_1/index.m3u8
+#EXTINF:-1 ,峨眉山-远眺贡嘎雪山
+http://gcalic.v.myalicdn.com/gc/emsyh_1/index.m3u8
+#EXTINF:-1 ,黄山-卧云峰
+http://gcalic.v.myalicdn.com/gc/hswlf_1/index.m3u8
+#EXTINF:-1 ,乌镇全景
+http://gcalic.v.myalicdn.com/gc/zjwzblt_1/index.m3u8
+#EXTINF:-1 ,龙形田
+http://gcalic.v.myalicdn.com/gc/zjwzlxt_1/index.m3u8
+#EXTINF:-1 ,乌镇·西市河
+http://gcalic.v.myalicdn.com/gc/zjwzbblh_1/index.m3u8
+#EXTINF:-1 ,深圳世界之窗
+http://gcalic.v.myalicdn.com/gc/sjzc01_1/index.m3u8
+#EXTINF:-1 ,云龙山观景台西
+http://gcalic.v.myalicdn.com/gc/ylh04_1/index.m3u8
+#EXTINF:-1 ,嘉峪关关城
+http://gcalic.v.myalicdn.com/gc/jyg04_1/index.m3u8
+#EXTINF:-1 ,山涧栈道
+http://gcbsc.v.live.baishancdnx.cn/gc/lhssjzd_1/index.m3u8
+#EXTINF:-1 ,西递半山亭
+http://gcalic.v.myalicdn.com/gc/yxxdbst_1/index.m3u8
+#EXTINF:-1 ,中央电视塔东
+http://gcalic.v.myalicdn.com/gc/ztd_1/index.m3u8
+#EXTINF:-1 ,天界山-玻璃栈道
+http://gcalic.v.myalicdn.com/gc/blg03_1/index.m3u8
+#EXTINF:-1 ,鸣沙山山门
+http://gcalic.v.myalicdn.com/gc/dhyyqyyq_1/index.m3u8
+#EXTINF:-1 ,峡谷石林
+http://gcalic.v.myalicdn.com/gc/pshdxg02_1/index.m3u8
+#EXTINF:-1 ,大红袍茶园
+http://gcalic.v.myalicdn.com/gc/wysdhpcy_1/index.m3u8
+#EXTINF:-1 ,峨眉山·云海日出
+http://gcalic.v.myalicdn.com/gc/emsarm_1/index.m3u8
+#EXTINF:-1 ,崇圣寺三塔湖面
+http://gcalic.v.myalicdn.com/gc/dlst02_1/index.m3u8
+#EXTINF:-1 ,武夷山玉女峰
+http://gcalic.v.myalicdn.com/gc/wysynf_1/index.m3u8
+#EXTINF:-1 ,八达岭长城南七楼
+http://gcalic.v.myalicdn.com/gc/bgws7_1/index.m3u8
+#EXTINF:-1 ,泰山-十八盘
+http://gcalic.v.myalicdn.com/gc/taishan05_1/index.m3u8
+#EXTINF:-1 ,黄花城水长城01
+http://gcalic.v.myalicdn.com/gc/wgw01_1/index.m3u8
+#EXTINF:-1 ,泰山-主峰
+http://gcalic.v.myalicdn.com/gc/taishan01_1/index.m3u8
+#EXTINF:-1 ,嘉峪关02
+http://gcalic.v.myalicdn.com/gc/jyg02_1/index.m3u8
+#EXTINF:-1 ,婺源02
+http://gcalic.v.myalicdn.com/gc/wygjt2_1/index.m3u8
+#EXTINF:-1 ,芦村远眺
+http://gcalic.v.myalicdn.com/gc/yxlcyt_1/index.m3u8
+#EXTINF:-1 ,天门洞
+http://gcalic.v.myalicdn.com/gc/tmstmd01_1/index.m3u8
+#EXTINF:-1 ,黄龙洗身洞
+http://gcalic.v.myalicdn.com/gc/hlxsd_1/index.m3u8
+#EXTINF:-1 ,张家界-将军列队
+http://gcalic.v.myalicdn.com/gc/zjjjjdl_1/index.m3u8
+#EXTINF:-1 ,福建漳州六鳌翡翠湾
+http://gcalic.v.myalicdn.com/gc/fcw01_1/index.m3u8
+#EXTINF:-1 ,天空步道
+http://gcalic.v.myalicdn.com/gc/tms02_1/index.m3u8
+#EXTINF:-1 ,黄山-飞来石
+http://gcalic.v.myalicdn.com/gc/hsptgy_1/index.m3u8
+#EXTINF:-1 ,黟县·西递牌坊
+http://gcalic.v.myalicdn.com/gc/yxxdpf_1/index.m3u8
+#EXTINF:-1 ,雪乡梦幻家园
+http://gcalic.v.myalicdn.com/gc/mdjxxmhjyxj_1/index.m3u8
+#EXTINF:-1 ,峨眉山-远眺万佛顶
+http://gcalic.v.myalicdn.com/gc/emswfs_1/index.m3u8
+#EXTINF:-1 ,国家游泳中心-水立方
+http://gcalic.v.myalicdn.com/gc/gccntv241-slf01_1/index.m3u8
+#EXTINF:-1 ,黄龙·争艳彩池
+http://gcalic.v.myalicdn.com/gc/hlzycc_1/index.m3u8
+#EXTINF:-1 ,鸣沙山月牙泉
+http://gcalic.v.myalicdn.com/gc/dhyyqsm_1/index.m3u8
+#EXTINF:-1 ,重庆李子坝轻轨站
+http://gcalic.v.myalicdn.com/gc/gccntv240-lzb01_1/index.m3u8
+#EXTINF:-1 ,汶川映秀新城
+http://gcbsc.v.live.baishancdnx.cn/gc/wcyxxc01_1/index.m3u8
+#EXTINF:-1 ,黄山峡谷
+https://gcalic.v.myalicdn.com/gc/hsxhdxg_1/index.m3u8?contentid=2820180516001
+#EXTINF:-1 ,眺万佛顶
+https://gcalic.v.myalicdn.com/gc/emswfs_1/index.m3u8?contentid=2820180516001
+#EXTINF:-1 ,水长城镜
+https://gcalic.v.myalicdn.com/gc/wgw02_1/index.m3u8?contentid=2820180516001
+#EXTINF:-1 ,黄山排云亭
+https://gcalic.v.myalicdn.com/gc/hspyt_1/index.m3u8?contentid=2820180516001
+#EXTINF:-1 ,泰拱北石
+https://gcalic.v.myalicdn.com/gc/taishan04_1/index.m3u8?contentid=2820180516001
+#EXTINF:-1 ,全国风景总览
+https://gcalic.v.myalicdn.com/gc/wgw05_1/index.m3u8?contentid=2820180516001
+#EXTINF:-1 ,雪乡大石碑
+https://gcalic.v.myalicdn.com/gc/mdjxxdsb_1/index.m3u8?contentid=2820180516001
+#EXTINF:-1 ,云台山红石硖
+https://gcalic.v.myalicdn.com/gc/ytshsx_1/index.m3u8?contentid=2820180516001
+#EXTINF:-1 ,恒宗
+https://gcalic.v.myalicdn.com/gc/hsxkssqdzrqj_1/index.m3u8?contentid=2820180516001
+#EXTINF:-1 ,普贤菩萨像
+https://gcalic.v.myalicdn.com/gc/emspxps_1/index.m3u8?contentid=2820180516001
+#EXTINF:-1 ,中央电视台中塔北
+https://gcalic.v.myalicdn.com/gc/ztb_1/index.m3u8?contentid=2820180516001
+#EXTINF:-1 ,水长城镜
+https://gcalic.v.myalicdn.com/gc/wgw01_1/index.m3u8?contentid=2820180516001
+#EXTINF:-1 ,黄山卧云峰
+https://gcalic.v.myalicdn.com/gc/hswlf_1/index.m3u8?contentid=2820180516001
+#EXTINF:-1 ,泰迎客松
+https://gcalic.v.myalicdn.com/gc/taishan02_1/index.m3u8?contentid=2820180516001
+#EXTINF:-1 ,黟县山亭
+https://gcalic.v.myalicdn.com/gc/yxxdbst_1/index.m3u8?contentid=2820180516001
+#EXTINF:-1 ,中央电视台中塔东
+https://gcalic.v.myalicdn.com/gc/ztd_1/index.m3u8?contentid=2820180516001
+#EXTINF:-1 ,黟县宏村南湖
+https://gcalic.v.myalicdn.com/gc/yxhcnh_1/index.m3u8?contentid=2820180516001
+#EXTINF:-1 ,泰山十八盘
+https://gcalic.v.myalicdn.com/gc/taishan05_1/index.m3u8?contentid=2820180516001
+#EXTINF:-1 ,悬空寺全景
+https://gcalic.v.myalicdn.com/gc/hsxksqj_1/index.m3u8?contentid=2820180516001
+#EXTINF:-1 ,悬空寺景
+https://gcalic.v.myalicdn.com/gc/hsxkscj_1/index.m3u8?contentid=2820180516001
+#EXTINF:-1 ,张家界阿凡达悬浮山
+https://gcalic.v.myalicdn.com/gc/zjjafdxfs_1/index.m3u8?contentid=2820180516001
+#EXTINF:-1 ,黟县西递牌坊
+https://gcalic.v.myalicdn.com/gc/yxxdpf_1/index.m3u8?contentid=2820180516001
+#EXTINF:-1 ,大研花巷景观台
+https://gcalic.v.myalicdn.com/gc/ljgcdyhxgjt_1/index.m3u8?contentid=2820180516001
+#EXTINF:-1 ,黄山平天矼
+https://gcalic.v.myalicdn.com/gc/hsptgz_1/index.m3u8?contentid=2820180516001
+#EXTINF:-1 ,六角亭瀑布
+http://gcalic.v.myalicdn.com/gc/hgsspzxdpb_1/index.m3u8
+#EXTINF:-1 ,宏村月沼
+http://gcbsc.v.live.baishancdnx.cn/gc/yxhcyz_1/index.m3u8
+#EXTINF:-1 ,泰山玉皇顶
+https://gcalic.v.myalicdn.com/gc/taishan06_1/index.m3u8?contentid=2820180516001
+#EXTINF:-1 ,九华山拜经台
+http://gccncc.v.wscdns.com/gc/jhs02_1/index.m3u8
+#EXTINF:-1 ,万峰林
+http://gccncc.v.wscdns.com/gc/xywfl_1/index.m3u8
+#EXTINF:-1 ,天涯鸟瞰
+http://gccncc.v.wscdns.com/gc/tyhjtynl_1/index.m3u8
+#EXTINF:-1 ,黄山-排云亭
+http://gccncc.v.wscdns.com/gc/hspyt_1/index.m3u8
+#EXTINF:-1 ,双乳峰
+http://gctxyc.liveplay.myqcloud.com/gc/xysrf_1_md.m3u8
+#EXTINF:-1 ,黄山-梦笔生花
+http://gctxyc.liveplay.myqcloud.com/gc/hsmbsh_1_md.m3u8
+#EXTINF:-1 ,中央电视塔北
+http://gctxyc.liveplay.myqcloud.com/gc/ztb_1_md.m3u8
+#EXTINF:-1 ,天山-马牙山
+http://gctxyc.liveplay.myqcloud.com/gc/xjtcmys_1_md.m3u8
+#EXTINF:-1 ,浙江舟山东极岛
+http://gctxyc.liveplay.myqcloud.com/gc/djd01_1_md.m3u8
+#EXTINF:-1 ,六盘山红军长征景区
+http://gctxyc.liveplay.myqcloud.com/gc/lpsgmjng01_1_md.m3u8
+#EXTINF:-1 ,嘉峪关03
+http://gctxyc.liveplay.myqcloud.com/gc/jyg04_1_md.m3u8
+#EXTINF:-1 ,厦门鼓浪屿
+http://gctxyc.liveplay.myqcloud.com/gc/gly01_1_md.m3u8
+#EXTINF:-1 ,印象红袍
+https://gctxyc.liveplay.myqcloud.com/gc/wysyxdhp_1/index.m3u8?contentid=2820180516001
+#EXTINF:-1 ,雪乡梦幻
+https://gctxyc.liveplay.myqcloud.com/gc/mdjxxmhjyxj_1/index.m3u8?contentid=2820180516001
+#EXTINF:-1 ,日月石
+http://gctxyc.liveplay.myqcloud.com/gc/tyhjrys_1_md.m3u8
+#EXTINF:-1 ,南天一柱
+https://gctxyc.liveplay.myqcloud.com/gc/tyhjntyz_1/index.m3u8?contentid=2820180516001
+#EXTINF:-1 ,黟县宏村月沼
+https://gctxyc.liveplay.myqcloud.com/gc/yxhcyz_1/index.m3u8?contentid=2820180516001
+#EXTINF:-1 ,红袍茶园
+https://gctxyc.liveplay.myqcloud.com/gc/wysdhpcy_1/index.m3u8?contentid=2820180516001
+#EXTINF:-1 ,天涯石
+https://gctxyc.liveplay.myqcloud.com/gc/tyhjtys_1/index.m3u8?contentid=2820180516001
+#EXTINF:-1 ,天山-定海神针
+http://gctxyc.liveplay.myqcloud.com/gc/xjtcdhsz_1_md.m3u8
+#EXTINF:-1 ,张家界将军列队
+https://gctxyc.liveplay.myqcloud.com/gc/zjjjjdl_1/index.m3u8?contentid=2820180516001
+#EXTINF:-1 ,天涯鸟瞰
+https://gctxyc.liveplay.myqcloud.com/gc/tyhjtynl_1/index.m3u8?contentid=2820180516001
+#EXTINF:-1 ,贡嘎雪山
+https://gctxyc.liveplay.myqcloud.com/gc/emsyh_1/index.m3u8?contentid=2820180516001
+#EXTINF:-1 ,都江堰-鱼嘴
+http://gctxyc.liveplay.myqcloud.com/gc/djyqyl1_1_md.m3u8
+#EXTINF:-1 ,泰山主峰
+https://gctxyc.liveplay.myqcloud.com/gc/taishan01_1/index.m3u8?contentid=2820180516001
+#EXTINF:-1 ,朱鹮03
+http://gctxyc.liveplay.myqcloud.com/gc/zh03_1_md.m3u8
+#EXTINF:-1 ,张家界-阿凡达悬浮山
+http://gctxyc.liveplay.myqcloud.com/gc/zjjafdxfs_1_md.m3u8
+#EXTINF:-1 ,天山-海西平台
+http://gctxyc.liveplay.myqcloud.com/gc/xjtchxpt_1_md.m3u8
+#EXTINF:-1 ,江苏南京牛首山
+http://gctxyc.liveplay.myqcloud.com/gc/nss01_1_md.m3u8
+#EXTINF:-1 ,四川凉山邛海景区
+http://gctxyc.liveplay.myqcloud.com/gc/xcqh01_1_md.m3u8
+#EXTINF:-1 ,崂山-太清
+http://gctxyc.liveplay.myqcloud.com/gc/qdls04_1_md.m3u8
+#EXTINF:-1 ,云梦仙顶
+http://gctxyc.liveplay.myqcloud.com/gc/tms04_1_md.m3u8
+#EXTINF:-1 ,西汉南越王博物馆
+http://gctxyc.liveplay.myqcloud.com/gc/nywbwg01_1_md.m3u8
+#EXTINF:-1 ,恒山悬空寺侧景
+http://gctxyc.liveplay.myqcloud.com/gc/hsxkscj_1_md.m3u8
+#EXTINF:-1 ,丹霞山丹梯铁锁
+http://gctxyc.liveplay.myqcloud.com/gc/dxsdtts_1_md.m3u8
+#EXTINF:-1 ,凤凰古城南华山
+http://gctxyc.liveplay.myqcloud.com/gc/fhgcdnhs_1_md.m3u8
+#EXTINF:-1 ,千岛湖
+http://gctxyc.liveplay.myqcloud.com/gc/caqdh_1_md.m3u8
+#EXTINF:-1 ,峨眉日出
+https://gctxyc.liveplay.myqcloud.com/gc/emsarm_1/index.m3u8?contentid=2820180516001
+#EXTINF:-1 ,桂林漓江景区
+http://gctxyc.liveplay.myqcloud.com/gc/gllj01_1_md.m3u8
+#EXTINF:-1 ,黄河漂流
+http://gctxyc.liveplay.myqcloud.com/gc/nxspthhpl_1_md.m3u8
+#EXTINF:-1 ,九华山
+http://gctxyc.liveplay.myqcloud.com/gc/jhs05_1_md.m3u8
+#EXTINF:-1 ,郑东新区千玺广场
+http://gctxyc.liveplay.myqcloud.com/gc/zdxq01_1_md.m3u8
+#EXTINF:-1 ,蓝印花布
+http://gctxyc.liveplay.myqcloud.com/gc/zjwzlyhb_1_md.m3u8
+#EXTINF:-1 ,都江堰-飞沙堰
+http://gctxyc.liveplay.myqcloud.com/gc/djyewm_1_md.m3u8
+#EXTINF:-1 ,普高老寨
+http://gctxyc.liveplay.myqcloud.com/gc/hnttpgsz_1_md.m3u8
+#EXTINF:-1 ,乐山大佛全景
+http://gctxyc.liveplay.myqcloud.com/gc/lsdfgfl_1_md.m3u8
+#EXTINF:-1 ,大漠孤烟
+http://gctxyc.liveplay.myqcloud.com/gc/nxsptdmgy_1_md.m3u8
+#EXTINF:-1 ,泰大观峰
+https://gctxyc.liveplay.myqcloud.com/gc/taishan03_1/index.m3u8?contentid=2820180516001
+#EXTINF:-1 ,山东卫视 1080
+http://140.207.241.2:8080/live/program/live/sdwshd/4000000/mnf.m3u8
+#EXTINF:-1 ,云台山-小寨沟
+http://gctxyc.liveplay.myqcloud.com/gc/ytsxzg_1_md.m3u8
+#EXTINF:-1 ,华山
+http://gccncc.v.wscdns.com/gc/hkhs01_1/index.m3u8
+#EXTINF:-1 ,西线玻璃栈道
+http://gccncc.v.wscdns.com/gc/tms05_1/index.m3u8
+#EXTINF:-1 ,九龙汇海
+http://gccncc.v.wscdns.com/gc/pshdxg01_1/index.m3u8
+#EXTINF:-1 ,韶音亭
+http://gctxyc.liveplay.myqcloud.com/gc/dxssyt_1_md.m3u8
+#EXTINF:-1 ,平遥古城
+http://gccncc.v.wscdns.com/gc/pygc01_1/index.m3u8
+#EXTINF:-1 ,直播中国精编直播
+http://gctxyc.liveplay.myqcloud.com/gc/wgw05_1_md.m3u8
+#EXTINF:-1 ,SiTV全纪实 1080
+http://140.207.241.2:8080/live/program/live/qjshd/4000000/mnf.m3u8
+#EXTINF:-1 ,嘉峪关城
+https://gctxyc.liveplay.myqcloud.com/gc/jyg04_1/index.m3u8?contentid=2820180516001
+#EXTINF:-1 ,长河落日
+http://gccncc.v.wscdns.com/gc/nxsptdmgychlr_1/index.m3u8
+#EXTINF:-1 ,隆珠措
+http://gctxyc.liveplay.myqcloud.com/gc/sgns02_1_md.m3u8
+#EXTINF:-1 ,朱鹮04
+http://gctxyc.liveplay.myqcloud.com/gc/zh04_1_md.m3u8
+#EXTINF:-1 ,云龙山观景台南
+http://gctxyc.liveplay.myqcloud.com/gc/ylh03_1_md.m3u8
+#EXTINF:-1 ,马岭河峡谷
+http://gccncc.v.wscdns.com/gc/xymlh_1/index.m3u8
+#EXTINF:-1 ,印象实景
+http://gccncc.v.wscdns.com/gc/hkylxs01_1/index.m3u8
+#EXTINF:-1 ,安徽卫视 1080
+http://140.207.241.2:8080/live/program/live/ahwshd/4000000/mnf.m3u8
+#EXTINF:-1 ,老虎嘴
+http://gccncc.v.wscdns.com/gc/hnttlhzjd_1/index.m3u8
+#EXTINF:-1 ,嵩山胜观峰
+http://gccncc.v.wscdns.com/gc/zsslstpt_1/index.m3u8
+#EXTINF:-1 ,海上观音
+http://gccncc.v.wscdns.com/gc/syns01_1/index.m3u8
+#EXTINF:-1 ,黄花城水长城02
+http://gccncc.v.wscdns.com/gc/wgw02_1/index.m3u8
+#EXTINF:-1 ,蓝月谷
+http://gccncc.v.wscdns.com/gc/ylxs12_1/index.m3u8
+#EXTINF:-1 ,八达岭长城北十楼
+http://gccncc.v.wscdns.com/gc/bgwn10_1/index.m3u8
+#EXTINF:-1 ,福州影视
+http://live.zohi.tv/video/s10001-yspd-2/index.m3u8
+#EXTINF:-1 ,大容山莲花山顶
+http://gctxyc.liveplay.myqcloud.com/gc/drs01_1_md.m3u8
+#EXTINF:-1 ,张掖七彩丹霞
+http://gctxyc.liveplay.myqcloud.com/gc/zyqcdx01_1_md.m3u8
+#EXTINF:-1 ,天津海河
+http://gctxyc.liveplay.myqcloud.com/gc/tjhh02_1_md.m3u8
+#EXTINF:-1 ,天山-灯杆山
+http://gctxyc.liveplay.myqcloud.com/gc/xjtcdgs_1_md.m3u8
+#EXTINF:-1 ,百事通体育 1080
+http://140.207.241.2:8080/live/program/live/hdnba7/4000000/mnf.m3u8
