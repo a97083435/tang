@@ -1,0 +1,876 @@
+
+<!DOCTYPE html>
+<html lang="zh-ch" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title>SYY技术导航网 - 嗨嗨嗨</title>
+    <meta name="keywords" content="简洁导航,云链接,个人导航,个人书签,扩展," />
+    <meta name="description" content="本站点采用TwoNav 导航系统，其是一款使用PHP + SQLite3/MySQL 开发的简约导航/书签管理器。" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,minimum-scale=1,user-scalable=no">
+    <link rel="stylesheet" href="./static/Font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet/less" href="./templates/home/tushan2/static/index.less" />
+    <script src="./templates/home/tushan2/static/less.js"></script>
+    <script src='./static/jquery/jquery-3.6.0.min.js'></script>
+    <script src="./static/Layui/v2.8.17/layui.js"></script>
+    <script src = "./static/Other/holmes.js"></script>
+    <meta http-equiv="Content-Type" content="text/html;charset=gb2312" /> 
+    <meta name="sogou_site_verification" content="kANSBr786C" />
+    <meta name="360-site-verification" content="9563560b09bec42d0580d55aa7bb160e" /> 
+    <script> // 百度统计
+        var _hmt = _hmt || [];
+        (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?845dd9c9d895581eb261b3f7e46f0b3e";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+        })();
+    </script> 
+    <link rel="shortcut icon" href="./data/user/admin/favicon/favicon.png">
+    <style>    footer.show {color: black;}
+    footer.show a {color: black !important;}</style>
+        </head>
+
+<body class="v-cloak">
+    <div class="banner">
+        <img src="./templates/home/tushan2/static/bg.webp" />
+    </div>
+    <header>
+        <div></div>
+        <time class="time">
+            <span class="date"></span>
+            <br />
+            <span class="datetime"></span>
+        </time>
+    </header>
+    <main>
+        <h1>SYY技术导航网</h1>
+        <div class="timedateBox">
+           
+        </div>
+        <div class="searchEngine ">
+            <ul>
+                <li data-name='Baidu' data-url='https://www.baidu.com/s?wd='>
+                    <img src="./templates/home/tushan2/static/svg/baidu.svg" />
+                    <span style='color:rgb(48,108,255)'>百度</span>
+                </li>
+                <li data-name='Bing' data-url='https://www.bing.com/search?q='>
+                    <img src="./templates/home/tushan2/static/svg/Bing.svg" />
+                    <span style='color:rgb(20,136,236)'>必应</span>
+                </li>
+                <li data-name='Bilibili' data-url='https://search.bilibili.com/all?keyword='>
+                    <img src="./templates/home/tushan2/static/svg/bilibili.svg" />
+                    <span style='color:rgb(32,176,227)'>哔哩哔哩</span>
+                </li>
+                <li data-name='Google' data-url='https://www.google.com/search?q='>
+                    <img src="./templates/home/tushan2/static/svg/google.svg" />
+                    <span id="google">谷歌</span>
+                </li>
+                <li data-name='Weixin' data-url='https://weixin.sogou.com/weixin?type=2&query='>
+                    <img src="./templates/home/tushan2/static/svg/weixin.svg" />
+                    <span style="color:rgb(211,32,36)">微信</span>
+                </li>
+            </ul>
+        </div>
+        <div class="search-input">
+            <input placeholder="搜索一下！" name="search" value="" id="search">
+            <button class="seartchBtn">
+                <img src="./templates/home/tushan2/static/svg/search.svg" />
+            </button>
+            <div id="searchRecommend" style="display: none;">
+                <div class="searchResult"></div>
+            </div>
+        </div>
+        <div class="links">
+                        <div class="links-items">
+                <div class="classTitle">
+                    <i class='fa fa-book'></i>
+                    <h2> 社区推荐</h2>
+                </div>
+                <div class="icons">
+                                        <a class="icons-item" target="_blank" href="https://github.com/dreamofstudy">
+                        <div class="logo">
+                            <img src="http://photo.syy4996.top//photo/github.png" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">GitHub</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="http://yang.syy4996.top/#/">
+                        <div class="logo">
+                            <img src="http://photo.syy4996.top//photo/520202.png" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">Yang-Panel</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="https://www.52pojie.cn/">
+                        <div class="logo">
+                            <img src="http://photo.syy4996.top//photo/52.png" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">吾爱破解</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="https://www.bilibili.com/">
+                        <div class="logo">
+                            <img src="http://photo.syy4996.top//photo/bilibili.png" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">哔哩哔哩</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="https://www.youtube.com/">
+                        <div class="logo">
+                            <img src="http://photo.syy4996.top//photo/youtube.png" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">Youtube</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="https://520202.xyz/">
+                        <div class="logo">
+                            <img src="http://photo.syy4996.top//photo/520202.png" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">SYY</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="https://syy4996.top/">
+                        <div class="logo">
+                            <img src="http://photo.syy4996.top//photo/520202.png" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">syy的导航网站</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="http://xiaoya.syy4996.top">
+                        <div class="logo">
+                            <img src="http://photo.syy4996.top//photo/wangzhi.png" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">小雅</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="http://blog.pandolar.top/">
+                        <div class="logo">
+                            <img src="http://photo.syy4996.top//photo/li.png" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">Pandolar</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="https://www.appinn.com/">
+                        <div class="logo">
+                            <img src="./data/user/admin/favicon/59.svg" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">小众软件 </span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="https://fulibus.net/">
+                        <div class="logo">
+                            <img src="http://photo.syy4996.top//photo/fuliba.png" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">福利吧-分享你的福利吧</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="https://anzhiy.cn/link/">
+                        <div class="logo">
+                            <img src="http://photo.syy4996.top//photo/anzhiyu.ico" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">安知鱼 - 安知鱼生活技术分享站</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="https://blog.wwang.pw/">
+                        <div class="logo">
+                            <img src="http://photo.syy4996.top//photo/miluyou.png" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">时光の主页</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="https://mp.weixin.qq.com/">
+                        <div class="logo">
+                            <img src="http://photo.syy4996.top//photo/weixin.png" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">公众号</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="https://www.iconfont.cn/">
+                        <div class="logo">
+                            <img src="http://photo.syy4996.top//photo/%E9%98%BF%E9%87%8C%E4%BA%91.png" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">阿里云图标库</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="https://jamcz.com/">
+                        <div class="logo">
+                            <img src="http://photo.syy4996.top//photo/keji.png" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">晨钟网络科技</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="https://bim.ccccltd.cn/family-web/home">
+                        <div class="logo">
+                            <img src="http://photo.syy4996.top//photo/zjlogo.png" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">中交族库</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="https://www.asp300.cn/">
+                        <div class="logo">
+                            <img src="http://photo.syy4996.top//photo/asp300.png" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">源码网站</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="http://chat.syy4996.top/">
+                        <div class="logo">
+                            <img src="http://photo.syy4996.top//photo/chatgpt.png" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">私人Chatgpt</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="https://bulianglin.com/archives/cdn.html">
+                        <div class="logo">
+                            <img src="./data/user/admin/favicon/183.png" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">不良林</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="https://passport2.chaoxing.com/login?fid=&amp;newversion=true&amp;refer=http://i.chaoxing.com">
+                        <div class="logo">
+                            <img src="./data/user/admin/favicon/185.svg" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">超星尔雅</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="https://lookdiv.com/">
+                        <div class="logo">
+                            <img src="./data/user/admin/favicon/193.svg" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">Pycharm激活</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="http://xvipvip.com/">
+                        <div class="logo">
+                            <img src="./data/user/admin/favicon/199.svg" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">vip影院</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="https://tool.chinaz.com/">
+                        <div class="logo">
+                            <img src="./data/user/admin/favicon/200.svg" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">站长工具</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="http://www.hnrsks.com/index.html?siteCode=hnsrskszx">
+                        <div class="logo">
+                            <img src="./data/user/admin/favicon/205.svg" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">河南省人事考试中心</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="https://linux.do/latest">
+                        <div class="logo">
+                            <img src="./data/user/admin/favicon/206.svg" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">linux社区</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="https://bbs.tampermonkey.net.cn/">
+                        <div class="logo">
+                            <img src="./data/user/admin/favicon/207.svg" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">油猴中文网</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="https://music.wjhe.top/">
+                        <div class="logo">
+                            <img src="./data/user/admin/favicon/214.svg" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">HEMusic</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="https://bbs.huorong.cn/">
+                        <div class="logo">
+                            <img src="./data/user/admin/favicon/219.svg" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">火绒安全论坛  </span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="https://chat.allai.works/#/chat">
+                        <div class="logo">
+                            <img src="./data/user/admin/favicon/220.svg" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">私Chatgpt</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="https://api.quickcloud.one/">
+                        <div class="logo">
+                            <img src="./data/user/admin/favicon/220.svg" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">New API</span>
+                    </a>
+                                    </div>
+            </div>
+                        <div class="links-items">
+                <div class="classTitle">
+                    <i class='fa fa-sellsy'></i>
+                    <h2> 云服务器</h2>
+                </div>
+                <div class="icons">
+                                        <a class="icons-item" target="_blank" href="https://www.oracle.com/">
+                        <div class="logo">
+                            <img src="http://photo.syy4996.top//photo/oracle.png" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">Oracle</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="https://dash.cloudflare.com/cf2e1bb38047fcd5b2fb41425c6d1d26">
+                        <div class="logo">
+                            <img src="http://photo.syy4996.top//photo/Cloudflare.png" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">Cloudflare</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="https://cloud.tencent.com/login?">
+                        <div class="logo">
+                            <img src="http://photo.syy4996.top//photo/%E8%85%BE%E8%AE%AF%E4%BA%91.png" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">腾讯云</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="https://developer.aliyun.com">
+                        <div class="logo">
+                            <img src="http://photo.syy4996.top//photo/aliyun.png" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">阿里云</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="https://www.ctyun.cn/">
+                        <div class="logo">
+                            <img src="http://photo.syy4996.top//photo/%E5%A4%A9%E7%BF%BC%E4%BA%91.png" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">天翼云</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="https://freessl.cn/">
+                        <div class="logo">
+                            <img src="http://photo.syy4996.top//photo/freessl.png" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">FreeSSL</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="https://iyideng.fun/welfare/best-domestic-platform-for-receiving-captcha-free-of-charge.html">
+                        <div class="logo">
+                            <img src="http://photo.syy4996.top//photo/yanzheng.png" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">免费接码平台大全</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="https://www.spaceship.com/">
+                        <div class="logo">
+                            <img src="http://photo.syy4996.top//photo/spaceship.png" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">Spaceship</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="https://sms-activate.org/cn#">
+                        <div class="logo">
+                            <img src="./data/user/admin/favicon/187.svg" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">接码平台</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="https://www.upyun.com/">
+                        <div class="logo">
+                            <img src="./data/user/admin/favicon/195.svg" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">又拍云</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="https://nic.eu.org/arf/en/">
+                        <div class="logo">
+                            <img src="./data/user/admin/favicon/203.svg" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">EU.org</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="https://www.cloudns.net/main/">
+                        <div class="logo">
+                            <img src="./data/user/admin/favicon/217.svg" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">ClouDNS</span>
+                    </a>
+                                    </div>
+            </div>
+                        <div class="links-items">
+                <div class="classTitle">
+                    <i class='fa fa-mixcloud'></i>
+                    <h2> 常用云盘</h2>
+                </div>
+                <div class="icons">
+                                        <a class="icons-item" target="_blank" href="http://pc.woozooo.com/">
+                        <div class="logo">
+                            <img src="http://photo.syy4996.top//photo/lanzou.png" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">蓝奏云盘</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="https://www.aliyundrive.com/sign/in">
+                        <div class="logo">
+                            <img src="http://photo.syy4996.top//photo/aliyunpan.png" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">阿里云盘</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="https://cloud.189.cn/">
+                        <div class="logo">
+                            <img src="http://photo.syy4996.top//photo/%E5%A4%A9%E7%BF%BC%E4%BA%91.png" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">天翼云盘</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="https://pan.baidu.com/">
+                        <div class="logo">
+                            <img src="http://photo.syy4996.top//photo/baiduwangpan.png" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">百度网盘</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="https://pan.quark.cn/">
+                        <div class="logo">
+                            <img src="./data/user/admin/favicon/204.svg" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">夸克网盘</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="https://www.wenshushu.cn/">
+                        <div class="logo">
+                            <img src="http://photo.syy4996.top//photo/wenshushu.png" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">文叔叔</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="https://cloud.syy4996.top/">
+                        <div class="logo">
+                            <img src="./data/user/admin/favicon/173.svg" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">私人网盘</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="https://www.662688.xyz/#/">
+                        <div class="logo">
+                            <img src="./data/user/admin/favicon/186.svg" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">88网盘聚合搜索</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="https://xpanpan.site/">
+                        <div class="logo">
+                            <img src="./data/user/admin/favicon/208.svg" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">小盘盘搜索</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="https://miaosou.fun/">
+                        <div class="logo">
+                            <img src="./data/user/admin/favicon/209.svg" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">秒搜</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="https://www.xuebapan.com/">
+                        <div class="logo">
+                            <img src="./data/user/admin/favicon/210.svg" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">学霸盘</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="https://www.okpt.net/login.php">
+                        <div class="logo">
+                            <img src="./data/user/admin/favicon/222.svg" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">OKPT</span>
+                    </a>
+                                    </div>
+            </div>
+                        <div class="links-items">
+                <div class="classTitle">
+                    <i class='fa fa-envelope-o'></i>
+                    <h2> 邮箱文档</h2>
+                </div>
+                <div class="icons">
+                                        <a class="icons-item" target="_blank" href="https://mail.google.com/">
+                        <div class="logo">
+                            <img src="http://photo.syy4996.top//photo/gamil.png" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">Gmail</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="https://outlook.live.com/">
+                        <div class="logo">
+                            <img src="http://photo.syy4996.top//photo/outlook.png" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">Outlook</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="https://mail.qq.com/">
+                        <div class="logo">
+                            <img src="http://photo.syy4996.top//photo/qqyouxiang.png" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">QQ邮箱</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="https://mail.163.com/">
+                        <div class="logo">
+                            <img src="http://photo.syy4996.top//photo/163youxiang.png" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">163邮箱</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="https://www.88.com/">
+                        <div class="logo">
+                            <img src="http://photo.syy4996.top//photo/wanmeiyouxiang.png" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">完美邮箱</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="http://24mail.chacuo.net/">
+                        <div class="logo">
+                            <img src="./data/user/admin/favicon/181.svg" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">临时邮箱</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="https://docs.qq.com/desktop/">
+                        <div class="logo">
+                            <img src="./data/user/admin/favicon/191.svg" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">腾讯文档</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="https://www.kdocs.cn/welcome">
+                        <div class="logo">
+                            <img src="./data/user/admin/favicon/192.svg" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">金山文档</span>
+                    </a>
+                                    </div>
+            </div>
+                        <div class="links-items">
+                <div class="classTitle">
+                    <i class='fa fa-group'></i>
+                    <h2> 友情链接</h2>
+                </div>
+                <div class="icons">
+                                        <a class="icons-item" target="_blank" href="https://blog.syy4996.top/">
+                        <div class="logo">
+                            <img src="./data/user/admin/favicon/7.png" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">Blog</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="http://192.168.2.137:5000/">
+                        <div class="logo">
+                            <img src="./data/user/admin/favicon/12.svg" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">NAS私有云</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="https://52syc.cn/">
+                        <div class="logo">
+                            <img src="./data/user/admin/favicon/159.svg" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">老李的网站</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="https://www.tweek.top/">
+                        <div class="logo">
+                            <img src="./data/user/admin/favicon/198.svg" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">Tweek</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="https://notes.fe-mm.com/">
+                        <div class="logo">
+                            <img src="./data/user/admin/favicon/215.png" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">茂茂物语</span>
+                    </a>
+                                    </div>
+            </div>
+                        <div class="links-items">
+                <div class="classTitle">
+                    <i class='fa fa-spinner'></i>
+                    <h2> 科学网络</h2>
+                </div>
+                <div class="icons">
+                                        <a class="icons-item" target="_blank" href="https://www.f2pool.com/mining-user-rvn/7d6923ac477b4ed089073c806b966551">
+                        <div class="logo">
+                            <img src="http://photo.syy4996.top//photo/shuichan.png" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">F2Pool</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="https://xfltd.cc/">
+                        <div class="logo">
+                            <img src="http://photo.syy4996.top//photo/jichang.png" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">XFLTD养鸡场</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="https://www.giffgaff.com/">
+                        <div class="logo">
+                            <img src="http://photo.syy4996.top//photo/SIM.svg" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">Giffgaff</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="https://skill-note.blogspot.com/2023/07/blogger.html">
+                        <div class="logo">
+                            <img src="./data/user/admin/favicon/174.svg" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">SF订阅</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="https://sl.slshenlong.top">
+                        <div class="logo">
+                            <img src="./data/user/admin/favicon/175.svg" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">神龙</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="https://dci.ink">
+                        <div class="logo">
+                            <img src="./data/user/admin/favicon/177.svg" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">DCI Cloud</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="https://fofa.info/">
+                        <div class="logo">
+                            <img src="./data/user/admin/favicon/180.svg" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">搜索引擎</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="https://www.i-card.shop?code=B2SWc">
+                        <div class="logo">
+                            <img src="./data/user/admin/favicon/211.svg" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">ICard</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="http://cardshome.net/">
+                        <div class="logo">
+                            <img src="./data/user/admin/favicon/212.svg" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">卡之家发卡平台</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="https://www.huoka.vip/">
+                        <div class="logo">
+                            <img src="./data/user/admin/favicon/213.svg" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">凤凰发卡</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="https://m2.spwvpn.com">
+                        <div class="logo">
+                            <img src="./data/user/admin/favicon/218.svg" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">麻雀</span>
+                    </a>
+                                    </div>
+            </div>
+                        <div class="links-items">
+                <div class="classTitle">
+                    <i class='fa fa-road'></i>
+                    <h2> 工具合集</h2>
+                </div>
+                <div class="icons">
+                                        <a class="icons-item" target="_blank" href="https://123apps.com/">
+                        <div class="logo">
+                            <img src="./data/user/admin/favicon/135.svg" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">Free Web Apps</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="https://www.notion.so/1c598629675145988b43a37998a1604a">
+                        <div class="logo">
+                            <img src="./data/user/admin/favicon/48.svg" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">青龙教程合集</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="https://www.data-baker.com/#/specs/compose/online">
+                        <div class="logo">
+                            <img src="./data/user/admin/favicon/49.svg" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">标贝科技-智能语音交互与AI数据服务专家</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="https://youtube.iiilab.com/">
+                        <div class="logo">
+                            <img src="./data/user/admin/favicon/167.svg" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">Youtube下载</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="https://ssstik.io/en">
+                        <div class="logo">
+                            <img src="./data/user/admin/favicon/168.svg" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">Tiktok下载</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="https://fanyi.baidu.com/">
+                        <div class="logo">
+                            <img src="./data/user/admin/favicon/169.svg" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">百度翻译</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="https://www.ciliso.co/">
+                        <div class="logo">
+                            <img src="./data/user/admin/favicon/176.svg" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">磁力搜索</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="https://m.youdao.com/translate">
+                        <div class="logo">
+                            <img src="./data/user/admin/favicon/178.svg" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">有道翻译</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="https://www.syy4996.top/cdn.html">
+                        <div class="logo">
+                            <img src="./data/user/admin/favicon/184.svg" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">节点转换</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="https://www.zerotier.com/">
+                        <div class="logo">
+                            <img src="./data/user/admin/favicon/190.svg" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">Zerotier</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="https://www.zhangxinxu.com/sp/svgo/">
+                        <div class="logo">
+                            <img src="./data/user/admin/favicon/194.svg" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">SVG在线压缩合并工具 &raquo; 张鑫旭-鑫空间-鑫生活</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="https://www.bejson.com/convert/image_to_svg/">
+                        <div class="logo">
+                            <img src="./data/user/admin/favicon/201.svg" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">图片转换</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="https://remove.photos/zh-cn/">
+                        <div class="logo">
+                            <img src="./data/user/admin/favicon/202.svg" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">AI抠图</span>
+                    </a>
+                                    </div>
+            </div>
+                        <div class="links-items">
+                <div class="classTitle">
+                    <i class='fa fa-photo'></i>
+                    <h2> AI绘画</h2>
+                </div>
+                <div class="icons">
+                                        <a class="icons-item" target="_blank" href="https://civitai.com/">
+                        <div class="logo">
+                            <img src="http://photo.520202.xyz/i/2024/01/12/zfy93t.png" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">绘画模型</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="https://jpghd.com/zh">
+                        <div class="logo">
+                            <img src="./data/user/admin/favicon/171.svg" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">照片修复</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="https://hug.520202.xyz/">
+                        <div class="logo">
+                            <img src="./data/user/admin/favicon/172.svg" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">HuggingFace</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="http://vr.xuanran100.com/">
+                        <div class="logo">
+                            <img src="./data/user/admin/favicon/216.svg" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">全景首页</span>
+                    </a>
+                                    </div>
+            </div>
+                        <div class="links-items">
+                <div class="classTitle">
+                    <i class='fa fa-tv'></i>
+                    <h2> 论文专利</h2>
+                </div>
+                <div class="icons">
+                                        <a class="icons-item" target="_blank" href="https://www.cnki.net/">
+                        <div class="logo">
+                            <img src="./data/user/admin/favicon/179.svg" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">知网</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="https://pubscholar.cn/">
+                        <div class="logo">
+                            <img src="./data/user/admin/favicon/188.svg" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">PubScholar公益学术平台</span>
+                    </a>
+                                        <a class="icons-item" target="_blank" href="https://pss-system.cponline.cnipa.gov.cn/conventionalSearch">
+                        <div class="logo">
+                            <img src="./data/user/admin/favicon/196.svg" alt="HUAN" width="16" height="16">
+                        </div>
+                        <span class="logo-title">专利检索</span>
+                    </a>
+                                    </div>
+            </div>
+                    </div>
+        <footer class="show">
+            <a href="./index.php?c=admin&u=admin" target="_blank">系统管理</a> | Copyright © 2023-2024  by  syy              
+             
+		</footer>
+    </main>
+</body>
+
+<script>
+    function renderTime() {
+        const now = new Date();
+        const year = now.getFullYear();     // 四位数的年份
+        const month = now.getMonth() + 1;   // 月份从0开始，需要加1
+        const day = now.getDate();          // 日
+        const hour = now.getHours();      // 当前小时数（0-23）
+        const minute = now.getMinutes();
+        const second = now.getSeconds();
+        const dateStr = `${year}年${month}月${day}日`;
+        const datetime = `${hour < 10 ? '0' + hour : hour}:${minute < 10 ? '0' + minute : minute}`;
+        $('.date').text(dateStr);
+        $('.datetime').text(datetime);
+    }
+    renderTime();
+    setInterval(renderTime, 1000)
+    $("#searchRecommend").hide();
+    let searchEngine = localStorage.getItem("searchEngine");
+    $(".searchEngine li").click(function () {
+        $(".searchEngine li").removeClass("selectEngine")
+        $(this).addClass("selectEngine")
+        searchEngine = $(this).attr('data-name')
+        localStorage.setItem("searchEngine", searchEngine);
+        $(".seartchBtn").css('background', $(this).find('span').css('color'))
+    })
+    if (!searchEngine || 'on' != 'on') {
+        searchEngine = 'Baidu'
+    }
+    $(`[data-name='${searchEngine}']`).addClass('selectEngine');
+    $(".seartchBtn").css('background', $(`[data-name='${searchEngine}']`).find('span').css('color'))
+    function openWindow(url, isNew = false) {
+        let a = document.createElement("a");
+        a.href = url;
+        if (isNew) {
+            a.target = "_blank"
+        }
+        a.click();
+        a.remove();
+    }
+    function search() {
+        let searchEngineUrl = $(`[data-name='${searchEngine}']`).attr("data-url");
+        let url = searchEngineUrl + $('[name="search"]').val();
+        openWindow(url, true)
+    }
+    function handleSuggestion(data) {
+        if (data.length > 0) {
+            $("#searchRecommend").show();
+        } else {
+            $("#searchRecommend").hide();
+        }
+        $(".searchResult").html("");
+        let index = 0;
+        data.forEach((item) => {
+            if (index < 10) {
+                let suggestion = document.createElement("p");
+                suggestion.textContent = item;
+                $(".searchResult").append(suggestion)
+            }
+            index += 1;
+        });
+        $(".searchResult p").off("click").click(function () {
+            $("[name='search']").val($(this).text());
+            search();
+        })
+    }
+    $(".seartchBtn").click(search);
+    $('[name="search"]').keypress(function (e) {
+        if (e.which == 13) {
+            search()
+        }
+    });
+    function debounce(fn, delay) {
+        let timerId;
+        return function () {
+            const context = this;
+            const args = arguments;
+            clearTimeout(timerId);
+            timerId = setTimeout(function () {
+                fn.apply(context, args);
+            }, delay);
+        }
+    }
+    function handleScroll() {
+        const keyword = $(this).val();
+        $.ajax({
+            url: 'https://www.baidu.com/sugrec?prod=pc&wd=' + keyword,
+            dataType: 'jsonp',
+            success: (data) => {
+                if (data['g']) {
+                    let list = data.g;
+                    let t = []
+                    list.forEach(el => {
+                        t.push(el.q)
+                    })
+                    handleSuggestion(t)
+                } else {
+                    handleSuggestion([])
+                }
+            }
+        })
+    }
+    const debounceHandleScroll = debounce(handleScroll, 100);
+    $('[name="search"]').on('input', debounceHandleScroll);
+    $(document).on("click", function (event) {
+        if (!$(event.target).closest(".searchResult").length) {
+            $("#searchRecommend").hide();
+        }
+    });
+    $(".v-cloak").removeClass("v-cloak")
+
+    var h = holmes({
+        input: '#search',
+        find: '.icons-item',
+        hiddenAttr: true
+    });
+</script>
+
+</html>
