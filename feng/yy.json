@@ -1,0 +1,63 @@
+{
+  "lines": [
+    {
+      "id": "kw",
+      "name": "小我",
+      "enabled": true,
+      "songApi": "{platform}&{id}&{level}",
+      "levels": [
+        "128",
+        "320",
+        "lossless"
+      ]
+    },
+    {
+      "id": "wy",
+      "name": "小云",
+      "enabled": true,
+      "songApi": "{platform}&{id}&{level}",
+      "levels": [
+        "standard",
+        "higher",
+        "exhigh",
+        "lossless",
+        "hires"
+      ]
+    },
+    {
+      "id": "qq",
+      "name": "小秋",
+      "enabled": true,
+      "songApi": "{platform}&{id}&{level}",
+      "levels": [
+        "128",
+        "320",
+        "flac",
+        "hires"
+      ]
+    },
+    {
+      "id": "kg",
+      "name": "小狗",
+      "enabled": true,
+      "songApi": "{platform}&{id}&{level}",
+      "levels": [
+        "128",
+        "320",
+        "sq",
+        "lossless"
+      ]
+    },
+    {
+      "id": "mg",
+      "name": "小咪",
+      "enabled": true,
+      "songApi": "{platform}&{id}&{level}",
+      "levels": [
+        "standard",
+        "high",
+        "exhigh"
+      ]
+    }
+  ]
+}
