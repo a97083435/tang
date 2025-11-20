@@ -1,0 +1,47 @@
+{
+"urls":[
+
+// https://github.com/hd9211/Tvbox1/blob/main/优质.json
+
+//🌕公众号【神秘的哥哥们】
+{"name":"🍚饭太硬","url":"http://www.饭太硬.com/tv/"},
+
+//🐼┃豆瓣┃微信公众号：肥猫宝贝
+{"name":"🐼肥猫接口","url":"https://肥猫.com/"},
+  
+//🌕公众号【老猫迷】
+{"name":"🐯精简砂锅","url":"https://m.n13.club/token/ali/jk.php?id=d879ef5bf1254d2cae40f6698cc38af8"},
+
+//🌹公众号-蚂蚁的日常
+{"name":"🌹南风线路","url":"https://raw.githubusercontent.com/yoursmile66/TVBox/main/XC.json"},
+
+//🐸公众号-日后魔改
+//{"name":"🐸荷城茶秀","url":"http://rihou.cc:88/荷城茶秀"},
+
+{"name":"🐟摸鱼儿","url":"https://raw.githubusercontent.com/ls125781003/tvboxtg/main/摸鱼儿/api.json"},
+//{"name":"🐟摸鱼儿(測)","url":"http://我不是.摸鱼儿.com"},
+  
+//🌕公众号 玉玉软件库
+//{"name":"⛅玉玉","url":"http://8.210.232.168/xc.json"}
+//{"name":"🚀潇洒哥线路","url":"https://9877.kstore.space/FourD/api.json"},
+{"name":"🚀毒盒影视","url":"https://tv.youdu.fan:666/毒盒影视/"},
+
+
+//{"name":"🌳小米线路","url":"http://www.mpanso.com/小米/DEMO.json"},
+
+//{"name":"🌳OK线路","url":"http://ok321.top/ok"},
+
+{"name":"🌳盒子迷","url":"https://盒子迷.top/禁止贩卖"},
+
+//{"name":"🌳欧歌(舊)","url":"https://xn--tkh-mf3g9f.v.nxog.top/m/111.php?ou=公众号欧歌app&mz=index&jar=index&123&b=欧歌tkh"},
+{"name":"🌳欧歌","url":"http://tv.nxog.top/m/"}
+
+],
+
+"lives": [
+
+{"name":"freetv","type":0,"url":"https://freetv.fun/test_channels_taiwan_new.txt","playerType":1,"epg":"http://epg.112114.xyz/?ch={name}&date={date}","logo":"https://epg.112114.xyz/logo/{name}.png"},
+{"name":"tianya7981","type":0,"url":"https://raw.githubusercontent.com/tianya7981/tvbox-/main/zbyfx20230107.txt","playerType":1,"epg":"http://epg.112114.xyz/?ch={name}&date={date}","logo":"https://epg.112114.xyz/logo/{name}.png"},
+
+]
+}
