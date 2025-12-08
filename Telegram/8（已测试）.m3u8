@@ -1,535 +1,402 @@
-#EXTM3U
-#EXTINF:-1 ,亚洲新闻
-http://d2e1asnsl7br7b.cloudfront.net/7782e205e72f43aeb4a48ec97f66ebbe/index_4.m3u8
-#EXTINF:-1 ,澳门奥视
-http://61.244.22.5/ch1/ch1.live/playelist.m3u8
-#EXTINF:-1 ,澳门葡语
-http://61.244.22.5/ch2/ch2.live/chunklist_w1632175875.m3u8
-#EXTINF:-1 ,澳视澳门
-http://61.244.22.5/ch1/_definst_/ch1.live/playlist.m3u8
-#EXTINF:-1 ,澳视综艺
-http://61.244.22.5/ch6/_definst_/hd_ch6.live/playlist.m3u8
-#EXTINF:-1 ,澳门卫星
-http://61.244.22.5/ch3/_definst_/ch3.live/playlist.m3u8
-#EXTINF:-1 ,澳门资讯
-http://61.244.22.5/ch5/_definst_/info_ch5.live/playlist.m3u8
-#EXTINF:-1 ,仙都风景区
-http://gccncc.v.wscdns.com/gc/xdfjq01_1/index.m3u8
-#EXTINF:-1 ,CCTV4 540
-http://140.207.241.2:8080/live/program/live/cctv4/1300000/mnf.m3u8
-#EXTINF:-1 ,CCTV11 540
-http://140.207.241.2:8080/live/program/live/cctv11/1300000/mnf.m3u8
-#EXTINF:-1 ,CCTV7 540
-http://140.207.241.2:8080/live/program/live/cctv7/1300000/mnf.m3u8
-#EXTINF:-1 ,九华山花台
-http://gccncc.v.wscdns.com/gc/jhs01_1/index.m3u8
-#EXTINF:-1 ,CCTV1 1080
-http://140.207.241.2:8080/live/program/live/cctv1hd/4000000/mnf.m3u8
-#EXTINF:-1 ,澳视综艺
-http://103.233.191.132:1935/ch6/hd_ch6.live/playlist.m3u8
-#EXTINF:-1 ,澳视体育
-http://103.233.191.132:1935/ch4/sport_ch4.live/playlist.m3u8
-#EXTINF:-1 ,澳视澳门
-http://103.233.191.132:1935/ch1/ch1.live/playlist.m3u8
-#EXTINF:-1 ,澳视资讯
-http://103.233.191.132:1935/ch5/info_ch5.live/playlist.m3u8
-#EXTINF:-1 ,澳视葡文
-http://103.233.191.132:1935/ch2/ch2.live/playlist.m3u8
-#EXTINF:-1 ,CCTV13 540
-http://140.207.241.2:8080/live/program/live/cctvxw/1300000/mnf.m3u8
-#EXTINF:-1 ,天界山-桃花湾瀑布
-http://gccncc.v.wscdns.com/gc/blg05_1/index.m3u8
-#EXTINF:-1 ,CCTV15 540
-http://140.207.241.2:8080/live/program/live/cctvyy/1300000/mnf.m3u8
-#EXTINF:-1 ,上海五星体育 1080
-http://140.207.241.2:8080/live/program/live/ssty/4000000/mnf.m3u8
-#EXTINF:-1 ,CCTV3 1080
-http://140.207.241.2:8080/live/program/live/cctv3hd/4000000/mnf.m3u8
-#EXTINF:-1 ,上海东方影视 1080
-http://140.207.241.2:8080/live/program/live/dsjpdhd/4000000/mnf.m3u8
-#EXTINF:-1 ,广东卫视 1080
-http://140.207.241.2:8080/live/program/live/gdwshd/4000000/mnf.m3u8
-#EXTINF:-1 ,CCTV14 1080
-http://140.207.241.2:8080/live/program/live/cctvsehd/4000000/mnf.m3u8
-#EXTINF:-1 ,云台山-百家岩
-http://gccncc.v.wscdns.com/gc/ytsbjy_1/index.m3u8
-#EXTINF:-1 ,湖南卫视 1080
-http://140.207.241.2:8080/live/program/live/hnwshd/4000000/mnf.m3u8
-#EXTINF:-1 ,张家界-水绕四门
-http://gccncc.v.wscdns.com/gc/zjjsrsm_1/index.m3u8
-#EXTINF:-1 ,吉林卫视 540
-http://140.207.241.2:8080/live/program/live/jlws/1300000/mnf.m3u8
-#EXTINF:-1 ,黄花城水长城04
-http://gccncc.v.wscdns.com/gc/wgw04_1/index.m3u8
-#EXTINF:-1 ,SiTV幸福彩 1080
-http://140.207.241.2:8080/live/program/live/xfchd/4000000/mnf.m3u8
-#EXTINF:-1 ,坝达景点观景台
-http://gccncc.v.wscdns.com/gc/hnttbdjd_1/index.m3u8
-#EXTINF:-1 ,SiTV劲爆体育 1080
-http://140.207.241.2:8080/live/program/live/jbtyhd/4000000/mnf.m3u8
-#EXTINF:-1 ,东方卫视 1080
-http://140.207.241.2:8080/live/program/live/hddfws/4000000/mnf.m3u8
-#EXTINF:-1 ,CCTV2 540
-http://140.207.241.2:8080/live/program/live/cctv2/1300000/mnf.m3u8
-#EXTINF:-1 ,SiTV七彩戏剧 540
-http://140.207.241.2:8080/live/program/live/qcxj/1300000/mnf.m3u8
-#EXTINF:-1 ,万古楼遥望玉龙雪山
-http://gccncc.v.wscdns.com/gc/ljgcwglytylxs_1/index.m3u8
-#EXTINF:-1 ,CCTV8 1080
-http://140.207.241.2:8080/live/program/live/cctv8hd/4000000/mnf.m3u8
-#EXTINF:-1 ,湖南金鹰卡通 540
-http://140.207.241.2:8080/live/program/live/jykt/1300000/mnf.m3u8
-#EXTINF:-1 ,CCTV5+ 1080
-http://140.207.241.2:8080/live/program/live/cctv5phd/4000000/mnf.m3u8
-#EXTINF:-1 ,SiTV动漫秀场 1080
-http://140.207.241.2:8080/live/program/live/dmxchd/4000000/mnf.m3u8
-#EXTINF:-1 ,SiTV魅力足球 1080
-http://140.207.241.2:8080/live/program/live/mlyyhd/4000000/mnf.m3u8
-#EXTINF:-1 ,陕西卫视 540
-http://140.207.241.2:8080/live/program/live/sxws/1300000/mnf.m3u8
-#EXTINF:-1 ,上海教育 540
-http://140.207.241.2:8080/live/program/live/setv/1300000/mnf.m3u8
-#EXTINF:-1 ,上海ICS外语 1080
-http://140.207.241.2:8080/live/program/live/wypdhd/4000000/mnf.m3u8
-#EXTINF:-1 ,广西卫视 540
-http://140.207.241.2:8080/live/program/live/gxws/1300000/mnf.m3u8
-#EXTINF:-1 ,五彩池
-http://gccncc.v.wscdns.com/gc/hlwcc_1/index.m3u8
-#EXTINF:-1 ,东南卫视 1080
-http://140.207.241.2:8080/live/program/live/dnwshd/4000000/mnf.m3u8
-#EXTINF:-1 ,中国天气 576
-http://140.207.241.2:8080/live/program/live/zgqx/1300000/mnf.m3u8
-#EXTINF:-1 ,厦门卫视 540
-http://140.207.241.2:8080/live/program/live/xmws/1300000/mnf.m3u8
-#EXTINF:-1 ,上海哈哈炫动 1080
-http://140.207.241.2:8080/live/program/live/hhxdhd/4000000/mnf.m3u8
-#EXTINF:-1 ,上海新闻综合 1080
-http://140.207.241.2:8080/live/program/live/xwzhhd/4000000/mnf.m3u8
-#EXTINF:-1 ,河北卫视 540
-http://140.207.241.2:8080/live/program/live/hbws/1300000/mnf.m3u8
-#EXTINF:-1 ,湖北卫视 1080
-http://140.207.241.2:8080/live/program/live/hbwshd/4000000/mnf.m3u8
-#EXTINF:-1 ,嵩山峻极峰
-http://gccncc.v.wscdns.com/gc/zsslsjjfsd_1/index.m3u8
-#EXTINF:-1 ,北京卫视 1080
-http://140.207.241.2:8080/live/program/live/bjwshd/4000000/mnf.m3u8
-#EXTINF:-1 ,天津卫视 1080
-http://140.207.241.2:8080/live/program/live/tjwshd/4000000/mnf.m3u8
-#EXTINF:-1 ,上海都市 1080
-http://140.207.241.2:8080/live/program/live/ylpdhd/4000000/mnf.m3u8
-#EXTINF:-1 ,黑龙江卫视 1080
-http://140.207.241.2:8080/live/program/live/hljwshd/4000000/mnf.m3u8
-#EXTINF:-1 ,内蒙古卫视 540
-http://140.207.241.2:8080/live/program/live/nmgws/1300000/mnf.m3u8
-#EXTINF:-1 ,新疆卫视 540
-http://140.207.241.2:8080/live/program/live/xjws/1300000/mnf.m3u8
-#EXTINF:-1 ,SiTV东方财经 540
-http://140.207.241.2:8080/live/program/live/dfcj/1300000/mnf.m3u8
-#EXTINF:-1 ,浙江卫视 1080
-http://140.207.241.2:8080/live/program/live/zjwshd/4000000/mnf.m3u8
-#EXTINF:-1 ,CCTV5 1080
-http://140.207.241.2:8080/live/program/live/cctv5hd/4000000/mnf.m3u8
-#EXTINF:-1 ,SiTV生活时尚 1080
-http://140.207.241.2:8080/live/program/live/shsshd/4000000/mnf.m3u8
-#EXTINF:-1 ,四川卫视 540
-http://140.207.241.2:8080/live/program/live/scws/1300000/mnf.m3u8
-#EXTINF:-1 ,百事通体育 1080
-http://140.207.241.2:8080/live/program/live/hdnba2/4000000/mnf.m3u8
-#EXTINF:-1 ,上海第一财经 1080
-http://140.207.241.2:8080/live/program/live/dycjhd/4000000/mnf.m3u8
-#EXTINF:-1 ,SiTV法治天地 540
-http://140.207.241.2:8080/live/program/live/fztd/1300000/mnf.m3u8
-#EXTINF:-1 ,SiTV游戏风云 1080
-http://140.207.241.2:8080/live/program/live/yxfyhd/4000000/mnf.m3u8
-#EXTINF:-1 ,重庆卫视 540
-http://140.207.241.2:8080/live/program/live/cqws/1300000/mnf.m3u8
-#EXTINF:-1 ,深圳卫视 1080
-http://140.207.241.2:8080/live/program/live/szwshd/4000000/mnf.m3u8
-#EXTINF:-1 ,贵州卫视 540
-http://140.207.241.2:8080/live/program/live/gzws/1300000/mnf.m3u8
-#EXTINF:-1 ,上海纪实人文 1080
-http://140.207.241.2:8080/live/program/live/jspdhd/4000000/mnf.m3u8
-#EXTINF:-1 ,SiTV新视觉 1080
-http://140.207.241.2:8080/live/program/live/xsjhd/4000000/mnf.m3u8
-#EXTINF:-1 ,河南卫视 540
-http://140.207.241.2:8080/live/program/live/hnws/1300000/mnf.m3u8
-#EXTINF:-1 ,SiTV极速汽车 1080
-http://140.207.241.2:8080/live/program/live/jsqchd/4000000/mnf.m3u8
-#EXTINF:-1 ,江西卫视 1080
-http://140.207.241.2:8080/live/program/live/jxwshd/4000000/mnf.m3u8
-#EXTINF:-1 ,CCTV10 1080
-http://140.207.241.2:8080/live/program/live/cctv10hd/4000000/mnf.m3u8
-#EXTINF:-1 ,江苏卫视 1080
-http://140.207.241.2:8080/live/program/live/jswshd/4000000/mnf.m3u8
-#EXTINF:-1 ,海南卫视 540
-http://140.207.241.2:8080/live/program/live/lyws/1300000/mnf.m3u8
-#EXTINF:-1 ,百事通体育 1080
-http://140.207.241.2:8080/live/program/live/hdnba6/4000000/mnf.m3u8
-#EXTINF:-1 ,SiTV欢笑剧场 1080
-http://140.207.241.2:8080/live/program/live/hxjchd/4000000/mnf.m3u8
-#EXTINF:-1 ,百事通体育 1080
-http://140.207.241.2:8080/live/program/live/hdnba1/4000000/mnf.m3u8
-#EXTINF:-1 ,广东嘉佳卡通 540
-http://140.207.241.2:8080/live/program/live/jjkt/1300000/mnf.m3u8
-#EXTINF:-1 ,青海卫视 540
-http://140.207.241.2:8080/live/program/live/qhws/1300000/mnf.m3u8
-#EXTINF:-1 ,SiTV都市剧场 1080
-http://140.207.241.2:8080/live/program/live/dsjchd/4000000/mnf.m3u8
-#EXTINF:-1 ,辽宁卫视 1080
-http://140.207.241.2:8080/live/program/live/lnwshd/4000000/mnf.m3u8
-#EXTINF:-1 ,宁夏卫视 540
-http://140.207.241.2:8080/live/program/live/nxws/1300000/mnf.m3u8
-#EXTINF:-1 ,百事通体育 1080
-http://140.207.241.2:8080/live/program/live/hdnba5/4000000/mnf.m3u8
-#EXTINF:-1 ,兵团卫视 540
-http://140.207.241.2:8080/live/program/live/btws/1300000/mnf.m3u8
-#EXTINF:-1 ,SiTV金色频道 540
-http://140.207.241.2:8080/live/program/live/jingsepd/1300000/mnf.m3u8
-#EXTINF:-1 ,百事通体育 1080
-http://140.207.241.2:8080/live/program/live/hdnba4/4000000/mnf.m3u8
-#EXTINF:-1 ,云南卫视 540
-http://140.207.241.2:8080/live/program/live/ynws/1300000/mnf.m3u8
-#EXTINF:-1 ,百事通体育 1080
-http://140.207.241.2:8080/live/program/live/hdnba3/4000000/mnf.m3u8
-#EXTINF:-1 ,甘肃卫视 540
-http://140.207.241.2:8080/live/program/live/gsws/1300000/mnf.m3u8
-#EXTINF:-1 ,SiTV游戏风云蓝光
-http://shbu.live.bestvcdn.com.cn:8080/live/program/live/yxfyhd/4000000/mnf.m3u8
-#EXTINF:-1 ,SiTV极速汽车蓝光
-http://shbu.live.bestvcdn.com.cn:8080/live/program/live/jsqchd/4000000/mnf.m3u8
-#EXTINF:-1 ,SiTV生活时尚蓝光
-http://shbu.live.bestvcdn.com.cn:8080/live/program/live/shsshd/4000000/mnf.m3u8
-#EXTINF:-1 ,东方影视
-http://shbu.live.bestvcdn.com.cn:8080/live/program/live/dsjpdhd/2300000/mnf.m3u8
-#EXTINF:-1 ,BesTV体育蓝光
-http://shbu.live.bestvcdn.com.cn:8080/live/program/live/hdnba7/4000000/mnf.m3u8
-#EXTINF:-1 ,CCTV6 1080
-http://140.207.241.2:8080/live/program/live/cctv6hd/4000000/mnf.m3u8
-#EXTINF:-1 ,美食李子柒
-http://hls-ott-zhibo.wasu.tv/live/443/index.m3u8
-#EXTINF:-1 ,朱鹮02
-http://gcbsc.v.live.baishancdnx.cn/gc/zh02_1/index.m3u8
-#EXTINF:-1 ,大研花巷观景
-http://gcbsc.v.live.baishancdnx.cn/gc/ljgcdyhxgjt_1/index.m3u8
-#EXTINF:-1 ,四姑娘山幺妹峰
-http://gcbsc.v.live.baishancdnx.cn/gc/sgns01_1/index.m3u8
-#EXTINF:-1 ,中央电视塔南
-http://gcbsc.v.live.baishancdnx.cn/gc/ztn_1/index.m3u8
-#EXTINF:-1 ,西递牌坊
-http://gcbsc.v.live.baishancdnx.cn/gc/yxxdpf_1/index.m3u8
-#EXTINF:-1 ,黄花城水长城03
-http://gcbsc.v.live.baishancdnx.cn/gc/wgw03_1/index.m3u8
-#EXTINF:-1 ,崇圣寺三塔远景
-http://gcbsc.v.live.baishancdnx.cn/gc/dlst01_1/index.m3u8
-#EXTINF:-1 ,恒山悬空寺全景
-http://gcbsc.v.live.baishancdnx.cn/gc/hsxksqj_1/index.m3u8
-#EXTINF:-1 ,崂山-双福
-http://gcbsc.v.live.baishancdnx.cn/gc/qdls03_1/index.m3u8
-#EXTINF:-1 ,印象大红袍
-http://gcbsc.v.live.baishancdnx.cn/gc/wysyxdhp_1/index.m3u8
-#EXTINF:-1 ,天涯石
-http://gcbsc.v.live.baishancdnx.cn/gc/tyhjtys_1/index.m3u8
-#EXTINF:-1 ,婺源01
-http://gcbsc.v.live.baishancdnx.cn/gc/wygjt1_1/index.m3u8
-#EXTINF:-1 ,崂山-八水河
-http://gcalic.v.myalicdn.com/gc/qdls02_1/index.m3u8
-#EXTINF:-1 ,云台山-红石峡
-http://gcalic.v.myalicdn.com/gc/ytshsx_1/index.m3u8
-#EXTINF:-1 ,峨眉山-普贤菩萨铜像
-http://gcalic.v.myalicdn.com/gc/emspxps_1/index.m3u8
-#EXTINF:-1 ,哈尼梯田·普高老寨
-http://gcalic.v.myalicdn.com/gc/hnttpgsz_1/index.m3u8
-#EXTINF:-1 ,雪乡梦幻大石碑
-http://gcalic.v.myalicdn.com/gc/mdjxxdsb_1/index.m3u8
-#EXTINF:-1 ,泰山-拱北石
-http://gcalic.v.myalicdn.com/gc/taishan04_1/index.m3u8
-#EXTINF:-1 ,泰山-望人松
-http://gcalic.v.myalicdn.com/gc/taishan02_1/index.m3u8
-#EXTINF:-1 ,普陀山
-http://gcalic.v.myalicdn.com/gc/pts01_1/index.m3u8
-#EXTINF:-1 ,峨眉山-远眺贡嘎雪山
-http://gcalic.v.myalicdn.com/gc/emsyh_1/index.m3u8
-#EXTINF:-1 ,黄山-卧云峰
-http://gcalic.v.myalicdn.com/gc/hswlf_1/index.m3u8
-#EXTINF:-1 ,乌镇全景
-http://gcalic.v.myalicdn.com/gc/zjwzblt_1/index.m3u8
-#EXTINF:-1 ,龙形田
-http://gcalic.v.myalicdn.com/gc/zjwzlxt_1/index.m3u8
-#EXTINF:-1 ,乌镇·西市河
-http://gcalic.v.myalicdn.com/gc/zjwzbblh_1/index.m3u8
-#EXTINF:-1 ,深圳世界之窗
-http://gcalic.v.myalicdn.com/gc/sjzc01_1/index.m3u8
-#EXTINF:-1 ,云龙山观景台西
-http://gcalic.v.myalicdn.com/gc/ylh04_1/index.m3u8
-#EXTINF:-1 ,嘉峪关关城
-http://gcalic.v.myalicdn.com/gc/jyg04_1/index.m3u8
-#EXTINF:-1 ,山涧栈道
-http://gcbsc.v.live.baishancdnx.cn/gc/lhssjzd_1/index.m3u8
-#EXTINF:-1 ,西递半山亭
-http://gcalic.v.myalicdn.com/gc/yxxdbst_1/index.m3u8
-#EXTINF:-1 ,中央电视塔东
-http://gcalic.v.myalicdn.com/gc/ztd_1/index.m3u8
-#EXTINF:-1 ,天界山-玻璃栈道
-http://gcalic.v.myalicdn.com/gc/blg03_1/index.m3u8
-#EXTINF:-1 ,鸣沙山山门
-http://gcalic.v.myalicdn.com/gc/dhyyqyyq_1/index.m3u8
-#EXTINF:-1 ,峡谷石林
-http://gcalic.v.myalicdn.com/gc/pshdxg02_1/index.m3u8
-#EXTINF:-1 ,大红袍茶园
-http://gcalic.v.myalicdn.com/gc/wysdhpcy_1/index.m3u8
-#EXTINF:-1 ,峨眉山·云海日出
-http://gcalic.v.myalicdn.com/gc/emsarm_1/index.m3u8
-#EXTINF:-1 ,崇圣寺三塔湖面
-http://gcalic.v.myalicdn.com/gc/dlst02_1/index.m3u8
-#EXTINF:-1 ,武夷山玉女峰
-http://gcalic.v.myalicdn.com/gc/wysynf_1/index.m3u8
-#EXTINF:-1 ,八达岭长城南七楼
-http://gcalic.v.myalicdn.com/gc/bgws7_1/index.m3u8
-#EXTINF:-1 ,泰山-十八盘
-http://gcalic.v.myalicdn.com/gc/taishan05_1/index.m3u8
-#EXTINF:-1 ,黄花城水长城01
-http://gcalic.v.myalicdn.com/gc/wgw01_1/index.m3u8
-#EXTINF:-1 ,泰山-主峰
-http://gcalic.v.myalicdn.com/gc/taishan01_1/index.m3u8
-#EXTINF:-1 ,嘉峪关02
-http://gcalic.v.myalicdn.com/gc/jyg02_1/index.m3u8
-#EXTINF:-1 ,婺源02
-http://gcalic.v.myalicdn.com/gc/wygjt2_1/index.m3u8
-#EXTINF:-1 ,芦村远眺
-http://gcalic.v.myalicdn.com/gc/yxlcyt_1/index.m3u8
-#EXTINF:-1 ,天门洞
-http://gcalic.v.myalicdn.com/gc/tmstmd01_1/index.m3u8
-#EXTINF:-1 ,黄龙洗身洞
-http://gcalic.v.myalicdn.com/gc/hlxsd_1/index.m3u8
-#EXTINF:-1 ,张家界-将军列队
-http://gcalic.v.myalicdn.com/gc/zjjjjdl_1/index.m3u8
-#EXTINF:-1 ,福建漳州六鳌翡翠湾
-http://gcalic.v.myalicdn.com/gc/fcw01_1/index.m3u8
-#EXTINF:-1 ,天空步道
-http://gcalic.v.myalicdn.com/gc/tms02_1/index.m3u8
-#EXTINF:-1 ,黄山-飞来石
-http://gcalic.v.myalicdn.com/gc/hsptgy_1/index.m3u8
-#EXTINF:-1 ,黟县·西递牌坊
-http://gcalic.v.myalicdn.com/gc/yxxdpf_1/index.m3u8
-#EXTINF:-1 ,雪乡梦幻家园
-http://gcalic.v.myalicdn.com/gc/mdjxxmhjyxj_1/index.m3u8
-#EXTINF:-1 ,峨眉山-远眺万佛顶
-http://gcalic.v.myalicdn.com/gc/emswfs_1/index.m3u8
-#EXTINF:-1 ,国家游泳中心-水立方
-http://gcalic.v.myalicdn.com/gc/gccntv241-slf01_1/index.m3u8
-#EXTINF:-1 ,黄龙·争艳彩池
-http://gcalic.v.myalicdn.com/gc/hlzycc_1/index.m3u8
-#EXTINF:-1 ,鸣沙山月牙泉
-http://gcalic.v.myalicdn.com/gc/dhyyqsm_1/index.m3u8
-#EXTINF:-1 ,重庆李子坝轻轨站
-http://gcalic.v.myalicdn.com/gc/gccntv240-lzb01_1/index.m3u8
-#EXTINF:-1 ,汶川映秀新城
-http://gcbsc.v.live.baishancdnx.cn/gc/wcyxxc01_1/index.m3u8
-#EXTINF:-1 ,黄山峡谷
-https://gcalic.v.myalicdn.com/gc/hsxhdxg_1/index.m3u8?contentid=2820180516001
-#EXTINF:-1 ,眺万佛顶
-https://gcalic.v.myalicdn.com/gc/emswfs_1/index.m3u8?contentid=2820180516001
-#EXTINF:-1 ,水长城镜
-https://gcalic.v.myalicdn.com/gc/wgw02_1/index.m3u8?contentid=2820180516001
-#EXTINF:-1 ,黄山排云亭
-https://gcalic.v.myalicdn.com/gc/hspyt_1/index.m3u8?contentid=2820180516001
-#EXTINF:-1 ,泰拱北石
-https://gcalic.v.myalicdn.com/gc/taishan04_1/index.m3u8?contentid=2820180516001
-#EXTINF:-1 ,全国风景总览
-https://gcalic.v.myalicdn.com/gc/wgw05_1/index.m3u8?contentid=2820180516001
-#EXTINF:-1 ,雪乡大石碑
-https://gcalic.v.myalicdn.com/gc/mdjxxdsb_1/index.m3u8?contentid=2820180516001
-#EXTINF:-1 ,云台山红石硖
-https://gcalic.v.myalicdn.com/gc/ytshsx_1/index.m3u8?contentid=2820180516001
-#EXTINF:-1 ,恒宗
-https://gcalic.v.myalicdn.com/gc/hsxkssqdzrqj_1/index.m3u8?contentid=2820180516001
-#EXTINF:-1 ,普贤菩萨像
-https://gcalic.v.myalicdn.com/gc/emspxps_1/index.m3u8?contentid=2820180516001
-#EXTINF:-1 ,中央电视台中塔北
-https://gcalic.v.myalicdn.com/gc/ztb_1/index.m3u8?contentid=2820180516001
-#EXTINF:-1 ,水长城镜
-https://gcalic.v.myalicdn.com/gc/wgw01_1/index.m3u8?contentid=2820180516001
-#EXTINF:-1 ,黄山卧云峰
-https://gcalic.v.myalicdn.com/gc/hswlf_1/index.m3u8?contentid=2820180516001
-#EXTINF:-1 ,泰迎客松
-https://gcalic.v.myalicdn.com/gc/taishan02_1/index.m3u8?contentid=2820180516001
-#EXTINF:-1 ,黟县山亭
-https://gcalic.v.myalicdn.com/gc/yxxdbst_1/index.m3u8?contentid=2820180516001
-#EXTINF:-1 ,中央电视台中塔东
-https://gcalic.v.myalicdn.com/gc/ztd_1/index.m3u8?contentid=2820180516001
-#EXTINF:-1 ,黟县宏村南湖
-https://gcalic.v.myalicdn.com/gc/yxhcnh_1/index.m3u8?contentid=2820180516001
-#EXTINF:-1 ,泰山十八盘
-https://gcalic.v.myalicdn.com/gc/taishan05_1/index.m3u8?contentid=2820180516001
-#EXTINF:-1 ,悬空寺全景
-https://gcalic.v.myalicdn.com/gc/hsxksqj_1/index.m3u8?contentid=2820180516001
-#EXTINF:-1 ,悬空寺景
-https://gcalic.v.myalicdn.com/gc/hsxkscj_1/index.m3u8?contentid=2820180516001
-#EXTINF:-1 ,张家界阿凡达悬浮山
-https://gcalic.v.myalicdn.com/gc/zjjafdxfs_1/index.m3u8?contentid=2820180516001
-#EXTINF:-1 ,黟县西递牌坊
-https://gcalic.v.myalicdn.com/gc/yxxdpf_1/index.m3u8?contentid=2820180516001
-#EXTINF:-1 ,大研花巷景观台
-https://gcalic.v.myalicdn.com/gc/ljgcdyhxgjt_1/index.m3u8?contentid=2820180516001
-#EXTINF:-1 ,黄山平天矼
-https://gcalic.v.myalicdn.com/gc/hsptgz_1/index.m3u8?contentid=2820180516001
-#EXTINF:-1 ,六角亭瀑布
-http://gcalic.v.myalicdn.com/gc/hgsspzxdpb_1/index.m3u8
-#EXTINF:-1 ,宏村月沼
-http://gcbsc.v.live.baishancdnx.cn/gc/yxhcyz_1/index.m3u8
-#EXTINF:-1 ,泰山玉皇顶
-https://gcalic.v.myalicdn.com/gc/taishan06_1/index.m3u8?contentid=2820180516001
-#EXTINF:-1 ,九华山拜经台
-http://gccncc.v.wscdns.com/gc/jhs02_1/index.m3u8
-#EXTINF:-1 ,万峰林
-http://gccncc.v.wscdns.com/gc/xywfl_1/index.m3u8
-#EXTINF:-1 ,天涯鸟瞰
-http://gccncc.v.wscdns.com/gc/tyhjtynl_1/index.m3u8
-#EXTINF:-1 ,黄山-排云亭
-http://gccncc.v.wscdns.com/gc/hspyt_1/index.m3u8
-#EXTINF:-1 ,双乳峰
-http://gctxyc.liveplay.myqcloud.com/gc/xysrf_1_md.m3u8
-#EXTINF:-1 ,黄山-梦笔生花
-http://gctxyc.liveplay.myqcloud.com/gc/hsmbsh_1_md.m3u8
-#EXTINF:-1 ,中央电视塔北
-http://gctxyc.liveplay.myqcloud.com/gc/ztb_1_md.m3u8
-#EXTINF:-1 ,天山-马牙山
-http://gctxyc.liveplay.myqcloud.com/gc/xjtcmys_1_md.m3u8
-#EXTINF:-1 ,浙江舟山东极岛
-http://gctxyc.liveplay.myqcloud.com/gc/djd01_1_md.m3u8
-#EXTINF:-1 ,六盘山红军长征景区
-http://gctxyc.liveplay.myqcloud.com/gc/lpsgmjng01_1_md.m3u8
-#EXTINF:-1 ,嘉峪关03
-http://gctxyc.liveplay.myqcloud.com/gc/jyg04_1_md.m3u8
-#EXTINF:-1 ,厦门鼓浪屿
-http://gctxyc.liveplay.myqcloud.com/gc/gly01_1_md.m3u8
-#EXTINF:-1 ,印象红袍
-https://gctxyc.liveplay.myqcloud.com/gc/wysyxdhp_1/index.m3u8?contentid=2820180516001
-#EXTINF:-1 ,雪乡梦幻
-https://gctxyc.liveplay.myqcloud.com/gc/mdjxxmhjyxj_1/index.m3u8?contentid=2820180516001
-#EXTINF:-1 ,日月石
-http://gctxyc.liveplay.myqcloud.com/gc/tyhjrys_1_md.m3u8
-#EXTINF:-1 ,南天一柱
-https://gctxyc.liveplay.myqcloud.com/gc/tyhjntyz_1/index.m3u8?contentid=2820180516001
-#EXTINF:-1 ,黟县宏村月沼
-https://gctxyc.liveplay.myqcloud.com/gc/yxhcyz_1/index.m3u8?contentid=2820180516001
-#EXTINF:-1 ,红袍茶园
-https://gctxyc.liveplay.myqcloud.com/gc/wysdhpcy_1/index.m3u8?contentid=2820180516001
-#EXTINF:-1 ,天涯石
-https://gctxyc.liveplay.myqcloud.com/gc/tyhjtys_1/index.m3u8?contentid=2820180516001
-#EXTINF:-1 ,天山-定海神针
-http://gctxyc.liveplay.myqcloud.com/gc/xjtcdhsz_1_md.m3u8
-#EXTINF:-1 ,张家界将军列队
-https://gctxyc.liveplay.myqcloud.com/gc/zjjjjdl_1/index.m3u8?contentid=2820180516001
-#EXTINF:-1 ,天涯鸟瞰
-https://gctxyc.liveplay.myqcloud.com/gc/tyhjtynl_1/index.m3u8?contentid=2820180516001
-#EXTINF:-1 ,贡嘎雪山
-https://gctxyc.liveplay.myqcloud.com/gc/emsyh_1/index.m3u8?contentid=2820180516001
-#EXTINF:-1 ,都江堰-鱼嘴
-http://gctxyc.liveplay.myqcloud.com/gc/djyqyl1_1_md.m3u8
-#EXTINF:-1 ,泰山主峰
-https://gctxyc.liveplay.myqcloud.com/gc/taishan01_1/index.m3u8?contentid=2820180516001
-#EXTINF:-1 ,朱鹮03
-http://gctxyc.liveplay.myqcloud.com/gc/zh03_1_md.m3u8
-#EXTINF:-1 ,张家界-阿凡达悬浮山
-http://gctxyc.liveplay.myqcloud.com/gc/zjjafdxfs_1_md.m3u8
-#EXTINF:-1 ,天山-海西平台
-http://gctxyc.liveplay.myqcloud.com/gc/xjtchxpt_1_md.m3u8
-#EXTINF:-1 ,江苏南京牛首山
-http://gctxyc.liveplay.myqcloud.com/gc/nss01_1_md.m3u8
-#EXTINF:-1 ,四川凉山邛海景区
-http://gctxyc.liveplay.myqcloud.com/gc/xcqh01_1_md.m3u8
-#EXTINF:-1 ,崂山-太清
-http://gctxyc.liveplay.myqcloud.com/gc/qdls04_1_md.m3u8
-#EXTINF:-1 ,云梦仙顶
-http://gctxyc.liveplay.myqcloud.com/gc/tms04_1_md.m3u8
-#EXTINF:-1 ,西汉南越王博物馆
-http://gctxyc.liveplay.myqcloud.com/gc/nywbwg01_1_md.m3u8
-#EXTINF:-1 ,恒山悬空寺侧景
-http://gctxyc.liveplay.myqcloud.com/gc/hsxkscj_1_md.m3u8
-#EXTINF:-1 ,丹霞山丹梯铁锁
-http://gctxyc.liveplay.myqcloud.com/gc/dxsdtts_1_md.m3u8
-#EXTINF:-1 ,凤凰古城南华山
-http://gctxyc.liveplay.myqcloud.com/gc/fhgcdnhs_1_md.m3u8
-#EXTINF:-1 ,千岛湖
-http://gctxyc.liveplay.myqcloud.com/gc/caqdh_1_md.m3u8
-#EXTINF:-1 ,峨眉日出
-https://gctxyc.liveplay.myqcloud.com/gc/emsarm_1/index.m3u8?contentid=2820180516001
-#EXTINF:-1 ,桂林漓江景区
-http://gctxyc.liveplay.myqcloud.com/gc/gllj01_1_md.m3u8
-#EXTINF:-1 ,黄河漂流
-http://gctxyc.liveplay.myqcloud.com/gc/nxspthhpl_1_md.m3u8
-#EXTINF:-1 ,九华山
-http://gctxyc.liveplay.myqcloud.com/gc/jhs05_1_md.m3u8
-#EXTINF:-1 ,郑东新区千玺广场
-http://gctxyc.liveplay.myqcloud.com/gc/zdxq01_1_md.m3u8
-#EXTINF:-1 ,蓝印花布
-http://gctxyc.liveplay.myqcloud.com/gc/zjwzlyhb_1_md.m3u8
-#EXTINF:-1 ,都江堰-飞沙堰
-http://gctxyc.liveplay.myqcloud.com/gc/djyewm_1_md.m3u8
-#EXTINF:-1 ,普高老寨
-http://gctxyc.liveplay.myqcloud.com/gc/hnttpgsz_1_md.m3u8
-#EXTINF:-1 ,乐山大佛全景
-http://gctxyc.liveplay.myqcloud.com/gc/lsdfgfl_1_md.m3u8
-#EXTINF:-1 ,大漠孤烟
-http://gctxyc.liveplay.myqcloud.com/gc/nxsptdmgy_1_md.m3u8
-#EXTINF:-1 ,泰大观峰
-https://gctxyc.liveplay.myqcloud.com/gc/taishan03_1/index.m3u8?contentid=2820180516001
-#EXTINF:-1 ,山东卫视 1080
-http://140.207.241.2:8080/live/program/live/sdwshd/4000000/mnf.m3u8
-#EXTINF:-1 ,云台山-小寨沟
-http://gctxyc.liveplay.myqcloud.com/gc/ytsxzg_1_md.m3u8
-#EXTINF:-1 ,华山
-http://gccncc.v.wscdns.com/gc/hkhs01_1/index.m3u8
-#EXTINF:-1 ,西线玻璃栈道
-http://gccncc.v.wscdns.com/gc/tms05_1/index.m3u8
-#EXTINF:-1 ,九龙汇海
-http://gccncc.v.wscdns.com/gc/pshdxg01_1/index.m3u8
-#EXTINF:-1 ,韶音亭
-http://gctxyc.liveplay.myqcloud.com/gc/dxssyt_1_md.m3u8
-#EXTINF:-1 ,平遥古城
-http://gccncc.v.wscdns.com/gc/pygc01_1/index.m3u8
-#EXTINF:-1 ,直播中国精编直播
-http://gctxyc.liveplay.myqcloud.com/gc/wgw05_1_md.m3u8
-#EXTINF:-1 ,SiTV全纪实 1080
-http://140.207.241.2:8080/live/program/live/qjshd/4000000/mnf.m3u8
-#EXTINF:-1 ,嘉峪关城
-https://gctxyc.liveplay.myqcloud.com/gc/jyg04_1/index.m3u8?contentid=2820180516001
-#EXTINF:-1 ,长河落日
-http://gccncc.v.wscdns.com/gc/nxsptdmgychlr_1/index.m3u8
-#EXTINF:-1 ,隆珠措
-http://gctxyc.liveplay.myqcloud.com/gc/sgns02_1_md.m3u8
-#EXTINF:-1 ,朱鹮04
-http://gctxyc.liveplay.myqcloud.com/gc/zh04_1_md.m3u8
-#EXTINF:-1 ,云龙山观景台南
-http://gctxyc.liveplay.myqcloud.com/gc/ylh03_1_md.m3u8
-#EXTINF:-1 ,马岭河峡谷
-http://gccncc.v.wscdns.com/gc/xymlh_1/index.m3u8
-#EXTINF:-1 ,印象实景
-http://gccncc.v.wscdns.com/gc/hkylxs01_1/index.m3u8
-#EXTINF:-1 ,安徽卫视 1080
-http://140.207.241.2:8080/live/program/live/ahwshd/4000000/mnf.m3u8
-#EXTINF:-1 ,老虎嘴
-http://gccncc.v.wscdns.com/gc/hnttlhzjd_1/index.m3u8
-#EXTINF:-1 ,嵩山胜观峰
-http://gccncc.v.wscdns.com/gc/zsslstpt_1/index.m3u8
-#EXTINF:-1 ,海上观音
-http://gccncc.v.wscdns.com/gc/syns01_1/index.m3u8
-#EXTINF:-1 ,黄花城水长城02
-http://gccncc.v.wscdns.com/gc/wgw02_1/index.m3u8
-#EXTINF:-1 ,蓝月谷
-http://gccncc.v.wscdns.com/gc/ylxs12_1/index.m3u8
-#EXTINF:-1 ,八达岭长城北十楼
-http://gccncc.v.wscdns.com/gc/bgwn10_1/index.m3u8
-#EXTINF:-1 ,福州影视
-http://live.zohi.tv/video/s10001-yspd-2/index.m3u8
-#EXTINF:-1 ,大容山莲花山顶
-http://gctxyc.liveplay.myqcloud.com/gc/drs01_1_md.m3u8
-#EXTINF:-1 ,张掖七彩丹霞
-http://gctxyc.liveplay.myqcloud.com/gc/zyqcdx01_1_md.m3u8
-#EXTINF:-1 ,天津海河
-http://gctxyc.liveplay.myqcloud.com/gc/tjhh02_1_md.m3u8
-#EXTINF:-1 ,天山-灯杆山
-http://gctxyc.liveplay.myqcloud.com/gc/xjtcdgs_1_md.m3u8
-#EXTINF:-1 ,百事通体育 1080
-http://140.207.241.2:8080/live/program/live/hdnba7/4000000/mnf.m3u8
+
+香港电视台,#genre#
+翡翠台,https://smart.946985.filegear-sg.me/smart.php?id=jade_twn
+翡翠台,https://smart.946985.filegear-sg.me/smart.php?id=Jade_xue
+翡翠台,http://hls.168.us.kg/u/81/master.m3u8
+翡翠台,http://mytv.veryfast.filegear-sg.me/hls/fct/playlist.m3u8
+翡翠台(广电),http://cdn6.veryfast.filegear-sg.me/live/fct/stream.m3u8
+无线新闻台,http://hls.168.us.kg/u/83/master.m3u8
+无线新闻台,https://smart.946985.filegear-sg.me/smart.php?id=inews_twn
+无线新闻台,http://cdn6.veryfast.filegear-sg.me/live/wxxw/stream.m3u8
+明珠台,https://smart.946985.filegear-sg.me/smart.php?id=pearl_twn
+明珠台,http://cdn6.veryfast.filegear-sg.me/live/mzt/stream.m3u8
+明珠台,http://o12.veryfast.filegear-sg.me/hls/mzt/playlist.m3u8
+明珠台,http://hls.168.us.kg/u/84/master.m3u8
+HOY TV,https://smart.946985.filegear-sg.me/smart.php?id=hoycaijing_twn
+HOY76,https://php.946985.filegear-sg.me/iptv/jacktv.php?id=7tad3n
+HOY76,http://hls.168.us.kg/u/76/master.m3u8
+HOY77,http://cdn6.veryfast.filegear-sg.me/live/hoy/stream.m3u8
+HOY77,http://hls.168.us.kg/u/77/master.m3u8
+HOY78,https://php.946985.filegear-sg.me/iptv/jacktv.php?id=38q53s
+HOY78,http://hls.168.us.kg/u/78/master.m3u8
+ViuTVSix,http://hls.168.us.kg/u/96/master.m3u8
+ViuTVSix,http://smt.veryfast.filegear-sg.me/smt3.2.1.php?id=viusix_twn
+ViuTVSix,https://smart.946985.filegear-sg.me/smart.php?id=viusix_twn
+ViuTV,http://cdn.veryfast.filegear-sg.me/live/viu/stream.m3u8
+ViuTV,http://hls.168.us.kg/u/99/master.m3u8
+ViuTV,https://smart.946985.filegear-sg.me/smart.php?id=viu1_twn
+NOW爆谷台,http://23.237.228.133/live2/baogutai.m3u8
+NOW爆谷台,https://php.946985.filegear-sg.me/iptv/jacktv.php?id=h7kw14
+NOW星影台,http://23.237.228.133/live2/xingyingtai.m3u8
+NOW星影台,https://php.946985.filegear-sg.me/iptv/jacktv.php?id=07jkor
+Now新聞台,http://hls.168.us.kg/u/332/master.m3u8
+Now新聞台,http://cdn.veryfast.filegear-sg.me/live/now/stream.m3u8
+Now直播台,http://hls.168.us.kg/u/331/master.m3u8
+Now財經台,http://hls.168.us.kg/u/333/master.m3u8
+Now Sports 精選,http://hls.168.us.kg/u/630/master.m3u8
+NOW 70s,https://php.946985.filegear-sg.me/mytv265.php?id=NOW7
+NOW 80s,https://php.946985.filegear-sg.me/mytv265.php?id=NOW8
+NOW ROCK,https://php.946985.filegear-sg.me/mytv265.php?id=NOWR
+NOW 90s00s,https://php.946985.filegear-sg.me/mytv265.php?id=NOW9
+RTHK31,https://smart.946985.filegear-sg.me/smart.php?id=rhk31_twn
+RTHK31,http://cdn.veryfast.filegear-sg.me/live/rthk31/stream.m3u8
+RTHK32,http://cdn.veryfast.filegear-sg.me/live/rthk32/stream.m3u8
+RTHK32,https://smart.946985.filegear-sg.me/smart.php?id=rhk32_twn
+澳视澳门,http://cdn6.veryfast.filegear-sg.me/live/asam/stream.m3u8
+澳视卫星,http://cdn6.veryfast.filegear-sg.me/live/as/stream.m3u8
+澳视体育,http://cdn6.veryfast.filegear-sg.me/live/amty/stream.m3u8
+凤凰中文,https://smart.946985.filegear-sg.me/smart.php?id=phoenixtv_hd
+凤凰中文,http://cdn6.veryfast.filegear-sg.me/live/fhzw/stream.m3u8
+凤凰中文,http://43.152.143.193/1.v.smtcdns.net/tvlive.fengshows.cn/live/0701pcc72.flv
+凤凰资讯,https://smart.946985.filegear-sg.me/smart.php?id=phoenixinfo_hd
+凤凰资讯,http://cdn6.veryfast.filegear-sg.me/live/fhzx/stream.m3u8
+凤凰资讯,http://43.152.143.193/1.v.smtcdns.net/tvlive.fengshows.cn/live/0701pin72.flv
+凤凰香港,https://smart.946985.filegear-sg.me/smart.php?id=hkphoenix_twn
+凤凰香港,http://cdn6.veryfast.filegear-sg.me/live/fhhk/stream.m3u8
+凤凰香港,http://43.152.143.193/1.v.smtcdns.net/tvlive.fengshows.cn/live/0701phk72.flv
+CCTV1,http://cdn6.veryfast.filegear-sg.me/live/cctv1/stream.m3u8
+CCTV13,http://cdn3.veryfast.filegear-sg.me/live/cctv13/stream.m3u8
+广东珠江,http://cdn2.veryfast.filegear-sg.me/live/gdzj/stream.m3u8
+广东体育,http://cdn2.veryfast.filegear-sg.me/live/gdty/stream.m3u8
+五星体育,http://cdn3.veryfast.filegear-sg.me/live/wxty/stream.m3u8
+SPOTV,http://iptv.4666888.xyz/iptv2A.php?id=2
+SPOTV2,http://iptv.4666888.xyz/iptv2A.php?id=1
+astroFootball,http://iptv.4666888.xyz/iptv2A.php?id=4
+TntSports3,http://iptv.4666888.xyz/iptv2A.php?id=3
+深圳卫视4K,http://cdn3.veryfast.filegear-sg.me/live/szws4k/stream.m3u8
+深圳财经生活,http://cdn3.veryfast.filegear-sg.me/live/szcjsh/stream.m3u8
+第一财经,http://cdn3.veryfast.filegear-sg.me/live/dycj/stream.m3u8
+重温经典,http://cdn6.veryfast.filegear-sg.me/live/cwjd/stream.m3u8
+龙华电影,http://cdn8.veryfast.filegear-sg.me/live/lhdy/stream.m3u8
+龙华经典,http://cdn8.veryfast.filegear-sg.me/live/lhjd/stream.m3u8
+龙华卡通,http://cdn8.veryfast.filegear-sg.me/live/lhkt/stream.m3u8
+龙华偶像,http://cdn8.veryfast.filegear-sg.me/live/lhox/stream.m3u8
+龙华日韩,http://cdn8.veryfast.filegear-sg.me/live/lhrh/stream.m3u8
+龙华戏剧,http://cdn8.veryfast.filegear-sg.me/live/lhxj/stream.m3u8
+龙华洋片,http://cdn8.veryfast.filegear-sg.me/live/lhyp/stream.m3u8
+TVB1,http://cdn6.veryfast.filegear-sg.me/live/tvb1/stream.m3u8
+TVBJ1,http://cdn6.veryfast.filegear-sg.me/live/j1/stream.m3u8
+TVB亚洲武侠,http://v2h.veryfast.filegear-sg.me/live/yzwx/stream.m3u8
+TVB娱乐新闻台,http://v2h.veryfast.filegear-sg.me/live/ylxw/stream.m3u8
+TVB华丽翡翠台,http://v2h.veryfast.filegear-sg.me/live/hlfct/stream.m3u8
+TVB星河,http://v2h.veryfast.filegear-sg.me/live/tvbxh/stream.m3u8
+TVB星河,http://smt.veryfast.filegear-sg.me/smt3.2.1.php?id=Xinhe
+TVBPLUS,https://smart.946985.filegear-sg.me/smart.php?id=j2_twn
+TVBPLUS,http://hls.168.us.kg/u/82/master.m3u8
+Now華劇台,http://hls.168.us.kg/u/105/master.m3u8
+TVB PLUS,http://cdn6.veryfast.filegear-sg.me/live/tvbp/stream.m3u8
+翡翠剧集台,http://cdn6.veryfast.filegear-sg.me/live/tvbd/stream.m3u8
+千禧经典台,http://smt.veryfast.filegear-sg.me/smt3.2.1.php?id=Tvbclassic
+美亚电影台,http://smt.veryfast.filegear-sg.me/smt3.2.1.php?id=meiyamovie_twn
+天映马来西亚,http://smt.veryfast.filegear-sg.me/smt3.2.1.php?id=Celestial
+天映经典频道,http://smt.veryfast.filegear-sg.me/smt3.2.1.php?id=Celestial2
+爱奇艺,http://smt.veryfast.filegear-sg.me/smt3.2.1.php?id=Qiyi
+八度空间,http://cdn6.veryfast.filegear-sg.me/live/8tv/stream.m3u8
+CH5,http://cdn6.veryfast.filegear-sg.me/live/ch5/stream.m3u8
+CH8,http://cdn6.veryfast.filegear-sg.me/live/ch8/stream.m3u8
+CHU,http://cdn6.veryfast.filegear-sg.me/live/chu/stream.m3u8
+Astro欢喜台,http://smt.veryfast.filegear-sg.me/smt3.2.1.php?id=Huahee
+Astro AOD,http://smt.veryfast.filegear-sg.me/smt3.2.1.php?id=Aodhd
+Astro AEC,http://smt.veryfast.filegear-sg.me/smt3.2.1.php?id=AEC
+Astro QJ,http://smt.veryfast.filegear-sg.me/smt3.2.1.php?id=Quanjia
+熊貓TV,http://hls.168.us.kg/u/200/master.m3u8
+Concerto,https://php.946985.filegear-sg.me/mytv265.php?id=CONC
+TRACE Urban,https://php.946985.filegear-sg.me/mytv265.php?id=TRUR
+NewsWorld,https://php.946985.filegear-sg.me/mytv265.php?id=NSWD
+
+
+台湾电视台4gtv,#genre#
+中天新聞台,https://4gtv.946985.filegear-sg.me/playlist?channel=%E4%B8%AD%E5%A4%A9%E6%96%B0%E8%81%9E%E5%8F%B0
+TVBS新聞,https://4gtv.946985.filegear-sg.me/playlist?channel=TVBS%E6%96%B0%E8%81%9E
+民視新聞台,https://4gtv.946985.filegear-sg.me/playlist?channel=%E6%B0%91%E8%A6%96%E6%96%B0%E8%81%9E%E5%8F%B0
+東森新聞台,https://4gtv.946985.filegear-sg.me/playlist?channel=%E6%9D%B1%E6%A3%AE%E6%96%B0%E8%81%9E%E5%8F%B0
+華視新聞,https://4gtv.946985.filegear-sg.me/playlist?channel=%E8%8F%AF%E8%A6%96%E6%96%B0%E8%81%9E
+鏡電視新聞台,https://4gtv.946985.filegear-sg.me/playlist?channel=%E9%8F%A1%E9%9B%BB%E8%A6%96%E6%96%B0%E8%81%9E%E5%8F%B0
+東森財經新聞台,https://4gtv.946985.filegear-sg.me/playlist?channel=%E6%9D%B1%E6%A3%AE%E8%B2%A1%E7%B6%93%E6%96%B0%E8%81%9E%E5%8F%B0
+中視新聞,https://4gtv.946985.filegear-sg.me/playlist?channel=%E4%B8%AD%E8%A6%96%E6%96%B0%E8%81%9E
+寰宇新聞台,https://4gtv.946985.filegear-sg.me/playlist?channel=%E5%AF%B0%E5%AE%87%E6%96%B0%E8%81%9E%E5%8F%B0
+寰宇新聞台灣台,https://4gtv.946985.filegear-sg.me/playlist?channel=%E5%AF%B0%E5%AE%87%E6%96%B0%E8%81%9E%E5%8F%B0%E7%81%A3%E5%8F%B0
+三立新聞iNEWS,https://4gtv.946985.filegear-sg.me/playlist?channel=%E4%B8%89%E7%AB%8B%E6%96%B0%E8%81%9EiNEWS
+Bloomberg TV,https://4gtv.946985.filegear-sg.me/playlist?channel=Bloomberg%20TV
+SBN全球財經台,https://4gtv.946985.filegear-sg.me/playlist?channel=SBN%E5%85%A8%E7%90%83%E8%B2%A1%E7%B6%93%E5%8F%B0
+FRANCE24 英文台,https://4gtv.946985.filegear-sg.me/playlist?channel=FRANCE24%20%E8%8B%B1%E6%96%87%E5%8F%B0
+半島國際新聞台,https://4gtv.946985.filegear-sg.me/playlist?channel=%E5%8D%8A%E5%B3%B6%E5%9C%8B%E9%9A%9B%E6%96%B0%E8%81%9E%E5%8F%B0
+NHK WORLD-JAPAN,https://4gtv.946985.filegear-sg.me/playlist?channel=NHK%20WORLD-JAPAN
+CNBC Asia 財經台,https://4gtv.946985.filegear-sg.me/playlist?channel=CNBC%20Asia%20%E8%B2%A1%E7%B6%93%E5%8F%B0
+DW德國之聲,https://4gtv.946985.filegear-sg.me/playlist?channel=DW%E5%BE%B7%E5%9C%8B%E4%B9%8B%E8%81%B2
+民視第一台,https://4gtv.946985.filegear-sg.me/playlist?channel=%E6%B0%91%E8%A6%96%E7%AC%AC%E4%B8%80%E5%8F%B0
+民視台灣台,https://4gtv.946985.filegear-sg.me/playlist?channel=%E6%B0%91%E8%A6%96%E5%8F%B0%E7%81%A3%E5%8F%B0
+民視,https://4gtv.946985.filegear-sg.me/playlist?channel=%E6%B0%91%E8%A6%96
+三立綜合台,https://4gtv.946985.filegear-sg.me/playlist?channel=%E4%B8%89%E7%AB%8B%E7%B6%9C%E5%90%88%E5%8F%B0
+華視,https://4gtv.946985.filegear-sg.me/playlist?channel=%E8%8F%AF%E8%A6%96
+中視,https://4gtv.946985.filegear-sg.me/playlist?channel=%E4%B8%AD%E8%A6%96
+中視經典台,https://4gtv.946985.filegear-sg.me/playlist?channel=%E4%B8%AD%E8%A6%96%E7%B6%93%E5%85%B8%E5%8F%B0
+中視菁采台,https://4gtv.946985.filegear-sg.me/playlist?channel=%E4%B8%AD%E8%A6%96%E8%8F%81%E9%87%87%E5%8F%B0
+八大綜藝台,https://4gtv.946985.filegear-sg.me/playlist?channel=%E5%85%AB%E5%A4%A7%E7%B6%9C%E8%97%9D%E5%8F%B0
+TVBS精采台,https://4gtv.946985.filegear-sg.me/playlist?channel=TVBS%E7%B2%BE%E9%87%87%E5%8F%B0
+民視綜藝台,https://4gtv.946985.filegear-sg.me/playlist?channel=%E6%B0%91%E8%A6%96%E7%B6%9C%E8%97%9D%E5%8F%B0
+TVBS,https://4gtv.946985.filegear-sg.me/playlist?channel=TVBS
+TVBS歡樂台,https://4gtv.946985.filegear-sg.me/playlist?channel=TVBS%E6%AD%A1%E6%A8%82%E5%8F%B0
+TVBS綜藝台,https://4gtv.946985.filegear-sg.me/playlist?channel=TVBS%E7%B6%9C%E8%97%9D%E5%8F%B0
+TVBS台劇台,https://4gtv.946985.filegear-sg.me/playlist?channel=TVBS%E5%8F%B0%E5%8A%87%E5%8F%B0
+靖天綜合台,https://4gtv.946985.filegear-sg.me/playlist?channel=%E9%9D%96%E5%A4%A9%E7%B6%9C%E5%90%88%E5%8F%B0
+靖天日本台,https://4gtv.946985.filegear-sg.me/playlist?channel=%E9%9D%96%E5%A4%A9%E6%97%A5%E6%9C%AC%E5%8F%B0
+KLT-靖天國際台,https://4gtv.946985.filegear-sg.me/playlist?channel=KLT-%E9%9D%96%E5%A4%A9%E5%9C%8B%E9%9A%9B%E5%8F%B0
+靖天資訊台,https://4gtv.946985.filegear-sg.me/playlist?channel=%E9%9D%96%E5%A4%A9%E8%B3%87%E8%A8%8A%E5%8F%B0
+Nice TV 靖天歡樂台,https://4gtv.946985.filegear-sg.me/playlist?channel=Nice%20TV%20%E9%9D%96%E5%A4%A9%E6%AD%A1%E6%A8%82%E5%8F%B0
+新唐人亞太台,https://4gtv.946985.filegear-sg.me/playlist?channel=%E6%96%B0%E5%94%90%E4%BA%BA%E4%BA%9E%E5%A4%AA%E5%8F%B0
+ARIRANG阿里郎頻道,https://4gtv.946985.filegear-sg.me/playlist?channel=ARIRANG%E9%98%BF%E9%87%8C%E9%83%8E%E9%A0%BB%E9%81%93
+Global Trekker,https://4gtv.946985.filegear-sg.me/playlist?channel=Global%20Trekker
+原住民族電視台,https://4gtv.946985.filegear-sg.me/playlist?channel=%E5%8E%9F%E4%BD%8F%E6%B0%91%E6%97%8F%E9%9B%BB%E8%A6%96%E5%8F%B0
+客家電視台,https://4gtv.946985.filegear-sg.me/playlist?channel=%E5%AE%A2%E5%AE%B6%E9%9B%BB%E8%A6%96%E5%8F%B0
+國會頻道1,https://4gtv.946985.filegear-sg.me/playlist?channel=%E5%9C%8B%E6%9C%83%E9%A0%BB%E9%81%931
+國會頻道2,https://4gtv.946985.filegear-sg.me/playlist?channel=%E5%9C%8B%E6%9C%83%E9%A0%BB%E9%81%932
+好消息,https://4gtv.946985.filegear-sg.me/playlist?channel=%E5%A5%BD%E6%B6%88%E6%81%AF
+好消息2台,https://4gtv.946985.filegear-sg.me/playlist?channel=%E5%A5%BD%E6%B6%88%E6%81%AF2%E5%8F%B0
+大愛電視,https://4gtv.946985.filegear-sg.me/playlist?channel=%E5%A4%A7%E6%84%9B%E9%9B%BB%E8%A6%96
+大愛二台,https://4gtv.946985.filegear-sg.me/playlist?channel=%E5%A4%A7%E6%84%9B%E4%BA%8C%E5%8F%B0
+人間衛視,https://4gtv.946985.filegear-sg.me/playlist?channel=%E4%BA%BA%E9%96%93%E8%A1%9B%E8%A6%96
+民視旅遊台,https://4gtv.946985.filegear-sg.me/playlist?channel=%E6%B0%91%E8%A6%96%E6%97%85%E9%81%8A%E5%8F%B0
+亞洲旅遊台,https://4gtv.946985.filegear-sg.me/playlist?channel=%E4%BA%9E%E6%B4%B2%E6%97%85%E9%81%8A%E5%8F%B0
+愛爾達生活旅遊台,https://4gtv.946985.filegear-sg.me/playlist?channel=%E6%84%9B%E7%88%BE%E9%81%94%E7%94%9F%E6%B4%BB%E6%97%85%E9%81%8A%E5%8F%B0
+fun探索娛樂台,https://4gtv.946985.filegear-sg.me/playlist?channel=fun%E6%8E%A2%E7%B4%A2%E5%A8%9B%E6%A8%82%E5%8F%B0
+幸福空間居家台,https://4gtv.946985.filegear-sg.me/playlist?channel=%E5%B9%B8%E7%A6%8F%E7%A9%BA%E9%96%93%E5%B1%85%E5%AE%B6%E5%8F%B0
+Love Nature,https://4gtv.946985.filegear-sg.me/playlist?channel=Love%20Nature
+History 歷史頻道,https://4gtv.946985.filegear-sg.me/playlist?channel=History%20%E6%AD%B7%E5%8F%B2%E9%A0%BB%E9%81%93
+LUXE TV Channel,https://4gtv.946985.filegear-sg.me/playlist?channel=LUXE%20TV%20Channel
+TV5MONDE STYLE HD 生活時尚,https://4gtv.946985.filegear-sg.me/playlist?channel=TV5MONDE%20STYLE%20HD%20%E7%94%9F%E6%B4%BB%E6%99%82%E5%B0%9A
+MagellanTV頻道 (麥哲倫頻道),https://4gtv.946985.filegear-sg.me/playlist?channel=MagellanTV%E9%A0%BB%E9%81%93%20%28%E9%BA%A5%E5%93%B2%E5%80%AB%E9%A0%BB%E9%81%93%29
+Lifetime 娛樂頻道,https://4gtv.946985.filegear-sg.me/playlist?channel=Lifetime%20%E5%A8%9B%E6%A8%82%E9%A0%BB%E9%81%93
+ROCK Entertainment,https://4gtv.946985.filegear-sg.me/playlist?channel=ROCK%20Entertainment
+八大精彩台,https://4gtv.946985.filegear-sg.me/playlist?channel=%E5%85%AB%E5%A4%A7%E7%B2%BE%E5%BD%A9%E5%8F%B0
+靖天育樂台,https://4gtv.946985.filegear-sg.me/playlist?channel=%E9%9D%96%E5%A4%A9%E8%82%B2%E6%A8%82%E5%8F%B0
+豬哥亮歌廳秀,https://4gtv.946985.filegear-sg.me/playlist?channel=%E8%B1%AC%E5%93%A5%E4%BA%AE%E6%AD%8C%E5%BB%B3%E7%A7%80
+韓國娛樂台 KMTV,https://4gtv.946985.filegear-sg.me/playlist?channel=%E9%9F%93%E5%9C%8B%E5%A8%9B%E6%A8%82%E5%8F%B0%20KMTV
+愛爾達娛樂台,https://4gtv.946985.filegear-sg.me/playlist?channel=%E6%84%9B%E7%88%BE%E9%81%94%E5%A8%9B%E6%A8%82%E5%8F%B0
+民視影劇台,https://4gtv.946985.filegear-sg.me/playlist?channel=%E6%B0%91%E8%A6%96%E5%BD%B1%E5%8A%87%E5%8F%B0
+公視戲劇,https://4gtv.946985.filegear-sg.me/playlist?channel=%E5%85%AC%E8%A6%96%E6%88%B2%E5%8A%87
+采昌影劇台,https://4gtv.946985.filegear-sg.me/playlist?channel=%E9%87%87%E6%98%8C%E5%BD%B1%E5%8A%87%E5%8F%B0
+靖天戲劇台,https://4gtv.946985.filegear-sg.me/playlist?channel=%E9%9D%96%E5%A4%A9%E6%88%B2%E5%8A%87%E5%8F%B0
+靖洋戲劇台,https://4gtv.946985.filegear-sg.me/playlist?channel=%E9%9D%96%E6%B4%8B%E6%88%B2%E5%8A%87%E5%8F%B0
+靖天映畫,https://4gtv.946985.filegear-sg.me/playlist?channel=%E9%9D%96%E5%A4%A9%E6%98%A0%E7%95%AB
+靖天電影台,https://4gtv.946985.filegear-sg.me/playlist?channel=%E9%9D%96%E5%A4%A9%E9%9B%BB%E5%BD%B1%E5%8F%B0
+影迷數位電影台,https://4gtv.946985.filegear-sg.me/playlist?channel=%E5%BD%B1%E8%BF%B7%E6%95%B8%E4%BD%8D%E9%9B%BB%E5%BD%B1%E5%8F%B0
+amc電影台,https://4gtv.946985.filegear-sg.me/playlist?channel=amc%E9%9B%BB%E5%BD%B1%E5%8F%B0
+CinemaWorld,https://4gtv.946985.filegear-sg.me/playlist?channel=CinemaWorld
+My Cinema Europe HD 我的歐洲電影,https://4gtv.946985.filegear-sg.me/playlist?channel=My%20Cinema%20Europe%20HD%20%E6%88%91%E7%9A%84%E6%AD%90%E6%B4%B2%E9%9B%BB%E5%BD%B1
+經典電影台,https://4gtv.946985.filegear-sg.me/playlist?channel=%E7%B6%93%E5%85%B8%E9%9B%BB%E5%BD%B1%E5%8F%B0
+電影原聲台CMusic,https://4gtv.946985.filegear-sg.me/playlist?channel=%E9%9B%BB%E5%BD%B1%E5%8E%9F%E8%81%B2%E5%8F%B0CMusic
+CI 罪案偵查頻道,https://4gtv.946985.filegear-sg.me/playlist?channel=CI%20%E7%BD%AA%E6%A1%88%E5%81%B5%E6%9F%A5%E9%A0%BB%E9%81%93
+視納華仁紀實頻道,https://4gtv.946985.filegear-sg.me/playlist?channel=%E8%A6%96%E7%B4%8D%E8%8F%AF%E4%BB%81%E7%B4%80%E5%AF%A6%E9%A0%BB%E9%81%93
+影迷數位紀實台,https://4gtv.946985.filegear-sg.me/playlist?channel=%E5%BD%B1%E8%BF%B7%E6%95%B8%E4%BD%8D%E7%B4%80%E5%AF%A6%E5%8F%B0
+戲劇免費看 1台,https://4gtv.946985.filegear-sg.me/playlist?channel=%E6%88%B2%E5%8A%87%E5%85%8D%E8%B2%BB%E7%9C%8B%201%E5%8F%B0
+LiveABC互動英語頻道,https://4gtv.946985.filegear-sg.me/playlist?channel=LiveABC%E4%BA%92%E5%8B%95%E8%8B%B1%E8%AA%9E%E9%A0%BB%E9%81%93
+ELTV生活英語台,https://4gtv.946985.filegear-sg.me/playlist?channel=ELTV%E7%94%9F%E6%B4%BB%E8%8B%B1%E8%AA%9E%E5%8F%B0
+MOMO親子台,https://4gtv.946985.filegear-sg.me/playlist?channel=MOMO%E8%A6%AA%E5%AD%90%E5%8F%B0
+Nick Jr. 兒童頻道,https://4gtv.946985.filegear-sg.me/playlist?channel=Nick%20Jr.%20%E5%85%92%E7%AB%A5%E9%A0%BB%E9%81%93
+尼克兒童頻道,https://4gtv.946985.filegear-sg.me/playlist?channel=%E5%B0%BC%E5%85%8B%E5%85%92%E7%AB%A5%E9%A0%BB%E9%81%93
+DreamWorks 夢工廠動畫,https://4gtv.946985.filegear-sg.me/playlist?channel=DreamWorks%20%E5%A4%A2%E5%B7%A5%E5%BB%A0%E5%8B%95%E7%95%AB
+靖天卡通台,https://4gtv.946985.filegear-sg.me/playlist?channel=%E9%9D%96%E5%A4%A9%E5%8D%A1%E9%80%9A%E5%8F%B0
+靖洋卡通Nice Bingo,https://4gtv.946985.filegear-sg.me/playlist?channel=%E9%9D%96%E6%B4%8B%E5%8D%A1%E9%80%9ANice%20Bingo
+金光布袋戲,https://4gtv.946985.filegear-sg.me/playlist?channel=%E9%87%91%E5%85%89%E5%B8%83%E8%A2%8B%E6%88%B2
+霹靂布袋戲,https://4gtv.946985.filegear-sg.me/playlist?channel=%E9%9C%B9%E9%9D%82%E5%B8%83%E8%A2%8B%E6%88%B2
+經典卡通台,https://4gtv.946985.filegear-sg.me/playlist?channel=%E7%B6%93%E5%85%B8%E5%8D%A1%E9%80%9A%E5%8F%B0
+精選動漫台,https://4gtv.946985.filegear-sg.me/playlist?channel=%E7%B2%BE%E9%81%B8%E5%8B%95%E6%BC%AB%E5%8F%B0
+MTV Live HD 音樂頻道,https://4gtv.946985.filegear-sg.me/playlist?channel=MTV%20Live%20HD%20%E9%9F%B3%E6%A8%82%E9%A0%BB%E9%81%93
+Mezzo Live HD,https://4gtv.946985.filegear-sg.me/playlist?channel=Mezzo%20Live%20HD
+CLASSICA 古典樂,https://4gtv.946985.filegear-sg.me/playlist?channel=CLASSICA%20%E5%8F%A4%E5%85%B8%E6%A8%82
+INULTRA,https://4gtv.946985.filegear-sg.me/playlist?channel=INULTRA
+TRACE Urban,https://4gtv.946985.filegear-sg.me/playlist?channel=TRACE%20Urban
+TRACE Sport Stars,https://4gtv.946985.filegear-sg.me/playlist?channel=TRACE%20Sport%20Stars
+ROCK Action,https://4gtv.946985.filegear-sg.me/playlist?channel=ROCK%20Action
+HITS頻道,https://4gtv.946985.filegear-sg.me/playlist?channel=HITS%E9%A0%BB%E9%81%93
+車迷TV,https://4gtv.946985.filegear-sg.me/playlist?channel=%E8%BB%8A%E8%BF%B7TV
+GINX Esports TV,https://4gtv.946985.filegear-sg.me/playlist?channel=GINX%20Esports%20TV
+Pet Club TV,https://4gtv.946985.filegear-sg.me/playlist?channel=Pet%20Club%20TV
+滾動力rollor,https://4gtv.946985.filegear-sg.me/playlist?channel=%E6%BB%BE%E5%8B%95%E5%8A%9Brollor
+達文西頻道,https://4gtv.946985.filegear-sg.me/playlist?channel=%E9%81%94%E6%96%87%E8%A5%BF%E9%A0%BB%E9%81%93
+智林體育台,https://4gtv.946985.filegear-sg.me/playlist?channel=%E6%99%BA%E6%9E%97%E9%AB%94%E8%82%B2%E5%8F%B0
+時尚運動X,https://4gtv.946985.filegear-sg.me/playlist?channel=%E6%99%82%E5%B0%9A%E9%81%8B%E5%8B%95X
+東森購物一台,https://4gtv.946985.filegear-sg.me/playlist?channel=%E6%9D%B1%E6%A3%AE%E8%B3%BC%E7%89%A9%E4%B8%80%E5%8F%B0
+東森購物二台,https://4gtv.946985.filegear-sg.me/playlist?channel=%E6%9D%B1%E6%A3%AE%E8%B3%BC%E7%89%A9%E4%BA%8C%E5%8F%B0
+東森購物三台,https://4gtv.946985.filegear-sg.me/playlist?channel=%E6%9D%B1%E6%A3%AE%E8%B3%BC%E7%89%A9%E4%B8%89%E5%8F%B0
+東森購物四台,https://4gtv.946985.filegear-sg.me/playlist?channel=%E6%9D%B1%E6%A3%AE%E8%B3%BC%E7%89%A9%E5%9B%9B%E5%8F%B0
+台湾电视smart,#genre#
+台视 HD,https://smart.946985.filegear-sg.me/smart.php?id=ttv_taiwan
+台视新闻,https://smart.946985.filegear-sg.me/smart.php?id=ttvnews_twn
+台视综合,https://smart.946985.filegear-sg.me/smart.php?id=ttvzhonghe
+中视 HD,https://smart.946985.filegear-sg.me/smart.php?id=zhongshihd_twn
+中视新闻,https://smart.946985.filegear-sg.me/smart.php?id=zhongshinews_twn
+中视经典,https://smart.946985.filegear-sg.me/smart.php?id=zhongshi_twn
+华视 HD,https://smart.946985.filegear-sg.me/smart.php?id=ctshd_twn
+公视 HD,https://smart.946985.filegear-sg.me/smart.php?id=ctv_taiwan
+公视台语台,https://smart.946985.filegear-sg.me/smart.php?id=ctv2_twn
+三立台湾台,https://smart.946985.filegear-sg.me/smart.php?id=sanlitaiwan
+三立都会台,https://smart.946985.filegear-sg.me/smart.php?id=sanlidouhui
+三立综合台,https://smart.946985.filegear-sg.me/smart.php?id=sanlizhonghe
+三立戏剧台,https://smart.946985.filegear-sg.me/smart.php?id=sanlixiju_twn
+东森新闻台,https://smart.946985.filegear-sg.me/smart.php?id=ettvnews
+东森财经新闻台,https://smart.946985.filegear-sg.me/smart.php?id=ettvcaijing_twn
+东森综合台,https://smart.946985.filegear-sg.me/smart.php?id=ettvzhonghe
+东森戏剧台,https://smart.946985.filegear-sg.me/smart.php?id=ettvdrama
+东森电影台,https://smart.946985.filegear-sg.me/smart.php?id=ettvmovie
+东森洋片台,https://smart.946985.filegear-sg.me/smart.php?id=ettvwestern
+东森幼幼台,https://smart.946985.filegear-sg.me/smart.php?id=yoyo_twn
+东森超视,https://smart.946985.filegear-sg.me/smart.php?id=ettvsuper
+TVBS HD,https://smart.946985.filegear-sg.me/smart.php?id=tvbs
+TVBS 新闻台,https://smart.946985.filegear-sg.me/smart.php?id=tvbs_n
+TVBS 欢乐台,https://smart.946985.filegear-sg.me/smart.php?id=tvbshuanle_twn
+民视 HD,https://smart.946985.filegear-sg.me/smart.php?id=ftvhd_taiwan
+民视新闻台,https://smart.946985.filegear-sg.me/smart.php?id=ftvnew_taiwan
+民视台湾台,https://smart.946985.filegear-sg.me/smart.php?id=ftvtaiwan_twn
+中天综合,https://smart.946985.filegear-sg.me/smart.php?id=ctizhonghe
+中天娱乐,https://smart.946985.filegear-sg.me/smart.php?id=ctient
+中天亚洲,https://smart.946985.filegear-sg.me/smart.php?id=ctiasia_twn
+中天新闻,https://smart.946985.filegear-sg.me/smart.php?id=ctinews
+寰宇新闻台,https://smart.946985.filegear-sg.me/smart.php?id=huanyuxinwen_twn
+寰宇财经台,https://smart.946985.filegear-sg.me/smart.php?id=huanyutaiwan_twn
+八大第一台,https://smart.946985.filegear-sg.me/smart.php?id=badafirst
+八大综合台,https://smart.946985.filegear-sg.me/smart.php?id=badazhonghe
+八大戏剧台,https://smart.946985.filegear-sg.me/smart.php?id=badadrama
+八大娱乐台,https://smart.946985.filegear-sg.me/smart.php?id=badaentertain
+纬来体育,https://smart.946985.filegear-sg.me/smart.php?id=videolandsport
+纬来精彩,https://smart.946985.filegear-sg.me/smart.php?id=videolandspecial_twn
+纬来日本,https://smart.946985.filegear-sg.me/smart.php?id=videolandjapan
+纬来电影,https://smart.946985.filegear-sg.me/smart.php?id=videolandmovie
+纬来综合,https://smart.946985.filegear-sg.me/smart.php?id=videolandzonghe
+纬来育乐,https://smart.946985.filegear-sg.me/smart.php?id=videolandyule
+爱尔达综合台,https://smart.946985.filegear-sg.me/smart.php?id=eltazonghe_twn
+爱尔达影剧台,https://smart.946985.filegear-sg.me/smart.php?id=eltayingju_twn
+爱尔达体育1台,https://smart.946985.filegear-sg.me/smart.php?id=eltasport_twn
+爱尔达体育2台,https://smart.946985.filegear-sg.me/smart.php?id=eltasport2_twn
+爱尔达体育3台,https://smart.946985.filegear-sg.me/smart.php?id=eltasport3_twn
+爱尔达体育4台,https://smart.946985.filegear-sg.me/smart.php?id=eltasports4_twn
+非凡新闻,https://smart.946985.filegear-sg.me/smart.php?id=feifannews_twn
+年代新闻,https://smart.946985.filegear-sg.me/smart.php?id=niandainews_twn
+龙华戏剧,https://smart.946985.filegear-sg.me/smart.php?id=lunghuaxiju_twn
+龙华偶像,https://smart.946985.filegear-sg.me/smart.php?id=lunghuaidol_twn
+龙华电影,https://smart.946985.filegear-sg.me/smart.php?id=xingwei_movie
+龙华洋片,https://smart.946985.filegear-sg.me/smart.php?id=lunghuawestern_twn
+龙华经典,https://smart.946985.filegear-sg.me/smart.php?id=lunghuajingdian_twn
+靖天国际,https://smart.946985.filegear-sg.me/smart.php?id=jingtianintl_twn
+靖天卡通,https://smart.946985.filegear-sg.me/smart.php?id=jingtiancartoon_twn
+大愛電視,https://smart.946985.filegear-sg.me/smart.php?id=daai_twn
+大愛二台,https://smart.946985.filegear-sg.me/smart.php?id=daai2_twn
+EYE 旅游台,https://smart.946985.filegear-sg.me/smart.php?id=eyetvtravel_twn
+EYE 戏剧台,https://smart.946985.filegear-sg.me/smart.php?id=eyetvxiju_twn
+亚洲美食,https://smart.946985.filegear-sg.me/smart.php?id=afc_twn
+美食星球,https://smart.946985.filegear-sg.me/smart.php?id=foodplanet_twn
+TLC旅遊生活,https://smart.946985.filegear-sg.me/smart.php?id=tlc_twn
+亚洲旅游台,https://smart.946985.filegear-sg.me/smart.php?id=asiatravel_twn
+Arirang,https://smart.946985.filegear-sg.me/smart.php?id=arirang_twn
+AXN Taiwan,https://smart.946985.filegear-sg.me/smart.php?id=axn_twn
+MTV Live,https://smart.946985.filegear-sg.me/smart.php?id=mtvhd_twn
+HBO_HD,https://smart.946985.filegear-sg.me/smart.php?id=hbohd_twn
+HBO_HITS,https://smart.946985.filegear-sg.me/smart.php?id=hbohit_twn
+CINEMAX,https://smart.946985.filegear-sg.me/smart.php?id=cinemax_twn
+好萊塢電影台,https://smart.946985.filegear-sg.me/smart.php?id=hollywoodmovies_twn
+卫视电影台,https://smart.946985.filegear-sg.me/smart.php?id=weishimovie_twn
+龙祥时代,https://smart.946985.filegear-sg.me/smart.php?id=lungxiangtime_twn
+美亚电影,https://smart.946985.filegear-sg.me/smart.php?id=meiyamovie_twn
+華藝綜合,https://smart.946985.filegear-sg.me/smart.php?id=weishichinese_twn
+博斯运动一台,https://smart.946985.filegear-sg.me/smart.php?id=bosisport1_twn
+博斯运动二台,https://smart.946985.filegear-sg.me/smart.php?id=bosisport2_twn
+博斯高球一台,https://smart.946985.filegear-sg.me/smart.php?id=bosigolf1_twn
+博斯高球二台,https://smart.946985.filegear-sg.me/smart.php?id=bosigolf2_twn
+博斯网球台,https://smart.946985.filegear-sg.me/smart.php?id=bositennis_twn
+博斯无限台,https://smart.946985.filegear-sg.me/smart.php?id=bosiunlimited_twn
+好消息 2,https://smart.946985.filegear-sg.me/smart.php?id=good2_twn
+CCTV-1 综合,https://smart.946985.filegear-sg.me/smart.php?id=cctv1
+CCTV-2 财经,https://smart.946985.filegear-sg.me/smart.php?id=cctv2
+CCTV-3 综艺,https://smart.946985.filegear-sg.me/smart.php?id=cctv3
+CCTV-4 中文国际,https://smart.946985.filegear-sg.me/smart.php?id=Cctv4
+CCTV-4 中文国际,https://smart.946985.filegear-sg.me/smart.php?id=cctv4
+CCTV-5 体育,https://smart.946985.filegear-sg.me/smart.php?id=cctv5
+CCTV-6 电影,https://smart.946985.filegear-sg.me/smart.php?id=cctv6
+CCTV-7 国防军事,https://smart.946985.filegear-sg.me/smart.php?id=cctv7
+CCTV-8 电视剧,https://smart.946985.filegear-sg.me/smart.php?id=cctv8hd
+CCTV-9 记录,https://smart.946985.filegear-sg.me/smart.php?id=cctv9hd
+CCTV-10 科教,https://smart.946985.filegear-sg.me/smart.php?id=cctv10hd
+CCTV-11 戏曲,https://smart.946985.filegear-sg.me/smart.php?id=cctv11
+CCTV-12 社会与法,https://smart.946985.filegear-sg.me/smart.php?id=cctv12
+CCTV-13 新闻,https://smart.946985.filegear-sg.me/smart.php?id=cctv13
+CCTV-14 少儿,https://smart.946985.filegear-sg.me/smart.php?id=cctv14
+CCTV-15 音乐,https://smart.946985.filegear-sg.me/smart.php?id=cctv15
+CCTV-16 奥林匹克,https://smart.946985.filegear-sg.me/smart.php?id=cctv16
+CCTV-17 农业农村,https://smart.946985.filegear-sg.me/smart.php?id=cctv17
+CCTV-5+ 体育赛事,https://smart.946985.filegear-sg.me/smart.php?id=cctv5plus
+湖南卫视,https://smart.946985.filegear-sg.me/smart.php?id=hunan_twn
+浙江卫视,https://smart.946985.filegear-sg.me/smart.php?id=zhejiang_twn
+江苏卫视,https://smart.946985.filegear-sg.me/smart.php?id=jiangsu_twn
+东方卫视,https://smart.946985.filegear-sg.me/smart.php?id=dongfangweishi_twn
+北京卫视,https://smart.946985.filegear-sg.me/smart.php?id=beijing
+深圳卫视,https://smart.946985.filegear-sg.me/smart.php?id=shenzhen
+广东卫视,https://smart.946985.filegear-sg.me/smart.php?id=guangdongweishi_twn
+大湾区卫视,https://smart.946985.filegear-sg.me/smart.php?id=nanfang_twn
+珠江台,https://smart.946985.filegear-sg.me/smart.php?id=zhujiang
+东南卫视,https://smart.946985.filegear-sg.me/smart.php?id=fujian
+广西卫视,https://smart.946985.filegear-sg.me/smart.php?id=guangxi
+湖北卫视,https://smart.946985.filegear-sg.me/smart.php?id=hubei
+四川卫视,https://smart.946985.filegear-sg.me/smart.php?id=sichuan_twn
+CGTN,https://smart.946985.filegear-sg.me/smart.php?id=CGTN
+CCTV-6,https://smart.946985.filegear-sg.me/smart.php?id=cctv6
+AXN Taiwan,https://smart.946985.filegear-sg.me/smart.php?id=axn_twn
+HBO_HD,https://smart.946985.filegear-sg.me/smart.php?id=hbohd_twn
+HBO_HITS,https://smart.946985.filegear-sg.me/smart.php?id=hbohit_twn
+CINEMAX,https://smart.946985.filegear-sg.me/smart.php?id=cinemax_twn
+好萊塢電影台,https://smart.946985.filegear-sg.me/smart.php?id=hollywoodmovies_twn
+东森电影,https://smart.946985.filegear-sg.me/smart.php?id=ettvmovie
+东森洋片,https://smart.946985.filegear-sg.me/smart.php?id=ettvwestern
+龙华电影,https://smart.946985.filegear-sg.me/smart.php?id=xingwei_movie
+龙华洋片,https://smart.946985.filegear-sg.me/smart.php?id=lunghuawestern_twn
+龙祥时代,https://smart.946985.filegear-sg.me/smart.php?id=lungxiangtime_twn
+美亚电影,https://smart.946985.filegear-sg.me/smart.php?id=meiyamovie_twn
+卫视电影台,https://smart.946985.filegear-sg.me/smart.php?id=weishimovie_twn
+天映频道,https://smart.946985.filegear-sg.me/smart.php?id=Celestial
+天映频道,https://smart.946985.filegear-sg.me/smart.php?id=Celestialindo
+天映经典,https://smart.946985.filegear-sg.me/smart.php?id=Celestial2
+Animax,https://smart.946985.filegear-sg.me/smart.php?id=Animax
+Movies Now HD,https://smart.946985.filegear-sg.me/smart.php?id=moviesnow_raj
+Star Movies HD,https://smart.946985.filegear-sg.me/smart.php?id=starmovies_raj
+Hits,https://smart.946985.filegear-sg.me/smart.php?id=Hits
+Warner TV,https://smart.946985.filegear-sg.me/smart.php?id=WarnerTV
+HBO HD,https://smart.946985.filegear-sg.me/smart.php?id=Hbo
+HBO Signature,https://smart.946985.filegear-sg.me/smart.php?id=Hbosignature
+HBO Family,https://smart.946985.filegear-sg.me/smart.php?id=Hbofamily
+HBO Hits,https://smart.946985.filegear-sg.me/smart.php?id=Hbohitshd
+Cinemax,https://smart.946985.filegear-sg.me/smart.php?id=Cinemax
+Dreamworks,https://smart.946985.filegear-sg.me/smart.php?id=Dreamworks
+SCM,https://smart.946985.filegear-sg.me/smart.php?id=Weishimovie
+Thrill,https://smart.946985.filegear-sg.me/smart.php?id=Thrill
+Hits Movie,https://smart.946985.filegear-sg.me/smart.php?id=Hitsmovie
+One,https://smart.946985.filegear-sg.me/smart.php?id=One
+tvN Movie,https://smart.946985.filegear-sg.me/smart.php?id=Tvnmovie
+Axn HD,https://smart.946985.filegear-sg.me/smart.php?id=Axn
+Paramount Network,https://smart.946985.filegear-sg.me/smart.php?id=Paramountnetwork
+Astrol Kplus,https://smart.946985.filegear-sg.me/smart.php?id=Kplus
+Rock Actions,https://smart.946985.filegear-sg.me/smart.php?id=Rockaction
+Rock Entertainment,https://smart.946985.filegear-sg.me/smart.php?id=Rockentertain
+Natgeo_HD,https://smart.946985.filegear-sg.me/smart.php?id=natgeohd_twn
+NatGeo_Wild HD,https://smart.946985.filegear-sg.me/smart.php?id=natgeowild_twn
+Animal_Planet,https://smart.946985.filegear-sg.me/smart.php?id=animalplanet_twn
+Discovery Asia,https://smart.946985.filegear-sg.me/smart.php?id=discoverytwn_twn
+CI,https://smart.946985.filegear-sg.me/smart.php?id=ci_twn
+Asia Travel,https://smart.946985.filegear-sg.me/smart.php?id=asiatravel_twn
+Discovery HD,https://smart.946985.filegear-sg.me/smart.php?id=discoveryhd_twn
+亚洲美食,https://smart.946985.filegear-sg.me/smart.php?id=afc_twn
+美食星球,https://smart.946985.filegear-sg.me/smart.php?id=foodplanet_twn
+亚洲TLC,https://smart.946985.filegear-sg.me/smart.php?id=tlc_twn
+NatGeo HD,https://smart.946985.filegear-sg.me/smart.php?id=Natgeo
+Fashion TV,https://smart.946985.filegear-sg.me/smart.php?id=fashiontv_twn
+History,https://smart.946985.filegear-sg.me/smart.php?id=History
+BBC Earth HD,https://smart.946985.filegear-sg.me/smart.php?id=bbcearth_twn
+BBC Earth Lifestyle,https://smart.946985.filegear-sg.me/smart.php?id=bbclifestyle_twn
+MTV Live,https://smart.946985.filegear-sg.me/smart.php?id=mtvhd_twn
+NatGeo Wild HD,https://smart.946985.filegear-sg.me/smart.php?id=Natgeowild
+Animal Planet (Eng),https://smart.946985.filegear-sg.me/smart.php?id=AnimalPlanet
+TLC,https://smart.946985.filegear-sg.me/smart.php?id=Tlc
+Foodnetwork Hd,https://smart.946985.filegear-sg.me/smart.php?id=Foodnetwork
+HGTV,https://smart.946985.filegear-sg.me/smart.php?id=HGTV
+亚洲旅游台,https://smart.946985.filegear-sg.me/smart.php?id=asiatravel_twn
+Skynews,https://smart.946985.filegear-sg.me/smart.php?id=skynews_twn
+ABC News,https://smart.946985.filegear-sg.me/smart.php?id=abcnews_glo
