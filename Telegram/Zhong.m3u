@@ -2159,3 +2159,5 @@ http://119.77.96.184:1935/chn05/chn05/chunklist_tvbox6.com.m3u8
 http://119.77.96.184:1935/chn21/chn21/chunklist_tvbox6.com.m3u8
 #EXTINF:-1 ,韩国|Arirang
 http://amdlive-ch01.ctnd.com.edgesuite.net/arirang_1ch/smil:arirang_1ch.smil/playlist.m3u8
+#EXTINF:-1 ,TVB1
+http://hls-pull-lumawnew.speedws.com/live/c55985eebf76a91b12f259549118ed86.m3u8
