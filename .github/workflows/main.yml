@@ -1,0 +1,48 @@
+name: Daily Update
+
+on:
+  schedule:
+    - cron: '5 1 * * *'  # 每天早上北京时间09:05更新(UTC时间为1:05)
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Update README with timestamp
+        run: |
+          # 生成当前时间
+          UTC_TIME=$(date -u +'%Y-%m-%d %H:%M:%S')
+          BJ_TIME=$(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M:%S')
+          
+          # 在 README 末尾添加或更新时间戳
+          TIMESTAMP_SECTION="\n## 🕒 最后更新时间\n\n"
+          TIMESTAMP_SECTION+="**UTC**: \`$UTC_TIME\`  \n"
+          TIMESTAMP_SECTION+="**北京时间**: \`$BJ_TIME\`  \n\n"
+          TIMESTAMP_SECTION+="> ⚡ 此时间戳由 GitHub Actions 自动更新\n"
+          
+          # 检查是否已经有时间戳部分
+          if grep -q "## 🕒 最后更新时间" README.md; then
+            sed -i '/## 🕒 最后更新时间/,/^## \|^# /{//!d}' README.md
+            sed -i '/## 🕒 最后更新时间/d' README.md
+          fi
+          
+          echo -e "$TIMESTAMP_SECTION" >> README.md
+          
+      - name: Auto commit changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Auto deploy by Github Actions"
+          commit_user_name: "github-actions[bot]"
+          commit_user_email: "github-actions[bot]@users.noreply.github.com"
+          file_pattern: README.md
