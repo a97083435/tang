@@ -1,0 +1,568 @@
+#EXTM3U
+
+### 国际 / 外语频道
+#EXTINF:-1 tvg-name="Arirang" group-title="国际",Arirang
+http://118.71.25.184:9999/udp/225.1.1.201:30120
+
+#EXTINF:-1 tvg-name="Asian Food Channel HD" group-title="生活",Asian Food Channel HD
+http://118.71.25.184:9999/udp/225.1.1.198:30120
+
+#EXTINF:-1 tvg-name="Australia Plus" group-title="国际",Australia Plus
+http://118.71.25.184:9999/udp/225.1.2.21:30120
+
+#EXTINF:-1 tvg-name="AXN" group-title="电影系列",AXN
+http://118.71.25.184:9999/udp/225.1.1.237:30120
+
+#EXTINF:-1 tvg-name="AXN HD" group-title="电影系列",AXN HD
+http://118.71.25.184:9999/udp/225.1.2.224:30120
+
+#EXTINF:-1 tvg-name="BBC Earth" group-title="纪录",BBC Earth
+http://118.71.25.184:9999/udp/225.1.2.24:30120
+
+#EXTINF:-1 tvg-name="BBC Earth HD" group-title="纪录",BBC Earth HD
+http://118.71.25.184:9999/udp/225.1.2.25:30120
+
+#EXTINF:-1 tvg-name="BBC World News" group-title="新闻",BBC World News
+http://118.71.25.184:9999/udp/225.1.2.74:30120
+
+#EXTINF:-1 tvg-name="Cartoon Network" group-title="儿童",Cartoon Network
+http://118.71.25.184:9999/udp/225.1.1.240:30120
+
+#EXTINF:-1 tvg-name="Cartoon Network HD" group-title="儿童",Cartoon Network HD
+http://118.71.25.184:9999/udp/225.1.2.230:30120
+
+#EXTINF:-1 tvg-name="Channel News Asia" group-title="新闻",Channel News Asia
+http://118.71.25.184:9999/udp/225.1.1.202:30120
+
+#EXTINF:-1 tvg-name="Channel [V]" group-title="音乐",Channel [V]
+http://118.71.25.184:9999/udp/225.1.1.243:30120
+
+#EXTINF:-1 tvg-name="Channel [V] HD" group-title="音乐",Channel [V] HD
+http://118.71.25.184:9999/udp/225.1.1.187:30120
+
+#EXTINF:-1 tvg-name="CNBC" group-title="财经",CNBC
+http://118.71.25.184:9999/udp/225.1.1.227:30120
+
+#EXTINF:-1 tvg-name="CNN" group-title="新闻",CNN
+http://118.71.25.184:9999/udp/225.1.1.242:30120
+
+#EXTINF:-1 tvg-name="Da Vinci Learning HD" group-title="教育",Da Vinci Learning HD
+http://118.71.25.184:9999/udp/225.1.2.253:30120
+
+#EXTINF:-1 tvg-name="Discovery Asia HD" group-title="纪录",Discovery Asia HD
+http://118.71.25.184:9999/udp/225.1.2.222:30120
+
+#EXTINF:-1 tvg-name="Discovery Channel" group-title="纪录",Discovery Channel
+http://118.71.25.184:9999/udp/225.1.1.238:30120
+
+#EXTINF:-1 tvg-name="Disney Channel" group-title="儿童",Disney Channel
+http://118.71.25.184:9999/udp/225.1.1.232:30120
+
+#EXTINF:-1 tvg-name="Disney Channel HD" group-title="儿童",Disney Channel HD
+http://118.71.25.184:9999/udp/225.1.2.158:30120
+
+#EXTINF:-1 tvg-name="Fashion TV HD" group-title="生活",Fashion TV HD
+http://118.71.25.184:9999/udp/225.1.2.226:30120
+
+#EXTINF:-1 tvg-name="Fox Sports 2" group-title="体育",Fox Sports 2
+http://118.71.25.184:9999/udp/225.1.1.241:30120
+
+#EXTINF:-1 tvg-name="Fox Sports 2 HD" group-title="体育",Fox Sports 2 HD
+http://118.71.25.184:9999/udp/225.1.1.108:30120
+
+#EXTINF:-1 tvg-name="FOX HD" group-title="电影系列",FOX HD
+http://118.71.25.184:9999/udp/225.1.1.51:30120
+
+#EXTINF:-1 tvg-name="France 24" group-title="新闻",France 24
+http://118.71.25.184:9999/udp/225.1.2.211:30120
+
+#EXTINF:-1 tvg-name="HBO HD" group-title="电影系列",HBO HD
+http://118.71.25.184:9999/udp/225.1.2.232:30120
+
+#EXTINF:-1 tvg-name="MAX by HBO" group-title="电影系列",MAX by HBO
+http://118.71.25.184:9999/udp/225.1.1.230:30120
+
+#EXTINF:-1 tvg-name="MAX by HBO HD" group-title="电影系列",MAX by HBO HD
+http://118.71.25.184:9999/udp/225.1.2.86:30120
+
+#EXTINF:-1 tvg-name="National Geographic HD" group-title="纪录",National Geographic HD
+http://118.71.25.184:9999/udp/225.1.2.235:30120
+
+#EXTINF:-1 tvg-name="NHK World" group-title="国际",NHK World
+http://118.71.25.184:9999/udp/225.1.1.196:30120
+
+#EXTINF:-1 tvg-name="NHK World HD" group-title="国际",NHK World HD
+http://118.71.25.184:9999/udp/225.1.1.47:30120
+
+#EXTINF:-1 tvg-name="Outdoor Channel HD" group-title="生活",Outdoor Channel HD
+http://118.71.25.184:9999/udp/225.1.2.214:30120
+
+#EXTINF:-1 tvg-name="Star Movies" group-title="电影系列",Star Movies
+http://118.71.25.184:9999/udp/225.1.1.205:30120
+
+#EXTINF:-1 tvg-name="Star Movies HD" group-title="电影系列",Star Movies HD
+http://118.71.25.184:9999/udp/225.1.2.238:30120
+
+#EXTINF:-1 tvg-name="Fox Life HD" group-title="电影系列",Fox Life HD
+http://118.71.25.184:9999/udp/225.1.2.237:30120
+
+#EXTINF:-1 tvg-name="TLC" group-title="生活",TLC
+http://118.71.25.184:9999/udp/225.1.1.236:30120
+
+#EXTINF:-1 tvg-name="Toonami HD" group-title="儿童",Toonami HD
+http://118.71.25.184:9999/udp/225.1.2.163:30120
+
+#EXTINF:-1 tvg-name="TV5Monde Asia" group-title="国际",TV5Monde Asia
+http://118.71.25.184:9999/udp/225.1.1.200:30120
+
+#EXTINF:-1 tvg-name="Warner Bros TV" group-title="电影系列",Warner Bros TV
+http://118.71.25.184:9999/udp/225.1.1.139:30120
+
+#EXTINF:-1 tvg-name="Warner Bros TV HD" group-title="电影系列",Warner Bros TV HD
+http://118.71.25.184:9999/udp/225.1.1.140:30120
+
+#EXTINF:-1 tvg-name="KIX HD" group-title="电影系列",KIX HD
+http://118.71.25.184:9999/udp/225.1.2.144:30120
+
+#EXTINF:-1 tvg-name="BabyTV" group-title="儿童",BabyTV
+http://118.71.25.184:9999/udp/225.1.2.146:30120
+
+### K+ 体育频道
+#EXTINF:-1 tvg-name="K+NS HD" group-title="体育",K+NS HD
+http://118.71.25.184:9999/udp/225.1.1.80:30120
+
+#EXTINF:-1 tvg-name="K+PM HD" group-title="体育",K+PM HD
+http://118.71.25.184:9999/udp/225.1.1.73:30120
+
+#EXTINF:-1 tvg-name="K+PC HD" group-title="体育",K+PC HD
+http://118.71.25.184:9999/udp/225.1.1.77:30120
+
+### VTV 国家台
+#EXTINF:-1 tvg-name="VTV1 HD" group-title="VTV",VTV1 HD
+http://118.71.25.184:9999/udp/225.1.2.249:30120
+
+#EXTINF:-1 tvg-name="VTV3" group-title="VTV",VTV3
+http://118.71.25.184:9999/udp/225.1.2.167:30120
+
+#EXTINF:-1 tvg-name="VTV3 HD" group-title="VTV",VTV3 HD
+http://118.71.25.184:9999/udp/225.1.2.246:30120
+
+#EXTINF:-1 tvg-name="VTV4" group-title="VTV",VTV4
+http://118.71.25.184:9999/udp/225.1.1.248:30120
+
+#EXTINF:-1 tvg-name="VTV4 HD" group-title="VTV",VTV4 HD
+http://118.71.25.184:9999/udp/225.1.2.20:30120
+
+#EXTINF:-1 tvg-name="VTV5 HD" group-title="VTV",VTV5 HD
+http://118.71.25.184:9999/udp/225.1.1.131:30120
+
+#EXTINF:-1 tvg-name="VTV6" group-title="VTV",VTV6
+http://118.71.25.184:9999/udp/225.1.1.246:30120
+
+#EXTINF:-1 tvg-name="VTV6 HD" group-title="VTV",VTV6 HD
+http://118.71.25.184:9999/udp/225.1.2.244:30120
+
+#EXTINF:-1 tvg-name="VTV7 HD" group-title="VTV",VTV7 HD
+http://118.71.25.184:9999/udp/225.1.2.96:30120
+
+#EXTINF:-1 tvg-name="VTV9" group-title="VTV",VTV9
+http://118.71.25.184:9999/udp/225.1.1.153:30120
+
+#EXTINF:-1 tvg-name="VTV9 HD" group-title="VTV",VTV9 HD
+http://118.71.25.184:9999/udp/225.1.1.126:30120
+
+### VTVCab 系列
+#EXTINF:-1 tvg-name="VTVCab1 - Giải Trí TV" group-title="VTVCab",VTVCab1 - Giải Trí TV
+http://118.71.25.184:9999/udp/225.1.2.150:30120
+
+#EXTINF:-1 tvg-name="VTVCab2 - Phim Việt" group-title="VTVCab",VTVCab2 - Phim Việt
+http://118.71.25.184:9999/udp/225.1.2.159:30120
+
+#EXTINF:-1 tvg-name="VTVCab3 - Thể Thao TV HD" group-title="VTVCab",VTVCab3 - Thể Thao TV HD
+http://118.71.25.184:9999/udp/225.1.2.240:30120
+
+#EXTINF:-1 tvg-name="VTVCab4 - Văn Hóa" group-title="VTVCab",VTVCab4 - Văn Hóa
+http://118.71.25.184:9999/udp/225.1.2.153:30120
+
+#EXTINF:-1 tvg-name="VTVCab7 - D Dramas" group-title="VTVCab",VTVCab7 - D Dramas
+http://118.71.25.184:9999/udp/225.1.2.157:30120
+
+#EXTINF:-1 tvg-name="VTVCab8 - Bibi" group-title="VTVCab",VTVCab8 - Bibi
+http://118.71.25.184:9999/udp/225.1.2.161:30120
+
+#EXTINF:-1 tvg-name="VTVCab9 - Info TV" group-title="VTVCab",VTVCab9 - Info TV
+http://118.71.25.184:9999/udp/225.1.2.154:30120
+
+#EXTINF:-1 tvg-name="VTVCab10 - O2TV" group-title="VTVCab",VTVCab10 - O2TV
+http://118.71.25.184:9999/udp/225.1.2.152:30120
+
+#EXTINF:-1 tvg-name="VTVCab11 - VGS Shop" group-title="VTVCab",VTVCab11 - VGS Shop
+http://118.71.25.184:9999/udp/225.1.1.252:30120
+
+#EXTINF:-1 tvg-name="VTVCab14 - Lotte Datviet Homeshopping" group-title="VTVCab",VTVCab14 - Lotte Datviet Homeshopping
+http://118.71.25.184:9999/udp/225.1.1.253:30120
+
+#EXTINF:-1 tvg-name="VTVCab15 - M Channel" group-title="VTVCab",VTVCab15 - M Channel
+http://118.71.25.184:9999/udp/225.1.1.251:30120
+
+#EXTINF:-1 tvg-name="VTVCab16 - Bóng Đá TV HD" group-title="VTVCab",VTVCab16 - Bóng Đá TV HD
+http://118.71.25.184:9999/udp/225.1.2.242:30120
+
+#EXTINF:-1 tvg-name="VTVCab17 - Yeah1 !TV" group-title="VTVCab",VTVCab17 - Yeah1 !TV
+http://118.71.25.184:9999/udp/225.1.2.151:30120
+
+#EXTINF:-1 tvg-name="VTVCab19 - Film TV" group-title="VTVCab",VTVCab19 - Film TV
+http://118.71.25.184:9999/udp/225.1.2.207:30120
+
+#EXTINF:-1 tvg-name="VTVCab21 - SaoTV Bibi+ HD" group-title="VTVCab",VTVCab21 - SaoTV Bibi+ HD
+http://118.71.25.184:9999/udp/225.1.2.103:30120
+
+### HTV 系列（胡志明市）
+#EXTINF:-1 tvg-name="HTV1" group-title="地方台",HTV1
+http://118.71.25.184:9999/udp/225.1.1.1:30120
+
+#EXTINF:-1 tvg-name="HTV2" group-title="地方台",HTV2
+http://118.71.25.184:9999/udp/225.1.1.179:30120
+
+#EXTINF:-1 tvg-name="HTV2 HD" group-title="地方台",HTV2 HD
+http://118.71.25.184:9999/udp/225.1.1.193:30120
+
+#EXTINF:-1 tvg-name="HTV3" group-title="地方台",HTV3
+http://118.71.25.184:9999/udp/225.1.1.178:30120
+
+#EXTINF:-1 tvg-name="HTV4" group-title="地方台",HTV4
+http://118.71.25.184:9999/udp/225.1.1.177:30120
+
+#EXTINF:-1 tvg-name="HTV7" group-title="地方台",HTV7
+http://118.71.25.184:9999/udp/225.1.1.176:30120
+
+#EXTINF:-1 tvg-name="HTV7 HD" group-title="地方台",HTV7 HD
+http://118.71.25.184:9999/udp/225.1.1.192:30120
+
+#EXTINF:-1 tvg-name="HTV9" group-title="地方台",HTV9
+http://118.71.25.184:9999/udp/225.1.1.175:30120
+
+#EXTINF:-1 tvg-name="HTV9 HD" group-title="地方台",HTV9 HD
+http://118.71.25.184:9999/udp/225.1.1.189:30120
+
+#EXTINF:-1 tvg-name="HTV Thể Thao" group-title="地方台",HTV Thể Thao
+http://118.71.25.184:9999/udp/225.1.1.165:30120
+
+#EXTINF:-1 tvg-name="HTVC Du Lịch và Cuộc Sống" group-title="地方台",HTVC Du Lịch và Cuộc Sống
+http://118.71.25.184:9999/udp/225.1.1.166:30120
+
+#EXTINF:-1 tvg-name="HTVC FBNC" group-title="地方台",HTVC FBNC
+http://118.71.25.184:9999/udp/225.1.1.169:30120
+
+#EXTINF:-1 tvg-name="HTVC Gia Đình" group-title="地方台",HTVC Gia Đình
+http://118.71.25.184:9999/udp/225.1.1.170:30120
+
+#EXTINF:-1 tvg-name="HTVC Phim - Paramount Channel" group-title="地方台",HTVC Phim - Paramount Channel
+http://118.71.25.184:9999/udp/225.1.1.173:30120
+
+#EXTINF:-1 tvg-name="HTVC Phim - Paramount Channel HD" group-title="地方台",HTVC Phim - Paramount Channel HD
+http://118.71.25.184:9999/udp/225.1.1.183:30120
+
+#EXTINF:-1 tvg-name="HTVC Phụ Nữ" group-title="地方台",HTVC Phụ Nữ
+http://118.71.25.184:9999/udp/225.1.1.171:30120
+
+#EXTINF:-1 tvg-name="HTVC Shopping - VGS Shop" group-title="地方台",HTVC Shopping - VGS Shop
+http://118.71.25.184:9999/udp/225.1.1.172:30120
+
+#EXTINF:-1 tvg-name="HTVC Thuần Việt" group-title="地方台",HTVC Thuần Việt
+http://118.71.25.184:9999/udp/225.1.1.174:30120
+
+### VTC 系列
+#EXTINF:-1 tvg-name="VTC1" group-title="VTC",VTC1
+http://118.71.25.184:9999/udp/225.1.2.203:30120
+
+#EXTINF:-1 tvg-name="VTC1 HD" group-title="VTC",VTC1 HD
+http://118.71.25.184:9999/udp/225.1.2.254:30120
+
+#EXTINF:-1 tvg-name="VTC3" group-title="VTC",VTC3
+http://118.71.25.184:9999/udp/225.1.2.201:30120
+
+#EXTINF:-1 tvg-name="VTC3 HD" group-title="VTC",VTC3 HD
+http://118.71.25.184:9999/udp/225.1.2.251:30120
+
+#EXTINF:-1 tvg-name="Yeah1 !Family - VTC4 HD" group-title="VTC",Yeah1 !Family - VTC4 HD
+http://118.71.25.184:9999/udp/225.1.2.200:30120
+
+#EXTINF:-1 tvg-name="tvBlue - VTC5" group-title="VTC",tvBlue - VTC5
+http://118.71.25.184:9999/udp/225.1.2.199:30120
+
+#EXTINF:-1 tvg-name="VTC6" group-title="VTC",VTC6
+http://118.71.25.184:9999/udp/225.1.2.198:30120
+
+#EXTINF:-1 tvg-name="Today TV - VTC7" group-title="VTC",Today TV - VTC7
+http://118.71.25.184:9999/udp/225.1.2.197:30120
+
+#EXTINF:-1 tvg-name="Nét Việt - VTC10" group-title="VTC",Nét Việt - VTC10
+http://118.71.25.184:9999/udp/225.1.2.194:30120
+
+#EXTINF:-1 tvg-name="Kids & Family TV - VTC11" group-title="VTC",Kids & Family TV - VTC11
+http://118.71.25.184:9999/udp/225.1.2.193:30120
+
+#EXTINF:-1 tvg-name="VTC12" group-title="VTC",VTC12
+http://118.71.25.184:9999/udp/225.1.2.192:30120
+
+#EXTINF:-1 tvg-name="VTC13" group-title="VTC",VTC13
+http://118.71.25.184:9999/udp/225.1.2.189:30120
+
+#EXTINF:-1 tvg-name="3NTV - VTC16" group-title="VTC",3NTV - VTC16
+http://118.71.25.184:9999/udp/225.1.2.190:30120
+
+### 其他越南频道
+#EXTINF:-1 tvg-name="Ca Nhạc" group-title="音乐",Ca Nhạc
+http://118.71.25.184:9999/udp/225.1.1.9:30120
+
+#EXTINF:-1 tvg-name="Ca Nhạc 2" group-title="音乐",Ca Nhạc 2
+http://118.71.25.184:9999/udp/225.1.1.8:30120
+
+#EXTINF:-1 tvg-name="VOV" group-title="广播",VOV
+http://118.71.25.184:9999/udp/225.1.2.171:30120
+
+#EXTINF:-1 tvg-name="Thông Tấn Xã Việt Nam HD" group-title="新闻",Thông Tấn Xã Việt Nam HD
+http://118.71.25.184:9999/udp/225.1.1.43:30120
+
+#EXTINF:-1 tvg-name="An Ninh TV HD" group-title="新闻",An Ninh TV HD
+http://118.71.25.184:9999/udp/225.1.2.169:30120
+
+#EXTINF:-1 tvg-name="An Ninh Thế Giới HD" group-title="新闻",An Ninh Thế Giới HD
+http://118.71.25.184:9999/udp/225.1.1.208:30120
+
+#EXTINF:-1 tvg-name="Nhân Dân HD" group-title="新闻",Nhân Dân HD
+http://118.71.25.184:9999/udp/225.1.1.91:30120
+
+#EXTINF:-1 tvg-name="Quốc Hội HD" group-title="新闻",Quốc Hội HD
+http://118.71.25.184:9999/udp/225.1.2.148:30120
+
+#EXTINF:-1 tvg-name="Quốc Phòng Việt Nam HD" group-title="新闻",Quốc Phòng Việt Nam HD
+http://118.71.25.184:9999/udp/225.1.2.216:30120
+
+#EXTINF:-1 tvg-name="VITV" group-title="娱乐",VITV
+http://118.71.25.184:9999/udp/225.1.2.143:30120
+
+#EXTINF:-1 tvg-name="G Channel - SCTV4" group-title="娱乐",G Channel - SCTV4
+http://118.71.25.184:9999/udp/225.1.2.187:30120
+
+#EXTINF:-1 tvg-name="GEM HD" group-title="电影系列",GEM HD
+http://118.71.25.184:9999/udp/225.1.1.17:30120
+
+### 地方台（按省份）
+#EXTINF:-1 tvg-name="Hà Nội 1 HD" group-title="地方台",Hà Nội 1 HD
+http://118.71.25.184:9999/udp/225.1.2.186:30120
+
+#EXTINF:-1 tvg-name="Hà Nội 2 HD" group-title="地方台",Hà Nội 2 HD
+http://118.71.25.184:9999/udp/225.1.1.125:30120
+
+#EXTINF:-1 tvg-name="HiTV - Hanoicab1" group-title="地方台",HiTV - Hanoicab1
+http://118.71.25.184:9999/udp/225.1.1.209:30120
+
+#EXTINF:-1 tvg-name="You!TV - Hanoicab2" group-title="地方台",You!TV - Hanoicab2
+http://118.71.25.184:9999/udp/225.1.1.207:30120
+
+#EXTINF:-1 tvg-name="An Giang 1" group-title="地方台",An Giang 1
+http://118.71.25.184:9999/udp/225.1.2.173:30120
+
+#EXTINF:-1 tvg-name="Bà Rịa Vũng Tàu" group-title="地方台",Bà Rịa Vũng Tàu
+http://118.71.25.184:9999/udp/225.1.2.175:30120
+
+#EXTINF:-1 tvg-name="Bạc Liêu" group-title="地方台",Bạc Liêu
+http://118.71.25.184:9999/udp/225.1.1.61:30120
+
+#EXTINF:-1 tvg-name="Bắc Giang" group-title="地方台",Bắc Giang
+http://118.71.25.184:9999/udp/225.1.1.164:30120
+
+#EXTINF:-1 tvg-name="Bắc Ninh" group-title="地方台",Bắc Ninh
+http://118.71.25.184:9999/udp/225.1.1.40:30120
+
+#EXTINF:-1 tvg-name="Bến Tre" group-title="地方台",Bến Tre
+http://118.71.25.184:9999/udp/225.1.1.156:30120
+
+#EXTINF:-1 tvg-name="Bình Dương 2 HD" group-title="地方台",Bình Dương 2 HD
+http://118.71.25.184:9999/udp/225.1.1.149:30120
+
+#EXTINF:-1 tvg-name="iMOVIE TV HD - BTV4 HD" group-title="地方台",iMOVIE TV HD - BTV4 HD
+http://118.71.25.184:9999/udp/225.1.1.29:30120
+
+#EXTINF:-1 tvg-name="Bình Định" group-title="地方台",Bình Định
+http://118.71.25.184:9999/udp/225.1.1.145:30120
+
+#EXTINF:-1 tvg-name="Bình Phước 1" group-title="地方台",Bình Phước 1
+http://118.71.25.184:9999/udp/225.1.2.23:30120
+
+#EXTINF:-1 tvg-name="BPTV2 - HOMETV" group-title="地方台",BPTV2 - HOMETV
+http://118.71.25.184:9999/udp/225.1.2.38:30120
+
+#EXTINF:-1 tvg-name="Bình Thuận" group-title="地方台",Bình Thuận
+http://118.71.25.184:9999/udp/225.1.1.124:30120
+
+#EXTINF:-1 tvg-name="Cà Mau" group-title="地方台",Cà Mau
+http://118.71.25.184:9999/udp/225.1.1.104:30120
+
+#EXTINF:-1 tvg-name="Cao Bằng" group-title="地方台",Cao Bằng
+http://118.71.25.184:9999/udp/225.1.1.102:30120
+
+#EXTINF:-1 tvg-name="Cần Thơ" group-title="地方台",Cần Thơ
+http://118.71.25.184:9999/udp/225.1.1.132:30120
+
+#EXTINF:-1 tvg-name="Đà Nẵng 1" group-title="地方台",Đà Nẵng 1
+http://118.71.25.184:9999/udp/225.1.1.147:30120
+
+#EXTINF:-1 tvg-name="Đắk Lắk" group-title="地方台",Đắk Lắk
+http://118.71.25.184:9999/udp/225.1.1.64:30120
+
+#EXTINF:-1 tvg-name="Điện Biên" group-title="地方台",Điện Biên
+http://118.71.25.184:9999/udp/225.1.1.74:30120
+
+#EXTINF:-1 tvg-name="Đồng Nai 1" group-title="地方台",Đồng Nai 1
+http://118.71.25.184:9999/udp/225.1.1.152:30120
+
+#EXTINF:-1 tvg-name="Đồng Nai 2" group-title="地方台",Đồng Nai 2
+http://118.71.25.184:9999/udp/225.1.1.151:30120
+
+#EXTINF:-1 tvg-name="AZSHOP - DN9" group-title="地方台",AZSHOP - DN9
+http://118.71.25.184:9999/udp/225.1.1.134:30120
+
+#EXTINF:-1 tvg-name="Đồng Tháp 1" group-title="地方台",Đồng Tháp 1
+http://118.71.25.184:9999/udp/225.1.1.163:30120
+
+#EXTINF:-1 tvg-name="Gia Lai" group-title="地方台",Gia Lai
+http://118.71.25.184:9999/udp/225.1.2.176:30120
+
+#EXTINF:-1 tvg-name="Hà Tĩnh" group-title="地方台",Hà Tĩnh
+http://118.71.25.184:9999/udp/225.1.1.75:30120
+
+#EXTINF:-1 tvg-name="Hải Dương" group-title="地方台",Hải Dương
+http://118.71.25.184:9999/udp/225.1.1.158:30120
+
+#EXTINF:-1 tvg-name="Hải Phòng HD" group-title="地方台",Hải Phòng HD
+http://118.71.25.184:9999/udp/225.1.1.44:30120
+
+#EXTINF:-1 tvg-name="Hậu Giang" group-title="地方台",Hậu Giang
+http://118.71.25.184:9999/udp/225.1.1.157:30120
+
+#EXTINF:-1 tvg-name="Hưng Yên" group-title="地方台",Hưng Yên
+http://118.71.25.184:9999/udp/225.1.1.118:30120
+
+#EXTINF:-1 tvg-name="Khánh Hòa" group-title="地方台",Khánh Hòa
+http://118.71.25.184:9999/udp/225.1.1.133:30120
+
+#EXTINF:-1 tvg-name="Kiên Giang" group-title="地方台",Kiên Giang
+http://118.71.25.184:9999/udp/225.1.2.182:30120
+
+#EXTINF:-1 tvg-name="Kon Tum" group-title="地方台",Kon Tum
+http://118.71.25.184:9999/udp/225.1.1.36:30120
+
+#EXTINF:-1 tvg-name="Lào Cai" group-title="地方台",Lào Cai
+http://118.71.25.184:9999/udp/225.1.1.119:30120
+
+#EXTINF:-1 tvg-name="Lâm Đồng" group-title="地方台",Lâm Đồng
+http://118.71.25.184:9999/udp/225.1.2.177:30120
+
+#EXTINF:-1 tvg-name="Long An 34" group-title="地方台",Long An 34
+http://118.71.25.184:9999/udp/225.1.1.162:30120
+
+#EXTINF:-1 tvg-name="Nam Định" group-title="地方台",Nam Định
+http://118.71.25.184:9999/udp/225.1.1.120:30120
+
+#EXTINF:-1 tvg-name="Nghệ An" group-title="地方台",Nghệ An
+http://118.71.25.184:9999/udp/225.1.2.183:30120
+
+#EXTINF:-1 tvg-name="Ninh Thuận" group-title="地方台",Ninh Thuận
+http://118.71.25.184:9999/udp/225.1.2.178:30120
+
+#EXTINF:-1 tvg-name="Phú Thọ" group-title="地方台",Phú Thọ
+http://118.71.25.184:9999/udp/225.1.2.165:30120
+
+#EXTINF:-1 tvg-name="Phú Yên" group-title="地方台",Phú Yên
+http://118.71.25.184:9999/udp/225.1.2.58:30120
+
+#EXTINF:-1 tvg-name="Quảng Bình" group-title="地方台",Quảng Bình
+http://118.71.25.184:9999/udp/225.1.2.164:30120
+
+#EXTINF:-1 tvg-name="Quảng Nam" group-title="地方台",Quảng Nam
+http://118.71.25.184:9999/udp/225.1.2.50:30120
+
+#EXTINF:-1 tvg-name="Quảng Ngãi" group-title="地方台",Quảng Ngãi
+http://118.71.25.184:9999/udp/225.1.2.174:30120
+
+#EXTINF:-1 tvg-name="Quảng Ninh 1" group-title="地方台",Quảng Ninh 1
+http://118.71.25.184:9999/udp/225.1.2.181:30120
+
+#EXTINF:-1 tvg-name="Quảng Ninh 3" group-title="地方台",Quảng Ninh 3
+http://118.71.25.184:9999/udp/225.1.2.180:30120
+
+#EXTINF:-1 tvg-name="Quảng Trị" group-title="地方台",Quảng Trị
+http://118.71.25.184:9999/udp/225.1.1.117:30120
+
+#EXTINF:-1 tvg-name="Sóc Trăng 1" group-title="地方台",Sóc Trăng 1
+http://118.71.25.184:9999/udp/225.1.1.159:30120
+
+#EXTINF:-1 tvg-name="Sơn La" group-title="地方台",Sơn La
+http://118.71.25.184:9999/udp/225.1.1.98:30120
+
+#EXTINF:-1 tvg-name="Tây Ninh 11" group-title="地方台",Tây Ninh 11
+http://118.71.25.184:9999/udp/225.1.1.130:30120
+
+#EXTINF:-1 tvg-name="Thái Bình" group-title="地方台",Thái Bình
+http://118.71.25.184:9999/udp/225.1.1.99:30120
+
+#EXTINF:-1 tvg-name="Thừa Thiên Huế" group-title="地方台",Thừa Thiên Huế
+http://118.71.25.184:9999/udp/225.1.1.161:30120
+
+#EXTINF:-1 tvg-name="Tuyên Quang" group-title="地方台",Tuyên Quang
+http://118.71.25.184:9999/udp/225.1.2.188:30120
+
+#EXTINF:-1 tvg-name="Vĩnh Long 1" group-title="地方台",Vĩnh Long 1
+http://118.71.25.184:9999/udp/225.1.1.155:30120
+
+#EXTINF:-1 tvg-name="Vĩnh Long 2" group-title="地方台",Vĩnh Long 2
+http://118.71.25.184:9999/udp/225.1.1.154:30120
+
+#EXTINF:-1 tvg-name="Vĩnh Phúc" group-title="地方台",Vĩnh Phúc
+http://118.71.25.184:9999/udp/225.1.2.99:30120
+
+#EXTINF:-1 tvg-name="Yên Bái" group-title="地方台",Yên Bái
+http://118.71.25.184:9999/udp/225.1.1.39:30120
+
+### 其他 / 测试 / 购物
+#EXTINF:-1 tvg-name="FPT thử nghiệm 4K" group-title="测试",FPT thử nghiệm 4K
+http://118.71.25.184:9999/udp/225.1.2.2:30120
+
+#EXTINF:-1 tvg-name="Phim Hay" group-title="电影",Phim Hay
+http://118.71.25.184:9999/udp/225.1.1.222:30120
+
+#EXTINF:-1 tvg-name="Miền Tây - THDT2" group-title="地方台",Miền Tây - THDT2
+http://118.71.25.184:9999/udp/225.1.1.221:30120
+
+#EXTINF:-1 tvg-name="NCM - BTV10" group-title="地方台",NCM - BTV10
+http://118.71.25.184:9999/udp/225.1.1.225:30120
+
+#EXTINF:-1 tvg-name="SAM - BTV11" group-title="地方台",SAM - BTV11
+http://118.71.25.184:9999/udp/225.1.1.224:30120
+
+#EXTINF:-1 tvg-name="SaoNamShopping-SCTV10" group-title="购物",SaoNamShopping-SCTV10
+http://118.71.25.184:9999/udp/225.1.2.205:30120
+
+#EXTINF:-1 tvg-name="Việt Nam Nét" group-title="娱乐",Việt Nam Nét
+http://118.71.25.184:9999/udp/225.1.1.194:30120
+
+#EXTINF:-1 tvg-name="FPT Mở Két" group-title="娱乐",FPT Mở Két
+http://118.71.25.184:9999/udp/225.1.1.97:30120
+
+#EXTINF:-1 tvg-name="FPT PIP 2" group-title="娱乐",FPT PIP 2
+http://118.71.25.184:9999/udp/225.1.2.49:30120
+
+#EXTINF:-1 tvg-name="FPT PIP 3" group-title="娱乐",FPT PIP 3
+http://118.71.25.184:9999/udp/225.1.2.72:30120
+
+#EXTINF:-1 tvg-name="Quang cao the thao FPT" group-title="广告",Quang cao the thao FPT
+http://118.71.25.184:9999/udp/225.1.2.252:30120
+
+#EXTINF:-1 tvg-name="Kenh truc tiep" group-title="直播",Kenh truc tiep
+http://118.71.25.184:9999/udp/225.1.1.13:30120
+
+#EXTINF:-1 tvg-name="The Mira Hotel" group-title="其他",The Mira Hotel
+http://118.71.25.184:9999/udp/225.1.1.123:30120
