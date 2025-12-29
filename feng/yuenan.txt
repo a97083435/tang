@@ -1,0 +1,51 @@
+ATV1,https://tv.angiangtv.vn/live/kgtv/kgtv.m3u8
+ATV2,https://tv.angiangtv.vn/live/kgtv2/kgtv2.m3u8
+ATV3,https://tv.angiangtv.vn/live/kgtv1/kgtv1.m3u8
+Cần Thơ 1,https://live.canthotv.vn/live/tv/playlist.m3u8
+Cần Thơ 2,https://megasystems-6c680321cd.gw-dthcdn.com/haugiangtv/haugiangtv.m3u8
+Cần Thơ 3,https://live.canthotv.vn/live/cs3/playlist.m3u8
+Cao Bang TV,https://stream.thingnet.vn/live/smil:CRTV.smil/playlist.m3u8
+Đắk Nông,https://cloudstreamthdn.tek4tv.vn/live/smil:daknong.smil/playlist.m3u8
+Dtv,https://truyenhinh.vnptvas.vn/live.m3u8?c=vstv362&q=high&type=tv&token=LX-ibJYRUq9pflRtYAxfYQ&time=1586395820&gcId=1532&userId=&deviceId=&deviceType=&location=NA&requestTime=1586309420781&pkg=pkg11.hni
+BHTtv,https://wse.hatinhtv.net/live/httv1/playlist.m3u8
+Hai Phong TV,https://1253562137.e.cdneverest.net/pjMvVWMFfcTXKWE0bNQvGg/1767035273/live/285a4c99665fdf84e94956c66bc7dc7eb5d/chunklist.m3u8
+THP,https://1253562137.e.cdneverest.net/auwsOuAboJZEysATLhpJBQ/1767036959/live/28548ca35823d41426d8b3da7ed82bdab13/chunklist.m3u8
+Hai Phong TV3,https://live.haiduongtv.vn/live/285857e204bb558402db3b431e183b6638d/playlist.m3u8
+Hau Giang TV,https://megasystems-6c680321cd.gw-dthcdn.com/haugiangtv/haugiangtv.m3u8
+Hung Yen TV,https://1253218859.e.cdneverest.net/YdTlWt4cGMZy7RVa9K3Mig/1767038736/live/285f5449d7d7d2946e0bd2d54b7e60f25a4/playlist.m3u8
+LSTV,https://stream.langsontv.vn/live/285c78da0c246524c90917842f8de03bd21/playlist.m3u8
+KENH,https://live.mediatech.vn/live/28597f8fd7ea5064d0f84ab00b3699dfd86/playlist.m3u8
+PTV,https://cdn.3ssoft.vn/live/phuthotv/phuthotv/index.m3u8
+QNG,https://live.mediatech.vn/live/285aaa79b4b265a457d81bb72bc32e2c114/playlist.m3u8
+Qtv,https://live.baoquangninh.vn/qtvlive/tv1live.m3u8
+Qtv3,https://live.baoquangninh.vn/qtvlive/tv3live.m3u8
+TH,https://live.canthotv.vn/live/cs3/chunklist_w1564680400.m3u8
+CT,https://live.canthotv.vn/live/tv/chunklist_w1230139181.m3u8
+STv,https://cdn.sonlatv.vn/live/28595222e707a364251b8724717894baa46/playlist.m3u8
+TTV,https://live.mediatech.vn/live/2851dc2c9af68834814a89e61db0faee561/playlist.m3u8
+TsV,https://s3-fpt-cdn.sohatv.vn/live/pull/Y5Kan2X7I7GHo4VN/thth-live/eVc6tyHuFZLQYgmX/337a54767a7233703637564336316a6d189b51abcbb15703b7100eb3e2845b27d0b3b43e409d1c219b185154215a148c20ad90fc14aa0fb01eaa2153c75078cc98c6f598143d9298bf39f63481b54dba7106ed0b4b843cc31bae64c9c80e105866814186b0807e4916467d5dd399690a61378881e4ed009497c381beb61df2c245ac1c9d0a2ea4fc0372ea91c1eb28f1aa39dc66cde96eafd20a4cc8f40028c7fc4130158946bbed89f81a83f2544059/720.m3u8
+THDT,https://megasystems-6c680321cd.gw-dthcdn.com/thdt1/index.m3u8
+Thdt2,https://618b88f69e53b.streamlock.net/THDT2/thdttv2/playlist.m3u8
+Vtv,https://cdn-live.vtv.vn/gHU6dsdbPbTqbvEOMz794w/1767008482/live/vtv1/vtv1-720p.m3u8
+Vtv1,https://vtv-live-push-token.akamaized.net/hls/live/2029307/vtv1/playlist.m3u8?hdnts=exp=1767014609~acl=/hls/live/2029307/vtv1/*~hmac=272f9a02427e92889425493ff7ccb7f3a4a38be4c240e6f118208aa24de0932e
+Vtv2,https://vtv-live-push-token.akamaized.net/hls/live/2029308/vtv2/playlist.m3u8?hdnts=exp=1767014596~acl=/hls/live/2029308/vtv2/*~hmac=7563ed65e99873902c9c3bb26362ee925171cc983a24698651a074bd7805c6af
+Vtv3,https://vtv-live-push-token.akamaized.net/hls/live/2029309/vtv3/playlist.m3u8?hdnts=exp=1767014827~acl=/hls/live/2029309/vtv3/*~hmac=9f329c8ea52153260dba85d9399e31403035a324605802f6b9f8ccf0f9f111c2
+vtv4,https://vtv-live-push-token.akamaized.net/hls/live/2029310/vtv4/playlist.m3u8?hdnts=exp=1767014897~acl=/hls/live/2029310/vtv4/*~hmac=14f6cb047e5e1ce1af492576fe1bc9ea18920d6f2a9549d415a022cf26c1104c
+today,https://vtvgolive-qt.vtvdigital.vn/U0sAD_fQfU3kjdE3FtsflA/1767014957/vtvgo_quocte/vietnamtoday-1080p.m3u8
+vtv5,https://vtv-live-push-token.akamaized.net/hls/live/2029311/vtv5/playlist.m3u8?hdnts=exp=1767015036~acl=/hls/live/2029311/vtv5/*~hmac=b0212ae00b50eae150ab8c01e5dc2a79211b2c116a4ecafac400e6a9e954c5c3
+vtv5,https://vtv-live-push-token.akamaized.net/hls/live/2029313/vtv5tnb/playlist.m3u8?hdnts=exp=1767015091~acl=/hls/live/2029313/vtv5tnb/*~hmac=db83a2366a5eed3734d48a2a88e251776531e2715457849d92a886b413007da3
+vtv5,https://vtv-live-push-token.akamaized.net/hls/live/2029312/vtv5tn/playlist.m3u8?hdnts=exp=1767015140~acl=/hls/live/2029312/vtv5tn/*~hmac=6b719a9ba87e6a4ca2bc452520847f589bf72877c82ea19325e687811e527c70
+vtv7,https://vtv-live-push-token.akamaized.net/hls/live/2029315/vtv7/playlist.m3u8?hdnts=exp=1767015173~acl=/hls/live/2029315/vtv7/*~hmac=7b837f3b8d87d9bd6f4e2cf25a588329d38162eda880ee116ae0543bc4b376b8
+vtv8,https://vtv-live-push-token.akamaized.net/hls/live/2029316/vtv8/playlist.m3u8?hdnts=exp=1767015199~acl=/hls/live/2029316/vtv8/*~hmac=c69056a2713c82e5cb2de7fcc3675bf568b64973fdefee93e8fe74a8aba98b3d
+vtv9,https://vtv-live-push-token.akamaized.net/hls/live/2029317/vtv9/playlist.m3u8?hdnts=exp=1767015223~acl=/hls/live/2029317/vtv9/*~hmac=52c7f268836124b4ad8b4756c1f35ec374af5173873d907428819afa0eebe51e
+vtv10,https://vtv-live-push-token.akamaized.net/hls/live/2029314/vtv6/playlist.m3u8?hdnts=exp=1767015253~acl=/hls/live/2029314/vtv6/*~hmac=9071d0bacfec017611982263625514226a9bf56a82988db1b4f6c272f0181fd2
+vch,https://tgn.bozztv.com/gin-dvrfl05/vch_vchannel1/index.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MTIvMjkvMjAyNSA5OjM5OjU2IEFNJmhhc2hfdmFsdWU9WWU0cUdVWjErenJmZmFyMDdDUDVqZz09JnZhbGlkbWludXRlcz0xNDQwJnN0cm1fbGVuPTI1
+stv,https://tgn.bozztv.com/gin-dvrfl05/vch_vchannel2/index.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MTIvMjkvMjAyNSA5OjQxOjE1IEFNJmhhc2hfdmFsdWU9R3VpNm9td1JLL2h1b2luR3l2eWd3Zz09JnZhbGlkbWludXRlcz0xNDQwJnN0cm1fbGVuPTI1
+vstv,https://tgn.bozztv.com/gin-dvrfl05/vch_vchannel3/index.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MTIvMjkvMjAyNSA5OjQyOjA3IEFNJmhhc2hfdmFsdWU9REc4TURydHRaWW9VSlhPWEIwYWZMUT09JnZhbGlkbWludXRlcz0xNDQwJnN0cm1fbGVuPTI1
+viet,https://tgn.bozztv.com/gin-dvrfl05/vchannel/vchannel13/index.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MTIvMjkvMjAyNSAxMDozMzowMSBBTSZoYXNoX3ZhbHVlPXJIZVduUEJnTUZSZXR2MWZjMmh4RkE9PSZ2YWxpZG1pbnV0ZXM9MTQ0MA==
+qq,https://tgn.bozztv.com/gin-dvrfl05/vchannel/vchannel15/index.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MTIvMjkvMjAyNSAxMDozNToxMCBBTSZoYXNoX3ZhbHVlPUJsWUpML3JrMWNBckh3VW12TnN6Wnc9PSZ2YWxpZG1pbnV0ZXM9MTQ0MA==
+qw,https://tgn.bozztv.com/gin-36bay4/vchannel_vchannel-event/index.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MTIvMjkvMjAyNSA5OjUwOjE5IEFNJmhhc2hfdmFsdWU9R2VLT1RJUGpQOWcxOXpGRWtrMkFodz09JnZhbGlkbWludXRlcz0xNDQwJnN0cm1fbGVuPTM0
+tq,https://tgn.bozztv.com/gin-dvrfl05/vchannel/vchannel1/index.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MTIvMjkvMjAyNSAxMDo0MTowOSBBTSZoYXNoX3ZhbHVlPWRUWXNiWUhBZmtOUGZvL2FRNEF3NXc9PSZ2YWxpZG1pbnV0ZXM9MTQ0MA==
+hbo2,https://cors-proxy.cooks.fyi/https://streamer1.nexgen.bz/HBO2/tracks-v1a1/mono.ts.m3u8
+hbo,https://fl31.moveonjoy.com/HBO_COMEDY/tracks-v1a1/mono.ts.m3u8
+hbo,https://cors-proxy.cooks.fyi/https://streamer1.nexgen.bz/HBO_FAMILY/tracks-v1a1/mono.ts.m3u8
