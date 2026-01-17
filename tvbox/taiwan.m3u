@@ -1,0 +1,183 @@
+#EXTM3U x-tvg-url="https://epg.iill.top/epg.xml.gz"
+#EXTINF:-1 tvg-id="4gtv-4gtv002" tvg-name="民視" tvg-logo="https://epg.iill.top/logo/民視.png" group-title="綜合頻道",民視
+http://ezc.xtvantsc.xyz/litv.php?id=4gtv-4gtv002
+#EXTINF:-1 tvg-id="4gtv-4gtv003" tvg-name="民視第一台" tvg-logo="https://epg.iill.top/logo/民視第一台.png" group-title="綜合頻道",民視第一台
+http://ezc.xtvantsc.xyz/litv.php?id=4gtv-4gtv003
+#EXTINF:-1 tvg-id="litv-ftv13" tvg-name="民視新聞台" tvg-logo="https://epg.iill.top/logo/民視新聞台.png" group-title="新聞財經",民視新聞台
+http://ezc.xtvantsc.xyz/litv.php?id=litv-ftv13
+#EXTINF:-1 tvg-id="4gtv-4gtv001" tvg-name="民視台灣台" tvg-logo="https://epg.iill.top/logo/民視台灣台.png" group-title="綜合頻道",民視台灣台
+http://ezc.xtvantsc.xyz/litv.php?id=4gtv-4gtv001
+#EXTINF:-1 tvg-id="litv-ftv09" tvg-name="民視影劇台" tvg-logo="https://epg.iill.top/logo/民視影劇台.png" group-title="電影戲劇",民視影劇台
+http://ezc.xtvantsc.xyz/litv.php?id=litv-ftv09
+#EXTINF:-1 tvg-id="litv-ftv07" tvg-name="民視旅遊台" tvg-logo="https://epg.iill.top/logo/民視旅遊台.png" group-title="科教紀實",民視旅遊台
+http://ezc.xtvantsc.xyz/litv.php?id=litv-ftv07
+#EXTINF:-1 tvg-id="4gtv-4gtv004" tvg-name="民視綜藝台" tvg-logo="https://epg.iill.top/logo/民視綜藝台.png" group-title="綜藝娛樂",民視綜藝台
+http://ezc.xtvantsc.xyz/litv.php?id=4gtv-4gtv004
+#EXTINF:-1 tvg-id="4gtv-4gtv040" tvg-name="中視" tvg-logo="https://epg.iill.top/logo/中视.png" group-title="綜合頻道",中視
+http://ezc.xtvantsc.xyz/litv.php?id=4gtv-4gtv040
+#EXTINF:-1 tvg-id="4gtv-4gtv074" tvg-name="中視新聞台" tvg-logo="https://epg.iill.top/logo/中视新闻.png" group-title="新聞財經",中視新聞台
+http://ezc.xtvantsc.xyz/litv.php?id=4gtv-4gtv074
+#EXTINF:-1 tvg-id="4gtv-4gtv009" tvg-name="中天新聞台" tvg-logo="https://epg.iill.top/logo/中天新闻.png" group-title="新聞財經",中天新聞台
+http://ezc.xtvantsc.xyz/litv.php?id=4gtv-4gtv009
+#EXTINF:-1 tvg-id="4gtv-4gtv041" tvg-name="華視" tvg-logo="https://epg.iill.top/logo/華視.png" group-title="綜合頻道",華視
+http://ezc.xtvantsc.xyz/litv.php?id=4gtv-4gtv041
+#EXTINF:-1 tvg-id="4gtv-4gtv052" tvg-name="華視新聞" tvg-logo="https://epg.iill.top/logo/華視新聞.png" group-title="新聞財經",華視新聞
+http://ezc.xtvantsc.xyz/litv.php?id=4gtv-4gtv052
+#EXTINF:-1 tvg-id="4gtv-4gtv046" tvg-name="靖天綜合台" tvg-logo="https://epg.iill.top/logo/靖天綜合台.png" group-title="綜合頻道",靖天綜合台
+http://ezc.xtvantsc.xyz/litv.php?id=4gtv-4gtv046
+#EXTINF:-1 tvg-id="4gtv-4gtv063" tvg-name="靖天國際台" tvg-logo="https://epg.iill.top/logo/靖天國際台.png" group-title="綜合頻道",靖天國際台
+http://ezc.xtvantsc.xyz/litv.php?id=4gtv-4gtv063
+#EXTINF:-1 tvg-id="4gtv-4gtv058" tvg-name="靖天戲劇台" tvg-logo="https://epg.iill.top/logo/靖天戲劇台.png" group-title="電影戲劇",靖天戲劇台
+http://ezc.xtvantsc.xyz/litv.php?id=4gtv-4gtv058
+#EXTINF:-1 tvg-id="4gtv-4gtv047" tvg-name="靖天日本台" tvg-logo="https://epg.iill.top/logo/靖天日本台.png" group-title="綜合頻道",靖天日本台
+http://ezc.xtvantsc.xyz/litv.php?id=4gtv-4gtv047
+#EXTINF:-1 tvg-id="4gtv-4gtv055" tvg-name="靖天映畫台" tvg-logo="https://epg.iill.top/logo/靖天映畫台.png" group-title="電影戲劇",靖天映畫台
+http://ezc.xtvantsc.xyz/litv.php?id=4gtv-4gtv055
+#EXTINF:-1 tvg-id="4gtv-4gtv044" tvg-name="靖天卡通台" tvg-logo="https://epg.iill.top/logo/靖天卡通台.png" group-title="卡通動漫",靖天卡通台
+http://ezc.xtvantsc.xyz/litv.php?id=4gtv-4gtv044
+#EXTINF:-1 tvg-id="4gtv-4gtv062" tvg-name="靖天育樂台" tvg-logo="https://epg.iill.top/logo/靖天育樂台.png" group-title="綜藝娛樂",靖天育樂台
+http://ezc.xtvantsc.xyz/litv.php?id=4gtv-4gtv062
+#EXTINF:-1 tvg-id="4gtv-4gtv065" tvg-name="靖天資訊台" tvg-logo="https://epg.iill.top/logo/靖天資訊台.png" group-title="新聞財經",靖天資訊台
+http://ezc.xtvantsc.xyz/litv.php?id=4gtv-4gtv065
+#EXTINF:-1 tvg-id="4gtv-4gtv061" tvg-name="靖天電影台" tvg-logo="https://epg.iill.top/logo/靖天電影台.png" group-title="電影戲劇",靖天電影台
+http://ezc.xtvantsc.xyz/litv.php?id=4gtv-4gtv061
+#EXTINF:-1 tvg-id="4gtv-4gtv054" tvg-name="靖天歡樂台" tvg-logo="https://epg.iill.top/logo/靖天歡樂台.png" group-title="綜藝娛樂",靖天歡樂台
+http://ezc.xtvantsc.xyz/litv.php?id=4gtv-4gtv054
+#EXTINF:-1 tvg-id="litv-xinchuang12" tvg-name="龍華偶像台" tvg-logo="https://epg.iill.top/logo/龍華偶像台.png" group-title="電影戲劇",龍華偶像台
+http://ezc.xtvantsc.xyz/litv.php?id=litv-xinchuang12
+#EXTINF:-1 tvg-id="litv-xinchuang01" tvg-name="龍華卡通台" tvg-logo="https://epg.iill.top/logo/龍華卡通台.png" group-title="卡通動漫",龍華卡通台
+http://ezc.xtvantsc.xyz/litv.php?id=litv-xinchuang01
+#EXTINF:-1 tvg-id="litv-xinchuang18" tvg-name="龍華戲劇台" tvg-logo="https://epg.iill.top/logo/龍華戲劇台.png" group-title="電影戲劇",龍華戲劇台
+http://ezc.xtvantsc.xyz/litv.php?id=litv-xinchuang18
+#EXTINF:-1 tvg-id="litv-xinchuang21" tvg-name="龍華經典台" tvg-logo="https://epg.iill.top/logo/龍華經典台.png" group-title="電影戲劇",龍華經典台
+http://ezc.xtvantsc.xyz/litv.php?id=litv-xinchuang21
+#EXTINF:-1 tvg-id="litv-xinchuang03" tvg-name="龍華電影台" tvg-logo="https://epg.iill.top/logo/龍華電影台.png" group-title="電影戲劇",龍華電影台
+http://ezc.xtvantsc.xyz/litv.php?id=litv-xinchuang03
+#EXTINF:-1 tvg-id="litv-xinchuang02" tvg-name="龍華洋片台" tvg-logo="https://epg.iill.top/logo/龍華洋片台.png" group-title="電影戲劇",龍華洋片台
+http://ezc.xtvantsc.xyz/litv.php?id=litv-xinchuang02
+#EXTINF:-1 tvg-id="4gtv-4gtv045" tvg-name="靖洋戲劇台" tvg-logo="https://epg.iill.top/logo/靖洋戲劇台.png" group-title="電影戲劇",靖洋戲劇台
+http://ezc.xtvantsc.xyz/litv.php?id=4gtv-4gtv045
+#EXTINF:-1 tvg-id="4gtv-4gtv057" tvg-name="靖洋卡通NiceBingo" tvg-logo="https://epg.iill.top/logo/靖洋卡通-Nice-Bingo.png" group-title="卡通動漫",靖洋卡通NiceBingo
+http://ezc.xtvantsc.xyz/litv.php?id=4gtv-4gtv057
+#EXTINF:-1 tvg-id="litv-longturn14" tvg-name="寰宇新聞台" tvg-logo="https://epg.iill.top/logo/寰宇新聞台.png" group-title="新聞財經",寰宇新聞台
+http://ezc.xtvantsc.xyz/litv.php?id=litv-longturn14
+#EXTINF:-1 tvg-id="4gtv-4gtv156" tvg-name="寰宇新聞台灣台" tvg-logo="https://epg.iill.top/logo/寰宇新聞台灣台.png" group-title="新聞財經",寰宇新聞台灣台
+http://ezc.xtvantsc.xyz/litv.php?id=4gtv-4gtv156
+#EXTINF:-1 tvg-id="4gtv-4gtv158" tvg-name="寰宇財經台" tvg-logo="https://epg.iill.top/logo/寰宇財經台.png" group-title="新聞財經",寰宇財經台
+http://ezc.xtvantsc.xyz/litv.php?id=4gtv-4gtv158
+#EXTINF:-1 tvg-id="4gtv-4gtv067" tvg-name="TVBS精采台" tvg-logo="https://epg.iill.top/logo/TVBS精采.png" group-title="綜藝娛樂",TVBS精采台
+http://ezc.xtvantsc.xyz/litv.php?id=4gtv-4gtv067
+#EXTINF:-1 tvg-id="4gtv-4gtv034" tvg-name="八大精彩台" tvg-logo="https://epg.iill.top/logo/八大精彩台.png" group-title="綜藝娛樂",八大精彩台
+http://ezc.xtvantsc.xyz/litv.php?id=4gtv-4gtv034
+#EXTINF:-1 tvg-id="4gtv-4gtv039" tvg-name="八大綜藝台" tvg-logo="https://epg.iill.top/logo/八大綜藝台.png" group-title="綜藝娛樂",八大綜藝台
+http://ezc.xtvantsc.xyz/litv.php?id=4gtv-4gtv039
+#EXTINF:-1 tvg-id="4gtv-4gtv070" tvg-name="ELTA娛樂台" tvg-logo="https://epg.iill.top/logo/ELTA娛樂.png" group-title="綜藝娛樂",ELTA娛樂台
+http://ezc.xtvantsc.xyz/litv.php?id=4gtv-4gtv070
+#EXTINF:-1 tvg-id="litv-xinchuang20" tvg-name="ELTV生活英語" tvg-logo="https://epg.iill.top/logo/ELTA生活英語.png" group-title="科教紀實",ELTV生活英語
+http://ezc.xtvantsc.xyz/litv.php?id=litv-xinchuang20
+#EXTINF:-1 tvg-id="4gtv-4gtv152" tvg-name="東森新聞" tvg-logo="https://epg.iill.top/logo/东森新闻.png" group-title="新聞財經",東森新聞
+http://ezc.xtvantsc.xyz/litv.php?id=4gtv-4gtv152
+#EXTINF:-1 tvg-id="4gtv-4gtv153" tvg-name="東森財經新聞" tvg-logo="https://epg.iill.top/logo/东森财经.png" group-title="新聞財經",東森財經新聞
+http://ezc.xtvantsc.xyz/litv.php?id=4gtv-4gtv153
+#EXTINF:-1 tvg-id="4gtv-4gtv075" tvg-name="鏡電視新聞台" tvg-logo="https://epg.iill.top/logo/鏡電視新聞台.png" group-title="新聞財經",鏡電視新聞台
+http://ezc.xtvantsc.xyz/litv.php?id=4gtv-4gtv075
+#EXTINF:-1 tvg-id="4gtv-4gtv076" tvg-name="亞洲旅遊台" tvg-logo="https://epg.iill.top/logo/亞洲旅遊台.png" group-title="科教紀實",亞洲旅遊台
+http://ezc.xtvantsc.xyz/litv.php?id=4gtv-4gtv076
+#EXTINF:-1 tvg-id="4gtv-4gtv053" tvg-name="GINXEsportsTV" tvg-logo="https://epg.iill.top/logo/GINX-Esports-TV.png" group-title="體育競技",GINXEsportsTV
+http://ezc.xtvantsc.xyz/litv.php?id=4gtv-4gtv053
+#EXTINF:-1 tvg-id="4gtv-4gtv014" tvg-name="時尚運動X" tvg-logo="https://epg.iill.top/logo/时尚运动X.png" group-title="體育競技",時尚運動X
+http://ezc.xtvantsc.xyz/litv.php?id=4gtv-4gtv014
+#EXTINF:-1 tvg-id="4gtv-4gtv101" tvg-name="智林體育台" tvg-logo="https://epg.iill.top/logo/智林体育.png" group-title="體育競技",智林體育台
+http://ezc.xtvantsc.xyz/litv.php?id=4gtv-4gtv101
+#EXTINF:-1 tvg-id="4gtv-4gtv077" tvg-name="TraceSports" tvg-logo="https://epg.iill.top/logo/TraceSports.png" group-title="體育競技",TraceSports
+http://ezc.xtvantsc.xyz/litv.php?id=4gtv-4gtv077
+#EXTINF:-1 tvg-id="4gtv-4gtv011" tvg-name="影迷數位電影台" tvg-logo="https://epg.iill.top/logo/影迷數位電影台.png" group-title="電影戲劇",影迷數位電影台
+http://ezc.xtvantsc.xyz/litv.php?id=4gtv-4gtv011
+#EXTINF:-1 tvg-id="4gtv-4gtv017" tvg-name="AMC電影台" tvg-logo="https://epg.iill.top/logo/AMC-最愛電影.png" group-title="電影戲劇",AMC電影台
+http://ezc.xtvantsc.xyz/litv.php?id=4gtv-4gtv017
+#EXTINF:-1 tvg-id="4gtv-4gtv042" tvg-name="公視戲劇台" tvg-logo="https://epg.iill.top/logo/公視戲劇台.png" group-title="電影戲劇",公視戲劇台
+http://ezc.xtvantsc.xyz/litv.php?id=4gtv-4gtv042
+#EXTINF:-1 tvg-id="4gtv-4gtv049" tvg-name="采昌影劇台" tvg-logo="https://epg.iill.top/logo/采昌影劇台.png" group-title="電影戲劇",采昌影劇台
+http://ezc.xtvantsc.xyz/litv.php?id=4gtv-4gtv049
+#EXTINF:-1 tvg-id="litv-xinchuang22" tvg-name="台灣戲劇台" tvg-logo="https://epg.iill.top/logo/台灣戲劇台.png" group-title="電影戲劇",台灣戲劇台
+http://ezc.xtvantsc.xyz/litv.php?id=litv-xinchuang22
+#EXTINF:-1 tvg-id="litv-ftv15" tvg-name="影迷數位紀實台" tvg-logo="https://epg.iill.top/logo/影迷數位紀實台.png" group-title="科教紀實",影迷數位紀實台
+http://ezc.xtvantsc.xyz/litv.php?id=litv-ftv15
+#EXTINF:-1 tvg-id="4gtv-4gtv018" tvg-name="達文西頻道" tvg-logo="https://epg.iill.top/logo/達文西頻道.png" group-title="科教紀實",達文西頻道
+http://ezc.xtvantsc.xyz/litv.php?id=4gtv-4gtv018
+#EXTINF:-1 tvg-id="4gtv-4gtv059" tvg-name="Classica古典樂" tvg-logo="https://epg.iill.top/logo/Classica-古典樂.png" group-title="科教紀實",Classica古典樂
+http://ezc.xtvantsc.xyz/litv.php?id=4gtv-4gtv059
+#EXTINF:-1 tvg-id="4gtv-4gtv083" tvg-name="MezzoLive" tvg-logo="https://epg.iill.top/logo/Mezzo-Live.png" group-title="科教紀實",MezzoLive
+http://ezc.xtvantsc.xyz/litv.php?id=4gtv-4gtv083
+#EXTINF:-1 tvg-id="4gtv-4gtv006" tvg-name="豬哥亮歌廳秀" tvg-logo="https://epg.iill.top/logo/豬哥亮歌廳秀.png" group-title="綜藝娛樂",豬哥亮歌廳秀
+http://ezc.xtvantsc.xyz/litv.php?id=4gtv-4gtv006
+#EXTINF:-1 tvg-id="4gtv-4gtv082" tvg-name="TraceUrban" tvg-logo="https://epg.iill.top/logo/Trace-Urban.png" group-title="體育競技",TraceUrban
+http://ezc.xtvantsc.xyz/litv.php?id=4gtv-4gtv082
+#EXTINF:-1 tvg-id="4gtv-4gtv016" tvg-name="韓國娛樂台" tvg-logo="https://epg.iill.top/logo/韩国娱乐台KMTV.png" group-title="綜藝娛樂",韓國娛樂台
+http://ezc.xtvantsc.xyz/litv.php?id=4gtv-4gtv016
+#EXTINF:-1 tvg-id="4gtv-4gtv079" tvg-name="ArirangTV" tvg-logo="https://epg.iill.top/logo/Arirang-TV.png" group-title="新聞財經",ArirangTV
+http://ezc.xtvantsc.xyz/litv.php?id=4gtv-4gtv079
+#EXTINF:-1 tvg-id="litv-ftv10" tvg-name="MCE 我的歐洲電影" tvg-logo="https://epg.iill.top/logo/MCE.png" group-title="電影戲劇",MCE 我的歐洲電影
+http://ezc.xtvantsc.xyz/litv.php?id=litv-ftv10
+#EXTINF:-1 tvg-id="4gtv-4gtv104" tvg-name="第1商業台" tvg-logo="https://epg.iill.top/logo/第1商业台.png" group-title="新聞財經",第1商業台
+http://ezc.xtvantsc.xyz/litv.php?id=4gtv-4gtv104
+#EXTINF:-1 tvg-id="4gtv-4gtv110" tvg-name="Pet Club TV" tvg-logo="https://epg.iill.top/logo/Pet-Club-TV.png" group-title="科教紀實",Pet Club TV
+http://ezc.xtvantsc.xyz/litv.php?id=4gtv-4gtv110
+#EXTINF:-1 tvg-id="litv-xinchuang19" tvg-name="Smart知識台" tvg-logo="https://epg.iill.top/logo/Smart-知識台.png" group-title="科教紀實",Smart知識台
+http://ezc.xtvantsc.xyz/litv.php?id=litv-xinchuang19
+#EXTINF:-1 tvg-id="4gtv-4gtv013" tvg-name="視納華仁紀實頻道" tvg-logo="https://epg.iill.top/logo/視納華仁紀實頻道.png" group-title="科教紀實",視納華仁紀實頻道
+http://ezc.xtvantsc.xyz/litv.php?id=4gtv-4gtv013
+#EXTINF:-1 tvg-id="4gtv-4gtv043" tvg-name="客家電視台" tvg-logo="https://epg.iill.top/logo/客家電視台.png" group-title="綜合頻道",客家電視台
+http://ezc.xtvantsc.xyz/litv.php?id=4gtv-4gtv043
+#EXTINF:-1 tvg-id="litv-ftv16" tvg-name="好消息" tvg-logo="https://epg.iill.top/logo/好消息.png" group-title="綜合頻道",好消息
+http://ezc.xtvantsc.xyz/litv.php?id=litv-ftv16
+#EXTINF:-1 tvg-id="litv-ftv17" tvg-name="好消息2台" tvg-logo="https://epg.iill.top/logo/好消息2台.png" group-title="綜合頻道",好消息2台
+http://ezc.xtvantsc.xyz/litv.php?id=litv-ftv17
+#EXTINF:-1 tvg-id="4gtv-4gtv084" tvg-name="國會頻道1" tvg-logo="https://epg.iill.top/logo/國會頻道1.png" group-title="科教紀實",國會頻道1
+http://ezc.xtvantsc.xyz/litv.php?id=4gtv-4gtv084
+#EXTINF:-1 tvg-id="4gtv-4gtv085" tvg-name="國會頻道2" tvg-logo="https://epg.iill.top/logo/國會頻道2.png" group-title="科教紀實",國會頻道2
+http://ezc.xtvantsc.xyz/litv.php?id=4gtv-4gtv085
+#EXTINF:-1 tvg-id="4gtv-4gtv155" tvg-name="民視" tvg-logo="https://epg.iill.top/logo/民視.png" group-title="綜合頻道",民視
+http://ezc.xtvantsc.xyz/litv.php?id=4gtv-4gtv155
+#EXTINF:-1 tvg-id="4gtv-4gtv080" tvg-name="中視經典台" tvg-logo="https://epg.iill.top/logo/中视经典.png" group-title="綜藝娛樂",中視經典台
+http://ezc.xtvantsc.xyz/litv.php?id=4gtv-4gtv080
+#EXTINF:-1 tvg-id="4gtv-4gtv064" tvg-name="中視菁采台" tvg-logo="https://epg.iill.top/logo/中視菁采台.png" group-title="綜藝娛樂",中視菁采台
+http://ezc.xtvantsc.xyz/litv.php?id=4gtv-4gtv064
+#EXTINF:-1 tvg-id="4gtv-4gtv109" tvg-name="中天亞洲台" tvg-logo="https://epg.iill.top/logo/中天亚洲.png" group-title="綜合頻道",中天亞洲台
+http://ezc.xtvantsc.xyz/litv.php?id=4gtv-4gtv109
+#EXTINF:-1 tvg-id="litv-xinchuang11" tvg-name="龍華日韓台" tvg-logo="https://epg.iill.top/logo/龍華日韓台.png" group-title="電影戲劇",龍華日韓台
+http://ezc.xtvantsc.xyz/litv.php?id=litv-xinchuang11
+#EXTINF:-1 tvg-id="4gtv-4gtv073" tvg-name="TVBS" tvg-logo="https://epg.iill.top/logo/TVBS.png" group-title="綜合頻道",TVBS
+http://ezc.xtvantsc.xyz/litv.php?id=4gtv-4gtv073
+#EXTINF:-1 tvg-id="4gtv-4gtv072" tvg-name="TVBS新聞台" tvg-logo="https://epg.iill.top/logo/TVBS新闻.png" group-title="新聞財經",TVBS新聞台
+http://ezc.xtvantsc.xyz/litv.php?id=4gtv-4gtv072
+#EXTINF:-1 tvg-id="4gtv-4gtv068" tvg-name="TVBS歡樂台" tvg-logo="https://epg.iill.top/logo/TVBS欢乐.png" group-title="綜藝娛樂",TVBS歡樂台
+http://ezc.xtvantsc.xyz/litv.php?id=4gtv-4gtv068
+#EXTINF:-1 tvg-id="4gtv-4gtv066" tvg-name="台視" tvg-logo="https://epg.iill.top/logo/台視.png" group-title="綜合頻道",台視
+http://ezc.xtvantsc.xyz/litv.php?id=4gtv-4gtv066
+#EXTINF:-1 tvg-id="4gtv-4gtv051" tvg-name="台視新聞台" tvg-logo="https://epg.iill.top/logo/台視新聞台.png" group-title="新聞財經",台視新聞台
+http://ezc.xtvantsc.xyz/litv.php?id=4gtv-4gtv051
+#EXTINF:-1 tvg-id="4gtv-4gtv056" tvg-name="台視財經台" tvg-logo="https://epg.iill.top/logo/台視財經台.png" group-title="新聞財經",台視財經台
+http://ezc.xtvantsc.xyz/litv.php?id=4gtv-4gtv056
+#EXTINF:-1 tvg-id="litv-xinchuang07" tvg-name="博斯運動一台" tvg-logo="https://epg.iill.top/logo/博斯运动1.png" group-title="體育競技",博斯運動一台
+http://ezc.xtvantsc.xyz/litv.php?id=litv-xinchuang07
+#EXTINF:-1 tvg-id="litv-xinchuang08" tvg-name="博斯運動二台" tvg-logo="https://epg.iill.top/logo/博斯运动1.png" group-title="體育競技",博斯運動二台
+http://ezc.xtvantsc.xyz/litv.php?id=litv-xinchuang08
+#EXTINF:-1 tvg-id="litv-xinchuang10" tvg-name="博斯無限台" tvg-logo="https://epg.iill.top/logo/博斯无限.png" group-title="體育競技",博斯無限台
+http://ezc.xtvantsc.xyz/litv.php?id=litv-xinchuang10
+#EXTINF:-1 tvg-id="litv-xinchuang13" tvg-name="博斯無限二台" tvg-logo="https://epg.iill.top/logo/博斯无限2.png" group-title="體育競技",博斯無限二台
+http://ezc.xtvantsc.xyz/litv.php?id=litv-xinchuang13
+#EXTINF:-1 tvg-id="litv-xinchuang09" tvg-name="博斯網球台" tvg-logo="https://epg.iill.top/logo/博斯网球.png" group-title="體育競技",博斯網球台
+http://ezc.xtvantsc.xyz/litv.php?id=litv-xinchuang09
+#EXTINF:-1 tvg-id="litv-xinchuang05" tvg-name="博斯高球台" tvg-logo="https://epg.iill.top/logo/博斯高球1.png" group-title="體育競技",博斯高球台
+http://ezc.xtvantsc.xyz/litv.php?id=litv-xinchuang05
+#EXTINF:-1 tvg-id="litv-xinchuang06" tvg-name="博斯高球二台" tvg-logo="https://epg.iill.top/logo/博斯高球2.png" group-title="體育競技",博斯高球二台
+http://ezc.xtvantsc.xyz/litv.php?id=litv-xinchuang06
+#EXTINF:-1 tvg-id="litv-xinchuang04" tvg-name="博斯魅力台" tvg-logo="https://epg.iill.top/logo/博斯魅力.png" group-title="體育競技",博斯魅力台
+http://ezc.xtvantsc.xyz/litv.php?id=litv-xinchuang04
+#EXTINF:-1 tvg-id="4gtv-4gtv010" tvg-name="非凡新聞台" tvg-logo="https://epg.iill.top/logo/非凡新聞台.png" group-title="新聞財經",非凡新聞台
+http://ezc.xtvantsc.xyz/litv.php?id=4gtv-4gtv010
+#EXTINF:-1 tvg-id="4gtv-4gtv048" tvg-name="非凡商業台" tvg-logo="https://epg.iill.top/logo/非凡商業台.png" group-title="新聞財經",非凡商業台
+http://ezc.xtvantsc.xyz/litv.php?id=4gtv-4gtv048
+#EXTINF:-1 tvg-id="litv-ftv03" tvg-name="VOA美國之音" tvg-logo="https://epg.iill.top/logo/VOA-美國之音.png" group-title="新聞財經",VOA美國之音
+http://ezc.xtvantsc.xyz/litv.php?id=litv-ftv03
