@@ -1,0 +1,319 @@
+import { connect } from 'cloudflare:sockets';
+// ===================== 用户配置区域开始 =====================
+let password = '5dc15e15-f285-4a9d-959b-0e4fbdd77b63';  // 节点密码/UUID [环境变量: PASSWORD/UUID]
+let proxyIP = '210.61.97.241:81';                       // 代理IP [环境变量: PROXYIP]
+let subPath = 'link';                                   // 订阅路径,为空使用UUID [环境变量: SUB_PATH]
+let SSpath = '';                                        // WS路径,为空使用UUID [环境变量: SSPATH]
+let loginPassword = '123456';                           // 后台登录密码 [环境变量: LOGIN_PASSWORD]
+let subPassword = '123456';                             // 自适应订阅密码 [环境变量: SUB_PASSWORD]
+let customIP = '';                                      // 自定义优选IP,为空使用内置cfip [环境变量: CUSTOM_IP]
+let sub = '';                                           // 优选订阅生成器,获取上游优选IP列表 [环境变量: SUB]
+const cfip = atob('bWZhLmdvdi51YSNTRyxzYWFzLnNpbi5mYW4jSlAsc3RvcmUudWJpLmNvbSNTRyxjZi4xMzA1MTkueHl6I0tSLGNmLjAwODUwMC54eXojSEssY2YuMDkwMjI3Lnh5eiNTRyxjZi44Nzc3NzQueHl6I0hLLGNkbnMuZG9vbi5ldS5vcmcjSlAsc3ViLmRhbmZlbmcuZXUub3JnI1RXLGNmLnpoZXRlbmdzaGEuZXUub3JnI0hL').split(',');
+let wsPlugin = ['v2','ray','-plugin'].join('');
+let proxyIPs=[],subs=[];
+// ===================== 用户配置区域结束 =====================
+// ===================== 禁止修改区域开始 =====================
+function closeWs(s){try{if(s.readyState===WebSocket.OPEN||s.readyState===WebSocket.CLOSING)s.close()}catch(e){}}
+function b64ToArr(b){if(!b)return{error:null};try{const s=atob(b.replace(/-/g,'+').replace(/_/g,'/'));const a=new Uint8Array(s.length);for(let i=0;i<s.length;i++)a[i]=s.charCodeAt(i);return{earlyData:a.buffer,error:null}}catch(e){return{error:e}}}
+function parseProxy(s){
+if(!s)return null;s=s.trim();
+if(s.startsWith('socks://')||s.startsWith('socks5://')){
+try{const u=new URL(s.replace(/^socks:\/\//,'socks5://'));return{type:'socks5',host:u.hostname,port:parseInt(u.port)||1080,username:u.username?decodeURIComponent(u.username):'',password:u.password?decodeURIComponent(u.password):''}}catch(e){return null}}
+if(s.startsWith('http://')||s.startsWith('https://')){
+try{const u=new URL(s);return{type:'http',host:u.hostname,port:parseInt(u.port)||(s.startsWith('https://')?443:80),username:u.username?decodeURIComponent(u.username):'',password:u.password?decodeURIComponent(u.password):''}}catch(e){return null}}
+if(s.startsWith('[')){const c=s.indexOf(']');if(c>0){const h=s.substring(1,c),r=s.substring(c+1);if(r.startsWith(':')){const p=parseInt(r.substring(1),10);if(!isNaN(p)&&p>0&&p<=65535)return{type:'direct',host:h,port:p}}return{type:'direct',host:h,port:443}}}
+const i=s.lastIndexOf(':');if(i>0){const h=s.substring(0,i),p=parseInt(s.substring(i+1),10);if(!isNaN(p)&&p>0&&p<=65535)return{type:'direct',host:h,port:p}}
+return{type:'direct',host:s,port:443}}
+function isSpeedTest(h){const d=['speedtest.net','fast.com','speedtest.cn','speed.cloudflare.com','ovo.speedtestcustom.com'];return d.includes(h)||d.some(x=>h.endsWith('.'+x))}
+async function handleSS(req,customProxy){
+const pair=new WebSocketPair(),[client,server]=Object.values(pair);server.accept();
+let remote={socket:null},isDns=false;
+const early=req.headers.get('sec-websocket-protocol')||'';
+makeStream(server,early).pipeTo(new WritableStream({async write(chunk){
+if(isDns)return await fwdUdp(chunk,server,null);
+if(remote.socket){const w=remote.socket.writable.getWriter();await w.write(chunk);w.releaseLock();return}
+const{hasError,message,addressType,port,hostname,rawIndex}=parseHeader(chunk);
+if(hasError)throw new Error(message);
+if(isSpeedTest(hostname))throw new Error('Blocked');
+if(addressType===2){if(port===53)isDns=true;else throw new Error('UDP not supported')}
+const raw=chunk.slice(rawIndex);
+if(isDns)return fwdUdp(raw,server,null);
+await fwdTcp(hostname,port,raw,server,null,remote,customProxy)}})).catch(()=>{});
+return new Response(null,{status:101,webSocket:client})}
+function parseHeader(c){
+if(c.byteLength<7)return{hasError:true,message:'Invalid'};
+try{const v=new Uint8Array(c),t=v[0];let i=1,l=0,vi=i,h='';
+switch(t){case 1:l=4;h=new Uint8Array(c.slice(vi,vi+l)).join('.');vi+=l;break;case 3:l=v[i];vi+=1;h=new TextDecoder().decode(c.slice(vi,vi+l));vi+=l;break;case 4:l=16;const ip6=[],dv=new DataView(c.slice(vi,vi+l));for(let j=0;j<8;j++)ip6.push(dv.getUint16(j*2).toString(16));h=ip6.join(':');vi+=l;break;default:return{hasError:true,message:'Invalid type'}}
+if(!h)return{hasError:true,message:'Invalid addr'};
+const p=new DataView(c.slice(vi,vi+2)).getUint16(0);
+return{hasError:false,addressType:t,port:p,hostname:h,rawIndex:vi+2}}catch(e){return{hasError:true,message:'Parse failed'}}}
+async function connectSocks5(cfg,host,port,data){
+const{host:h,port:p,username:u,password:pw}=cfg;
+const sock=connect({hostname:h,port:p}),w=sock.writable.getWriter(),r=sock.readable.getReader();
+try{
+const auth=u&&pw?new Uint8Array([5,2,0,2]):new Uint8Array([5,1,0]);
+await w.write(auth);const mr=await r.read();
+if(mr.done||mr.value.byteLength<2)throw new Error('S5 fail');
+const m=new Uint8Array(mr.value)[1];
+if(m===2){if(!u||!pw)throw new Error('S5 auth required');
+const ub=new TextEncoder().encode(u),pb=new TextEncoder().encode(pw),ap=new Uint8Array(3+ub.length+pb.length);
+ap[0]=1;ap[1]=ub.length;ap.set(ub,2);ap[2+ub.length]=pb.length;ap.set(pb,3+ub.length);
+await w.write(ap);const ar=await r.read();if(ar.done||new Uint8Array(ar.value)[1]!==0)throw new Error('S5 auth fail')}
+else if(m!==0)throw new Error('S5 unsupported');
+const hb=new TextEncoder().encode(host),cp=new Uint8Array(7+hb.length);
+cp[0]=5;cp[1]=1;cp[2]=0;cp[3]=3;cp[4]=hb.length;cp.set(hb,5);
+new DataView(cp.buffer).setUint16(5+hb.length,port,false);
+await w.write(cp);const cr=await r.read();
+if(cr.done||new Uint8Array(cr.value)[1]!==0)throw new Error('S5 connect fail');
+await w.write(data);w.releaseLock();r.releaseLock();return sock}
+catch(e){w.releaseLock();r.releaseLock();throw e}}
+async function connectHttp(cfg,host,port,data){
+const{host:h,port:p,username:u,password:pw}=cfg;
+const sock=connect({hostname:h,port:p}),w=sock.writable.getWriter(),r=sock.readable.getReader();
+try{
+let req=`CONNECT ${host}:${port} HTTP/1.1\r\nHost: ${host}:${port}\r\n`;
+if(u&&pw)req+=`Proxy-Authorization: Basic ${btoa(u+':'+pw)}\r\n`;
+req+='User-Agent: Mozilla/5.0\r\nConnection: keep-alive\r\n\r\n';
+await w.write(new TextEncoder().encode(req));
+let buf=new Uint8Array(0),hi=-1,br=0;
+while(hi===-1&&br<8192){const{done,value}=await r.read();if(done)throw new Error('Closed');
+const nb=new Uint8Array(buf.length+value.length);nb.set(buf);nb.set(value,buf.length);buf=nb;br=buf.length;
+for(let i=0;i<buf.length-3;i++)if(buf[i]===13&&buf[i+1]===10&&buf[i+2]===13&&buf[i+3]===10){hi=i+4;break}}
+if(hi===-1)throw new Error('Invalid response');
+const ht=new TextDecoder().decode(buf.slice(0,hi)),sl=ht.split('\r\n')[0],sm=sl.match(/HTTP\/\d\.\d\s+(\d+)/);
+if(!sm)throw new Error('Invalid');const sc=parseInt(sm[1]);if(sc<200||sc>=300)throw new Error('Failed');
+await w.write(data);w.releaseLock();r.releaseLock();return sock}
+catch(e){try{w.releaseLock()}catch(x){}try{r.releaseLock()}catch(x){}try{sock.close()}catch(x){}throw e}}
+async function fwdTcp(host,port,raw,ws,hdr,remote,customProxy){
+async function direct(addr,p,d){const s=connect({hostname:addr,port:p}),w=s.writable.getWriter();await w.write(d);w.releaseLock();return s}
+async function viaProxy(idx){
+if(idx>=proxyIPs.length)throw new Error('All proxies failed');
+const px=proxyIPs[idx]||proxyIP,cfg=parseProxy(px)||{type:'direct',host:px.split(':')[0],port:parseInt(px.split(':')[1])||443};
+try{let s;if(cfg.type==='socks5')s=await connectSocks5(cfg,host,port,raw);else if(cfg.type==='http'||cfg.type==='https')s=await connectHttp(cfg,host,port,raw);else s=await direct(cfg.host,cfg.port,raw);remote.socket=s;s.closed.catch(()=>{}).finally(()=>closeWs(ws));pipeStream(s,ws,hdr,null)}catch(e){await viaProxy(idx+1)}}
+if(customProxy){const cfg=parseProxy(customProxy);if(cfg&&(cfg.type==='socks5'||cfg.type==='http'||cfg.type==='https')){try{let s;if(cfg.type==='socks5')s=await connectSocks5(cfg,host,port,raw);else s=await connectHttp(cfg,host,port,raw);remote.socket=s;s.closed.catch(()=>{}).finally(()=>closeWs(ws));pipeStream(s,ws,hdr,null)}catch(e){await viaProxy(0)}}else{await viaProxy(0)}}
+else{try{const s=await direct(host,port,raw);remote.socket=s;pipeStream(s,ws,hdr,()=>viaProxy(0))}catch(e){await viaProxy(0)}}}
+function makeStream(sock,early){
+let cancel=false;
+return new ReadableStream({start(c){
+sock.addEventListener('message',e=>{if(!cancel)c.enqueue(e.data)});
+sock.addEventListener('close',()=>{if(!cancel){closeWs(sock);c.close()}});
+sock.addEventListener('error',e=>c.error(e));
+const{earlyData,error}=b64ToArr(early);if(error)c.error(error);else if(earlyData)c.enqueue(earlyData)},
+cancel(){cancel=true;closeWs(sock)}})}
+async function pipeStream(remote,ws,hdr,retry){
+let h=hdr,hasData=false;
+await remote.readable.pipeTo(new WritableStream({async write(chunk,c){hasData=true;if(ws.readyState!==WebSocket.OPEN)c.error('closed');
+if(h){const r=new Uint8Array(h.length+chunk.byteLength);r.set(h,0);r.set(chunk,h.length);ws.send(r.buffer);h=null}else ws.send(chunk)},abort(){}})).catch(()=>closeWs(ws));
+if(!hasData&&retry)await retry()}
+async function fwdUdp(chunk,ws,hdr){
+try{const s=connect({hostname:'8.8.4.4',port:53});let h=hdr;const w=s.writable.getWriter();await w.write(chunk);w.releaseLock();
+await s.readable.pipeTo(new WritableStream({async write(c){if(ws.readyState===WebSocket.OPEN){if(h){const r=new Uint8Array(h.length+c.byteLength);r.set(h,0);r.set(c,h.length);ws.send(r.buffer);h=null}else ws.send(c)}}}))}catch(e){}}
+function getLoginPage(err=''){
+const e=err?`<div style="background:#ffe6e6;color:#d63031;padding:10px;border-radius:8px;margin-bottom:15px">${err}</div>`:'';
+return new Response(`<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>登录</title><style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:system-ui;background:linear-gradient(135deg,#7dd3ca,#a17ec4);height:100vh;display:flex;align-items:center;justify-content:center}.c{background:#fff;border-radius:20px;padding:40px;box-shadow:0 20px 40px rgba(0,0,0,.1);max-width:400px;width:95%;text-align:center}h1{font-size:1.5rem;margin-bottom:25px;color:#2d3748}input{width:100%;padding:12px;border:2px solid #e1e1e1;border-radius:8px;font-size:1rem;margin-bottom:15px}input:focus{outline:none;border-color:#7dd3ca}button{width:100%;background:linear-gradient(135deg,#7dd3ca,#a17ec4);color:#fff;border:none;padding:14px;border-radius:8px;font-size:1rem;cursor:pointer;font-weight:600}button:hover{opacity:.9}</style></head><body><div class="c"><h1>SS订阅中心</h1>${e}<form method="POST" action="/login"><input type="password" name="password" placeholder="请输入密码" required><button type="submit">登录</button></form></div></body></html>`,{status:200,headers:{'Content-Type':'text/html;charset=utf-8'}})}
+function verifyAuth(req){const c=req.headers.get('Cookie')||'';const m=c.match(/ss_auth=([^;]+)/);if(m){try{return decodeURIComponent(m[1])===btoa(loginPassword)}catch(e){}}return false}
+function generateSSLink(host,port,domain,path,password,remark){
+const method='none';
+const userInfo=btoa(`${method}:${password}`);
+return`ss://${userInfo}@${host}:${port}?plugin=${wsPlugin};mode%3Dwebsocket;host%3D${domain};path%3D${path.replace(/=/g,'%3D')};tls;sni%3D${domain};skip-cert-verify%3Dtrue;mux%3D0#${remark}`}
+function generateQXLink(host,port,domain,path,password,remark){
+return`shadowsocks=${host}:${port},method=none,password=${password},obfs=wss,obfs-host=${domain},obfs-uri=${path},fast-open=true,udp-relay=true,tag=${remark}`}
+function generateSingboxConfig(nodes){
+const outbounds=[
+{type:"selector",tag:"PROXY",outbounds:["AUTO",...nodes.map(n=>n.tag),"DIRECT"],default:"AUTO"},
+{type:"selector",tag:"GLOBAL",outbounds:["DIRECT","PROXY","AUTO",...nodes.map(n=>n.tag)],default:"PROXY"},
+{type:"urltest",tag:"AUTO",outbounds:nodes.map(n=>n.tag),url:"https://cp.cloudflare.com/generate_204",interval:"5m0s",tolerance:50},
+...nodes.map(n=>({
+type:"shadowsocks",
+tag:n.tag,
+server:n.server,
+server_port:n.port,
+method:"none",
+password:n.password,
+plugin:wsPlugin,
+plugin_opts:`tls;host=${n.domain};path=${n.path.replace(/=/g,'%3D')};mux=0`,
+network:"tcp"
+})),
+{type:"direct",tag:"DIRECT"},{type:"block",tag:"REJECT"},{type:"dns",tag:"dns-out"}
+];
+return JSON.stringify({
+log:{level:"info",timestamp:true},
+dns:{servers:[{tag:"proxy-dns",address:"tls://8.8.8.8",detour:"PROXY"},{tag:"direct-dns",address:"local",detour:"DIRECT"}],rules:[{outbound:"any",server:"direct-dns"}],final:"proxy-dns"},
+inbounds:[{type:"tun",tag:"tun-in",address:["172.19.0.1/30","fdfe:dcba:9876::1/126"],auto_route:true,stack:"mixed",sniff:true,sniff_override_destination:true}],
+outbounds,
+route:{rules:[{protocol:"dns",outbound:"dns-out"},{ip_is_private:true,outbound:"DIRECT"},{clash_mode:"Direct",outbound:"DIRECT"},{clash_mode:"Global",outbound:"GLOBAL"}],final:"PROXY",auto_detect_interface:true},
+experimental:{clash_api:{external_controller:"127.0.0.1:9090",default_mode:"Rule"}}
+})}
+async function fetchSubIPs(subUrl,baseLink){
+try{
+let finalUrl=subUrl;
+if(!finalUrl.includes('/'))finalUrl+='/sub';
+const fullUrl='https://'+finalUrl+(finalUrl.includes('?')?'&':'?')+'link='+encodeURIComponent(baseLink);
+const res=await fetch(fullUrl,{signal:AbortSignal.timeout(10000),headers:{'User-Agent':'Mozilla/5.0'}});
+if(!res.ok)return null;
+let text=await res.text();
+try{const decoded=atob(text);if(decoded.includes('ss://'))text=decoded}catch(e){}
+const lines=text.split('\n').map(s=>s.trim()).filter(s=>s.startsWith('ss://'));
+if(lines.length>0)return lines;
+}catch(e){}
+return null}
+async function generateSubscription(domain,validPath,pwd,defaultIPs){
+let ipList=defaultIPs;
+if(subs.length>0&&subs[0]){
+for(const subUrl of subs){
+const subIPs=await fetchSubIPs(subUrl);
+if(subIPs&&subIPs.length>0){ipList=subIPs;break}}}
+const links=ipList.map((item,idx)=>{
+if(item.startsWith('ss://'))return item;
+let h,p=443,n='';
+if(item.includes('#')){const ps=item.split('#');item=ps[0];n=ps[1]}
+if(item.startsWith('[')&&item.includes(']:')){const i=item.indexOf(']:');h=item.substring(0,i+1);p=parseInt(item.substring(i+2))||443}
+else if(item.includes(':')){const ps=item.split(':');h=ps[0];p=parseInt(ps[1])||443}
+else h=item;
+const remark=n||`node-${idx+1}`;
+return generateSSLink(h,p,domain,validPath+'/?ed=2560',pwd,remark)
+}).join('\n');
+return btoa(unescape(encodeURIComponent(links)))}
+export default{async fetch(req,env){
+try{
+if(env){
+if(env.PROXYIP||env.proxyip||env.proxyIP)proxyIP=env.PROXYIP||env.proxyip||env.proxyIP;
+if(env.PASSWORD||env.password||env.uuid||env.UUID)password=env.PASSWORD||env.password||env.uuid||env.UUID;
+if(env.SUB_PATH||env.subpath)subPath=env.SUB_PATH||env.subpath;
+if(env.SSPATH||env.sspath)SSpath=env.SSPATH||env.sspath;
+if(env.LOGIN_PASSWORD||env.loginpassword)loginPassword=env.LOGIN_PASSWORD||env.loginpassword;
+if(env.SUB_PASSWORD||env.subpassword)subPassword=env.SUB_PASSWORD||env.subpassword;
+if(env.CUSTOM_IP||env.customip)customIP=env.CUSTOM_IP||env.customip;
+if(env.SUB||env.sub)sub=env.SUB||env.sub;
+}
+const activeIPs=customIP?customIP.split(/[\n,]/).map(s=>s.trim()).filter(s=>s):cfip;
+if(subPath==='link'||subPath==='')subPath=password;
+if(SSpath==='')SSpath=password;
+proxyIPs=proxyIP.split(',').map(s=>s.trim()).filter(s=>s);
+subs=sub.split(',').map(s=>s.trim().replace(/^https?:\/\//i,'').replace(/\/+$/,'')).filter(s=>s);
+proxyIP=proxyIPs[0]||proxyIP;
+const validPath='/'+SSpath;
+const url=new URL(req.url),path=url.pathname;
+if(path.startsWith('/proxyip=')){try{const p=decodeURIComponent(path.substring(9)).trim();if(p&&!req.headers.get('Upgrade')){proxyIP=p;return new Response('proxyIP: '+proxyIP,{headers:{'Content-Type':'text/plain'}})}}catch(e){}}
+if(req.headers.get('Upgrade')==='websocket'){
+if(!path.toLowerCase().startsWith(validPath.toLowerCase()))return new Response('Unauthorized',{status:401});
+let wp=null;if(path.startsWith('/proxyip='))try{wp=decodeURIComponent(path.substring(9)).trim()}catch(e){}
+return await handleSS(req,wp||url.searchParams.get('proxyip')||req.headers.get('proxyip'))}
+if(req.method==='POST'&&path==='/login'){
+try{const fd=await req.formData(),pw=fd.get('password')||'';
+if(pw===loginPassword)return new Response(null,{status:302,headers:{Location:'/dashboard','Set-Cookie':`ss_auth=${encodeURIComponent(btoa(loginPassword))};Path=/;HttpOnly;SameSite=Strict;Max-Age=86400`}});
+return getLoginPage('密码错误')}catch(e){return getLoginPage('登录失败')}}
+if(req.method==='GET'&&path==='/logout')return new Response(null,{status:302,headers:{Location:'/','Set-Cookie':'ss_auth=;Path=/;HttpOnly;Max-Age=0'}});
+if(req.method==='GET'){
+if(path==='/'){if(verifyAuth(req))return new Response(null,{status:302,headers:{Location:'/dashboard'}});return getLoginPage()}
+if(path==='/dashboard'){
+if(!verifyAuth(req))return new Response(null,{status:302,headers:{Location:'/'}});
+const d=url.hostname,base='https://'+d,adaptiveUrl=base+'/'+subPassword;
+return new Response(`<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>订阅中心</title><style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:system-ui;padding:20px;background:linear-gradient(135deg,#7dd3ca,#a17ec4);min-height:100vh}.c{max-width:800px;margin:0 auto}.h{position:relative;margin-bottom:20px}.h h1{text-align:center;color:#007fff;border-bottom:2px solid #3498db;padding-bottom:10px}.lo{position:absolute;right:0;top:0;background:#e74c3c;color:#fff;padding:8px 16px;border-radius:4px;text-decoration:none;font-size:.9rem}.lo:hover{background:#c0392b}.s{margin-bottom:15px}.s h2{color:#b33ce7;margin-bottom:5px;font-size:1em}.b{background:#f0fffa;border:1px solid #ddd;border-radius:8px;padding:15px;display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap}.t{flex:1;word-break:break-all;font-family:monospace;color:#2980b9;margin-right:10px}.g{display:flex;gap:10px}.btn{border:none;padding:8px 15px;border-radius:4px;cursor:pointer;color:#fff;text-decoration:none;font-size:.9rem}.cp{background:#27aea2}.ts{background:#3498db}.f{text-align:center;color:#7f8c8d;border-top:1px solid #e1d9fb;padding-top:15px;margin-top:20px}.f a{color:#9b59b6;margin:0 10px}@media(max-width:600px){.b{flex-direction:column}.g{margin-top:10px}}</style></head><body><div class="c"><div class="h"><h1>SS订阅中心</h1><a href="/logout" class="lo">退出</a></div><div class="s"><h2>自适应订阅 (全平台通用)</h2><div class="b"><div class="t">${adaptiveUrl}</div><div class="g"><button class="btn cp" onclick="copy('${adaptiveUrl}')">复制</button><a class="btn ts" href="${adaptiveUrl}" target="_blank">测试</a></div></div></div><div class="s"><h2>支持端口</h2><div class="b"><div class="t">HTTP: 80, 8080, 8880, 2052, 2082, 2086, 2095<br>HTTPS: 443, 2053, 2083, 2087, 2096, 8443</div></div></div><div class="s"><h2>客户端下载</h2><div class="b"><div class="t">v2电脑客户端: <a href="https://github.com/2dust/v2rayN/releases/tag/7.16.4" target="_blank">7.16.4</a><br>v2手机客户端: <a href="https://github.com/2dust/v2rayNG/releases/tag/1.8.25" target="_blank">1.8.25</a><br>Karing: <a href="https://github.com/KaringX/karing/releases/tag/v1.2.8.1101" target="_blank">1.2.8.1101</a></div></div></div><div class="f"><a href="https://t.me/zyssadmin" target="_blank">天诚交流群</a></div></div><script>function copy(t){navigator.clipboard.writeText(t).then(()=>alert('已复制')).catch(()=>{const a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();document.execCommand('copy');document.body.removeChild(a);alert('已复制')})}</script></body></html>`,{status:200,headers:{'Content-Type':'text/html;charset=utf-8'}})}
+if(path.toLowerCase()==='/sub/'+subPath.toLowerCase()||path.toLowerCase()==='/sub/'+subPath.toLowerCase()+'/'){
+const d=url.hostname;
+if(subs.length>0&&subs[0]){
+const baseIP=activeIPs[0]||'cf.090227.xyz';
+let bh=baseIP,bp=443;
+if(baseIP.includes('#')){bh=baseIP.split('#')[0]}
+if(bh.includes(':')){const ps=bh.split(':');bh=ps[0];bp=parseInt(ps[1])||443}
+const baseLink=generateSSLink(bh,bp,d,validPath+'/?ed=2560',password,'base');
+for(const subUrl of subs){
+const subResult=await fetchSubIPs(subUrl,baseLink);
+if(subResult&&subResult.length>0){
+if(subResult[0].startsWith('ss://')){
+return new Response(btoa(unescape(encodeURIComponent(subResult.join('\n')))),{headers:{'Content-Type':'text/plain;charset=utf-8'}})}
+const links=subResult.map((item,idx)=>{
+let h,p=443,n='';if(item.includes('#')){const ps=item.split('#');item=ps[0];n=ps[1]}if(item.startsWith('[')&&item.includes(']:')){const i=item.indexOf(']:');h=item.substring(0,i+1);p=parseInt(item.substring(i+2))||443}else if(item.includes(':')){const ps=item.split(':');h=ps[0];p=parseInt(ps[1])||443}else h=item;
+const remark=n?`${n}-ss`:'ss';
+return generateSSLink(h,p,d,validPath+'/?ed=2560',password,remark)}).join('\n');
+return new Response(btoa(unescape(encodeURIComponent(links))),{headers:{'Content-Type':'text/plain;charset=utf-8'}})}}}
+const links=activeIPs.map((item,idx)=>{
+if(item.startsWith('ss://'))return item;
+let h,p=443,n='';if(item.includes('#')){const ps=item.split('#');item=ps[0];n=ps[1]}if(item.startsWith('[')&&item.includes(']:')){const i=item.indexOf(']:');h=item.substring(0,i+1);p=parseInt(item.substring(i+2))||443}else if(item.includes(':')){const ps=item.split(':');h=ps[0];p=parseInt(ps[1])||443}else h=item;
+const remark=n?`${n}-ss`:'ss';
+return generateSSLink(h,p,d,validPath+'/?ed=2560',password,remark)
+}).join('\n');
+return new Response(btoa(unescape(encodeURIComponent(links))),{headers:{'Content-Type':'text/plain;charset=utf-8'}})}
+if(path==='/'+subPassword||path==='/'+subPassword+'/'){
+const ua=(req.headers.get('User-Agent')||'').toLowerCase();
+const d=url.hostname;
+let ipList=null;
+if(subs.length>0&&subs[0]){
+const baseIP=activeIPs[0]||'cf.090227.xyz';
+let bh=baseIP,bp=443;
+if(baseIP.includes('#')){bh=baseIP.split('#')[0]}
+if(bh.includes(':')){const ps=bh.split(':');bh=ps[0];bp=parseInt(ps[1])||443}
+const baseLink=generateSSLink(bh,bp,d,validPath+'/?ed=2560',password,'base');
+for(const subUrl of subs){const subResult=await fetchSubIPs(subUrl,baseLink);if(subResult&&subResult.length>0){ipList=subResult;break}}}
+const subUrl=`https://${d}/sub/${subPath}`;
+const encodedUrl=encodeURIComponent(subUrl);
+if((ua.includes('clash')||ua.includes('stash'))&&!ua.includes('karing'))return Response.redirect(`https://sublink.eooce.com/clash?config=${encodedUrl}`,302);
+if(ua.includes('surge')&&!ua.includes('karing'))return Response.redirect(`https://sublink.eooce.com/surge?config=${encodedUrl}`,302);
+const useList=ipList||activeIPs;
+const isSSLinks=useList.length>0&&useList[0].startsWith('ss://');
+if((ua.includes('singbox')||ua.includes('sing-box'))&&!ua.includes('karing')){
+if(isSSLinks){
+const nodes=[];
+const tagCount={};
+for(let i=0;i<useList.length;i++){
+const link=useList[i];
+try{
+let tag=`node-${i+1}`;
+const hashIdx=link.indexOf('#');
+if(hashIdx!==-1)tag=decodeURIComponent(link.substring(hashIdx+1))||tag;
+const mainPart=hashIdx!==-1?link.substring(0,hashIdx):link;
+const atIdx=mainPart.lastIndexOf('@');
+if(atIdx===-1)continue;
+const hostPortQuery=mainPart.substring(atIdx+1);
+const queryIdx=hostPortQuery.indexOf('?');
+const hostPort=queryIdx!==-1?hostPortQuery.substring(0,queryIdx):hostPortQuery;
+let server,port=443;
+if(hostPort.startsWith('[')&&hostPort.includes(']:')){
+const bracketEnd=hostPort.indexOf(']:');
+server=hostPort.substring(1,bracketEnd);
+port=parseInt(hostPort.substring(bracketEnd+2))||443;
+}else if(hostPort.includes(':')){
+const colonIdx=hostPort.lastIndexOf(':');
+server=hostPort.substring(0,colonIdx);
+port=parseInt(hostPort.substring(colonIdx+1))||443;
+}else{server=hostPort}
+if(tagCount[tag]){tagCount[tag]++;tag=`${tag}-${tagCount[tag]}`}else{tagCount[tag]=1}
+nodes.push({tag,server,port,password,domain:d,path:validPath+'/?ed=2560'});
+}catch(e){}}
+const config=generateSingboxConfig(nodes);
+return new Response(config,{headers:{'Content-Type':'application/json;charset=utf-8'}})}
+const nodes=useList.map((item,idx)=>{
+let h,p=443,n='';
+if(item.includes('#')){const ps=item.split('#');item=ps[0];n=ps[1]}
+if(item.startsWith('[')&&item.includes(']:')){const i=item.indexOf(']:');h=item.substring(0,i+1);p=parseInt(item.substring(i+2))||443}
+else if(item.includes(':')){const ps=item.split(':');h=ps[0];p=parseInt(ps[1])||443}else h=item;
+return{tag:n||`node-${idx+1}`,server:h,port:p,password,domain:d,path:validPath+'/?ed=2560'}
+});
+const config=generateSingboxConfig(nodes);
+return new Response(config,{headers:{'Content-Type':'application/json;charset=utf-8'}})}
+if(ua.includes('quantumult')){
+if(isSSLinks){
+return new Response(useList.join('\n'),{headers:{'Content-Type':'text/plain;charset=utf-8'}})}
+const qxLinks=useList.map((item,idx)=>{
+let h,p=443,n='';
+if(item.includes('#')){const ps=item.split('#');item=ps[0];n=ps[1]}
+if(item.startsWith('[')&&item.includes(']:')){const i=item.indexOf(']:');h=item.substring(0,i+1);p=parseInt(item.substring(i+2))||443}
+else if(item.includes(':')){const ps=item.split(':');h=ps[0];p=parseInt(ps[1])||443}else h=item;
+const remark=n||`node-${idx+1}`;
+return generateQXLink(h,p,d,validPath+'/?ed=2560',password,remark)
+}).join('\n');
+return new Response(qxLinks,{headers:{'Content-Type':'text/plain;charset=utf-8'}})}
+if(isSSLinks){
+return new Response(btoa(unescape(encodeURIComponent(useList.join('\n')))),{headers:{'Content-Type':'text/plain;charset=utf-8'}})}
+const links=useList.map((item,idx)=>{
+let h,p=443,n='';
+if(item.includes('#')){const ps=item.split('#');item=ps[0];n=ps[1]}
+if(item.startsWith('[')&&item.includes(']:')){const i=item.indexOf(']:');h=item.substring(0,i+1);p=parseInt(item.substring(i+2))||443}
+else if(item.includes(':')){const ps=item.split(':');h=ps[0];p=parseInt(ps[1])||443}else h=item;
+const remark=n||`node-${idx+1}`;
+return generateSSLink(h,p,d,validPath+'/?ed=2560',password,remark)
+}).join('\n');
+return new Response(btoa(unescape(encodeURIComponent(links))),{headers:{'Content-Type':'text/plain;charset=utf-8'}})}}
+return new Response('Not Found',{status:404})}catch(e){return new Response('Error',{status:500})}}};
+// ===================== 禁止修改区域结束 =====================
