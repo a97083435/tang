@@ -1,18 +1,29 @@
-import { connect } from 'cloudflare:sockets';
-// ===================== 用户配置区域开始 =====================
-let password = '5dc15e15-f285-4a9d-959b-0e4fbdd77b63';  // 节点密码/UUID [环境变量: PASSWORD/UUID]
-let proxyIP = '210.61.97.241:81';                       // 代理IP [环境变量: PROXYIP]
-let subPath = 'link';                                   // 订阅路径,为空使用UUID [环境变量: SUB_PATH]
-let SSpath = '';                                        // WS路径,为空使用UUID [环境变量: SSPATH]
-let loginPassword = '123456';                           // 后台登录密码 [环境变量: LOGIN_PASSWORD]
-let subPassword = '123456';                             // 自适应订阅密码 [环境变量: SUB_PASSWORD]
-let customIP = '';                                      // 自定义优选IP,为空使用内置cfip [环境变量: CUSTOM_IP]
-let sub = '';                                           // 优选订阅生成器,获取上游优选IP列表 [环境变量: SUB]
-const cfip = atob('bWZhLmdvdi51YSNTRyxzYWFzLnNpbi5mYW4jSlAsc3RvcmUudWJpLmNvbSNTRyxjZi4xMzA1MTkueHl6I0tSLGNmLjAwODUwMC54eXojSEssY2YuMDkwMjI3Lnh5eiNTRyxjZi44Nzc3NzQueHl6I0hLLGNkbnMuZG9vbi5ldS5vcmcjSlAsc3ViLmRhbmZlbmcuZXUub3JnI1RXLGNmLnpoZXRlbmdzaGEuZXUub3JnI0hL').split(',');
-let wsPlugin = ['v2','ray','-plugin'].join('');
-let proxyIPs=[],subs=[];
-// ===================== 用户配置区域结束 =====================
-// ===================== 禁止修改区域开始 =====================
+import{connect}from'cloudflare:sockets';
+//用户配置区域修改下方开始
+let password='5dc15e15-f285-4a9d-959b-0e4fbdd77b63';//密码/UUID [环境变量:password/uuid]
+let proxyIP='210.61.97.241:81';//代理IP [环境变量:proxyip]
+let subPath='link';//订阅路径 [环境变量:subpath]
+let SSpath='';//WS路径 [环境变量:sspath]
+let loginPassword='123456';//后台登录密码 [环境变量:loginpassword]
+let subPassword='123456';//自适应订阅密码 [环境变量:subpassword]
+let customIP='';//自定义优选IP [环境变量:subip][支持换行，支持逗号分隔，支持ss单节点链接]
+let sub='';//上游订阅 [环境变量:sub]
+//clash输出配置 [订阅转换api环境变量:subapi- Clash INI配置环境变量:subini]
+let subApi=atob('aHR0cHM6Ly9zdWJhcGkuY21saXVzc3NzLm5ldA==');
+let subIni=atob('aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2NtbGl1L0FDTDRTU1IvbWFpbi9DbGFzaC9jb25maWcvQUNMNFNTUl9PbmxpbmVfRnVsbF9NdWx0aU1vZGUuaW5p');
+//用户配置区域修改结束上方截止
+const cfip=atob('bWZhLmdvdi51YSNTRyxzYWFzLnNpbi5mYW4jSlAsc3RvcmUudWJpLmNvbSNTRyxjZi4xMzA1MTkueHl6I0tSLGNmLjAwODUwMC54eXojSEssY2YuMDkwMjI3Lnh5eiNTRyxjZi44Nzc3NzQueHl6I0hLLGNkbnMuZG9vbi5ldS5vcmcjSlAsc3ViLmRhbmZlbmcuZXUub3JnI1RXLGNmLnpoZXRlbmdzaGEuZXUub3JnI0hL').split(',');
+let wsPlugin=['v2','ray','-plugin'].join(''),proxyIPs=[],subs=[];
+const noCache={'Content-Type':'text/plain;charset=utf-8','Cache-Control':'no-store'},jsonCache={'Content-Type':'application/json;charset=utf-8','Cache-Control':'no-store'};
+function pSS(item,idx,keepBracket){let tag=`node-${idx+1}`;const hi=item.indexOf('#');if(hi!==-1)tag=decodeURIComponent(item.substring(hi+1))||tag;const mp=hi!==-1?item.substring(0,hi):item;const ai=mp.lastIndexOf('@');if(ai===-1)return{tag,server:null,port:443};const hpq=mp.substring(ai+1);const qi=hpq.indexOf('?');const hp=qi!==-1?hpq.substring(0,qi):hpq;let sv,pt=443;if(hp.startsWith('[')&&hp.includes(']:')){const be=hp.indexOf(']:');sv=keepBracket?hp.substring(0,be+1):hp.substring(1,be);pt=parseInt(hp.substring(be+2))||443}else if(hp.includes(':')){const ci=hp.lastIndexOf(':');sv=hp.substring(0,ci);pt=parseInt(hp.substring(ci+1))||443}else sv=hp;return{tag,server:sv,port:pt}}
+function pIP(item,keepBracket){let h,p=443,n='';if(item.includes('#')){const ps=item.split('#');item=ps[0];n=ps[1]}if(item.startsWith('[')&&item.includes(']:')){const i=item.indexOf(']:');h=keepBracket?item.substring(0,i+1):item.substring(1,i);p=parseInt(item.substring(i+2))||443}else if(item.includes(':')){const ps=item.split(':');h=ps[0];p=parseInt(ps[1])||443}else h=item;return{h,p,n}}
+function parseIPPort(item){
+let h,p=443,n='';
+if(item.includes('#')){const idx=item.indexOf('#');n=item.substring(idx+1);item=item.substring(0,idx)}
+if(item.startsWith('[')&&item.includes(']:')){const i=item.indexOf(']:');h=item.substring(0,i+1);p=parseInt(item.substring(i+2))||443}
+else if(item.includes(':')){const i=item.lastIndexOf(':');h=item.substring(0,i);p=parseInt(item.substring(i+1))||443}
+else h=item;
+return{h,p,n}}
 function closeWs(s){try{if(s.readyState===WebSocket.OPEN||s.readyState===WebSocket.CLOSING)s.close()}catch(e){}}
 function b64ToArr(b){if(!b)return{error:null};try{const s=atob(b.replace(/-/g,'+').replace(/_/g,'/'));const a=new Uint8Array(s.length);for(let i=0;i<s.length;i++)a[i]=s.charCodeAt(i);return{earlyData:a.buffer,error:null}}catch(e){return{error:e}}}
 function parseProxy(s){
@@ -116,13 +127,17 @@ function generateSSLink(host,port,domain,path,password,remark){
 const method='none';
 const userInfo=btoa(`${method}:${password}`);
 return`ss://${userInfo}@${host}:${port}?plugin=${wsPlugin};mode%3Dwebsocket;host%3D${domain};path%3D${path.replace(/=/g,'%3D')};tls;sni%3D${domain};skip-cert-verify%3Dtrue;mux%3D0#${remark}`}
+function generateSSLinkForClash(host,port,domain,path,password,remark){
+const method='none';
+const userInfo=btoa(`${method}:${password}`);
+return`ss://${userInfo}@${host}:${port}?plugin=${wsPlugin};mode%3Dwebsocket;host%3D${domain};path%3D${path.replace(/=/g,'%3D')};tls;sni%3D${domain};skip-cert-verify%3Dtrue;MUX%3D0#${remark}`}
 function generateQXLink(host,port,domain,path,password,remark){
 return`shadowsocks=${host}:${port},method=none,password=${password},obfs=wss,obfs-host=${domain},obfs-uri=${path},fast-open=true,udp-relay=true,tag=${remark}`}
 function generateSingboxConfig(nodes){
 const outbounds=[
 {type:"selector",tag:"PROXY",outbounds:["AUTO",...nodes.map(n=>n.tag),"DIRECT"],default:"AUTO"},
 {type:"selector",tag:"GLOBAL",outbounds:["DIRECT","PROXY","AUTO",...nodes.map(n=>n.tag)],default:"PROXY"},
-{type:"urltest",tag:"AUTO",outbounds:nodes.map(n=>n.tag),url:"https://cp.cloudflare.com/generate_204",interval:"5m0s",tolerance:50},
+{type:"urltest",tag:"AUTO",outbounds:nodes.map(n=>n.tag),url:"https://www.gstatic.com/generate_204",interval:"5m0s",tolerance:50},
 ...nodes.map(n=>({
 type:"shadowsocks",
 tag:n.tag,
@@ -131,7 +146,7 @@ server_port:n.port,
 method:"none",
 password:n.password,
 plugin:wsPlugin,
-plugin_opts:`tls;host=${n.domain};path=${n.path.replace(/=/g,'%3D')};mux=0`,
+plugin_opts:`tls;host=${n.domain};path=${n.path};mux=0`,
 network:"tcp"
 })),
 {type:"direct",tag:"DIRECT"},{type:"block",tag:"REJECT"},{type:"dns",tag:"dns-out"}
@@ -149,7 +164,7 @@ try{
 let finalUrl=subUrl;
 if(!finalUrl.includes('/'))finalUrl+='/sub';
 const fullUrl='https://'+finalUrl+(finalUrl.includes('?')?'&':'?')+'link='+encodeURIComponent(baseLink);
-const res=await fetch(fullUrl,{signal:AbortSignal.timeout(10000),headers:{'User-Agent':'Mozilla/5.0'}});
+const res=await fetch(fullUrl,{signal:AbortSignal.timeout(3000),headers:{'User-Agent':'Mozilla/5.0'}});
 if(!res.ok)return null;
 let text=await res.text();
 try{const decoded=atob(text);if(decoded.includes('ss://'))text=decoded}catch(e){}
@@ -171,20 +186,22 @@ if(item.startsWith('[')&&item.includes(']:')){const i=item.indexOf(']:');h=item.
 else if(item.includes(':')){const ps=item.split(':');h=ps[0];p=parseInt(ps[1])||443}
 else h=item;
 const remark=n||`node-${idx+1}`;
-return generateSSLink(h,p,domain,validPath+'/?ed=2560',pwd,remark)
+return generateSSLink(h,p,domain,fullPath,pwd,remark)
 }).join('\n');
 return btoa(unescape(encodeURIComponent(links)))}
 export default{async fetch(req,env){
 try{
 if(env){
-if(env.PROXYIP||env.proxyip||env.proxyIP)proxyIP=env.PROXYIP||env.proxyip||env.proxyIP;
-if(env.PASSWORD||env.password||env.uuid||env.UUID)password=env.PASSWORD||env.password||env.uuid||env.UUID;
-if(env.SUB_PATH||env.subpath)subPath=env.SUB_PATH||env.subpath;
-if(env.SSPATH||env.sspath)SSpath=env.SSPATH||env.sspath;
-if(env.LOGIN_PASSWORD||env.loginpassword)loginPassword=env.LOGIN_PASSWORD||env.loginpassword;
-if(env.SUB_PASSWORD||env.subpassword)subPassword=env.SUB_PASSWORD||env.subpassword;
-if(env.CUSTOM_IP||env.customip)customIP=env.CUSTOM_IP||env.customip;
-if(env.SUB||env.sub)sub=env.SUB||env.sub;
+if(env.proxyip)proxyIP=env.proxyip;
+if(env.password||env.uuid)password=env.password||env.uuid;
+if(env.subpath)subPath=env.subpath;
+if(env.sspath)SSpath=env.sspath;
+if(env.loginpassword)loginPassword=env.loginpassword;
+if(env.subpassword)subPassword=env.subpassword;
+if(env.subip)customIP=env.subip;
+if(env.sub)sub=env.sub;
+if(env.subapi)subApi=env.subapi;
+if(env.subini)subIni=env.subini;
 }
 const activeIPs=customIP?customIP.split(/[\n,]/).map(s=>s.trim()).filter(s=>s):cfip;
 if(subPath==='link'||subPath==='')subPath=password;
@@ -193,7 +210,9 @@ proxyIPs=proxyIP.split(',').map(s=>s.trim()).filter(s=>s);
 subs=sub.split(',').map(s=>s.trim().replace(/^https?:\/\//i,'').replace(/\/+$/,'')).filter(s=>s);
 proxyIP=proxyIPs[0]||proxyIP;
 const validPath='/'+SSpath;
+const fullPath=validPath+'/?ed=2560';
 const url=new URL(req.url),path=url.pathname;
+if(path==='/test-ua')return new Response('User-Agent: '+(req.headers.get('User-Agent')||'unknown'),{headers:{'Content-Type':'text/plain;charset=utf-8'}});
 if(path.startsWith('/proxyip=')){try{const p=decodeURIComponent(path.substring(9)).trim();if(p&&!req.headers.get('Upgrade')){proxyIP=p;return new Response('proxyIP: '+proxyIP,{headers:{'Content-Type':'text/plain'}})}}catch(e){}}
 if(req.headers.get('Upgrade')==='websocket'){
 if(!path.toLowerCase().startsWith(validPath.toLowerCase()))return new Response('Unauthorized',{status:401});
@@ -210,110 +229,84 @@ if(path==='/dashboard'){
 if(!verifyAuth(req))return new Response(null,{status:302,headers:{Location:'/'}});
 const d=url.hostname,base='https://'+d,adaptiveUrl=base+'/'+subPassword;
 return new Response(`<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>订阅中心</title><style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:system-ui;padding:20px;background:linear-gradient(135deg,#7dd3ca,#a17ec4);min-height:100vh}.c{max-width:800px;margin:0 auto}.h{position:relative;margin-bottom:20px}.h h1{text-align:center;color:#007fff;border-bottom:2px solid #3498db;padding-bottom:10px}.lo{position:absolute;right:0;top:0;background:#e74c3c;color:#fff;padding:8px 16px;border-radius:4px;text-decoration:none;font-size:.9rem}.lo:hover{background:#c0392b}.s{margin-bottom:15px}.s h2{color:#b33ce7;margin-bottom:5px;font-size:1em}.b{background:#f0fffa;border:1px solid #ddd;border-radius:8px;padding:15px;display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap}.t{flex:1;word-break:break-all;font-family:monospace;color:#2980b9;margin-right:10px}.g{display:flex;gap:10px}.btn{border:none;padding:8px 15px;border-radius:4px;cursor:pointer;color:#fff;text-decoration:none;font-size:.9rem}.cp{background:#27aea2}.ts{background:#3498db}.f{text-align:center;color:#7f8c8d;border-top:1px solid #e1d9fb;padding-top:15px;margin-top:20px}.f a{color:#9b59b6;margin:0 10px}@media(max-width:600px){.b{flex-direction:column}.g{margin-top:10px}}</style></head><body><div class="c"><div class="h"><h1>SS订阅中心</h1><a href="/logout" class="lo">退出</a></div><div class="s"><h2>自适应订阅 (全平台通用)</h2><div class="b"><div class="t">${adaptiveUrl}</div><div class="g"><button class="btn cp" onclick="copy('${adaptiveUrl}')">复制</button><a class="btn ts" href="${adaptiveUrl}" target="_blank">测试</a></div></div></div><div class="s"><h2>支持端口</h2><div class="b"><div class="t">HTTP: 80, 8080, 8880, 2052, 2082, 2086, 2095<br>HTTPS: 443, 2053, 2083, 2087, 2096, 8443</div></div></div><div class="s"><h2>客户端下载</h2><div class="b"><div class="t">v2电脑客户端: <a href="https://github.com/2dust/v2rayN/releases/tag/7.16.4" target="_blank">7.16.4</a><br>v2手机客户端: <a href="https://github.com/2dust/v2rayNG/releases/tag/1.8.25" target="_blank">1.8.25</a><br>Karing: <a href="https://github.com/KaringX/karing/releases/tag/v1.2.8.1101" target="_blank">1.2.8.1101</a></div></div></div><div class="f"><a href="https://t.me/zyssadmin" target="_blank">天诚交流群</a></div></div><script>function copy(t){navigator.clipboard.writeText(t).then(()=>alert('已复制')).catch(()=>{const a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();document.execCommand('copy');document.body.removeChild(a);alert('已复制')})}</script></body></html>`,{status:200,headers:{'Content-Type':'text/html;charset=utf-8'}})}
-if(path.toLowerCase()==='/sub/'+subPath.toLowerCase()||path.toLowerCase()==='/sub/'+subPath.toLowerCase()+'/'){
+if(path.toLowerCase()==='/sub/'+subPath.toLowerCase()+'/clash'||path.toLowerCase()==='/sub/'+subPath.toLowerCase()+'/clash/'){
 const d=url.hostname;
 if(subs.length>0&&subs[0]){
 const baseIP=activeIPs[0]||'cf.090227.xyz';
-let bh=baseIP,bp=443;
-if(baseIP.includes('#')){bh=baseIP.split('#')[0]}
-if(bh.includes(':')){const ps=bh.split(':');bh=ps[0];bp=parseInt(ps[1])||443}
-const baseLink=generateSSLink(bh,bp,d,validPath+'/?ed=2560',password,'base');
+const{h:bh,p:bp}=parseIPPort(baseIP);
+const baseLink=generateSSLinkForClash(bh,bp,d,fullPath,password,'base');
 for(const subUrl of subs){
 const subResult=await fetchSubIPs(subUrl,baseLink);
 if(subResult&&subResult.length>0){
 if(subResult[0].startsWith('ss://')){
-return new Response(btoa(unescape(encodeURIComponent(subResult.join('\n')))),{headers:{'Content-Type':'text/plain;charset=utf-8'}})}
+const clashLinks=subResult.map(link=>link.replace(/;mux%3D0/gi,';MUX%3D0').replace(/;mux=0/gi,';MUX=0')).join('\n');
+return new Response(btoa(unescape(encodeURIComponent(clashLinks))),{headers:noCache})}
 const links=subResult.map((item,idx)=>{
 let h,p=443,n='';if(item.includes('#')){const ps=item.split('#');item=ps[0];n=ps[1]}if(item.startsWith('[')&&item.includes(']:')){const i=item.indexOf(']:');h=item.substring(0,i+1);p=parseInt(item.substring(i+2))||443}else if(item.includes(':')){const ps=item.split(':');h=ps[0];p=parseInt(ps[1])||443}else h=item;
 const remark=n?`${n}-ss`:'ss';
-return generateSSLink(h,p,d,validPath+'/?ed=2560',password,remark)}).join('\n');
-return new Response(btoa(unescape(encodeURIComponent(links))),{headers:{'Content-Type':'text/plain;charset=utf-8'}})}}}
+return generateSSLinkForClash(h,p,d,fullPath,password,remark)}).join('\n');
+return new Response(btoa(unescape(encodeURIComponent(links))),{headers:noCache})}}}
+const links=activeIPs.map((item,idx)=>{
+if(item.startsWith('ss://'))return item.replace(/;mux%3D0/gi,';MUX%3D0').replace(/;mux=0/gi,';MUX=0');
+let h,p=443,n='';if(item.includes('#')){const ps=item.split('#');item=ps[0];n=ps[1]}if(item.startsWith('[')&&item.includes(']:')){const i=item.indexOf(']:');h=item.substring(0,i+1);p=parseInt(item.substring(i+2))||443}else if(item.includes(':')){const ps=item.split(':');h=ps[0];p=parseInt(ps[1])||443}else h=item;
+const remark=n?`${n}-ss`:'ss';
+return generateSSLinkForClash(h,p,d,fullPath,password,remark)
+}).join('\n');
+return new Response(btoa(unescape(encodeURIComponent(links))),{headers:noCache})}
+if(path.toLowerCase()==='/sub/'+subPath.toLowerCase()||path.toLowerCase()==='/sub/'+subPath.toLowerCase()+'/'){
+const d=url.hostname;
+if(subs.length>0&&subs[0]){
+const baseIP=activeIPs[0]||'cf.090227.xyz';
+const{h:bh,p:bp}=parseIPPort(baseIP);
+const baseLink=generateSSLink(bh,bp,d,fullPath,password,'base');
+for(const subUrl of subs){
+const subResult=await fetchSubIPs(subUrl,baseLink);
+if(subResult&&subResult.length>0){
+if(subResult[0].startsWith('ss://')){
+return new Response(btoa(unescape(encodeURIComponent(subResult.join('\n')))),{headers:noCache})}
+const links=subResult.map((item,idx)=>{
+let h,p=443,n='';if(item.includes('#')){const ps=item.split('#');item=ps[0];n=ps[1]}if(item.startsWith('[')&&item.includes(']:')){const i=item.indexOf(']:');h=item.substring(0,i+1);p=parseInt(item.substring(i+2))||443}else if(item.includes(':')){const ps=item.split(':');h=ps[0];p=parseInt(ps[1])||443}else h=item;
+const remark=n?`${n}-ss`:'ss';
+return generateSSLink(h,p,d,fullPath,password,remark)}).join('\n');
+return new Response(btoa(unescape(encodeURIComponent(links))),{headers:noCache})}}}
 const links=activeIPs.map((item,idx)=>{
 if(item.startsWith('ss://'))return item;
 let h,p=443,n='';if(item.includes('#')){const ps=item.split('#');item=ps[0];n=ps[1]}if(item.startsWith('[')&&item.includes(']:')){const i=item.indexOf(']:');h=item.substring(0,i+1);p=parseInt(item.substring(i+2))||443}else if(item.includes(':')){const ps=item.split(':');h=ps[0];p=parseInt(ps[1])||443}else h=item;
 const remark=n?`${n}-ss`:'ss';
-return generateSSLink(h,p,d,validPath+'/?ed=2560',password,remark)
+return generateSSLink(h,p,d,fullPath,password,remark)
 }).join('\n');
-return new Response(btoa(unescape(encodeURIComponent(links))),{headers:{'Content-Type':'text/plain;charset=utf-8'}})}
+return new Response(btoa(unescape(encodeURIComponent(links))),{headers:noCache})}
 if(path==='/'+subPassword||path==='/'+subPassword+'/'){
 const ua=(req.headers.get('User-Agent')||'').toLowerCase();
 const d=url.hostname;
 let ipList=null;
 if(subs.length>0&&subs[0]){
 const baseIP=activeIPs[0]||'cf.090227.xyz';
-let bh=baseIP,bp=443;
-if(baseIP.includes('#')){bh=baseIP.split('#')[0]}
-if(bh.includes(':')){const ps=bh.split(':');bh=ps[0];bp=parseInt(ps[1])||443}
-const baseLink=generateSSLink(bh,bp,d,validPath+'/?ed=2560',password,'base');
+const{h:bh,p:bp}=parseIPPort(baseIP);
+const baseLink=generateSSLink(bh,bp,d,fullPath,password,'base');
 for(const subUrl of subs){const subResult=await fetchSubIPs(subUrl,baseLink);if(subResult&&subResult.length>0){ipList=subResult;break}}}
 const subUrl=`https://${d}/sub/${subPath}`;
+const clashSubUrl=`https://${d}/sub/${subPath}/clash`;
 const encodedUrl=encodeURIComponent(subUrl);
-if((ua.includes('clash')||ua.includes('stash'))&&!ua.includes('karing'))return Response.redirect(`https://sublink.eooce.com/clash?config=${encodedUrl}`,302);
-if(ua.includes('surge')&&!ua.includes('karing'))return Response.redirect(`https://sublink.eooce.com/surge?config=${encodedUrl}`,302);
+const clashEncodedUrl=encodeURIComponent(clashSubUrl);
 const useList=ipList||activeIPs;
 const isSSLinks=useList.length>0&&useList[0].startsWith('ss://');
+if((ua.includes('clash')||ua.includes('stash'))&&!ua.includes('karing')&&!ua.includes('nekobox')){return Response.redirect(`${subApi}/sub?target=clash&url=${clashEncodedUrl}&config=${encodeURIComponent(subIni)}&emoji=true&list=false&scv=true`,302);}
+if(ua.includes('surge')&&!ua.includes('karing'))return Response.redirect(`https://sub.ssss.xx.kg/surge?config=${encodedUrl}`,302);
+if(ua.includes('karing')){
+const links=useList.map((item,idx)=>{if(item.startsWith('ss://')){const{tag,server,port}=pSS(item,idx,true);if(!server)return item.replace(/;MUX%3D0/gi,';mux%3D0').replace(/;MUX=0/gi,';mux=0');return generateSSLink(server,port,d,fullPath,password,tag)}const{h,p,n}=pIP(item,true);const remark=n?`${n}-ss`:'ss';return generateSSLink(h,p,d,fullPath,password,remark)}).join('\n');
+return new Response(btoa(unescape(encodeURIComponent(links))),{headers:noCache})}
+if(ua.includes('nekobox')||ua.includes('neko box')||ua.includes('nb4a')){
+const links=useList.map((item,idx)=>{if(item.startsWith('ss://')){const{tag,server,port}=pSS(item,idx,true);if(!server)return item;return generateSSLink(server,port,d,fullPath,password,tag)}const{h,p,n}=pIP(item,true);const remark=n?`${n}-ss`:'ss';return generateSSLink(h,p,d,fullPath,password,remark)}).join('\n');
+return new Response(btoa(unescape(encodeURIComponent(links))),{headers:noCache})}
 if((ua.includes('singbox')||ua.includes('sing-box'))&&!ua.includes('karing')){
-if(isSSLinks){
-const nodes=[];
-const tagCount={};
-for(let i=0;i<useList.length;i++){
-const link=useList[i];
-try{
-let tag=`node-${i+1}`;
-const hashIdx=link.indexOf('#');
-if(hashIdx!==-1)tag=decodeURIComponent(link.substring(hashIdx+1))||tag;
-const mainPart=hashIdx!==-1?link.substring(0,hashIdx):link;
-const atIdx=mainPart.lastIndexOf('@');
-if(atIdx===-1)continue;
-const hostPortQuery=mainPart.substring(atIdx+1);
-const queryIdx=hostPortQuery.indexOf('?');
-const hostPort=queryIdx!==-1?hostPortQuery.substring(0,queryIdx):hostPortQuery;
-let server,port=443;
-if(hostPort.startsWith('[')&&hostPort.includes(']:')){
-const bracketEnd=hostPort.indexOf(']:');
-server=hostPort.substring(1,bracketEnd);
-port=parseInt(hostPort.substring(bracketEnd+2))||443;
-}else if(hostPort.includes(':')){
-const colonIdx=hostPort.lastIndexOf(':');
-server=hostPort.substring(0,colonIdx);
-port=parseInt(hostPort.substring(colonIdx+1))||443;
-}else{server=hostPort}
-if(tagCount[tag]){tagCount[tag]++;tag=`${tag}-${tagCount[tag]}`}else{tagCount[tag]=1}
-nodes.push({tag,server,port,password,domain:d,path:validPath+'/?ed=2560'});
-}catch(e){}}
+const nodes=[],tagCount={};
+for(let i=0;i<useList.length;i++){const item=useList[i];try{if(item.startsWith('ss://')){const{tag:t,server,port}=pSS(item,i,false);if(!server)continue;let tag=t;if(tagCount[tag]){tagCount[tag]++;tag=`${tag}-${tagCount[tag]}`}else{tagCount[tag]=1}nodes.push({tag,server,port,password,domain:d,path:fullPath})}else{const{h,p,n}=pIP(item,false);let tag=n||`node-${i+1}`;if(tagCount[tag]){tagCount[tag]++;tag=`${tag}-${tagCount[tag]}`}else{tagCount[tag]=1}nodes.push({tag,server:h,port:p,password,domain:d,path:fullPath})}}catch(e){}}
 const config=generateSingboxConfig(nodes);
-return new Response(config,{headers:{'Content-Type':'application/json;charset=utf-8'}})}
-const nodes=useList.map((item,idx)=>{
-let h,p=443,n='';
-if(item.includes('#')){const ps=item.split('#');item=ps[0];n=ps[1]}
-if(item.startsWith('[')&&item.includes(']:')){const i=item.indexOf(']:');h=item.substring(0,i+1);p=parseInt(item.substring(i+2))||443}
-else if(item.includes(':')){const ps=item.split(':');h=ps[0];p=parseInt(ps[1])||443}else h=item;
-return{tag:n||`node-${idx+1}`,server:h,port:p,password,domain:d,path:validPath+'/?ed=2560'}
-});
-const config=generateSingboxConfig(nodes);
-return new Response(config,{headers:{'Content-Type':'application/json;charset=utf-8'}})}
+return new Response(config,{headers:jsonCache})}
 if(ua.includes('quantumult')){
-if(isSSLinks){
-return new Response(useList.join('\n'),{headers:{'Content-Type':'text/plain;charset=utf-8'}})}
-const qxLinks=useList.map((item,idx)=>{
-let h,p=443,n='';
-if(item.includes('#')){const ps=item.split('#');item=ps[0];n=ps[1]}
-if(item.startsWith('[')&&item.includes(']:')){const i=item.indexOf(']:');h=item.substring(0,i+1);p=parseInt(item.substring(i+2))||443}
-else if(item.includes(':')){const ps=item.split(':');h=ps[0];p=parseInt(ps[1])||443}else h=item;
-const remark=n||`node-${idx+1}`;
-return generateQXLink(h,p,d,validPath+'/?ed=2560',password,remark)
-}).join('\n');
-return new Response(qxLinks,{headers:{'Content-Type':'text/plain;charset=utf-8'}})}
-if(isSSLinks){
-return new Response(btoa(unescape(encodeURIComponent(useList.join('\n')))),{headers:{'Content-Type':'text/plain;charset=utf-8'}})}
-const links=useList.map((item,idx)=>{
-let h,p=443,n='';
-if(item.includes('#')){const ps=item.split('#');item=ps[0];n=ps[1]}
-if(item.startsWith('[')&&item.includes(']:')){const i=item.indexOf(']:');h=item.substring(0,i+1);p=parseInt(item.substring(i+2))||443}
-else if(item.includes(':')){const ps=item.split(':');h=ps[0];p=parseInt(ps[1])||443}else h=item;
-const remark=n||`node-${idx+1}`;
-return generateSSLink(h,p,d,validPath+'/?ed=2560',password,remark)
-}).join('\n');
-return new Response(btoa(unescape(encodeURIComponent(links))),{headers:{'Content-Type':'text/plain;charset=utf-8'}})}}
+const qxLinks=useList.map((item,idx)=>{try{if(item.startsWith('ss://')){const{tag,server,port}=pSS(item,idx,false);if(!server)return null;return generateQXLink(server,port,d,fullPath,password,tag)}else{const{h,p,n}=pIP(item,true);const remark=n||`node-${idx+1}`;return generateQXLink(h,p,d,fullPath,password,remark)}}catch(e){return null}}).filter(l=>l).join('\n');
+return new Response(qxLinks,{headers:noCache})}
+const links=useList.map((item,idx)=>{if(item.startsWith('ss://')){const{tag,server,port}=pSS(item,idx,true);if(!server)return item;return generateSSLink(server,port,d,fullPath,password,tag)}const{h,p,n}=pIP(item,true);const remark=n?`${n}-ss`:'ss';return generateSSLink(h,p,d,fullPath,password,remark)}).join('\n');
+return new Response(btoa(unescape(encodeURIComponent(links))),{headers:noCache})}}
 return new Response('Not Found',{status:404})}catch(e){return new Response('Error',{status:500})}}};
-// ===================== 禁止修改区域结束 =====================
