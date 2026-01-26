@@ -7470,4 +7470,29 @@ https://pan.baidu.re/down.php/75b7a7038d217678be0b6e3ad52f33f7.txt
 以上接口均收集于网络，不保证永久有效性，
 自行测试，均为免费使用，切勿购买。
 
+视频中演示的就是这个接口列表第1个肥猫 
+
+
+肥猫 http://肥猫.com 简单易用，高清影视。
+
+
+欧歌 http://tv.nxog.top/m/ 多仓支持，包含直播。
+巧技 http://cdn.qiaoji8.com/tvbox.json 快速加载，TV端优化。
+小米 DEMOhttp://xhww.fun:63/小米/DEMO.json 小米设备优化。
+YH源 https://yydsys.top/duo 多源聚合。
+OK源 http://ok321.top/tv 高清源，可扩展。
+王小二 http://tvbox.xn--4kq62z5rby2qupq9ub.top/ 实时更新，多源。
+运输车 https://tvkj.top/DC/ysc/tvkj/svip.jsonVIP 配置，多线路。
+香雅情 https://github.moeyy.xyz/https://raw.githubusercontent.com/xyq254245/xyqonlinerule/main/XYQTVBox.json 开源仓库，自定义强。
+海棠源 http://yuan.haitangw.net/tv/ 稳定主线，影视资源丰富。
+饭太硬 http://饭太硬.top/tv 经典源，资源齐全。
+4K VIP https://ghps.cc/https://raw.githubusercontent.com/xmbjm/vip4K/main/4Kvip.json 4K高清源。
+Cainisi https://tvbox.cainisi.cf 简洁源。
+Pyramid https://ghproxy.com/raw.githubusercontent.com/lm317379829/PyramidStore/pyramid/py.json 高级配置。
+海棠多线 http://yuan.haitangw.net/box/ 多线路备份，速度优化。
+春盈天下 https://盒子迷.top/ 春盈天下频道全面，支持扩展。
+欧歌多仓 http://m.nxog.top/nxog/ou1.php?url=http://tv.nxog.top&b= 欧歌随机线路，稳定性高。
+月光宝盒 https://jihulab.com/ygbh1/box/-/raw/main/ 月光宝盒
+荷城茶秀 http://rihou.cc:88/ 荷城茶秀稳定影视仓。
+我不是肥猫 http://我不是.肥猫.live/ 接口禁止贩卖纯净源，禁止贩卖。
 
