@@ -379,3 +379,11 @@ http://hucongrong.web3v.work/风水/fxz/fxz.json
 https://www.yckceo.com/yuedu/shuyuans/json/id/111.json
 https://gitee.com/yiwu369/6758/raw/master/2025.json
 
+https://raw.liucn.cc/box/m.json
+http://cdn.qiaoji8.com/tvbox.json
+http://pandown.pro/tvbox/tvbox.json
+https://jihulab.com/jinenge/tvbox/-/raw/main/1.json
+https://agit.ai/mmmgit/tvbox/raw/branch/main/zzz1.json
+https://weixine.net/ysc.json
+https://cdn.jsdelivr.net/gh/GDaily/TVbox@master/TVbox.text
+https://jinenge.cn/1.json
