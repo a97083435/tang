@@ -41,6 +41,10 @@ https://9764.kstore.vip/xuenai/catvod/index.js.md5
 https://9280.kstore.vip/cat/index.js.md5
 
 
+接口：https://catbox.n13.club/jk/t4.json
+
+t4接口：https://catbox.n13.club/jk/jsm.json
+
 
 
 
