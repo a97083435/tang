@@ -1,0 +1,93 @@
+﻿{"warningText": "接口来自网络，有网就能用。","warningText": "影视在线接口",
+"urls": [{ 
+           "url": "https://yhqmlt765.github.io/ysapi.json", 
+           "name": "①【饭太硬直播】"
+        },
+{ 
+           "url": "http://www.饭太硬.com/tv", 
+           "name": "②【饭太硬影视】"
+        },
+
+{ 
+           "url": "https://9877.kstore.space/AnotherD/api.json", 
+           "name": "③【潇洒影视】"
+        },
+
+{
+           "url": "http://cdn.qiaoji8.com/tvbox.json",
+           "name": "④【巧技影视】"
+        },
+
+{
+           "url": "https://yydsys.netlify.app/config.json", 
+           "name": "⑤【多多影音】"
+        },
+        
+{
+           "url": "http://ok321.top/tv",
+           "name": "⑥【OK影视】"
+        },
+
+{
+           "url": "http://tv.nxog.top/m/",
+           "name": "⑦【欧歌影视】"
+        },
+
+{
+           "url": "https://7337.kstore.vip/tw.json", 
+           "name": "⑧【天微影视】"
+        },
+        
+{
+           "url": "https://3043.kstore.space/bhvip/bh/bh2.json", 
+           "name": "⑨【宝盒影视】"
+        },
+
+{
+           "url": "http://肥猫.com", 
+           "name": "⑩【肥猫影视】"
+        },
+
+{
+           "url": "http://tvbox.王二小放牛娃.top",
+            "name": "⑪【王二小影视】"
+        },
+
+
+{
+           "url": "http://miqk.cc/小米/DEMO.json",
+           "name": "⑫【小米影视】"
+        },
+
+{
+           "url": "https://7337.kstore.vip/qxys/禁止传播.json",
+           "name": "⑬【七星影视】"
+        },
+
+{
+           "url": "http://tv.laohu.cool/tvbox.json",
+           "name": "⑭【老虎影视】"
+        },
+
+{
+           "url": "http://我不是.摸鱼儿.com",
+           "name": "⑮【摸鱼儿影视】"
+        },
+
+{
+           "url": "http://hb.小虎斑.site:25252/仅供测试",
+           "name": "⑯【小虎斑影视】"
+        },
+{
+           "url": "http://8.138.7.223/tv.txt",
+           "name": "⑰【榴芒电视】"
+        },
+{
+         "url":"https://jk.nxbox.top/yly/yly.json",
+         "name":"⑱【念心小站】"
+       },
+{
+      "url":"https://gitee.com/yiwu369/6758/raw/master/青龙/1.json",
+      "name":"⑲【青龙影视】"
+      }
+]}
