@@ -1,0 +1,12 @@
+野草音源：（亲测可用）
+https://tt.tenmeng.com/moonue/js/yecao.js
+
+Huibq音源加速链接：（亲测可用）
+https://ghproxy.net/https://raw.githubusercontent.com/pdone/lx-music-source/main/huibq/latest.js
+
+Flower音源加速链接：（亲测可用）
+https://ghproxy.net/https://raw.githubusercontent.com/pdone/lx-music-source/main/flower/latest.js
+
+Grass音源原始链接：（亲测可用）
+https://tt.tenmeng.com/moonue/js/yecao202412.js
+
