@@ -1,0 +1,20 @@
+{
+  "urls": [
+    { "name": "摸魚兒介面", "url": "http://不是.摸魚兒.com" },
+    { "name": "肥貓介面", "url": "http://肥貓.com" },
+    { "name": "飯太硬接口", "url": "http://www.飯太硬.com/tv/" },
+    { "name": "神祕哥哥們備用介面", "url": "http://fty.xxooo.cf/tv/" },
+    { "name": "開心介面", "url": "http://rihou.cc:55" },
+    { "name": "動漫城市介面", "url": "https://www.yingm.cc/dm/dm.json" },
+    { "name": "PG介面", "url": "https://git.acwing.com/iduoduo/orange/-/raw/main/jsm.json" },
+    { "name": "英俊介面", "url": "http://home.jundie.top:81/top98.json" },
+    { "name": "道長介面", "url": "https://cdn.gitmirror.com/bb/xduo/libs/master/index.json" },
+    { "name": "寶盒介面", "url": "http://mzjk.top/禁止貨運" },
+    { "name": "王二小放牛娃介面", "url": "http://tvbox.王二小放牛娃.top" },
+    { "name": "菜妮絲介面", "url": "https://tv.菜妮絲.top" },
+    { "name": "HG介面", "url": "https://api.hgyx.vip/hgyx.json" },
+    { "name": "dxawi", "url": "https://dxawi.github.io/0/0.json" },
+    { "name": "瀟灑介面", "url": "https://github.moeyy.xyz/https://raw.githubusercontent.com/PizazzGY/TVBox/main/api.json" },
+    { "name": "小蘋果介面", "url": "https://bitbucket.org/xduo/duoapi/raw/master/xpg.json" }
+  ]
+}
