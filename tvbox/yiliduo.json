@@ -20,7 +20,7 @@
     {
       "name": "myTV「香港」",
       "type": 3,
-      "url": "https://live.yang-1989.eu.org/Live.m3u",
+      "url": "https://iptv.yang-1989.xyz/myTV/playlist.m3u",
       "epg":"https://material.1989.click/epg.xml.gz",
       "ua": "okhttp/3.8.1",
       "timeout": 10,
