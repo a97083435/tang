@@ -1,0 +1,147 @@
+#EXTM3U
+#EXTINF:-1 tvg-id="600001859" tvg-name="CCTV1" group-title="央視頻道",CCTV1
+video://https://www.yangshipin.cn/tv/home?pid=600001859
+#EXTINF:-1 tvg-id="600001800" tvg-name="CCTV2" group-title="央視頻道",CCTV2
+video://https://www.yangshipin.cn/tv/home?pid=600001800
+#EXTINF:-1 tvg-id="600001801" tvg-name="CCTV3" group-title="央視頻道",CCTV3
+video://https://www.yangshipin.cn/tv/home?pid=600001801
+#EXTINF:-1 tvg-id="600001814" tvg-name="CCTV4" group-title="央視頻道",CCTV4
+video://https://www.yangshipin.cn/tv/home?pid=600001814
+#EXTINF:-1 tvg-id="600001818" tvg-name="CCTV5" group-title="央視頻道",CCTV5
+video://https://www.yangshipin.cn/tv/home?pid=600001818
+#EXTINF:-1 tvg-id="600001817" tvg-name="CCTV5+" group-title="央視頻道",CCTV5+
+video://https://www.yangshipin.cn/tv/home?pid=600001817
+#EXTINF:-1 tvg-id="600108442" tvg-name="CCTV6" group-title="央視頻道",CCTV6
+video://https://www.yangshipin.cn/tv/home?pid=600108442
+#EXTINF:-1 tvg-id="600004092" tvg-name="CCTV7" group-title="央視頻道",CCTV7
+video://https://www.yangshipin.cn/tv/home?pid=600004092
+#EXTINF:-1 tvg-id="600001803" tvg-name="CCTV8" group-title="央視頻道",CCTV8
+video://https://www.yangshipin.cn/tv/home?pid=600001803
+#EXTINF:-1 tvg-id="600004078" tvg-name="CCTV9" group-title="央視頻道",CCTV9
+video://https://www.yangshipin.cn/tv/home?pid=600004078
+#EXTINF:-1 tvg-id="600001805" tvg-name="CCTV10" group-title="央視頻道",CCTV10
+video://https://www.yangshipin.cn/tv/home?pid=600001805
+#EXTINF:-1 tvg-id="600001806" tvg-name="CCTV11" group-title="央視頻道",CCTV11
+video://https://www.yangshipin.cn/tv/home?pid=600001806
+#EXTINF:-1 tvg-id="600001807" tvg-name="CCTV12" group-title="央視頻道",CCTV12
+video://https://www.yangshipin.cn/tv/home?pid=600001807
+#EXTINF:-1 tvg-id="600001811" tvg-name="CCTV13" group-title="央視頻道",CCTV13
+video://https://www.yangshipin.cn/tv/home?pid=600001811
+#EXTINF:-1 tvg-id="600001809" tvg-name="CCTV14" group-title="央視頻道",CCTV14
+video://https://www.yangshipin.cn/tv/home?pid=600001809
+#EXTINF:-1 tvg-id="600001815" tvg-name="CCTV15" group-title="央視頻道",CCTV15
+video://https://www.yangshipin.cn/tv/home?pid=600001815
+#EXTINF:-1 tvg-id="600098637" tvg-name="CCTV16-HD" group-title="央視頻道",CCTV16-HD
+video://https://www.yangshipin.cn/tv/home?pid=600098637
+#EXTINF:-1 tvg-id="600099502" tvg-name="CCTV16（4K）" group-title="央視頻道",CCTV16（4K）
+video://https://www.yangshipin.cn/tv/home?pid=600099502
+#EXTINF:-1 tvg-id="600001810" tvg-name="CCTV17" group-title="央視頻道",CCTV17
+video://https://www.yangshipin.cn/tv/home?pid=600001810
+#EXTINF:-1 tvg-id="600002264" tvg-name="CCTV4K" group-title="央視頻道",CCTV4K
+video://https://www.yangshipin.cn/tv/home?pid=600002264
+#EXTINF:-1 tvg-id="600156816" tvg-name="CCTV8K" group-title="央視頻道",CCTV8K
+video://https://www.yangshipin.cn/tv/home?pid=600156816
+#EXTINF:-1 tvg-id="600014550" tvg-name="CGTN" group-title="央視頻道",CGTN
+video://https://www.yangshipin.cn/tv/home?pid=600014550
+#EXTINF:-1 tvg-id="600084704" tvg-name="CGTN法語頻道" group-title="央視頻道",CGTN法語頻道
+video://https://www.yangshipin.cn/tv/home?pid=600084704
+#EXTINF:-1 tvg-id="600084758" tvg-name="CGTN俄語頻道" group-title="央視頻道",CGTN俄語頻道
+video://https://www.yangshipin.cn/tv/home?pid=600084758
+#EXTINF:-1 tvg-id="600084782" tvg-name="CGTN阿拉伯語頻道" group-title="央視頻道",CGTN阿拉伯語頻道
+video://https://www.yangshipin.cn/tv/home?pid=600084782
+#EXTINF:-1 tvg-id="600084744" tvg-name="CGTN西班牙語頻道" group-title="央視頻道",CGTN西班牙語頻道
+video://https://www.yangshipin.cn/tv/home?pid=600084744
+#EXTINF:-1 tvg-id="600084781" tvg-name="CGTN外語紀錄頻道" group-title="央視頻道",CGTN外語紀錄頻道
+video://https://www.yangshipin.cn/tv/home?pid=600084781
+#EXTINF:-1 tvg-id="600099658" tvg-name="CCTV風雲劇場頻道" group-title="央視頻道",CCTV風雲劇場頻道
+video://https://www.yangshipin.cn/tv/home?pid=600099658
+#EXTINF:-1 tvg-id="600099655" tvg-name="CCTV第一劇場頻道" group-title="央視頻道",CCTV第一劇場頻道
+video://https://www.yangshipin.cn/tv/home?pid=600099655
+#EXTINF:-1 tvg-id="600099620" tvg-name="CCTV懷舊劇場頻道" group-title="央視頻道",CCTV懷舊劇場頻道
+video://https://www.yangshipin.cn/tv/home?pid=600099620
+#EXTINF:-1 tvg-id="600099637" tvg-name="CCTV世界地理頻道" group-title="央視頻道",CCTV世界地理頻道
+video://https://www.yangshipin.cn/tv/home?pid=600099637
+#EXTINF:-1 tvg-id="600099660" tvg-name="CCTV風雲音樂頻道" group-title="央視頻道",CCTV風雲音樂頻道
+video://https://www.yangshipin.cn/tv/home?pid=600099660
+#EXTINF:-1 tvg-id="600099649" tvg-name="CCTV兵器科技頻道" group-title="央視頻道",CCTV兵器科技頻道
+video://https://www.yangshipin.cn/tv/home?pid=600099649
+#EXTINF:-1 tvg-id="600099636" tvg-name="CCTV風雲足球頻道" group-title="央視頻道",CCTV風雲足球頻道
+video://https://www.yangshipin.cn/tv/home?pid=600099636
+#EXTINF:-1 tvg-id="600099659" tvg-name="CCTV高爾夫·網球頻道" group-title="央視頻道",CCTV高爾夫·網球頻道
+video://https://www.yangshipin.cn/tv/home?pid=600099659
+#EXTINF:-1 tvg-id="600099650" tvg-name="CCTV女性時尚頻道" group-title="央視頻道",CCTV女性時尚頻道
+video://https://www.yangshipin.cn/tv/home?pid=600099650
+#EXTINF:-1 tvg-id="600099653" tvg-name="CCTV央視文化精品頻道" group-title="央視頻道",CCTV央視文化精品頻道
+video://https://www.yangshipin.cn/tv/home?pid=600099653
+#EXTINF:-1 tvg-id="600099652" tvg-name="CCTV央視臺球頻道" group-title="央視頻道",CCTV央視臺球頻道
+video://https://www.yangshipin.cn/tv/home?pid=600099652
+#EXTINF:-1 tvg-id="600099656" tvg-name="CCTV電視指南頻道" group-title="央視頻道",CCTV電視指南頻道
+video://https://www.yangshipin.cn/tv/home?pid=600099656
+#EXTINF:-1 tvg-id="600099651" tvg-name="CCTV衛生健康頻道" group-title="央視頻道",CCTV衛生健康頻道
+video://https://www.yangshipin.cn/tv/home?pid=600099651
+#EXTINF:-1 tvg-id="600002309" tvg-name="北京衛視" group-title="衛視頻道",北京衛視
+video://https://www.yangshipin.cn/tv/home?pid=600002309
+#EXTINF:-1 tvg-id="600002521" tvg-name="江蘇衛視" group-title="衛視頻道",江蘇衛視
+video://https://www.yangshipin.cn/tv/home?pid=600002521
+#EXTINF:-1 tvg-id="600002483" tvg-name="東方衛視" group-title="衛視頻道",東方衛視
+video://https://www.yangshipin.cn/tv/home?pid=600002483
+#EXTINF:-1 tvg-id="600002520" tvg-name="浙江衛視" group-title="衛視頻道",浙江衛視
+video://https://www.yangshipin.cn/tv/home?pid=600002520
+#EXTINF:-1 tvg-id="600002475" tvg-name="湖南衛視" group-title="衛視頻道",湖南衛視
+video://https://www.yangshipin.cn/tv/home?pid=600002475
+#EXTINF:-1 tvg-id="600002508" tvg-name="湖北衛視" group-title="衛視頻道",湖北衛視
+video://https://www.yangshipin.cn/tv/home?pid=600002508
+#EXTINF:-1 tvg-id="600002485" tvg-name="廣東衛視" group-title="衛視頻道",廣東衛視
+video://https://www.yangshipin.cn/tv/home?pid=600002485
+#EXTINF:-1 tvg-id="600002509" tvg-name="廣西衛視" group-title="衛視頻道",廣西衛視
+video://https://www.yangshipin.cn/tv/home?pid=600002509
+#EXTINF:-1 tvg-id="600002498" tvg-name="黑龍江衛視" group-title="衛視頻道",黑龍江衛視
+video://https://www.yangshipin.cn/tv/home?pid=600002498
+#EXTINF:-1 tvg-id="600002506" tvg-name="海南衛視" group-title="衛視頻道",海南衛視
+video://https://www.yangshipin.cn/tv/home?pid=600002506
+#EXTINF:-1 tvg-id="600002531" tvg-name="重慶衛視" group-title="衛視頻道",重慶衛視
+video://https://www.yangshipin.cn/tv/home?pid=600002531
+#EXTINF:-1 tvg-id="600002481" tvg-name="深圳衛視" group-title="衛視頻道",深圳衛視
+video://https://www.yangshipin.cn/tv/home?pid=600002481
+#EXTINF:-1 tvg-id="600002516" tvg-name="四川衛視" group-title="衛視頻道",四川衛視
+video://https://www.yangshipin.cn/tv/home?pid=600002516
+#EXTINF:-1 tvg-id="600002525" tvg-name="河南衛視" group-title="衛視頻道",河南衛視
+video://https://www.yangshipin.cn/tv/home?pid=600002525
+#EXTINF:-1 tvg-id="600002484" tvg-name="福建東南衛視" group-title="衛視頻道",福建東南衛視
+video://https://www.yangshipin.cn/tv/home?pid=600002484
+#EXTINF:-1 tvg-id="600002490" tvg-name="貴州衛視" group-title="衛視頻道",貴州衛視
+video://https://www.yangshipin.cn/tv/home?pid=600002490
+#EXTINF:-1 tvg-id="600002503" tvg-name="江西衛視" group-title="衛視頻道",江西衛視
+video://https://www.yangshipin.cn/tv/home?pid=600002503
+#EXTINF:-1 tvg-id="600002505" tvg-name="遼寧衛視" group-title="衛視頻道",遼寧衛視
+video://https://www.yangshipin.cn/tv/home?pid=600002505
+#EXTINF:-1 tvg-id="600002532" tvg-name="安徽衛視" group-title="衛視頻道",安徽衛視
+video://https://www.yangshipin.cn/tv/home?pid=600002532
+#EXTINF:-1 tvg-id="600002493" tvg-name="河北衛視" group-title="衛視頻道",河北衛視
+video://https://www.yangshipin.cn/tv/home?pid=600002493
+#EXTINF:-1 tvg-id="600002513" tvg-name="山東衛視" group-title="衛視頻道",山東衛視
+video://https://www.yangshipin.cn/tv/home?pid=600002513
+#EXTINF:-1 tvg-id="600152137" tvg-name="天津衛視" group-title="衛視頻道",天津衛視
+video://https://www.yangshipin.cn/tv/home?pid=600152137
+#EXTINF:-1 tvg-id="600190405" tvg-name="吉林衛視" group-title="衛視頻道",吉林衛視
+video://https://www.yangshipin.cn/tv/home?pid=600190405
+#EXTINF:-1 tvg-id="600190400" tvg-name="陝西衛視" group-title="衛視頻道",陝西衛視
+video://https://www.yangshipin.cn/tv/home?pid=600190400
+#EXTINF:-1 tvg-id="600190408" tvg-name="甘肅衛視" group-title="衛視頻道",甘肅衛視
+video://https://www.yangshipin.cn/tv/home?pid=600190408
+#EXTINF:-1 tvg-id="600190737" tvg-name="寧夏衛視" group-title="衛視頻道",寧夏衛視
+video://https://www.yangshipin.cn/tv/home?pid=600190737
+#EXTINF:-1 tvg-id="600190401" tvg-name="內蒙古衛視" group-title="衛視頻道",內蒙古衛視
+video://https://www.yangshipin.cn/tv/home?pid=600190401
+#EXTINF:-1 tvg-id="600190402" tvg-name="雲南衛視" group-title="衛視頻道",雲南衛視
+video://https://www.yangshipin.cn/tv/home?pid=600190402
+#EXTINF:-1 tvg-id="600190407" tvg-name="山西衛視" group-title="衛視頻道",山西衛視
+video://https://www.yangshipin.cn/tv/home?pid=600190407
+#EXTINF:-1 tvg-id="600190406" tvg-name="青海衛視" group-title="衛視頻道",青海衛視
+video://https://www.yangshipin.cn/tv/home?pid=600190406
+#EXTINF:-1 tvg-id="600190403" tvg-name="西藏衛視" group-title="衛視頻道",西藏衛視
+video://https://www.yangshipin.cn/tv/home?pid=600190403
+#EXTINF:-1 tvg-id="600171827" tvg-name="中國教育電視臺1頻道" group-title="衛視頻道",中國教育電視臺1頻道
+video://https://www.yangshipin.cn/tv/home?pid=600171827
+#EXTINF:-1 tvg-id="600152138" tvg-name="新疆衛視" group-title="衛視頻道",新疆衛視
+video://https://www.yangshipin.cn/tv/home?pid=600152138

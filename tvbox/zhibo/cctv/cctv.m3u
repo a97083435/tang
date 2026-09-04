@@ -1,0 +1,61 @@
+#EXTM3U
+#EXTINF:-1 tvg-id="cctv1" tvg-name="CCTV-1 綜合" group-title="央視頻道",CCTV-1 綜合
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36&Referer=https://tv.cctv.com/
+video://https://tv.cctv.com/live/cctv1/m/
+#EXTINF:-1 tvg-id="cctv2" tvg-name="CCTV-2 財經" group-title="央視頻道",CCTV-2 財經
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36&Referer=https://tv.cctv.com/
+video://https://tv.cctv.com/live/cctv2/m/
+#EXTINF:-1 tvg-id="cctv3" tvg-name="CCTV-3 綜藝" group-title="央視頻道",CCTV-3 綜藝
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36&Referer=https://tv.cctv.com/
+video://https://tv.cctv.com/live/cctv3/m/
+#EXTINF:-1 tvg-id="cctv4" tvg-name="CCTV-4 中文國際（亞）" group-title="央視頻道",CCTV-4 中文國際（亞）
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36&Referer=https://tv.cctv.com/
+video://https://tv.cctv.com/live/cctv4/m/
+#EXTINF:-1 tvg-id="cctv5" tvg-name="CCTV-5 體育" group-title="央視頻道",CCTV-5 體育
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36&Referer=https://tv.cctv.com/
+video://https://tv.cctv.com/live/cctv5/m/
+#EXTINF:-1 tvg-id="cctv5plus" tvg-name="CCTV-5+ 體育賽事" group-title="央視頻道",CCTV-5+ 體育賽事
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36&Referer=https://tv.cctv.com/
+video://https://tv.cctv.com/live/cctv5plus/m/
+#EXTINF:-1 tvg-id="cctv6" tvg-name="CCTV-6 電影" group-title="央視頻道",CCTV-6 電影
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36&Referer=https://tv.cctv.com/
+video://https://tv.cctv.com/live/cctv6/m/
+#EXTINF:-1 tvg-id="cctv7" tvg-name="CCTV-7 國防軍事" group-title="央視頻道",CCTV-7 國防軍事
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36&Referer=https://tv.cctv.com/
+video://https://tv.cctv.com/live/cctv7/m/
+#EXTINF:-1 tvg-id="cctv8" tvg-name="CCTV-8 電視劇" group-title="央視頻道",CCTV-8 電視劇
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36&Referer=https://tv.cctv.com/
+video://https://tv.cctv.com/live/cctv8/m/
+#EXTINF:-1 tvg-id="cctvjilu" tvg-name="CCTV-9 紀錄" group-title="央視頻道",CCTV-9 紀錄
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36&Referer=https://tv.cctv.com/
+video://https://tv.cctv.com/live/cctvjilu/m/
+#EXTINF:-1 tvg-id="cctv10" tvg-name="CCTV-10 科教" group-title="央視頻道",CCTV-10 科教
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36&Referer=https://tv.cctv.com/
+video://https://tv.cctv.com/live/cctv10/m/
+#EXTINF:-1 tvg-id="cctv11" tvg-name="CCTV-11 戲曲" group-title="央視頻道",CCTV-11 戲曲
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36&Referer=https://tv.cctv.com/
+video://https://tv.cctv.com/live/cctv11/m/
+#EXTINF:-1 tvg-id="cctv12" tvg-name="CCTV-12 社會與法" group-title="央視頻道",CCTV-12 社會與法
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36&Referer=https://tv.cctv.com/
+video://https://tv.cctv.com/live/cctv12/m/
+#EXTINF:-1 tvg-id="cctv13" tvg-name="CCTV-13 新聞" group-title="央視頻道",CCTV-13 新聞
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36&Referer=https://tv.cctv.com/
+video://https://tv.cctv.com/live/cctv13/m/
+#EXTINF:-1 tvg-id="cctvchild" tvg-name="CCTV-14 少兒" group-title="央視頻道",CCTV-14 少兒
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36&Referer=https://tv.cctv.com/
+video://https://tv.cctv.com/live/cctvchild/m/
+#EXTINF:-1 tvg-id="cctv15" tvg-name="CCTV-15 音樂" group-title="央視頻道",CCTV-15 音樂
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36&Referer=https://tv.cctv.com/
+video://https://tv.cctv.com/live/cctv15/m/
+#EXTINF:-1 tvg-id="cctv16" tvg-name="CCTV-16 奧林匹克" group-title="央視頻道",CCTV-16 奧林匹克
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36&Referer=https://tv.cctv.com/
+video://https://tv.cctv.com/live/cctv16/m/
+#EXTINF:-1 tvg-id="cctv17" tvg-name="CCTV-17 農業農村" group-title="央視頻道",CCTV-17 農業農村
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36&Referer=https://tv.cctv.com/
+video://https://tv.cctv.com/live/cctv17/m/
+#EXTINF:-1 tvg-id="cctveurope" tvg-name="CCTV-4 中文國際（歐）" group-title="央視頻道",CCTV-4 中文國際（歐）
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36&Referer=https://tv.cctv.com/
+video://https://tv.cctv.com/live/cctveurope/m/
+#EXTINF:-1 tvg-id="cctvamerica" tvg-name="CCTV-4 中文國際（美）" group-title="央視頻道",CCTV-4 中文國際（美）
+#KODIPROP:inputstream.adaptive.stream_headers=User-Agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36&Referer=https://tv.cctv.com/
+video://https://tv.cctv.com/live/cctvamerica/m/
