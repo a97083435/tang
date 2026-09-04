@@ -1,0 +1,28 @@
+{
+  "rules": [
+    {
+      "name": "央視官網播放器",
+      "hosts": [
+        "tv.cctv.com"
+      ],
+      "script": [
+        "(function(){if(typeof livePlayerObjs==='object'&&!livePlayerObjs.player&&typeof playzhibo==='function'){playzhibo();}})()"
+      ]
+    }
+  ],
+  "lives": [
+    {
+      "name": "央視頻直播",
+      "url": "./yangshipin.m3u",
+      "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36",
+      "click": "(function(){var n=0,t=setInterval(function(){var e=document.querySelector('.c-container'),v=e&&e.__vue__;if(v&&typeof v.onInitPlayVideo==='function'){clearInterval(t);v.onInitPlayVideo();}else if(++n>50)clearInterval(t);},200);})()",
+      "timeout": 30
+    },
+    {
+      "name": "央視官網直播",
+      "url": "./cctv.m3u",
+      "timeout": 20
+    }
+  ]
+}
+
