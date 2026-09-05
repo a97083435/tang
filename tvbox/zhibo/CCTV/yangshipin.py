@@ -1,7 +1,9 @@
+import datetime
 import hashlib
 import json
 import os
 import random
+import re
 import string
 import struct
 import tempfile
@@ -22,14 +24,68 @@ PAGE_URL = "https://capi.yangshipin.cn/api/oms/pc/page/{}"
 PLAYER_URL = "https://player-api.yangshipin.cn/v1/player/"
 OPEN_TOKEN_URL = "https://h5access.yangshipin.cn/web/open/token"
 KEYGEN_URL = "https://s.yangshipin.cn/CCTVVideo/cctvh5-openapicore/keygen_bg.wasm"
+EPG_URL = "https://api.cntv.cn/epg/getEpgInfoByChannelNew"
 HLS_MIME = "application/x-mpegURL"
 CATALOG_TIMEOUT = 8
 PLAYER_TIMEOUT = 15
+EPG_CACHE_SECONDS = 60 * 60
+TAIPEI = datetime.timezone(datetime.timedelta(hours=8))
+LOGO_URL = "https://epg.112114.xyz/logo/{}.png"
 USER_AGENT = (
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
     "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36"
 )
 GROUP_NAMES = {"yangshi": "央視頻道", "weishi": "衛視頻道"}
+XMLTV_NAMES = {
+    "CCTV1": "CCTV-1 综合",
+    "CCTV2": "CCTV-2 财经",
+    "CCTV3": "CCTV-3 综艺",
+    "CCTV4": "CCTV-4 中文国际",
+    "CCTV5": "CCTV-5 体育",
+    "CCTV5+": "CCTV-5+ 体育赛事",
+    "CCTV6": "CCTV-6 电影",
+    "CCTV7": "CCTV-7 国防 军事",
+    "CCTV8": "CCTV-8 电视剧",
+    "CCTV9": "CCTV-9 记录",
+    "CCTV10": "CCTV-10 科教",
+    "CCTV11": "CCTV-11 戏曲",
+    "CCTV12": "CCTV-12 社会与法",
+    "CCTV13": "CCTV-13 新闻",
+    "CCTV14": "CCTV-14 少儿",
+    "CCTV15": "CCTV-15 音乐",
+    "CCTV16-HD": "CCTV-16 奥林匹克",
+    "CCTV16(4K）": "CCTV-16 奥林匹克",
+    "CCTV17": "CCTV-17 农业 农村",
+    "CCTV4K": "CCTV-4K",
+    "CCTV8K": "CCTV8K",
+    "CGTN": "CGTN英语",
+    "CGTN法语频道": "CGTN法语",
+    "CGTN俄语频道": "CGTN俄语",
+    "CGTN阿拉伯语频道": "CGTN阿拉伯语",
+    "CGTN西班牙语频道": "CGTN西班牙语",
+    "CGTN外语纪录频道": "CGTN英文记录",
+    "CCTV风云剧场频道": "CCTV-风云剧场",
+    "CCTV第一剧场频道": "CCTV-第一剧场",
+    "CCTV怀旧剧场频道": "CCTV-怀旧剧场",
+    "CCTV世界地理频道": "CCTV-世界地理",
+    "CCTV风云音乐频道": "CCTV-风云音乐",
+    "CCTV兵器科技频道": "CCTV-兵器科技",
+    "CCTV风云足球频道": "CCTV-央视足球",
+    "CCTV高尔夫·网球频道": "CCTV-高尔夫网球",
+    "CCTV女性时尚频道": "CCTV-女性时尚",
+    "CCTV央视文化精品频道": "CCTV-央视文化精品",
+    "CCTV央视台球频道": "CCTV-央视台球",
+    "CCTV电视指南频道": "CCTV-电视指南",
+    "CCTV卫生健康频道": "CCTV-卫生健康",
+}
+LOGO_NAMES = {
+    "CCTV16-HD": "CCTV16",
+    "CCTV16(4K）": "CCTV16-4K",
+    "CGTN阿拉伯语频道": "CGTN阿拉伯语",
+    "CGTN西班牙语频道": "CGTN西班牙语",
+    "CGTN外语纪录频道": "CGTN纪录",
+    "CCTV高尔夫·网球频道": "CCTV高尔夫网球",
+}
 MIN_CHANNELS = 50
 YSP_APP_ID = "519748109"
 APP_VERSION = "V1.0.0"
@@ -45,6 +101,35 @@ TICKET_KEYSTREAM = bytes.fromhex(
 TICKET_SUFFIX = "bSCz8SqH8T"
 PLAY_CACHE_SECONDS = 60
 _KEYGEN_LOCK = threading.Lock()
+
+
+def _cntv_epg_id(name):
+    special = {
+        "CCTV5+": "cctv5plus",
+        "CCTV16-HD": "cctv16",
+        "CCTV16(4K）": "cctv16",
+        "CCTV4K": "cctv4k",
+        "CCTV8K": "cctv8k",
+        "CCTV第一剧场频道": "diyijuchang",
+        "CCTV世界地理频道": "shijiedili",
+    }
+    if name in special:
+        return special[name]
+    match = re.fullmatch(r"CCTV(\d{1,2})", name)
+    if not match or not 1 <= int(match.group(1)) <= 17:
+        return ""
+    if match.group(1) == "9":
+        return "cctvjilu"
+    if match.group(1) == "14":
+        return "cctvchild"
+    return "cctv" + match.group(1)
+
+
+def _logo(name, fallback):
+    logo_name = LOGO_NAMES.get(name)
+    if not logo_name:
+        logo_name = name[:-2] if name.endswith("频道") else name
+    return LOGO_URL.format(quote(logo_name, safe="")) if logo_name else fallback
 
 
 def _md5(value):
@@ -390,7 +475,9 @@ class Spider(BaseSpider):
         self.snapshot_url = extend
         self.player = None
         self.play_cache = {}
+        self.epg_cache = {}
         self.player_lock = threading.RLock()
+        self.epg_lock = threading.Lock()
 
     def getName(self):
         return "央視頻"
@@ -409,6 +496,9 @@ class Spider(BaseSpider):
 
     def localProxy(self, param):
         try:
+            if param.get("type") == "epg":
+                content = self._epg(param.get("id", ""), param.get("date", ""))
+                return [200, "application/json", content]
             location = self._resolve(param.get("pid", ""), param.get("cnlid", ""))
             return [302, "text/plain", "", {"Location": location}]
         except Exception as error:
@@ -418,6 +508,63 @@ class Spider(BaseSpider):
         with self.player_lock:
             self.player = None
             self.play_cache.clear()
+        self.epg_cache = {}
+
+    def _epg(self, channel_id, date):
+        if not isinstance(channel_id, str) or not re.fullmatch(r"[a-z0-9]+", channel_id):
+            raise ValueError("invalid epg channel id")
+        try:
+            datetime.date.fromisoformat(date)
+        except (TypeError, ValueError):
+            raise ValueError("invalid date") from None
+        key = (channel_id, date)
+        now = time.monotonic()
+        with self.epg_lock:
+            cached = self.epg_cache.get(key)
+            if cached and now < cached[0]:
+                return cached[1]
+        with requests.get(
+            EPG_URL,
+            params={
+                "c": channel_id,
+                "serviceId": "tvcctv",
+                "d": date.replace("-", ""),
+            },
+            headers={"Referer": "https://tv.cctv.com/", "User-Agent": USER_AGENT},
+            timeout=CATALOG_TIMEOUT,
+        ) as response:
+            response.raise_for_status()
+            result = response.json()
+        data = result.get("data") if isinstance(result, dict) else None
+        channel = data.get(channel_id) if isinstance(data, dict) else None
+        rows = channel.get("list") if isinstance(channel, dict) else None
+        if not isinstance(rows, list):
+            raise ValueError("invalid epg response")
+        items = []
+        for row in rows:
+            if not isinstance(row, dict):
+                continue
+            title = str(row.get("title") or "").strip()
+            if not title:
+                continue
+            try:
+                start = datetime.datetime.fromtimestamp(
+                    int(row.get("startTime")), TAIPEI
+                ).strftime("%H:%M:%S")
+                end = datetime.datetime.fromtimestamp(
+                    int(row.get("endTime")), TAIPEI
+                ).strftime("%H:%M:%S")
+            except (TypeError, ValueError, OverflowError):
+                continue
+            items.append({"title": title, "start": start, "end": end})
+        content = json.dumps(
+            {"date": date, "epg_data": items},
+            ensure_ascii=False,
+            separators=(",", ":"),
+        )
+        with self.epg_lock:
+            self.epg_cache[key] = (now + EPG_CACHE_SECONDS, content)
+        return content
 
     def _resolve(self, pid, cnlid):
         pid = str(pid)
@@ -602,12 +749,13 @@ class Spider(BaseSpider):
         pid = str(channel["pid"])
         cnlid = str(channel.get("cnlid") or "")
         name = str(channel["name"])
-        return {
+        epg_id = _cntv_epg_id(name)
+        item = {
             "name": name,
-            "tvgName": name,
+            "tvgName": XMLTV_NAMES.get(name, name),
             "tvgId": pid,
-            "number": str(number),
-            "logo": str(channel.get("logo") or ""),
+            "number": "{:02d}".format(number),
+            "logo": _logo(name, str(channel.get("logo") or "")),
             "format": HLS_MIME,
             "ua": USER_AGENT,
             "urls": [
@@ -618,6 +766,12 @@ class Spider(BaseSpider):
                 )
             ],
         }
+        if epg_id:
+            item["epg"] = "{}&type=epg&id={}&date={{date}}".format(
+                proxy,
+                quote(epg_id, safe=""),
+            )
+        return item
 
     @staticmethod
     def _new_session():

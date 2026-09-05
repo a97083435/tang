@@ -1,14 +1,16 @@
 {
   "lives": [
     {
-      "name": "央視頻直播",
+      "name": "央視頻",
       "url": "https://capi.yangshipin.cn/api/oms/pc/navigation/home_top_nav",
       "api": "./yangshipin.py",
       "ext": "./yangshipin.json",
+      "epg": "https://github.com/litiande03/epg/raw/refs/heads/master/pl.xml.gz",
+      "timeZone": "Asia/Shanghai",
       "timeout": 30
     },
     {
-      "name": "央視官網直播",
+      "name": "央視官網",
       "url": "https://tv.cctv.com/live/",
       "api": "./cctv.py",
       "ext": "./cctv.json",
