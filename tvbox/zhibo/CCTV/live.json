@@ -1,0 +1,19 @@
+{
+  "lives": [
+    {
+      "name": "央視頻直播",
+      "url": "https://capi.yangshipin.cn/api/oms/pc/navigation/home_top_nav",
+      "api": "./yangshipin.py",
+      "ext": "./yangshipin.json",
+      "timeout": 30
+    },
+    {
+      "name": "央視官網直播",
+      "url": "https://tv.cctv.com/live/",
+      "api": "./cctv.py",
+      "ext": "./cctv.json",
+      "timeout": 20
+    }
+  ]
+}
+
