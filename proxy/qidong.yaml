@@ -1,0 +1,944 @@
+mixed-port: 7890
+allow-lan: true
+bind-address: '*'
+mode: rule
+log-level: info
+ipv6: false
+unified-delay: true
+tcp-concurrent: true
+geodata-mode: true
+geox-url:
+  geoip: "https://cdn.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geoip.dat"
+  geosite: "https://cdn.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geosite.dat"
+geo-auto-update: true
+geo-update-interval: 24
+global-ua: clash.meta
+
+dns:
+  enable: true
+  ipv6: false
+  listen: 0.0.0.0:1053
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - "*.lan"
+    - "*.local"
+    - "*.arpa"
+    - time.*.com
+    - ntp.*.com
+    - +.market.xiaomi.com
+    - localhost.ptlogin2.qq.com
+    - "*.msftncsi.com"
+    - www.msftconnecttest.com
+  use-hosts: true
+  cache-algorithm: arc
+  prefer-h3: false
+  respect-rules: true
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+  nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+  nameserver-policy:
+    "geosite:cn":
+      - https://dns.alidns.com/dns-query
+      - https://doh.pub/dns-query
+    "geosite:geolocation-!cn":
+      - https://cloudflare-dns.com/dns-query#proxy=节点选择
+      - https://dns.google/dns-query#proxy=节点选择
+  proxy-server-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+
+proxy-providers:
+  VPNGATE-CHAIN:
+    type: http
+    url: "https://raw.githubusercontent.com/wanwushequ/VG2C/main/vpngate.yaml"
+    path: "./providers/vpngate-chain.yaml"
+    proxy: "端点自动"
+    interval: 1800
+    size-limit: 4194304
+    health-check:
+      enable: true
+      url: https://cloudflare.com/cdn-cgi/trace
+      interval: 300
+      timeout: 6000
+      lazy: false
+    override:
+      additional-prefix: "端点手动 → "
+      dialer-proxy: "端点手动"
+  VPNGATE-CHAIN-AUTO:
+    type: http
+    url: "https://raw.githubusercontent.com/wanwushequ/VG2C/main/vpngate.yaml"
+    path: "./providers/vpngate-chain-auto.yaml"
+    proxy: "端点自动"
+    interval: 1800
+    size-limit: 4194304
+    health-check:
+      enable: true
+      url: https://cloudflare.com/cdn-cgi/trace
+      interval: 300
+      timeout: 6000
+      lazy: false
+    override:
+      additional-prefix: "UN | "
+      dialer-proxy: "端点自动"	  
+  VPNGATE-CHAIN-JP:
+    type: http
+    url: "https://raw.githubusercontent.com/wanwushequ/VG2C/main/vpngate-jp.yaml"
+    path: "./providers/vpngate-chain-jp.yaml"
+    proxy: "端点自动"
+    interval: 1800
+    size-limit: 4194304
+    health-check:
+      enable: true
+      url: https://cloudflare.com/cdn-cgi/trace
+      interval: 300
+      timeout: 6000
+      lazy: false
+    override:
+      additional-prefix: "JP | "
+      dialer-proxy: "端点自动"
+  VPNGATE-CHAIN-KR:
+    type: http
+    url: "https://raw.githubusercontent.com/wanwushequ/VG2C/main/vpngate-kr.yaml"
+    path: "./providers/vpngate-chain-kr.yaml"
+    proxy: "端点自动"
+    interval: 1800
+    size-limit: 4194304
+    health-check:
+      enable: true
+      url: https://cloudflare.com/cdn-cgi/trace
+      interval: 300
+      timeout: 6000
+      lazy: false
+    override:
+      additional-prefix: "KR | "
+      dialer-proxy: "端点自动"
+
+proxy-groups:
+  - name: 节点选择
+    type: select
+    proxies: [端点自动, 端点手动, 端点故障, 切换地区, 链式代理, 高纯净度, DIRECT]
+    icon: "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Rocket.png"
+  - name: 端点自动
+    type: url-test
+    url: https://cloudflare.com/cdn-cgi/trace
+    interval: 300
+    tolerance: 30
+    proxies: ["MASQUE导航 | 13.250.41.68 | 443", "MASQUE导航 | 172.237.6.233 | 443", "MASQUE导航 | 13.124.209.180 | 443", "MASQUE导航 | masque-sg1.bestcf.eu.cc | 443", "MASQUE导航 | masque-jp1.bestcf.eu.cc | 443", "MASQUE导航 | masque-kr1.bestcf.eu.cc | 443", "MASQUE导航 | masque1.bestcf.eu.cc | 443", "MASQUE导航 | masque2.bestcf.eu.cc | 443", "MASQUE导航 | 162.159.198.2 | 8095", "MASQUE导航 | 162.159.198.2 | 443", "MASQUE导航 | 162.159.198.2 | 8443", "MASQUE导航 | 162.159.198.2 | 4443", "MASQUE导航 | 162.159.198.2 | 1701", "MASQUE导航 | 162.159.198.2 | 4500", "MASQUE导航 | 162.159.198.2 | 500", "MASQUE导航 | 162.159.199.2 | 8095", "MASQUE导航 | 162.159.199.2 | 443", "MASQUE导航 | 162.159.199.2 | 8443", "MASQUE导航 | 162.159.199.2 | 4443", "MASQUE导航 | 162.159.199.2 | 1701", "MASQUE导航 | 162.159.199.2 | 4500", "MASQUE导航 | 162.159.199.2 | 500"]
+    icon: "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png"
+  - name: 端点手动
+    type: select
+    proxies: ["MASQUE导航 | 13.250.41.68 | 443", "MASQUE导航 | 172.237.6.233 | 443", "MASQUE导航 | 13.124.209.180 | 443", "MASQUE导航 | masque-sg1.bestcf.eu.cc | 443", "MASQUE导航 | masque-jp1.bestcf.eu.cc | 443", "MASQUE导航 | masque-kr1.bestcf.eu.cc | 443", "MASQUE导航 | masque1.bestcf.eu.cc | 443", "MASQUE导航 | masque2.bestcf.eu.cc | 443", "MASQUE导航 | 162.159.198.2 | 8095", "MASQUE导航 | 162.159.198.2 | 443", "MASQUE导航 | 162.159.198.2 | 8443", "MASQUE导航 | 162.159.198.2 | 4443", "MASQUE导航 | 162.159.198.2 | 1701", "MASQUE导航 | 162.159.198.2 | 4500", "MASQUE导航 | 162.159.198.2 | 500", "MASQUE导航 | 162.159.199.2 | 8095", "MASQUE导航 | 162.159.199.2 | 443", "MASQUE导航 | 162.159.199.2 | 8443", "MASQUE导航 | 162.159.199.2 | 4443", "MASQUE导航 | 162.159.199.2 | 1701", "MASQUE导航 | 162.159.199.2 | 4500", "MASQUE导航 | 162.159.199.2 | 500"]
+    icon: "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Static.png"		
+  - name: 端点故障
+    type: fallback
+    url: https://cloudflare.com/cdn-cgi/trace
+    interval: 300
+    proxies: ["MASQUE导航 | 13.250.41.68 | 443", "MASQUE导航 | 172.237.6.233 | 443", "MASQUE导航 | 13.124.209.180 | 443", "MASQUE导航 | masque-sg1.bestcf.eu.cc | 443", "MASQUE导航 | masque-jp1.bestcf.eu.cc | 443", "MASQUE导航 | masque-kr1.bestcf.eu.cc | 443", "MASQUE导航 | masque1.bestcf.eu.cc | 443", "MASQUE导航 | masque2.bestcf.eu.cc | 443", "MASQUE导航 | 162.159.198.2 | 8095", "MASQUE导航 | 162.159.198.2 | 443", "MASQUE导航 | 162.159.198.2 | 8443", "MASQUE导航 | 162.159.198.2 | 4443", "MASQUE导航 | 162.159.198.2 | 1701", "MASQUE导航 | 162.159.198.2 | 4500", "MASQUE导航 | 162.159.198.2 | 500", "MASQUE导航 | 162.159.199.2 | 8095", "MASQUE导航 | 162.159.199.2 | 443", "MASQUE导航 | 162.159.199.2 | 8443", "MASQUE导航 | 162.159.199.2 | 4443", "MASQUE导航 | 162.159.199.2 | 1701", "MASQUE导航 | 162.159.199.2 | 4500", "MASQUE导航 | 162.159.199.2 | 500"]
+    icon: "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Proxy.png"
+  - name: 切换地区
+    type: select
+    proxies: [DIRECT]
+    icon: "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Domestic.png"	
+  - name: 链式代理
+    type: select
+    proxies: [DIRECT]
+    icon: "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin.png"
+  - name: 高纯净度
+    type: select
+    icon: "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Back.png"
+    proxies:
+      - "端点自动 → 🇺🇳 不限 [自动]"
+      - "端点自动 → 🇯🇵 日本 [自动]"
+      - "端点自动 → 🇰🇷 韩国 [自动]"
+    use:
+      - "VPNGATE-CHAIN"
+  - name: "端点自动 → 🇺🇳 不限 [自动]"
+    type: url-test
+    hidden: true
+    url: https://cloudflare.com/cdn-cgi/trace
+    interval: 300
+    tolerance: 30
+    lazy: false
+    max-failed-times: 2
+    use:
+      - "VPNGATE-CHAIN-AUTO"
+  - name: "端点自动 → 🇯🇵 日本 [自动]"
+    type: url-test
+    hidden: true
+    url: https://cloudflare.com/cdn-cgi/trace
+    interval: 300
+    tolerance: 30
+    lazy: false
+    max-failed-times: 2
+    use:
+      - "VPNGATE-CHAIN-JP"
+  - name: "端点自动 → 🇰🇷 韩国 [自动]"
+    type: url-test
+    hidden: true
+    url: https://cloudflare.com/cdn-cgi/trace
+    interval: 300
+    tolerance: 30
+    lazy: false
+    max-failed-times: 2
+    use:
+      - "VPNGATE-CHAIN-KR"
+  - name: 人工智能
+    type: select
+    icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ChatGPT.png
+    proxies: [节点选择, 端点自动, 端点手动, 端点故障, 切换地区, 链式代理, 高纯净度, DIRECT]
+
+  - name: 视频平台
+    type: select
+    icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/TikTok.png
+    proxies: [节点选择, 端点自动, 端点手动, 端点故障, 切换地区, 链式代理, 高纯净度, DIRECT]
+
+  - name: 电报信息
+    type: select
+    icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Telegram.png
+    proxies: [节点选择, 端点自动, 端点手动, 端点故障, 切换地区, 链式代理, 高纯净度, DIRECT]
+
+  - name: 微软服务
+    type: select
+    icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Microsoft.png
+    proxies: [全球直连, 节点选择, 端点自动, 端点手动, 端点故障, 切换地区, 链式代理, 高纯净度, DIRECT]
+
+  - name: 苹果服务
+    type: select
+    icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Apple.png
+    proxies: [全球直连, 节点选择, 端点自动, 端点手动, 端点故障, 切换地区, 链式代理, 高纯净度, DIRECT]
+
+  - name: 加速服务
+    type: select
+    icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Cloudflare.png
+    proxies: [节点选择, 端点自动, 端点手动, 端点故障, 切换地区, 链式代理, 高纯净度, DIRECT]
+
+  - name: 游戏平台
+    type: select
+    icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Game.png
+    proxies: [节点选择, 端点自动, 端点手动, 端点故障, 切换地区, 链式代理, 高纯净度, DIRECT]
+
+  - name: 国外网站
+    type: select
+    icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Global.png
+    proxies: [节点选择, 端点自动, 端点手动, 端点故障, 切换地区, 链式代理, 高纯净度, DIRECT]
+
+  - name: 全球直连
+    type: select
+    proxies: [DIRECT]
+    icon: "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Direct.png"
+  - name: 全球拦截
+    type: select
+    proxies: [REJECT, 节点选择, DIRECT]
+    icon: "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Reject.png"
+  - name: 漏网之鱼
+    type: select
+    icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Final.png
+    proxies: [节点选择, 端点自动, 端点手动, 端点故障, 切换地区, 链式代理, 高纯净度, 全球直连, DIRECT]
+
+rule-providers:
+  bilibili:
+    type: http
+    interval: 43200
+    behavior: domain
+    format: mrs
+    url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/bilibili.mrs
+    proxy: "节点选择"
+
+  cn:
+    type: http
+    interval: 43200
+    behavior: domain
+    format: mrs
+    url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/cn.mrs
+    proxy: "节点选择"
+
+  category-ai-!cn:
+    type: http
+    interval: 43200
+    behavior: domain
+    format: mrs
+    url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-ai-!cn.mrs
+    proxy: "节点选择"
+
+  youtube:
+    type: http
+    interval: 43200
+    behavior: domain
+    format: mrs
+    url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/youtube.mrs
+    proxy: "节点选择"
+
+  netflix:
+    type: http
+    interval: 43200
+    behavior: domain
+    format: mrs
+    url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/netflix.mrs
+    proxy: "节点选择"
+
+  disney:
+    type: http
+    interval: 43200
+    behavior: domain
+    format: mrs
+    url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/disney.mrs
+    proxy: "节点选择"
+
+  spotify:
+    type: http
+    interval: 43200
+    behavior: domain
+    format: mrs
+    url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/spotify.mrs
+    proxy: "节点选择"
+
+  tiktok:
+    type: http
+    interval: 43200
+    behavior: domain
+    format: mrs
+    url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/tiktok.mrs
+    proxy: "节点选择"
+
+  primevideo:
+    type: http
+    interval: 43200
+    behavior: domain
+    format: mrs
+    url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/primevideo.mrs
+    proxy: "节点选择"
+
+  hbo:
+    type: http
+    interval: 43200
+    behavior: domain
+    format: mrs
+    url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/hbo.mrs
+    proxy: "节点选择"
+
+  emby:
+    type: http
+    interval: 43200
+    behavior: domain
+    format: mrs
+    url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-emby.mrs
+    proxy: "节点选择"
+
+  telegram:
+    type: http
+    interval: 43200
+    behavior: domain
+    format: mrs
+    url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/telegram.mrs
+    proxy: "节点选择"
+
+  microsoft:
+    type: http
+    interval: 43200
+    behavior: domain
+    format: mrs
+    url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/microsoft.mrs
+    proxy: "节点选择"
+
+  apple:
+    type: http
+    interval: 43200
+    behavior: domain
+    format: mrs
+    url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/apple.mrs
+    proxy: "节点选择"
+
+  cloudflare:
+    type: http
+    interval: 43200
+    behavior: domain
+    format: mrs
+    url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/cloudflare.mrs
+    proxy: "节点选择"
+
+  steam:
+    type: http
+    interval: 43200
+    behavior: domain
+    format: mrs
+    url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/steam.mrs
+    proxy: "节点选择"
+
+  epicgames:
+    type: http
+    interval: 43200
+    behavior: domain
+    format: mrs
+    url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/epicgames.mrs
+    proxy: "节点选择"
+
+  sony:
+    type: http
+    interval: 43200
+    behavior: domain
+    format: mrs
+    url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/sony.mrs
+    proxy: "节点选择"
+
+  xbox:
+    type: http
+    interval: 43200
+    behavior: domain
+    format: mrs
+    url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/xbox.mrs
+    proxy: "节点选择"
+
+  geolocation-!cn:
+    type: http
+    interval: 43200
+    behavior: domain
+    format: mrs
+    url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/geolocation-!cn.mrs
+    proxy: "节点选择"
+
+  category-ads-all:
+    type: http
+    interval: 43200
+    behavior: domain
+    format: mrs
+    url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-ads-all.mrs
+    proxy: "节点选择"
+
+  private_ip:
+    type: http
+    interval: 43200
+    behavior: ipcidr
+    format: mrs
+    url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo-lite/geoip/private.mrs
+    proxy: "节点选择"
+
+  netflix_ip:
+    type: http
+    interval: 43200
+    behavior: ipcidr
+    format: mrs
+    url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo-lite/geoip/netflix.mrs
+    proxy: "节点选择"
+
+  telegram_ip:
+    type: http
+    interval: 43200
+    behavior: ipcidr
+    format: mrs
+    url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/telegram.mrs
+    proxy: "节点选择"
+
+  cloudflare_ip:
+    type: http
+    interval: 43200
+    behavior: ipcidr
+    format: mrs
+    url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/cloudflare.mrs
+    proxy: "节点选择"
+
+  cn_ip:
+    type: http
+    interval: 43200
+    behavior: ipcidr
+    format: mrs
+    url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo-lite/geoip/cn.mrs
+    proxy: "节点选择"
+
+  gfw:
+    type: http
+    interval: 43200
+    behavior: domain
+    format: mrs
+    url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/gfw.mrs
+    proxy: "节点选择"
+
+  ad_ip:
+    type: http
+    interval: 43200
+    behavior: ipcidr
+    format: mrs
+    url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/ad.mrs
+    proxy: "节点选择"
+
+rules:
+  # ===== 拦截 =====
+  - RULE-SET,category-ads-all,全球拦截
+  - RULE-SET,ad_ip,全球拦截,no-resolve
+
+  # ===== 私有地址直连（geo + mrs 双保险）=====
+  - RULE-SET,private_ip,全球直连,no-resolve
+  - GEOIP,private,全球直连,no-resolve
+
+  # ===== AI =====
+  # 人工智能-Gemini-手机端
+  - DOMAIN-SUFFIX,pa.googleapis.com,人工智能
+  - DOMAIN,robinfrontend-pa.googleapis.com,人工智能
+  - DOMAIN,signaler-pa.googleapis.com,人工智能
+  
+  # 人工智能-ACL4SSR通用-50条
+  - DOMAIN-KEYWORD,anthropic,人工智能
+  - DOMAIN-KEYWORD,claude,人工智能
+  - DOMAIN-KEYWORD,openai,人工智能
+  - DOMAIN,ai.google.dev,人工智能
+  - DOMAIN,aistudio.google.com,人工智能
+  - DOMAIN,api.githubcopilot.com,人工智能
+  - DOMAIN,api.groq.com,人工智能
+  - DOMAIN,api.together.xyz,人工智能
+  - DOMAIN,bard.google.com,人工智能
+  - DOMAIN,console.groq.com,人工智能
+  - DOMAIN,copilot-proxy.githubusercontent.com,人工智能
+  - DOMAIN,gemini.google.com,人工智能
+  - DOMAIN,generativelanguage.googleapis.com,人工智能
+  - DOMAIN,notebooklm.google.com,人工智能
+  - DOMAIN,sydney.bing.com,人工智能
+  - DOMAIN-SUFFIX,ai.azure.com,人工智能
+  - DOMAIN-SUFFIX,anthropic.com,人工智能
+  - DOMAIN-SUFFIX,auth0.com,人工智能
+  - DOMAIN-SUFFIX,bard.google.com,人工智能
+  - DOMAIN-SUFFIX,chatgpt.com,人工智能
+  - DOMAIN-SUFFIX,claude.ai,人工智能
+  - DOMAIN-SUFFIX,claude.com,人工智能
+  - DOMAIN-SUFFIX,claudeusercontent.com,人工智能
+  - DOMAIN-SUFFIX,client-api.arkoselabs.com,人工智能
+  - DOMAIN-SUFFIX,copilot.cloud.microsoft,人工智能
+  - DOMAIN-SUFFIX,copilot.microsoft.com,人工智能
+  - DOMAIN-SUFFIX,cursor.com,人工智能
+  - DOMAIN-SUFFIX,cursor.sh,人工智能
+  - DOMAIN-SUFFIX,events.statsigapi.net,人工智能
+  - DOMAIN-SUFFIX,featuregates.org,人工智能
+  - DOMAIN-SUFFIX,gemini.google.com,人工智能
+  - DOMAIN-SUFFIX,grazie.ai,人工智能
+  - DOMAIN-SUFFIX,grazie.aws.intellij.net,人工智能
+  - DOMAIN-SUFFIX,identrust.com,人工智能
+  - DOMAIN-SUFFIX,intercom.io,人工智能
+  - DOMAIN-SUFFIX,intercomcdn.com,人工智能
+  - DOMAIN-SUFFIX,jetbrains.ai,人工智能
+  - DOMAIN-SUFFIX,makersuite.google.com,人工智能
+  - DOMAIN-SUFFIX,meta.ai,人工智能
+  - DOMAIN-SUFFIX,mistral.ai,人工智能
+  - DOMAIN-SUFFIX,notebooklm.google,人工智能
+  - DOMAIN-SUFFIX,notebooklm.google.com,人工智能
+  - DOMAIN-SUFFIX,oaistatic.com,人工智能
+  - DOMAIN-SUFFIX,oaiusercontent.com,人工智能
+  - DOMAIN-SUFFIX,openai.com,人工智能
+  - DOMAIN-SUFFIX,openaiapi-site.azureedge.net,人工智能
+  - DOMAIN-SUFFIX,perplexity.ai,人工智能
+  - DOMAIN-SUFFIX,sora.com,人工智能
+  - DOMAIN-SUFFIX,x.ai,人工智能
+  - RULE-SET,category-ai-!cn,人工智能
+
+  # ===== YouTube =====
+  - RULE-SET,youtube,视频平台
+
+  # ===== 流媒体 =====
+  - RULE-SET,netflix,视频平台
+  - RULE-SET,netflix_ip,视频平台,no-resolve
+  - RULE-SET,disney,视频平台
+  - RULE-SET,primevideo,视频平台
+  - RULE-SET,hbo,视频平台
+  - RULE-SET,spotify,视频平台
+  - RULE-SET,tiktok,视频平台
+  - RULE-SET,emby,视频平台
+
+  # ===== Telegram =====
+  - RULE-SET,telegram,电报信息
+  - RULE-SET,telegram_ip,电报信息,no-resolve
+
+  # ===== GitHub =====
+  - DOMAIN-SUFFIX,github.com,节点选择
+  - DOMAIN-SUFFIX,githubusercontent.com,节点选择
+  - DOMAIN-SUFFIX,githubassets.com,节点选择
+  - DOMAIN-SUFFIX,github.io,节点选择
+  - DOMAIN-SUFFIX,github.dev,节点选择
+  - DOMAIN-SUFFIX,githubcopilot.com,人工智能
+
+  # ===== 微软 / 苹果 =====
+  - RULE-SET,microsoft,微软服务
+  - RULE-SET,apple,苹果服务 
+
+  # ===== Cloudflare =====
+  - RULE-SET,cloudflare,加速服务
+  - RULE-SET,cloudflare_ip,加速服务,no-resolve
+
+  # ===== 游戏平台 =====
+  - DOMAIN-SUFFIX,steamserver.net,全球直连
+  - DOMAIN-SUFFIX,cm.steampowered.com,全球直连
+  - RULE-SET,steam,游戏平台
+  - RULE-SET,epicgames,游戏平台
+  - RULE-SET,sony,游戏平台
+  - RULE-SET,xbox,游戏平台
+
+  # ===== 国内直连（geo + mrs 双保险）=====
+  - RULE-SET,bilibili,全球直连
+  - RULE-SET,cn,全球直连
+  - RULE-SET,cn_ip,全球直连,no-resolve
+  - GEOSITE,cn,全球直连
+  - GEOIP,CN,全球直连,no-resolve  
+
+  # ===== GFW 名单 =====
+  - RULE-SET,gfw,节点选择
+  - GEOSITE,gfw,节点选择
+
+  # ===== 国外兜底 =====
+  - RULE-SET,geolocation-!cn,国外网站
+  - GEOSITE,geolocation-!cn,国外网站
+
+  # ===== 最终兜底 =====
+  - MATCH,漏网之鱼
+
+proxies:
+  - name: "MASQUE导航 | 13.250.41.68 | 443"
+    type: masque
+    server: 13.250.41.68
+    port: 443
+    private-key: MHcCAQEEICJft/3KpkE/pW6HXJi0OfFcBEftLroJepqpPOLt5FauoAoGCCqGSM49AwEHoUQDQgAE0oFMAVg8GBjPTG7hW7y9L+ZP6SqY2OB5V5+trjy8/5NC92vp8IDuO4Fh0Kf/Eb91OPSabg3IkwquskguRMb6WQ==
+    public-key: MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==
+    ip: 172.16.0.2
+    ipv6: 2606:4700:110:8f36:dd45:4c50:a961:c90d
+    uri: https://cloudflareaccess.com
+    mtu: 1280
+    udp: true
+    remote-dns-resolve: true
+    congestion-controller: bbr
+    dns: [ 1.1.1.1, 8.8.8.8 ]
+    sni: www.microsoft.com
+
+  - name: "MASQUE导航 | 172.237.6.233 | 443"
+    type: masque
+    server: 172.237.6.233
+    port: 443
+    private-key: MHcCAQEEICJft/3KpkE/pW6HXJi0OfFcBEftLroJepqpPOLt5FauoAoGCCqGSM49AwEHoUQDQgAE0oFMAVg8GBjPTG7hW7y9L+ZP6SqY2OB5V5+trjy8/5NC92vp8IDuO4Fh0Kf/Eb91OPSabg3IkwquskguRMb6WQ==
+    public-key: MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==
+    ip: 172.16.0.2
+    ipv6: 2606:4700:110:8f36:dd45:4c50:a961:c90d
+    uri: https://cloudflareaccess.com
+    mtu: 1280
+    udp: true
+    remote-dns-resolve: true
+    congestion-controller: bbr
+    dns: [ 1.1.1.1, 8.8.8.8 ]
+    sni: www.microsoft.com
+
+  - name: "MASQUE导航 | 13.124.209.180 | 443"
+    type: masque
+    server: 13.124.209.180
+    port: 443
+    private-key: MHcCAQEEICJft/3KpkE/pW6HXJi0OfFcBEftLroJepqpPOLt5FauoAoGCCqGSM49AwEHoUQDQgAE0oFMAVg8GBjPTG7hW7y9L+ZP6SqY2OB5V5+trjy8/5NC92vp8IDuO4Fh0Kf/Eb91OPSabg3IkwquskguRMb6WQ==
+    public-key: MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==
+    ip: 172.16.0.2
+    ipv6: 2606:4700:110:8f36:dd45:4c50:a961:c90d
+    uri: https://cloudflareaccess.com
+    mtu: 1280
+    udp: true
+    remote-dns-resolve: true
+    congestion-controller: bbr
+    dns: [ 1.1.1.1, 8.8.8.8 ]
+    sni: www.microsoft.com
+
+  - name: "MASQUE导航 | masque-sg1.bestcf.eu.cc | 443"
+    type: masque
+    server: masque-sg1.bestcf.eu.cc
+    port: 443
+    private-key: MHcCAQEEICJft/3KpkE/pW6HXJi0OfFcBEftLroJepqpPOLt5FauoAoGCCqGSM49AwEHoUQDQgAE0oFMAVg8GBjPTG7hW7y9L+ZP6SqY2OB5V5+trjy8/5NC92vp8IDuO4Fh0Kf/Eb91OPSabg3IkwquskguRMb6WQ==
+    public-key: MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==
+    ip: 172.16.0.2
+    ipv6: 2606:4700:110:8f36:dd45:4c50:a961:c90d
+    uri: https://cloudflareaccess.com
+    mtu: 1280
+    udp: true
+    remote-dns-resolve: true
+    congestion-controller: bbr
+    dns: [ 1.1.1.1, 8.8.8.8 ]
+    sni: www.microsoft.com
+
+  - name: "MASQUE导航 | masque-jp1.bestcf.eu.cc | 443"
+    type: masque
+    server: masque-jp1.bestcf.eu.cc
+    port: 443
+    private-key: MHcCAQEEICJft/3KpkE/pW6HXJi0OfFcBEftLroJepqpPOLt5FauoAoGCCqGSM49AwEHoUQDQgAE0oFMAVg8GBjPTG7hW7y9L+ZP6SqY2OB5V5+trjy8/5NC92vp8IDuO4Fh0Kf/Eb91OPSabg3IkwquskguRMb6WQ==
+    public-key: MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==
+    ip: 172.16.0.2
+    ipv6: 2606:4700:110:8f36:dd45:4c50:a961:c90d
+    uri: https://cloudflareaccess.com
+    mtu: 1280
+    udp: true
+    remote-dns-resolve: true
+    congestion-controller: bbr
+    dns: [ 1.1.1.1, 8.8.8.8 ]
+    sni: www.microsoft.com
+
+  - name: "MASQUE导航 | masque-kr1.bestcf.eu.cc | 443"
+    type: masque
+    server: masque-kr1.bestcf.eu.cc
+    port: 443
+    private-key: MHcCAQEEICJft/3KpkE/pW6HXJi0OfFcBEftLroJepqpPOLt5FauoAoGCCqGSM49AwEHoUQDQgAE0oFMAVg8GBjPTG7hW7y9L+ZP6SqY2OB5V5+trjy8/5NC92vp8IDuO4Fh0Kf/Eb91OPSabg3IkwquskguRMb6WQ==
+    public-key: MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==
+    ip: 172.16.0.2
+    ipv6: 2606:4700:110:8f36:dd45:4c50:a961:c90d
+    uri: https://cloudflareaccess.com
+    mtu: 1280
+    udp: true
+    remote-dns-resolve: true
+    congestion-controller: bbr
+    dns: [ 1.1.1.1, 8.8.8.8 ]
+    sni: www.microsoft.com
+
+  - name: "MASQUE导航 | masque1.bestcf.eu.cc | 443"
+    type: masque
+    server: masque1.bestcf.eu.cc
+    port: 443
+    private-key: MHcCAQEEICJft/3KpkE/pW6HXJi0OfFcBEftLroJepqpPOLt5FauoAoGCCqGSM49AwEHoUQDQgAE0oFMAVg8GBjPTG7hW7y9L+ZP6SqY2OB5V5+trjy8/5NC92vp8IDuO4Fh0Kf/Eb91OPSabg3IkwquskguRMb6WQ==
+    public-key: MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==
+    ip: 172.16.0.2
+    ipv6: 2606:4700:110:8f36:dd45:4c50:a961:c90d
+    uri: https://cloudflareaccess.com
+    mtu: 1280
+    udp: true
+    remote-dns-resolve: true
+    congestion-controller: bbr
+    dns: [ 1.1.1.1, 8.8.8.8 ]
+    sni: www.microsoft.com
+
+  - name: "MASQUE导航 | masque2.bestcf.eu.cc | 443"
+    type: masque
+    server: masque2.bestcf.eu.cc
+    port: 443
+    private-key: MHcCAQEEICJft/3KpkE/pW6HXJi0OfFcBEftLroJepqpPOLt5FauoAoGCCqGSM49AwEHoUQDQgAE0oFMAVg8GBjPTG7hW7y9L+ZP6SqY2OB5V5+trjy8/5NC92vp8IDuO4Fh0Kf/Eb91OPSabg3IkwquskguRMb6WQ==
+    public-key: MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==
+    ip: 172.16.0.2
+    ipv6: 2606:4700:110:8f36:dd45:4c50:a961:c90d
+    uri: https://cloudflareaccess.com
+    mtu: 1280
+    udp: true
+    remote-dns-resolve: true
+    congestion-controller: bbr
+    dns: [ 1.1.1.1, 8.8.8.8 ]
+    sni: www.microsoft.com
+
+  - name: "MASQUE导航 | 162.159.198.2 | 8095"
+    type: masque
+    server: 162.159.198.2
+    port: 8095
+    private-key: MHcCAQEEICJft/3KpkE/pW6HXJi0OfFcBEftLroJepqpPOLt5FauoAoGCCqGSM49AwEHoUQDQgAE0oFMAVg8GBjPTG7hW7y9L+ZP6SqY2OB5V5+trjy8/5NC92vp8IDuO4Fh0Kf/Eb91OPSabg3IkwquskguRMb6WQ==
+    public-key: MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==
+    ip: 172.16.0.2
+    ipv6: 2606:4700:110:8f36:dd45:4c50:a961:c90d
+    uri: https://cloudflareaccess.com
+    mtu: 1280
+    udp: true
+    remote-dns-resolve: true
+    congestion-controller: bbr
+    dns: [ 1.1.1.1, 8.8.8.8 ]
+    sni: www.microsoft.com
+
+  - name: "MASQUE导航 | 162.159.198.2 | 443"
+    type: masque
+    server: 162.159.198.2
+    port: 443
+    private-key: MHcCAQEEICJft/3KpkE/pW6HXJi0OfFcBEftLroJepqpPOLt5FauoAoGCCqGSM49AwEHoUQDQgAE0oFMAVg8GBjPTG7hW7y9L+ZP6SqY2OB5V5+trjy8/5NC92vp8IDuO4Fh0Kf/Eb91OPSabg3IkwquskguRMb6WQ==
+    public-key: MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==
+    ip: 172.16.0.2
+    ipv6: 2606:4700:110:8f36:dd45:4c50:a961:c90d
+    uri: https://cloudflareaccess.com
+    mtu: 1280
+    udp: true
+    remote-dns-resolve: true
+    congestion-controller: bbr
+    dns: [ 1.1.1.1, 8.8.8.8 ]
+    sni: www.microsoft.com
+
+  - name: "MASQUE导航 | 162.159.198.2 | 8443"
+    type: masque
+    server: 162.159.198.2
+    port: 8443
+    private-key: MHcCAQEEICJft/3KpkE/pW6HXJi0OfFcBEftLroJepqpPOLt5FauoAoGCCqGSM49AwEHoUQDQgAE0oFMAVg8GBjPTG7hW7y9L+ZP6SqY2OB5V5+trjy8/5NC92vp8IDuO4Fh0Kf/Eb91OPSabg3IkwquskguRMb6WQ==
+    public-key: MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==
+    ip: 172.16.0.2
+    ipv6: 2606:4700:110:8f36:dd45:4c50:a961:c90d
+    uri: https://cloudflareaccess.com
+    mtu: 1280
+    udp: true
+    remote-dns-resolve: true
+    congestion-controller: bbr
+    dns: [ 1.1.1.1, 8.8.8.8 ]
+    sni: www.microsoft.com
+
+  - name: "MASQUE导航 | 162.159.198.2 | 4443"
+    type: masque
+    server: 162.159.198.2
+    port: 4443
+    private-key: MHcCAQEEICJft/3KpkE/pW6HXJi0OfFcBEftLroJepqpPOLt5FauoAoGCCqGSM49AwEHoUQDQgAE0oFMAVg8GBjPTG7hW7y9L+ZP6SqY2OB5V5+trjy8/5NC92vp8IDuO4Fh0Kf/Eb91OPSabg3IkwquskguRMb6WQ==
+    public-key: MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==
+    ip: 172.16.0.2
+    ipv6: 2606:4700:110:8f36:dd45:4c50:a961:c90d
+    uri: https://cloudflareaccess.com
+    mtu: 1280
+    udp: true
+    remote-dns-resolve: true
+    congestion-controller: bbr
+    dns: [ 1.1.1.1, 8.8.8.8 ]
+    sni: www.microsoft.com
+
+  - name: "MASQUE导航 | 162.159.198.2 | 1701"
+    type: masque
+    server: 162.159.198.2
+    port: 1701
+    private-key: MHcCAQEEICJft/3KpkE/pW6HXJi0OfFcBEftLroJepqpPOLt5FauoAoGCCqGSM49AwEHoUQDQgAE0oFMAVg8GBjPTG7hW7y9L+ZP6SqY2OB5V5+trjy8/5NC92vp8IDuO4Fh0Kf/Eb91OPSabg3IkwquskguRMb6WQ==
+    public-key: MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==
+    ip: 172.16.0.2
+    ipv6: 2606:4700:110:8f36:dd45:4c50:a961:c90d
+    uri: https://cloudflareaccess.com
+    mtu: 1280
+    udp: true
+    remote-dns-resolve: true
+    congestion-controller: bbr
+    dns: [ 1.1.1.1, 8.8.8.8 ]
+    sni: www.microsoft.com
+
+  - name: "MASQUE导航 | 162.159.198.2 | 4500"
+    type: masque
+    server: 162.159.198.2
+    port: 4500
+    private-key: MHcCAQEEICJft/3KpkE/pW6HXJi0OfFcBEftLroJepqpPOLt5FauoAoGCCqGSM49AwEHoUQDQgAE0oFMAVg8GBjPTG7hW7y9L+ZP6SqY2OB5V5+trjy8/5NC92vp8IDuO4Fh0Kf/Eb91OPSabg3IkwquskguRMb6WQ==
+    public-key: MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==
+    ip: 172.16.0.2
+    ipv6: 2606:4700:110:8f36:dd45:4c50:a961:c90d
+    uri: https://cloudflareaccess.com
+    mtu: 1280
+    udp: true
+    remote-dns-resolve: true
+    congestion-controller: bbr
+    dns: [ 1.1.1.1, 8.8.8.8 ]
+    sni: www.microsoft.com
+
+  - name: "MASQUE导航 | 162.159.198.2 | 500"
+    type: masque
+    server: 162.159.198.2
+    port: 500
+    private-key: MHcCAQEEICJft/3KpkE/pW6HXJi0OfFcBEftLroJepqpPOLt5FauoAoGCCqGSM49AwEHoUQDQgAE0oFMAVg8GBjPTG7hW7y9L+ZP6SqY2OB5V5+trjy8/5NC92vp8IDuO4Fh0Kf/Eb91OPSabg3IkwquskguRMb6WQ==
+    public-key: MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==
+    ip: 172.16.0.2
+    ipv6: 2606:4700:110:8f36:dd45:4c50:a961:c90d
+    uri: https://cloudflareaccess.com
+    mtu: 1280
+    udp: true
+    remote-dns-resolve: true
+    congestion-controller: bbr
+    dns: [ 1.1.1.1, 8.8.8.8 ]
+    sni: www.microsoft.com
+
+  - name: "MASQUE导航 | 162.159.199.2 | 8095"
+    type: masque
+    server: 162.159.199.2
+    port: 8095
+    private-key: MHcCAQEEICJft/3KpkE/pW6HXJi0OfFcBEftLroJepqpPOLt5FauoAoGCCqGSM49AwEHoUQDQgAE0oFMAVg8GBjPTG7hW7y9L+ZP6SqY2OB5V5+trjy8/5NC92vp8IDuO4Fh0Kf/Eb91OPSabg3IkwquskguRMb6WQ==
+    public-key: MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==
+    ip: 172.16.0.2
+    ipv6: 2606:4700:110:8f36:dd45:4c50:a961:c90d
+    uri: https://cloudflareaccess.com
+    mtu: 1280
+    udp: true
+    remote-dns-resolve: true
+    congestion-controller: bbr
+    dns: [ 1.1.1.1, 8.8.8.8 ]
+    sni: www.microsoft.com
+
+  - name: "MASQUE导航 | 162.159.199.2 | 443"
+    type: masque
+    server: 162.159.199.2
+    port: 443
+    private-key: MHcCAQEEICJft/3KpkE/pW6HXJi0OfFcBEftLroJepqpPOLt5FauoAoGCCqGSM49AwEHoUQDQgAE0oFMAVg8GBjPTG7hW7y9L+ZP6SqY2OB5V5+trjy8/5NC92vp8IDuO4Fh0Kf/Eb91OPSabg3IkwquskguRMb6WQ==
+    public-key: MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==
+    ip: 172.16.0.2
+    ipv6: 2606:4700:110:8f36:dd45:4c50:a961:c90d
+    uri: https://cloudflareaccess.com
+    mtu: 1280
+    udp: true
+    remote-dns-resolve: true
+    congestion-controller: bbr
+    dns: [ 1.1.1.1, 8.8.8.8 ]
+    sni: www.microsoft.com
+
+  - name: "MASQUE导航 | 162.159.199.2 | 8443"
+    type: masque
+    server: 162.159.199.2
+    port: 8443
+    private-key: MHcCAQEEICJft/3KpkE/pW6HXJi0OfFcBEftLroJepqpPOLt5FauoAoGCCqGSM49AwEHoUQDQgAE0oFMAVg8GBjPTG7hW7y9L+ZP6SqY2OB5V5+trjy8/5NC92vp8IDuO4Fh0Kf/Eb91OPSabg3IkwquskguRMb6WQ==
+    public-key: MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==
+    ip: 172.16.0.2
+    ipv6: 2606:4700:110:8f36:dd45:4c50:a961:c90d
+    uri: https://cloudflareaccess.com
+    mtu: 1280
+    udp: true
+    remote-dns-resolve: true
+    congestion-controller: bbr
+    dns: [ 1.1.1.1, 8.8.8.8 ]
+    sni: www.microsoft.com
+
+  - name: "MASQUE导航 | 162.159.199.2 | 4443"
+    type: masque
+    server: 162.159.199.2
+    port: 4443
+    private-key: MHcCAQEEICJft/3KpkE/pW6HXJi0OfFcBEftLroJepqpPOLt5FauoAoGCCqGSM49AwEHoUQDQgAE0oFMAVg8GBjPTG7hW7y9L+ZP6SqY2OB5V5+trjy8/5NC92vp8IDuO4Fh0Kf/Eb91OPSabg3IkwquskguRMb6WQ==
+    public-key: MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==
+    ip: 172.16.0.2
+    ipv6: 2606:4700:110:8f36:dd45:4c50:a961:c90d
+    uri: https://cloudflareaccess.com
+    mtu: 1280
+    udp: true
+    remote-dns-resolve: true
+    congestion-controller: bbr
+    dns: [ 1.1.1.1, 8.8.8.8 ]
+    sni: www.microsoft.com
+
+  - name: "MASQUE导航 | 162.159.199.2 | 1701"
+    type: masque
+    server: 162.159.199.2
+    port: 1701
+    private-key: MHcCAQEEICJft/3KpkE/pW6HXJi0OfFcBEftLroJepqpPOLt5FauoAoGCCqGSM49AwEHoUQDQgAE0oFMAVg8GBjPTG7hW7y9L+ZP6SqY2OB5V5+trjy8/5NC92vp8IDuO4Fh0Kf/Eb91OPSabg3IkwquskguRMb6WQ==
+    public-key: MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==
+    ip: 172.16.0.2
+    ipv6: 2606:4700:110:8f36:dd45:4c50:a961:c90d
+    uri: https://cloudflareaccess.com
+    mtu: 1280
+    udp: true
+    remote-dns-resolve: true
+    congestion-controller: bbr
+    dns: [ 1.1.1.1, 8.8.8.8 ]
+    sni: www.microsoft.com
+
+  - name: "MASQUE导航 | 162.159.199.2 | 4500"
+    type: masque
+    server: 162.159.199.2
+    port: 4500
+    private-key: MHcCAQEEICJft/3KpkE/pW6HXJi0OfFcBEftLroJepqpPOLt5FauoAoGCCqGSM49AwEHoUQDQgAE0oFMAVg8GBjPTG7hW7y9L+ZP6SqY2OB5V5+trjy8/5NC92vp8IDuO4Fh0Kf/Eb91OPSabg3IkwquskguRMb6WQ==
+    public-key: MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==
+    ip: 172.16.0.2
+    ipv6: 2606:4700:110:8f36:dd45:4c50:a961:c90d
+    uri: https://cloudflareaccess.com
+    mtu: 1280
+    udp: true
+    remote-dns-resolve: true
+    congestion-controller: bbr
+    dns: [ 1.1.1.1, 8.8.8.8 ]
+    sni: www.microsoft.com
+
+  - name: "MASQUE导航 | 162.159.199.2 | 500"
+    type: masque
+    server: 162.159.199.2
+    port: 500
+    private-key: MHcCAQEEICJft/3KpkE/pW6HXJi0OfFcBEftLroJepqpPOLt5FauoAoGCCqGSM49AwEHoUQDQgAE0oFMAVg8GBjPTG7hW7y9L+ZP6SqY2OB5V5+trjy8/5NC92vp8IDuO4Fh0Kf/Eb91OPSabg3IkwquskguRMb6WQ==
+    public-key: MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==
+    ip: 172.16.0.2
+    ipv6: 2606:4700:110:8f36:dd45:4c50:a961:c90d
+    uri: https://cloudflareaccess.com
+    mtu: 1280
+    udp: true
+    remote-dns-resolve: true
+    congestion-controller: bbr
+    dns: [ 1.1.1.1, 8.8.8.8 ]
+    sni: www.microsoft.com
