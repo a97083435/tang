@@ -1,0 +1,2618 @@
+mixed-port: 7890
+allow-lan: true
+bind-address: '*'
+mode: rule
+log-level: info
+ipv6: false
+unified-delay: true
+tcp-concurrent: true
+geodata-mode: true
+geox-url:
+  geoip: "https://cdn.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geoip.dat"
+  geosite: "https://cdn.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geosite.dat"
+geo-auto-update: true
+geo-update-interval: 24
+global-ua: clash.meta
+
+dns:
+  enable: true
+  ipv6: false
+  listen: 0.0.0.0:1053
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - "*.lan"
+    - "*.local"
+    - "*.arpa"
+    - time.*.com
+    - ntp.*.com
+    - +.market.xiaomi.com
+    - localhost.ptlogin2.qq.com
+    - "*.msftncsi.com"
+    - www.msftconnecttest.com
+  use-hosts: true
+  cache-algorithm: arc
+  prefer-h3: false
+  respect-rules: true
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+  nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+  nameserver-policy:
+    "geosite:cn":
+      - https://dns.alidns.com/dns-query
+      - https://doh.pub/dns-query
+    "geosite:geolocation-!cn":
+      - https://cloudflare-dns.com/dns-query#proxy=节点选择
+      - https://dns.google/dns-query#proxy=节点选择
+  proxy-server-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+
+proxy-providers:
+  VPNGATE-CHAIN:
+    type: http
+    url: "https://raw.githubusercontent.com/wanwushequ/VG2C/main/vpngate.yaml"
+    path: "./providers/vpngate-chain.yaml"
+    proxy: "端点自动"
+    interval: 1800
+    size-limit: 4194304
+    health-check:
+      enable: true
+      url: https://cloudflare.com/cdn-cgi/trace
+      interval: 300
+      timeout: 6000
+      lazy: false
+    override:
+      additional-prefix: "端点手动 → "
+      dialer-proxy: "端点手动"
+  VPNGATE-CHAIN-AUTO:
+    type: http
+    url: "https://raw.githubusercontent.com/wanwushequ/VG2C/main/vpngate.yaml"
+    path: "./providers/vpngate-chain-auto.yaml"
+    proxy: "端点自动"
+    interval: 1800
+    size-limit: 4194304
+    health-check:
+      enable: true
+      url: https://cloudflare.com/cdn-cgi/trace
+      interval: 300
+      timeout: 6000
+      lazy: false
+    override:
+      additional-prefix: "自动 UN | "
+      dialer-proxy: "端点手动"	  
+  VPNGATE-CHAIN-JP:
+    type: http
+    url: "https://raw.githubusercontent.com/wanwushequ/VG2C/main/vpngate-jp.yaml"
+    path: "./providers/vpngate-chain-jp.yaml"
+    proxy: "端点自动"
+    interval: 1800
+    size-limit: 4194304
+    health-check:
+      enable: true
+      url: https://cloudflare.com/cdn-cgi/trace
+      interval: 300
+      timeout: 6000
+      lazy: false
+    override:
+      additional-prefix: "自动 JP | "
+      dialer-proxy: "端点手动"
+  VPNGATE-CHAIN-KR:
+    type: http
+    url: "https://raw.githubusercontent.com/wanwushequ/VG2C/main/vpngate-kr.yaml"
+    path: "./providers/vpngate-chain-kr.yaml"
+    proxy: "端点自动"
+    interval: 1800
+    size-limit: 4194304
+    health-check:
+      enable: true
+      url: https://cloudflare.com/cdn-cgi/trace
+      interval: 300
+      timeout: 6000
+      lazy: false
+    override:
+      additional-prefix: "自动 KR | "
+      dialer-proxy: "端点手动"
+
+proxy-groups:
+  - name: 节点选择
+    type: select
+    proxies: [端点自动, 端点手动, 端点故障, 切换地区, 链式代理, 高纯净度, DIRECT]
+    icon: "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Rocket.png"
+  - name: 端点自动
+    type: url-test
+    url: https://cloudflare.com/cdn-cgi/trace
+    interval: 300
+    tolerance: 30
+    proxies: ["MASQUE导航 | 13.250.41.68 | 443", "MASQUE导航 | 172.237.6.233 | 443", "MASQUE导航 | 13.124.209.180 | 443", "MASQUE导航 | masque-sg1.bestcf.eu.cc | 443", "MASQUE导航 | masque-jp1.bestcf.eu.cc | 443", "MASQUE导航 | masque-kr1.bestcf.eu.cc | 443", "MASQUE导航 | masque1.bestcf.eu.cc | 443", "MASQUE导航 | masque2.bestcf.eu.cc | 443", "MASQUE导航 | 162.159.198.2 | 8095", "MASQUE导航 | 162.159.198.2 | 443", "MASQUE导航 | 162.159.198.2 | 8443", "MASQUE导航 | 162.159.198.2 | 4443", "MASQUE导航 | 162.159.198.2 | 1701", "MASQUE导航 | 162.159.198.2 | 4500", "MASQUE导航 | 162.159.198.2 | 500", "MASQUE导航 | 162.159.199.2 | 8095", "MASQUE导航 | 162.159.199.2 | 443", "MASQUE导航 | 162.159.199.2 | 8443", "MASQUE导航 | 162.159.199.2 | 4443", "MASQUE导航 | 162.159.199.2 | 1701", "MASQUE导航 | 162.159.199.2 | 4500", "MASQUE导航 | 162.159.199.2 | 500"]
+    icon: "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Auto.png"
+  - name: 端点手动
+    type: select
+    proxies: ["MASQUE导航 | 13.250.41.68 | 443", "MASQUE导航 | 172.237.6.233 | 443", "MASQUE导航 | 13.124.209.180 | 443", "MASQUE导航 | masque-sg1.bestcf.eu.cc | 443", "MASQUE导航 | masque-jp1.bestcf.eu.cc | 443", "MASQUE导航 | masque-kr1.bestcf.eu.cc | 443", "MASQUE导航 | masque1.bestcf.eu.cc | 443", "MASQUE导航 | masque2.bestcf.eu.cc | 443", "MASQUE导航 | 162.159.198.2 | 8095", "MASQUE导航 | 162.159.198.2 | 443", "MASQUE导航 | 162.159.198.2 | 8443", "MASQUE导航 | 162.159.198.2 | 4443", "MASQUE导航 | 162.159.198.2 | 1701", "MASQUE导航 | 162.159.198.2 | 4500", "MASQUE导航 | 162.159.198.2 | 500", "MASQUE导航 | 162.159.199.2 | 8095", "MASQUE导航 | 162.159.199.2 | 443", "MASQUE导航 | 162.159.199.2 | 8443", "MASQUE导航 | 162.159.199.2 | 4443", "MASQUE导航 | 162.159.199.2 | 1701", "MASQUE导航 | 162.159.199.2 | 4500", "MASQUE导航 | 162.159.199.2 | 500"]
+    icon: "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Static.png"		
+  - name: 端点故障
+    type: fallback
+    url: https://cloudflare.com/cdn-cgi/trace
+    interval: 300
+    proxies: ["MASQUE导航 | 13.250.41.68 | 443", "MASQUE导航 | 172.237.6.233 | 443", "MASQUE导航 | 13.124.209.180 | 443", "MASQUE导航 | masque-sg1.bestcf.eu.cc | 443", "MASQUE导航 | masque-jp1.bestcf.eu.cc | 443", "MASQUE导航 | masque-kr1.bestcf.eu.cc | 443", "MASQUE导航 | masque1.bestcf.eu.cc | 443", "MASQUE导航 | masque2.bestcf.eu.cc | 443", "MASQUE导航 | 162.159.198.2 | 8095", "MASQUE导航 | 162.159.198.2 | 443", "MASQUE导航 | 162.159.198.2 | 8443", "MASQUE导航 | 162.159.198.2 | 4443", "MASQUE导航 | 162.159.198.2 | 1701", "MASQUE导航 | 162.159.198.2 | 4500", "MASQUE导航 | 162.159.198.2 | 500", "MASQUE导航 | 162.159.199.2 | 8095", "MASQUE导航 | 162.159.199.2 | 443", "MASQUE导航 | 162.159.199.2 | 8443", "MASQUE导航 | 162.159.199.2 | 4443", "MASQUE导航 | 162.159.199.2 | 1701", "MASQUE导航 | 162.159.199.2 | 4500", "MASQUE导航 | 162.159.199.2 | 500"]
+    icon: "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Proxy.png"
+  - name: 切换地区
+    type: select
+    proxies: ["直接落地 → 🇺🇸 美国1", "直接落地 → 🇺🇸 美国2", "直接落地 → 🇺🇸 美国3", "直接落地 → 🇯🇵 日本1", "直接落地 → 🇯🇵 日本2", "直接落地 → 🇯🇵 日本3", "直接落地 → 🇰🇷 韩国1", "直接落地 → 🇰🇷 韩国2", "直接落地 → 🇰🇷 韩国3", "直接落地 → 🇬🇧 英国1", "直接落地 → 🇬🇧 英国2", "直接落地 → 🇬🇧 英国3", "直接落地 → 🇫🇷 法国1", "直接落地 → 🇫🇷 法国2", "直接落地 → 🇫🇷 法国3", "直接落地 → 🇩🇪 德国1", "直接落地 → 🇩🇪 德国2", "直接落地 → 🇩🇪 德国3", "直接落地 → 🇳🇱 荷兰1", "直接落地 → 🇳🇱 荷兰2", "直接落地 → 🇳🇱 荷兰3", "直接落地 → 🇸🇬 新加坡1", "直接落地 → 🇸🇬 新加坡2", "直接落地 → 🇸🇬 新加坡3", "直接落地 → 🇨🇦 加拿大1", "直接落地 → 🇨🇦 加拿大2", "直接落地 → 🇨🇦 加拿大3", "直接落地 → 🇫🇮 芬兰1", "直接落地 → 🇫🇮 芬兰2", "直接落地 → 🇫🇮 芬兰3", "直接落地 → 🇵🇱 波兰1", "直接落地 → 🇵🇱 波兰2", "直接落地 → 🇵🇱 波兰3", "直接落地 → 🇨🇭 瑞士1", "直接落地 → 🇨🇭 瑞士2", "直接落地 → 🇨🇭 瑞士3", "直接落地 → 🇸🇪 瑞典1", "直接落地 → 🇸🇪 瑞典2", "直接落地 → 🇸🇪 瑞典3", "直接落地 → 🇮🇳 印度1", "直接落地 → 🇮🇳 印度2", "直接落地 → 🇮🇳 印度3", "直接落地 → 🇨🇳 中国台湾1", "直接落地 → 🇨🇳 中国台湾2", "直接落地 → 🇨🇳 中国台湾3", "直接落地 → 🇭🇰 中国香港1", "直接落地 → 🇭🇰 中国香港2", "直接落地 → 🇭🇰 中国香港3", "直接落地 → 🇱🇻 拉脱维亚1", "直接落地 → 🇱🇻 拉脱维亚2", "直接落地 → 🇱🇻 拉脱维亚3", "直接落地 → 🇷🇺 俄罗斯1", "直接落地 → 🇷🇺 俄罗斯2", "直接落地 → 🇷🇺 俄罗斯3"]
+    icon: "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Domestic.png"	
+  - name: 链式代理
+    type: select
+    proxies: ["端点手动 → 🇺🇸 美国1", "端点手动 → 🇺🇸 美国2", "端点手动 → 🇺🇸 美国3", "端点手动 → 🇯🇵 日本1", "端点手动 → 🇯🇵 日本2", "端点手动 → 🇯🇵 日本3", "端点手动 → 🇰🇷 韩国1", "端点手动 → 🇰🇷 韩国2", "端点手动 → 🇰🇷 韩国3", "端点手动 → 🇬🇧 英国1", "端点手动 → 🇬🇧 英国2", "端点手动 → 🇬🇧 英国3", "端点手动 → 🇫🇷 法国1", "端点手动 → 🇫🇷 法国2", "端点手动 → 🇫🇷 法国3", "端点手动 → 🇩🇪 德国1", "端点手动 → 🇩🇪 德国2", "端点手动 → 🇩🇪 德国3", "端点手动 → 🇳🇱 荷兰1", "端点手动 → 🇳🇱 荷兰2", "端点手动 → 🇳🇱 荷兰3", "端点手动 → 🇸🇬 新加坡1", "端点手动 → 🇸🇬 新加坡2", "端点手动 → 🇸🇬 新加坡3", "端点手动 → 🇨🇦 加拿大1", "端点手动 → 🇨🇦 加拿大2", "端点手动 → 🇨🇦 加拿大3", "端点手动 → 🇫🇮 芬兰1", "端点手动 → 🇫🇮 芬兰2", "端点手动 → 🇫🇮 芬兰3", "端点手动 → 🇵🇱 波兰1", "端点手动 → 🇵🇱 波兰2", "端点手动 → 🇵🇱 波兰3", "端点手动 → 🇨🇭 瑞士1", "端点手动 → 🇨🇭 瑞士2", "端点手动 → 🇨🇭 瑞士3", "端点手动 → 🇸🇪 瑞典1", "端点手动 → 🇸🇪 瑞典2", "端点手动 → 🇸🇪 瑞典3", "端点手动 → 🇮🇳 印度1", "端点手动 → 🇮🇳 印度2", "端点手动 → 🇮🇳 印度3", "端点手动 → 🇨🇳 中国台湾1", "端点手动 → 🇨🇳 中国台湾2", "端点手动 → 🇨🇳 中国台湾3", "端点手动 → 🇭🇰 中国香港1", "端点手动 → 🇭🇰 中国香港2", "端点手动 → 🇭🇰 中国香港3", "端点手动 → 🇱🇻 拉脱维亚1", "端点手动 → 🇱🇻 拉脱维亚2", "端点手动 → 🇱🇻 拉脱维亚3", "端点手动 → 🇷🇺 俄罗斯1", "端点手动 → 🇷🇺 俄罗斯2", "端点手动 → 🇷🇺 俄罗斯3"]
+    icon: "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Round_Robin.png"
+  - name: 高纯净度
+    type: select
+    icon: "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Back.png"
+    proxies:
+      - "端点手动 → 🇺🇳 不限"
+      - "端点手动 → 🇯🇵 日本"
+      - "端点手动 → 🇰🇷 韩国"
+    use:
+      - "VPNGATE-CHAIN"
+  - name: "端点手动 → 🇺🇳 不限"
+    type: url-test
+    hidden: true
+    url: https://cloudflare.com/cdn-cgi/trace
+    interval: 300
+    tolerance: 30
+    lazy: false
+    max-failed-times: 2
+    use:
+      - "VPNGATE-CHAIN-AUTO"
+  - name: "端点手动 → 🇯🇵 日本"
+    type: url-test
+    hidden: true
+    url: https://cloudflare.com/cdn-cgi/trace
+    interval: 300
+    tolerance: 30
+    lazy: false
+    max-failed-times: 2
+    use:
+      - "VPNGATE-CHAIN-JP"
+  - name: "端点手动 → 🇰🇷 韩国"
+    type: url-test
+    hidden: true
+    url: https://cloudflare.com/cdn-cgi/trace
+    interval: 300
+    tolerance: 30
+    lazy: false
+    max-failed-times: 2
+    use:
+      - "VPNGATE-CHAIN-KR"
+  - name: 人工智能
+    type: select
+    icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/ChatGPT.png
+    proxies: [节点选择, 端点自动, 端点手动, 端点故障, 切换地区, 链式代理, 高纯净度, DIRECT]
+
+  - name: 视频平台
+    type: select
+    icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/TikTok.png
+    proxies: [节点选择, 端点自动, 端点手动, 端点故障, 切换地区, 链式代理, 高纯净度, DIRECT]
+
+  - name: 电报信息
+    type: select
+    icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Telegram.png
+    proxies: [节点选择, 端点自动, 端点手动, 端点故障, 切换地区, 链式代理, 高纯净度, DIRECT]
+
+  - name: 微软服务
+    type: select
+    icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Microsoft.png
+    proxies: [全球直连, 节点选择, 端点自动, 端点手动, 端点故障, 切换地区, 链式代理, 高纯净度, DIRECT]
+
+  - name: 苹果服务
+    type: select
+    icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Apple.png
+    proxies: [全球直连, 节点选择, 端点自动, 端点手动, 端点故障, 切换地区, 链式代理, 高纯净度, DIRECT]
+
+  - name: 加速服务
+    type: select
+    icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Cloudflare.png
+    proxies: [节点选择, 端点自动, 端点手动, 端点故障, 切换地区, 链式代理, 高纯净度, DIRECT]
+
+  - name: 游戏平台
+    type: select
+    icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Game.png
+    proxies: [节点选择, 端点自动, 端点手动, 端点故障, 切换地区, 链式代理, 高纯净度, DIRECT]
+
+  - name: 国外网站
+    type: select
+    icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Global.png
+    proxies: [节点选择, 端点自动, 端点手动, 端点故障, 切换地区, 链式代理, 高纯净度, DIRECT]
+
+  - name: 全球直连
+    type: select
+    proxies: [DIRECT]
+    icon: "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Direct.png"
+  - name: 全球拦截
+    type: select
+    proxies: [REJECT, 节点选择, DIRECT]
+    icon: "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Reject.png"
+  - name: 漏网之鱼
+    type: select
+    icon: https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Final.png
+    proxies: [节点选择, 端点自动, 端点手动, 端点故障, 切换地区, 链式代理, 高纯净度, 全球直连, DIRECT]
+
+rule-providers:
+  bilibili:
+    type: http
+    interval: 43200
+    behavior: domain
+    format: mrs
+    url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/bilibili.mrs
+    proxy: "节点选择"
+
+  cn:
+    type: http
+    interval: 43200
+    behavior: domain
+    format: mrs
+    url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/cn.mrs
+    proxy: "节点选择"
+
+  category-ai-!cn:
+    type: http
+    interval: 43200
+    behavior: domain
+    format: mrs
+    url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-ai-!cn.mrs
+    proxy: "节点选择"
+
+  youtube:
+    type: http
+    interval: 43200
+    behavior: domain
+    format: mrs
+    url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/youtube.mrs
+    proxy: "节点选择"
+
+  netflix:
+    type: http
+    interval: 43200
+    behavior: domain
+    format: mrs
+    url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/netflix.mrs
+    proxy: "节点选择"
+
+  disney:
+    type: http
+    interval: 43200
+    behavior: domain
+    format: mrs
+    url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/disney.mrs
+    proxy: "节点选择"
+
+  spotify:
+    type: http
+    interval: 43200
+    behavior: domain
+    format: mrs
+    url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/spotify.mrs
+    proxy: "节点选择"
+
+  tiktok:
+    type: http
+    interval: 43200
+    behavior: domain
+    format: mrs
+    url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/tiktok.mrs
+    proxy: "节点选择"
+
+  primevideo:
+    type: http
+    interval: 43200
+    behavior: domain
+    format: mrs
+    url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/primevideo.mrs
+    proxy: "节点选择"
+
+  hbo:
+    type: http
+    interval: 43200
+    behavior: domain
+    format: mrs
+    url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/hbo.mrs
+    proxy: "节点选择"
+
+  emby:
+    type: http
+    interval: 43200
+    behavior: domain
+    format: mrs
+    url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-emby.mrs
+    proxy: "节点选择"
+
+  telegram:
+    type: http
+    interval: 43200
+    behavior: domain
+    format: mrs
+    url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/telegram.mrs
+    proxy: "节点选择"
+
+  microsoft:
+    type: http
+    interval: 43200
+    behavior: domain
+    format: mrs
+    url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/microsoft.mrs
+    proxy: "节点选择"
+
+  apple:
+    type: http
+    interval: 43200
+    behavior: domain
+    format: mrs
+    url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/apple.mrs
+    proxy: "节点选择"
+
+  cloudflare:
+    type: http
+    interval: 43200
+    behavior: domain
+    format: mrs
+    url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/cloudflare.mrs
+    proxy: "节点选择"
+
+  steam:
+    type: http
+    interval: 43200
+    behavior: domain
+    format: mrs
+    url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/steam.mrs
+    proxy: "节点选择"
+
+  epicgames:
+    type: http
+    interval: 43200
+    behavior: domain
+    format: mrs
+    url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/epicgames.mrs
+    proxy: "节点选择"
+
+  sony:
+    type: http
+    interval: 43200
+    behavior: domain
+    format: mrs
+    url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/sony.mrs
+    proxy: "节点选择"
+
+  xbox:
+    type: http
+    interval: 43200
+    behavior: domain
+    format: mrs
+    url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/xbox.mrs
+    proxy: "节点选择"
+
+  geolocation-!cn:
+    type: http
+    interval: 43200
+    behavior: domain
+    format: mrs
+    url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/geolocation-!cn.mrs
+    proxy: "节点选择"
+
+  category-ads-all:
+    type: http
+    interval: 43200
+    behavior: domain
+    format: mrs
+    url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/category-ads-all.mrs
+    proxy: "节点选择"
+
+  private_ip:
+    type: http
+    interval: 43200
+    behavior: ipcidr
+    format: mrs
+    url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo-lite/geoip/private.mrs
+    proxy: "节点选择"
+
+  netflix_ip:
+    type: http
+    interval: 43200
+    behavior: ipcidr
+    format: mrs
+    url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo-lite/geoip/netflix.mrs
+    proxy: "节点选择"
+
+  telegram_ip:
+    type: http
+    interval: 43200
+    behavior: ipcidr
+    format: mrs
+    url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/telegram.mrs
+    proxy: "节点选择"
+
+  cloudflare_ip:
+    type: http
+    interval: 43200
+    behavior: ipcidr
+    format: mrs
+    url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/cloudflare.mrs
+    proxy: "节点选择"
+
+  cn_ip:
+    type: http
+    interval: 43200
+    behavior: ipcidr
+    format: mrs
+    url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo-lite/geoip/cn.mrs
+    proxy: "节点选择"
+
+  gfw:
+    type: http
+    interval: 43200
+    behavior: domain
+    format: mrs
+    url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/gfw.mrs
+    proxy: "节点选择"
+
+  ad_ip:
+    type: http
+    interval: 43200
+    behavior: ipcidr
+    format: mrs
+    url: https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geoip/ad.mrs
+    proxy: "节点选择"
+
+rules:
+  # ===== 拦截 =====
+  - RULE-SET,category-ads-all,全球拦截
+  - RULE-SET,ad_ip,全球拦截,no-resolve
+
+  # ===== 私有地址直连（geo + mrs 双保险）=====
+  - RULE-SET,private_ip,全球直连,no-resolve
+  - GEOIP,private,全球直连,no-resolve
+
+  # ===== AI =====
+  # 人工智能-Gemini-手机端
+  - DOMAIN-SUFFIX,pa.googleapis.com,人工智能
+  - DOMAIN,robinfrontend-pa.googleapis.com,人工智能
+  - DOMAIN,signaler-pa.googleapis.com,人工智能
+  
+  # 人工智能-ACL4SSR通用-50条
+  - DOMAIN-KEYWORD,anthropic,人工智能
+  - DOMAIN-KEYWORD,claude,人工智能
+  - DOMAIN-KEYWORD,openai,人工智能
+  - DOMAIN,ai.google.dev,人工智能
+  - DOMAIN,aistudio.google.com,人工智能
+  - DOMAIN,api.githubcopilot.com,人工智能
+  - DOMAIN,api.groq.com,人工智能
+  - DOMAIN,api.together.xyz,人工智能
+  - DOMAIN,bard.google.com,人工智能
+  - DOMAIN,console.groq.com,人工智能
+  - DOMAIN,copilot-proxy.githubusercontent.com,人工智能
+  - DOMAIN,gemini.google.com,人工智能
+  - DOMAIN,generativelanguage.googleapis.com,人工智能
+  - DOMAIN,notebooklm.google.com,人工智能
+  - DOMAIN,sydney.bing.com,人工智能
+  - DOMAIN-SUFFIX,ai.azure.com,人工智能
+  - DOMAIN-SUFFIX,anthropic.com,人工智能
+  - DOMAIN-SUFFIX,auth0.com,人工智能
+  - DOMAIN-SUFFIX,bard.google.com,人工智能
+  - DOMAIN-SUFFIX,chatgpt.com,人工智能
+  - DOMAIN-SUFFIX,claude.ai,人工智能
+  - DOMAIN-SUFFIX,claude.com,人工智能
+  - DOMAIN-SUFFIX,claudeusercontent.com,人工智能
+  - DOMAIN-SUFFIX,client-api.arkoselabs.com,人工智能
+  - DOMAIN-SUFFIX,copilot.cloud.microsoft,人工智能
+  - DOMAIN-SUFFIX,copilot.microsoft.com,人工智能
+  - DOMAIN-SUFFIX,cursor.com,人工智能
+  - DOMAIN-SUFFIX,cursor.sh,人工智能
+  - DOMAIN-SUFFIX,events.statsigapi.net,人工智能
+  - DOMAIN-SUFFIX,featuregates.org,人工智能
+  - DOMAIN-SUFFIX,gemini.google.com,人工智能
+  - DOMAIN-SUFFIX,grazie.ai,人工智能
+  - DOMAIN-SUFFIX,grazie.aws.intellij.net,人工智能
+  - DOMAIN-SUFFIX,identrust.com,人工智能
+  - DOMAIN-SUFFIX,intercom.io,人工智能
+  - DOMAIN-SUFFIX,intercomcdn.com,人工智能
+  - DOMAIN-SUFFIX,jetbrains.ai,人工智能
+  - DOMAIN-SUFFIX,makersuite.google.com,人工智能
+  - DOMAIN-SUFFIX,meta.ai,人工智能
+  - DOMAIN-SUFFIX,mistral.ai,人工智能
+  - DOMAIN-SUFFIX,notebooklm.google,人工智能
+  - DOMAIN-SUFFIX,notebooklm.google.com,人工智能
+  - DOMAIN-SUFFIX,oaistatic.com,人工智能
+  - DOMAIN-SUFFIX,oaiusercontent.com,人工智能
+  - DOMAIN-SUFFIX,openai.com,人工智能
+  - DOMAIN-SUFFIX,openaiapi-site.azureedge.net,人工智能
+  - DOMAIN-SUFFIX,perplexity.ai,人工智能
+  - DOMAIN-SUFFIX,sora.com,人工智能
+  - DOMAIN-SUFFIX,x.ai,人工智能
+  - RULE-SET,category-ai-!cn,人工智能
+
+  # ===== YouTube =====
+  - RULE-SET,youtube,视频平台
+
+  # ===== 流媒体 =====
+  - RULE-SET,netflix,视频平台
+  - RULE-SET,netflix_ip,视频平台,no-resolve
+  - RULE-SET,disney,视频平台
+  - RULE-SET,primevideo,视频平台
+  - RULE-SET,hbo,视频平台
+  - RULE-SET,spotify,视频平台
+  - RULE-SET,tiktok,视频平台
+  - RULE-SET,emby,视频平台
+
+  # ===== Telegram =====
+  - RULE-SET,telegram,电报信息
+  - RULE-SET,telegram_ip,电报信息,no-resolve
+
+  # ===== GitHub =====
+  - DOMAIN-SUFFIX,github.com,节点选择
+  - DOMAIN-SUFFIX,githubusercontent.com,节点选择
+  - DOMAIN-SUFFIX,githubassets.com,节点选择
+  - DOMAIN-SUFFIX,github.io,节点选择
+  - DOMAIN-SUFFIX,github.dev,节点选择
+  - DOMAIN-SUFFIX,githubcopilot.com,人工智能
+
+  # ===== 微软 / 苹果 =====
+  - RULE-SET,microsoft,微软服务
+  - RULE-SET,apple,苹果服务 
+
+  # ===== Cloudflare =====
+  - RULE-SET,cloudflare,加速服务
+  - RULE-SET,cloudflare_ip,加速服务,no-resolve
+
+  # ===== 游戏平台 =====
+  - DOMAIN-SUFFIX,steamserver.net,全球直连
+  - DOMAIN-SUFFIX,cm.steampowered.com,全球直连
+  - RULE-SET,steam,游戏平台
+  - RULE-SET,epicgames,游戏平台
+  - RULE-SET,sony,游戏平台
+  - RULE-SET,xbox,游戏平台
+
+  # ===== 国内直连（geo + mrs 双保险）=====
+  - RULE-SET,bilibili,全球直连
+  - RULE-SET,cn,全球直连
+  - RULE-SET,cn_ip,全球直连,no-resolve
+  - GEOSITE,cn,全球直连
+  - GEOIP,CN,全球直连,no-resolve  
+
+  # ===== GFW 名单 =====
+  - RULE-SET,gfw,节点选择
+  - GEOSITE,gfw,节点选择
+
+  # ===== 国外兜底 =====
+  - RULE-SET,geolocation-!cn,国外网站
+  - GEOSITE,geolocation-!cn,国外网站
+
+  # ===== 最终兜底 =====
+  - MATCH,漏网之鱼
+
+proxies:
+  - name: "MASQUE导航 | 13.250.41.68 | 443"
+    type: masque
+    server: 13.250.41.68
+    port: 443
+    private-key: MHcCAQEEINCYtd+fM9JgHBbNbR3YAFNWqi7Gg5b+UDMeS44erXqeoAoGCCqGSM49AwEHoUQDQgAEiepRAJn0a3kuPysTazB1bl75fOy/5PhklRWgET6FtAAjjIS/1+4ce05aStT7310cAgpP5ZmtblEk2KJz4n+Upg==
+    public-key: MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==
+    ip: 172.16.0.2
+    ipv6: 2606:4700:110:87ad:c791:5715:2ad:8d11
+    uri: https://cloudflareaccess.com
+    mtu: 1280
+    udp: true
+    remote-dns-resolve: true
+    congestion-controller: bbr
+    dns: [ 1.1.1.1, 8.8.8.8 ]
+    sni: www.microsoft.com
+
+  - name: "MASQUE导航 | 172.237.6.233 | 443"
+    type: masque
+    server: 172.237.6.233
+    port: 443
+    private-key: MHcCAQEEINCYtd+fM9JgHBbNbR3YAFNWqi7Gg5b+UDMeS44erXqeoAoGCCqGSM49AwEHoUQDQgAEiepRAJn0a3kuPysTazB1bl75fOy/5PhklRWgET6FtAAjjIS/1+4ce05aStT7310cAgpP5ZmtblEk2KJz4n+Upg==
+    public-key: MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==
+    ip: 172.16.0.2
+    ipv6: 2606:4700:110:87ad:c791:5715:2ad:8d11
+    uri: https://cloudflareaccess.com
+    mtu: 1280
+    udp: true
+    remote-dns-resolve: true
+    congestion-controller: bbr
+    dns: [ 1.1.1.1, 8.8.8.8 ]
+    sni: www.microsoft.com
+
+  - name: "MASQUE导航 | 13.124.209.180 | 443"
+    type: masque
+    server: 13.124.209.180
+    port: 443
+    private-key: MHcCAQEEINCYtd+fM9JgHBbNbR3YAFNWqi7Gg5b+UDMeS44erXqeoAoGCCqGSM49AwEHoUQDQgAEiepRAJn0a3kuPysTazB1bl75fOy/5PhklRWgET6FtAAjjIS/1+4ce05aStT7310cAgpP5ZmtblEk2KJz4n+Upg==
+    public-key: MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==
+    ip: 172.16.0.2
+    ipv6: 2606:4700:110:87ad:c791:5715:2ad:8d11
+    uri: https://cloudflareaccess.com
+    mtu: 1280
+    udp: true
+    remote-dns-resolve: true
+    congestion-controller: bbr
+    dns: [ 1.1.1.1, 8.8.8.8 ]
+    sni: www.microsoft.com
+
+  - name: "MASQUE导航 | masque-sg1.bestcf.eu.cc | 443"
+    type: masque
+    server: masque-sg1.bestcf.eu.cc
+    port: 443
+    private-key: MHcCAQEEINCYtd+fM9JgHBbNbR3YAFNWqi7Gg5b+UDMeS44erXqeoAoGCCqGSM49AwEHoUQDQgAEiepRAJn0a3kuPysTazB1bl75fOy/5PhklRWgET6FtAAjjIS/1+4ce05aStT7310cAgpP5ZmtblEk2KJz4n+Upg==
+    public-key: MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==
+    ip: 172.16.0.2
+    ipv6: 2606:4700:110:87ad:c791:5715:2ad:8d11
+    uri: https://cloudflareaccess.com
+    mtu: 1280
+    udp: true
+    remote-dns-resolve: true
+    congestion-controller: bbr
+    dns: [ 1.1.1.1, 8.8.8.8 ]
+    sni: www.microsoft.com
+
+  - name: "MASQUE导航 | masque-jp1.bestcf.eu.cc | 443"
+    type: masque
+    server: masque-jp1.bestcf.eu.cc
+    port: 443
+    private-key: MHcCAQEEINCYtd+fM9JgHBbNbR3YAFNWqi7Gg5b+UDMeS44erXqeoAoGCCqGSM49AwEHoUQDQgAEiepRAJn0a3kuPysTazB1bl75fOy/5PhklRWgET6FtAAjjIS/1+4ce05aStT7310cAgpP5ZmtblEk2KJz4n+Upg==
+    public-key: MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==
+    ip: 172.16.0.2
+    ipv6: 2606:4700:110:87ad:c791:5715:2ad:8d11
+    uri: https://cloudflareaccess.com
+    mtu: 1280
+    udp: true
+    remote-dns-resolve: true
+    congestion-controller: bbr
+    dns: [ 1.1.1.1, 8.8.8.8 ]
+    sni: www.microsoft.com
+
+  - name: "MASQUE导航 | masque-kr1.bestcf.eu.cc | 443"
+    type: masque
+    server: masque-kr1.bestcf.eu.cc
+    port: 443
+    private-key: MHcCAQEEINCYtd+fM9JgHBbNbR3YAFNWqi7Gg5b+UDMeS44erXqeoAoGCCqGSM49AwEHoUQDQgAEiepRAJn0a3kuPysTazB1bl75fOy/5PhklRWgET6FtAAjjIS/1+4ce05aStT7310cAgpP5ZmtblEk2KJz4n+Upg==
+    public-key: MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==
+    ip: 172.16.0.2
+    ipv6: 2606:4700:110:87ad:c791:5715:2ad:8d11
+    uri: https://cloudflareaccess.com
+    mtu: 1280
+    udp: true
+    remote-dns-resolve: true
+    congestion-controller: bbr
+    dns: [ 1.1.1.1, 8.8.8.8 ]
+    sni: www.microsoft.com
+
+  - name: "MASQUE导航 | masque1.bestcf.eu.cc | 443"
+    type: masque
+    server: masque1.bestcf.eu.cc
+    port: 443
+    private-key: MHcCAQEEINCYtd+fM9JgHBbNbR3YAFNWqi7Gg5b+UDMeS44erXqeoAoGCCqGSM49AwEHoUQDQgAEiepRAJn0a3kuPysTazB1bl75fOy/5PhklRWgET6FtAAjjIS/1+4ce05aStT7310cAgpP5ZmtblEk2KJz4n+Upg==
+    public-key: MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==
+    ip: 172.16.0.2
+    ipv6: 2606:4700:110:87ad:c791:5715:2ad:8d11
+    uri: https://cloudflareaccess.com
+    mtu: 1280
+    udp: true
+    remote-dns-resolve: true
+    congestion-controller: bbr
+    dns: [ 1.1.1.1, 8.8.8.8 ]
+    sni: www.microsoft.com
+
+  - name: "MASQUE导航 | masque2.bestcf.eu.cc | 443"
+    type: masque
+    server: masque2.bestcf.eu.cc
+    port: 443
+    private-key: MHcCAQEEINCYtd+fM9JgHBbNbR3YAFNWqi7Gg5b+UDMeS44erXqeoAoGCCqGSM49AwEHoUQDQgAEiepRAJn0a3kuPysTazB1bl75fOy/5PhklRWgET6FtAAjjIS/1+4ce05aStT7310cAgpP5ZmtblEk2KJz4n+Upg==
+    public-key: MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==
+    ip: 172.16.0.2
+    ipv6: 2606:4700:110:87ad:c791:5715:2ad:8d11
+    uri: https://cloudflareaccess.com
+    mtu: 1280
+    udp: true
+    remote-dns-resolve: true
+    congestion-controller: bbr
+    dns: [ 1.1.1.1, 8.8.8.8 ]
+    sni: www.microsoft.com
+
+  - name: "MASQUE导航 | 162.159.198.2 | 8095"
+    type: masque
+    server: 162.159.198.2
+    port: 8095
+    private-key: MHcCAQEEINCYtd+fM9JgHBbNbR3YAFNWqi7Gg5b+UDMeS44erXqeoAoGCCqGSM49AwEHoUQDQgAEiepRAJn0a3kuPysTazB1bl75fOy/5PhklRWgET6FtAAjjIS/1+4ce05aStT7310cAgpP5ZmtblEk2KJz4n+Upg==
+    public-key: MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==
+    ip: 172.16.0.2
+    ipv6: 2606:4700:110:87ad:c791:5715:2ad:8d11
+    uri: https://cloudflareaccess.com
+    mtu: 1280
+    udp: true
+    remote-dns-resolve: true
+    congestion-controller: bbr
+    dns: [ 1.1.1.1, 8.8.8.8 ]
+    sni: www.microsoft.com
+
+  - name: "MASQUE导航 | 162.159.198.2 | 443"
+    type: masque
+    server: 162.159.198.2
+    port: 443
+    private-key: MHcCAQEEINCYtd+fM9JgHBbNbR3YAFNWqi7Gg5b+UDMeS44erXqeoAoGCCqGSM49AwEHoUQDQgAEiepRAJn0a3kuPysTazB1bl75fOy/5PhklRWgET6FtAAjjIS/1+4ce05aStT7310cAgpP5ZmtblEk2KJz4n+Upg==
+    public-key: MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==
+    ip: 172.16.0.2
+    ipv6: 2606:4700:110:87ad:c791:5715:2ad:8d11
+    uri: https://cloudflareaccess.com
+    mtu: 1280
+    udp: true
+    remote-dns-resolve: true
+    congestion-controller: bbr
+    dns: [ 1.1.1.1, 8.8.8.8 ]
+    sni: www.microsoft.com
+
+  - name: "MASQUE导航 | 162.159.198.2 | 8443"
+    type: masque
+    server: 162.159.198.2
+    port: 8443
+    private-key: MHcCAQEEINCYtd+fM9JgHBbNbR3YAFNWqi7Gg5b+UDMeS44erXqeoAoGCCqGSM49AwEHoUQDQgAEiepRAJn0a3kuPysTazB1bl75fOy/5PhklRWgET6FtAAjjIS/1+4ce05aStT7310cAgpP5ZmtblEk2KJz4n+Upg==
+    public-key: MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==
+    ip: 172.16.0.2
+    ipv6: 2606:4700:110:87ad:c791:5715:2ad:8d11
+    uri: https://cloudflareaccess.com
+    mtu: 1280
+    udp: true
+    remote-dns-resolve: true
+    congestion-controller: bbr
+    dns: [ 1.1.1.1, 8.8.8.8 ]
+    sni: www.microsoft.com
+
+  - name: "MASQUE导航 | 162.159.198.2 | 4443"
+    type: masque
+    server: 162.159.198.2
+    port: 4443
+    private-key: MHcCAQEEINCYtd+fM9JgHBbNbR3YAFNWqi7Gg5b+UDMeS44erXqeoAoGCCqGSM49AwEHoUQDQgAEiepRAJn0a3kuPysTazB1bl75fOy/5PhklRWgET6FtAAjjIS/1+4ce05aStT7310cAgpP5ZmtblEk2KJz4n+Upg==
+    public-key: MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==
+    ip: 172.16.0.2
+    ipv6: 2606:4700:110:87ad:c791:5715:2ad:8d11
+    uri: https://cloudflareaccess.com
+    mtu: 1280
+    udp: true
+    remote-dns-resolve: true
+    congestion-controller: bbr
+    dns: [ 1.1.1.1, 8.8.8.8 ]
+    sni: www.microsoft.com
+
+  - name: "MASQUE导航 | 162.159.198.2 | 1701"
+    type: masque
+    server: 162.159.198.2
+    port: 1701
+    private-key: MHcCAQEEINCYtd+fM9JgHBbNbR3YAFNWqi7Gg5b+UDMeS44erXqeoAoGCCqGSM49AwEHoUQDQgAEiepRAJn0a3kuPysTazB1bl75fOy/5PhklRWgET6FtAAjjIS/1+4ce05aStT7310cAgpP5ZmtblEk2KJz4n+Upg==
+    public-key: MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==
+    ip: 172.16.0.2
+    ipv6: 2606:4700:110:87ad:c791:5715:2ad:8d11
+    uri: https://cloudflareaccess.com
+    mtu: 1280
+    udp: true
+    remote-dns-resolve: true
+    congestion-controller: bbr
+    dns: [ 1.1.1.1, 8.8.8.8 ]
+    sni: www.microsoft.com
+
+  - name: "MASQUE导航 | 162.159.198.2 | 4500"
+    type: masque
+    server: 162.159.198.2
+    port: 4500
+    private-key: MHcCAQEEINCYtd+fM9JgHBbNbR3YAFNWqi7Gg5b+UDMeS44erXqeoAoGCCqGSM49AwEHoUQDQgAEiepRAJn0a3kuPysTazB1bl75fOy/5PhklRWgET6FtAAjjIS/1+4ce05aStT7310cAgpP5ZmtblEk2KJz4n+Upg==
+    public-key: MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==
+    ip: 172.16.0.2
+    ipv6: 2606:4700:110:87ad:c791:5715:2ad:8d11
+    uri: https://cloudflareaccess.com
+    mtu: 1280
+    udp: true
+    remote-dns-resolve: true
+    congestion-controller: bbr
+    dns: [ 1.1.1.1, 8.8.8.8 ]
+    sni: www.microsoft.com
+
+  - name: "MASQUE导航 | 162.159.198.2 | 500"
+    type: masque
+    server: 162.159.198.2
+    port: 500
+    private-key: MHcCAQEEINCYtd+fM9JgHBbNbR3YAFNWqi7Gg5b+UDMeS44erXqeoAoGCCqGSM49AwEHoUQDQgAEiepRAJn0a3kuPysTazB1bl75fOy/5PhklRWgET6FtAAjjIS/1+4ce05aStT7310cAgpP5ZmtblEk2KJz4n+Upg==
+    public-key: MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==
+    ip: 172.16.0.2
+    ipv6: 2606:4700:110:87ad:c791:5715:2ad:8d11
+    uri: https://cloudflareaccess.com
+    mtu: 1280
+    udp: true
+    remote-dns-resolve: true
+    congestion-controller: bbr
+    dns: [ 1.1.1.1, 8.8.8.8 ]
+    sni: www.microsoft.com
+
+  - name: "MASQUE导航 | 162.159.199.2 | 8095"
+    type: masque
+    server: 162.159.199.2
+    port: 8095
+    private-key: MHcCAQEEINCYtd+fM9JgHBbNbR3YAFNWqi7Gg5b+UDMeS44erXqeoAoGCCqGSM49AwEHoUQDQgAEiepRAJn0a3kuPysTazB1bl75fOy/5PhklRWgET6FtAAjjIS/1+4ce05aStT7310cAgpP5ZmtblEk2KJz4n+Upg==
+    public-key: MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==
+    ip: 172.16.0.2
+    ipv6: 2606:4700:110:87ad:c791:5715:2ad:8d11
+    uri: https://cloudflareaccess.com
+    mtu: 1280
+    udp: true
+    remote-dns-resolve: true
+    congestion-controller: bbr
+    dns: [ 1.1.1.1, 8.8.8.8 ]
+    sni: www.microsoft.com
+
+  - name: "MASQUE导航 | 162.159.199.2 | 443"
+    type: masque
+    server: 162.159.199.2
+    port: 443
+    private-key: MHcCAQEEINCYtd+fM9JgHBbNbR3YAFNWqi7Gg5b+UDMeS44erXqeoAoGCCqGSM49AwEHoUQDQgAEiepRAJn0a3kuPysTazB1bl75fOy/5PhklRWgET6FtAAjjIS/1+4ce05aStT7310cAgpP5ZmtblEk2KJz4n+Upg==
+    public-key: MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==
+    ip: 172.16.0.2
+    ipv6: 2606:4700:110:87ad:c791:5715:2ad:8d11
+    uri: https://cloudflareaccess.com
+    mtu: 1280
+    udp: true
+    remote-dns-resolve: true
+    congestion-controller: bbr
+    dns: [ 1.1.1.1, 8.8.8.8 ]
+    sni: www.microsoft.com
+
+  - name: "MASQUE导航 | 162.159.199.2 | 8443"
+    type: masque
+    server: 162.159.199.2
+    port: 8443
+    private-key: MHcCAQEEINCYtd+fM9JgHBbNbR3YAFNWqi7Gg5b+UDMeS44erXqeoAoGCCqGSM49AwEHoUQDQgAEiepRAJn0a3kuPysTazB1bl75fOy/5PhklRWgET6FtAAjjIS/1+4ce05aStT7310cAgpP5ZmtblEk2KJz4n+Upg==
+    public-key: MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==
+    ip: 172.16.0.2
+    ipv6: 2606:4700:110:87ad:c791:5715:2ad:8d11
+    uri: https://cloudflareaccess.com
+    mtu: 1280
+    udp: true
+    remote-dns-resolve: true
+    congestion-controller: bbr
+    dns: [ 1.1.1.1, 8.8.8.8 ]
+    sni: www.microsoft.com
+
+  - name: "MASQUE导航 | 162.159.199.2 | 4443"
+    type: masque
+    server: 162.159.199.2
+    port: 4443
+    private-key: MHcCAQEEINCYtd+fM9JgHBbNbR3YAFNWqi7Gg5b+UDMeS44erXqeoAoGCCqGSM49AwEHoUQDQgAEiepRAJn0a3kuPysTazB1bl75fOy/5PhklRWgET6FtAAjjIS/1+4ce05aStT7310cAgpP5ZmtblEk2KJz4n+Upg==
+    public-key: MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==
+    ip: 172.16.0.2
+    ipv6: 2606:4700:110:87ad:c791:5715:2ad:8d11
+    uri: https://cloudflareaccess.com
+    mtu: 1280
+    udp: true
+    remote-dns-resolve: true
+    congestion-controller: bbr
+    dns: [ 1.1.1.1, 8.8.8.8 ]
+    sni: www.microsoft.com
+
+  - name: "MASQUE导航 | 162.159.199.2 | 1701"
+    type: masque
+    server: 162.159.199.2
+    port: 1701
+    private-key: MHcCAQEEINCYtd+fM9JgHBbNbR3YAFNWqi7Gg5b+UDMeS44erXqeoAoGCCqGSM49AwEHoUQDQgAEiepRAJn0a3kuPysTazB1bl75fOy/5PhklRWgET6FtAAjjIS/1+4ce05aStT7310cAgpP5ZmtblEk2KJz4n+Upg==
+    public-key: MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==
+    ip: 172.16.0.2
+    ipv6: 2606:4700:110:87ad:c791:5715:2ad:8d11
+    uri: https://cloudflareaccess.com
+    mtu: 1280
+    udp: true
+    remote-dns-resolve: true
+    congestion-controller: bbr
+    dns: [ 1.1.1.1, 8.8.8.8 ]
+    sni: www.microsoft.com
+
+  - name: "MASQUE导航 | 162.159.199.2 | 4500"
+    type: masque
+    server: 162.159.199.2
+    port: 4500
+    private-key: MHcCAQEEINCYtd+fM9JgHBbNbR3YAFNWqi7Gg5b+UDMeS44erXqeoAoGCCqGSM49AwEHoUQDQgAEiepRAJn0a3kuPysTazB1bl75fOy/5PhklRWgET6FtAAjjIS/1+4ce05aStT7310cAgpP5ZmtblEk2KJz4n+Upg==
+    public-key: MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==
+    ip: 172.16.0.2
+    ipv6: 2606:4700:110:87ad:c791:5715:2ad:8d11
+    uri: https://cloudflareaccess.com
+    mtu: 1280
+    udp: true
+    remote-dns-resolve: true
+    congestion-controller: bbr
+    dns: [ 1.1.1.1, 8.8.8.8 ]
+    sni: www.microsoft.com
+
+  - name: "MASQUE导航 | 162.159.199.2 | 500"
+    type: masque
+    server: 162.159.199.2
+    port: 500
+    private-key: MHcCAQEEINCYtd+fM9JgHBbNbR3YAFNWqi7Gg5b+UDMeS44erXqeoAoGCCqGSM49AwEHoUQDQgAEiepRAJn0a3kuPysTazB1bl75fOy/5PhklRWgET6FtAAjjIS/1+4ce05aStT7310cAgpP5ZmtblEk2KJz4n+Upg==
+    public-key: MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==
+    ip: 172.16.0.2
+    ipv6: 2606:4700:110:87ad:c791:5715:2ad:8d11
+    uri: https://cloudflareaccess.com
+    mtu: 1280
+    udp: true
+    remote-dns-resolve: true
+    congestion-controller: bbr
+    dns: [ 1.1.1.1, 8.8.8.8 ]
+    sni: www.microsoft.com
+
+  - name: 直接落地 → 🇺🇸 美国1
+    type: vless
+    server: proxyip.us.cmliussss.net
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=proxyip.us.cmliussss.net:443&p=proxyip.us.cmliussss.net:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 直接落地 → 🇺🇸 美国2
+    type: vless
+    server: us.bestcf.eu.cc
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=us.bestcf.eu.cc:443&p=us.bestcf.eu.cc:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 直接落地 → 🇺🇸 美国3
+    type: vless
+    server: us-proxyip.bestcf.eu.cc
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=us-proxyip.bestcf.eu.cc:443&p=us-proxyip.bestcf.eu.cc:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 直接落地 → 🇯🇵 日本1
+    type: vless
+    server: proxyip.jp.cmliussss.net
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=proxyip.jp.cmliussss.net:443&p=proxyip.jp.cmliussss.net:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 直接落地 → 🇯🇵 日本2
+    type: vless
+    server: jp.bestcf.eu.cc
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=jp.bestcf.eu.cc:443&p=jp.bestcf.eu.cc:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 直接落地 → 🇯🇵 日本3
+    type: vless
+    server: jp-proxyip.bestcf.eu.cc
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=jp-proxyip.bestcf.eu.cc:443&p=jp-proxyip.bestcf.eu.cc:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 直接落地 → 🇰🇷 韩国1
+    type: vless
+    server: proxyip.kr.cmliussss.net
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=proxyip.kr.cmliussss.net:443&p=proxyip.kr.cmliussss.net:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 直接落地 → 🇰🇷 韩国2
+    type: vless
+    server: kr.bestcf.eu.cc
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=kr.bestcf.eu.cc:443&p=kr.bestcf.eu.cc:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 直接落地 → 🇰🇷 韩国3
+    type: vless
+    server: kr-proxyip.bestcf.eu.cc
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=kr-proxyip.bestcf.eu.cc:443&p=kr-proxyip.bestcf.eu.cc:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 直接落地 → 🇬🇧 英国1
+    type: vless
+    server: proxyip.gb.cmliussss.net
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=proxyip.gb.cmliussss.net:443&p=proxyip.gb.cmliussss.net:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 直接落地 → 🇬🇧 英国2
+    type: vless
+    server: gb.bestcf.eu.cc
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=gb.bestcf.eu.cc:443&p=gb.bestcf.eu.cc:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 直接落地 → 🇬🇧 英国3
+    type: vless
+    server: gb-proxyip.bestcf.eu.cc
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=gb-proxyip.bestcf.eu.cc:443&p=gb-proxyip.bestcf.eu.cc:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 直接落地 → 🇫🇷 法国1
+    type: vless
+    server: proxyip.fr.cmliussss.net
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=proxyip.fr.cmliussss.net:443&p=proxyip.fr.cmliussss.net:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 直接落地 → 🇫🇷 法国2
+    type: vless
+    server: fr.bestcf.eu.cc
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=fr.bestcf.eu.cc:443&p=fr.bestcf.eu.cc:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 直接落地 → 🇫🇷 法国3
+    type: vless
+    server: fr-proxyip.bestcf.eu.cc
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=fr-proxyip.bestcf.eu.cc:443&p=fr-proxyip.bestcf.eu.cc:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 直接落地 → 🇩🇪 德国1
+    type: vless
+    server: proxyip.de.cmliussss.net
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=proxyip.de.cmliussss.net:443&p=proxyip.de.cmliussss.net:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 直接落地 → 🇩🇪 德国2
+    type: vless
+    server: de.bestcf.eu.cc
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=de.bestcf.eu.cc:443&p=de.bestcf.eu.cc:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 直接落地 → 🇩🇪 德国3
+    type: vless
+    server: de-proxyip.bestcf.eu.cc
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=de-proxyip.bestcf.eu.cc:443&p=de-proxyip.bestcf.eu.cc:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 直接落地 → 🇳🇱 荷兰1
+    type: vless
+    server: proxyip.nl.cmliussss.net
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=proxyip.nl.cmliussss.net:443&p=proxyip.nl.cmliussss.net:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 直接落地 → 🇳🇱 荷兰2
+    type: vless
+    server: nl.bestcf.eu.cc
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=nl.bestcf.eu.cc:443&p=nl.bestcf.eu.cc:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 直接落地 → 🇳🇱 荷兰3
+    type: vless
+    server: nl-proxyip.bestcf.eu.cc
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=nl-proxyip.bestcf.eu.cc:443&p=nl-proxyip.bestcf.eu.cc:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 直接落地 → 🇸🇬 新加坡1
+    type: vless
+    server: proxyip.sg.cmliussss.net
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=proxyip.sg.cmliussss.net:443&p=proxyip.sg.cmliussss.net:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 直接落地 → 🇸🇬 新加坡2
+    type: vless
+    server: sg.bestcf.eu.cc
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=sg.bestcf.eu.cc:443&p=sg.bestcf.eu.cc:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 直接落地 → 🇸🇬 新加坡3
+    type: vless
+    server: sg-proxyip.bestcf.eu.cc
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=sg-proxyip.bestcf.eu.cc:443&p=sg-proxyip.bestcf.eu.cc:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 直接落地 → 🇨🇦 加拿大1
+    type: vless
+    server: proxyip.ca.cmliussss.net
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=proxyip.ca.cmliussss.net:443&p=proxyip.ca.cmliussss.net:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 直接落地 → 🇨🇦 加拿大2
+    type: vless
+    server: ca.bestcf.eu.cc
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=ca.bestcf.eu.cc:443&p=ca.bestcf.eu.cc:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 直接落地 → 🇨🇦 加拿大3
+    type: vless
+    server: ca-proxyip.bestcf.eu.cc
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=ca-proxyip.bestcf.eu.cc:443&p=ca-proxyip.bestcf.eu.cc:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 直接落地 → 🇫🇮 芬兰1
+    type: vless
+    server: proxyip.fi.cmliussss.net
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=proxyip.fi.cmliussss.net:443&p=proxyip.fi.cmliussss.net:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 直接落地 → 🇫🇮 芬兰2
+    type: vless
+    server: fi.bestcf.eu.cc
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=fi.bestcf.eu.cc:443&p=fi.bestcf.eu.cc:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 直接落地 → 🇫🇮 芬兰3
+    type: vless
+    server: fi-proxyip.bestcf.eu.cc
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=fi-proxyip.bestcf.eu.cc:443&p=fi-proxyip.bestcf.eu.cc:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 直接落地 → 🇵🇱 波兰1
+    type: vless
+    server: proxyip.pl.cmliussss.net
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=proxyip.pl.cmliussss.net:443&p=proxyip.pl.cmliussss.net:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 直接落地 → 🇵🇱 波兰2
+    type: vless
+    server: pl.bestcf.eu.cc
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=pl.bestcf.eu.cc:443&p=pl.bestcf.eu.cc:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 直接落地 → 🇵🇱 波兰3
+    type: vless
+    server: pl-proxyip.bestcf.eu.cc
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=pl-proxyip.bestcf.eu.cc:443&p=pl-proxyip.bestcf.eu.cc:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 直接落地 → 🇨🇭 瑞士1
+    type: vless
+    server: proxyip.ch.cmliussss.net
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=proxyip.ch.cmliussss.net:443&p=proxyip.ch.cmliussss.net:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 直接落地 → 🇨🇭 瑞士2
+    type: vless
+    server: ch.bestcf.eu.cc
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=ch.bestcf.eu.cc:443&p=ch.bestcf.eu.cc:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 直接落地 → 🇨🇭 瑞士3
+    type: vless
+    server: ch-proxyip.bestcf.eu.cc
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=ch-proxyip.bestcf.eu.cc:443&p=ch-proxyip.bestcf.eu.cc:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 直接落地 → 🇸🇪 瑞典1
+    type: vless
+    server: proxyip.se.cmliussss.net
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=proxyip.se.cmliussss.net:443&p=proxyip.se.cmliussss.net:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 直接落地 → 🇸🇪 瑞典2
+    type: vless
+    server: se.bestcf.eu.cc
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=se.bestcf.eu.cc:443&p=se.bestcf.eu.cc:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 直接落地 → 🇸🇪 瑞典3
+    type: vless
+    server: se-proxyip.bestcf.eu.cc
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=se-proxyip.bestcf.eu.cc:443&p=se-proxyip.bestcf.eu.cc:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 直接落地 → 🇮🇳 印度1
+    type: vless
+    server: proxyip.in.cmliussss.net
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=proxyip.in.cmliussss.net:443&p=proxyip.in.cmliussss.net:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 直接落地 → 🇮🇳 印度2
+    type: vless
+    server: in.bestcf.eu.cc
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=in.bestcf.eu.cc:443&p=in.bestcf.eu.cc:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 直接落地 → 🇮🇳 印度3
+    type: vless
+    server: in-proxyip.bestcf.eu.cc
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=in-proxyip.bestcf.eu.cc:443&p=in-proxyip.bestcf.eu.cc:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 直接落地 → 🇨🇳 中国台湾1
+    type: vless
+    server: proxyip.tw.cmliussss.net
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=proxyip.tw.cmliussss.net:443&p=proxyip.tw.cmliussss.net:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 直接落地 → 🇨🇳 中国台湾2
+    type: vless
+    server: tw.bestcf.eu.cc
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=tw.bestcf.eu.cc:443&p=tw.bestcf.eu.cc:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 直接落地 → 🇨🇳 中国台湾3
+    type: vless
+    server: tw-proxyip.bestcf.eu.cc
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=tw-proxyip.bestcf.eu.cc:443&p=tw-proxyip.bestcf.eu.cc:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 直接落地 → 🇭🇰 中国香港1
+    type: vless
+    server: proxyip.hk.cmliussss.net
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=proxyip.hk.cmliussss.net:443&p=proxyip.hk.cmliussss.net:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 直接落地 → 🇭🇰 中国香港2
+    type: vless
+    server: hk.bestcf.eu.cc
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=hk.bestcf.eu.cc:443&p=hk.bestcf.eu.cc:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 直接落地 → 🇭🇰 中国香港3
+    type: vless
+    server: hk-proxyip.bestcf.eu.cc
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=hk-proxyip.bestcf.eu.cc:443&p=hk-proxyip.bestcf.eu.cc:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 直接落地 → 🇱🇻 拉脱维亚1
+    type: vless
+    server: proxyip.lv.cmliussss.net
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=proxyip.lv.cmliussss.net:443&p=proxyip.lv.cmliussss.net:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 直接落地 → 🇱🇻 拉脱维亚2
+    type: vless
+    server: lv.bestcf.eu.cc
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=lv.bestcf.eu.cc:443&p=lv.bestcf.eu.cc:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 直接落地 → 🇱🇻 拉脱维亚3
+    type: vless
+    server: lv-proxyip.bestcf.eu.cc
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=lv-proxyip.bestcf.eu.cc:443&p=lv-proxyip.bestcf.eu.cc:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 直接落地 → 🇷🇺 俄罗斯1
+    type: vless
+    server: proxyip.ru.cmliussss.net
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=proxyip.ru.cmliussss.net:443&p=proxyip.ru.cmliussss.net:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 直接落地 → 🇷🇺 俄罗斯2
+    type: vless
+    server: ru.bestcf.eu.cc
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=ru.bestcf.eu.cc:443&p=ru.bestcf.eu.cc:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 直接落地 → 🇷🇺 俄罗斯3
+    type: vless
+    server: ru-proxyip.bestcf.eu.cc
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=ru-proxyip.bestcf.eu.cc:443&p=ru-proxyip.bestcf.eu.cc:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 端点手动 → 🇺🇸 美国1
+    dialer-proxy: "端点手动"
+    type: vless
+    server: proxyip.us.cmliussss.net
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=proxyip.us.cmliussss.net:443&p=proxyip.us.cmliussss.net:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 端点手动 → 🇺🇸 美国2
+    dialer-proxy: "端点手动"
+    type: vless
+    server: us.bestcf.eu.cc
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=us.bestcf.eu.cc:443&p=us.bestcf.eu.cc:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 端点手动 → 🇺🇸 美国3
+    dialer-proxy: "端点手动"
+    type: vless
+    server: us-proxyip.bestcf.eu.cc
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=us-proxyip.bestcf.eu.cc:443&p=us-proxyip.bestcf.eu.cc:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 端点手动 → 🇯🇵 日本1
+    dialer-proxy: "端点手动"
+    type: vless
+    server: proxyip.jp.cmliussss.net
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=proxyip.jp.cmliussss.net:443&p=proxyip.jp.cmliussss.net:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 端点手动 → 🇯🇵 日本2
+    dialer-proxy: "端点手动"
+    type: vless
+    server: jp.bestcf.eu.cc
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=jp.bestcf.eu.cc:443&p=jp.bestcf.eu.cc:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 端点手动 → 🇯🇵 日本3
+    dialer-proxy: "端点手动"
+    type: vless
+    server: jp-proxyip.bestcf.eu.cc
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=jp-proxyip.bestcf.eu.cc:443&p=jp-proxyip.bestcf.eu.cc:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 端点手动 → 🇰🇷 韩国1
+    dialer-proxy: "端点手动"
+    type: vless
+    server: proxyip.kr.cmliussss.net
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=proxyip.kr.cmliussss.net:443&p=proxyip.kr.cmliussss.net:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 端点手动 → 🇰🇷 韩国2
+    dialer-proxy: "端点手动"
+    type: vless
+    server: kr.bestcf.eu.cc
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=kr.bestcf.eu.cc:443&p=kr.bestcf.eu.cc:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 端点手动 → 🇰🇷 韩国3
+    dialer-proxy: "端点手动"
+    type: vless
+    server: kr-proxyip.bestcf.eu.cc
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=kr-proxyip.bestcf.eu.cc:443&p=kr-proxyip.bestcf.eu.cc:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 端点手动 → 🇬🇧 英国1
+    dialer-proxy: "端点手动"
+    type: vless
+    server: proxyip.gb.cmliussss.net
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=proxyip.gb.cmliussss.net:443&p=proxyip.gb.cmliussss.net:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 端点手动 → 🇬🇧 英国2
+    dialer-proxy: "端点手动"
+    type: vless
+    server: gb.bestcf.eu.cc
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=gb.bestcf.eu.cc:443&p=gb.bestcf.eu.cc:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 端点手动 → 🇬🇧 英国3
+    dialer-proxy: "端点手动"
+    type: vless
+    server: gb-proxyip.bestcf.eu.cc
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=gb-proxyip.bestcf.eu.cc:443&p=gb-proxyip.bestcf.eu.cc:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 端点手动 → 🇫🇷 法国1
+    dialer-proxy: "端点手动"
+    type: vless
+    server: proxyip.fr.cmliussss.net
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=proxyip.fr.cmliussss.net:443&p=proxyip.fr.cmliussss.net:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 端点手动 → 🇫🇷 法国2
+    dialer-proxy: "端点手动"
+    type: vless
+    server: fr.bestcf.eu.cc
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=fr.bestcf.eu.cc:443&p=fr.bestcf.eu.cc:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 端点手动 → 🇫🇷 法国3
+    dialer-proxy: "端点手动"
+    type: vless
+    server: fr-proxyip.bestcf.eu.cc
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=fr-proxyip.bestcf.eu.cc:443&p=fr-proxyip.bestcf.eu.cc:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 端点手动 → 🇩🇪 德国1
+    dialer-proxy: "端点手动"
+    type: vless
+    server: proxyip.de.cmliussss.net
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=proxyip.de.cmliussss.net:443&p=proxyip.de.cmliussss.net:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 端点手动 → 🇩🇪 德国2
+    dialer-proxy: "端点手动"
+    type: vless
+    server: de.bestcf.eu.cc
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=de.bestcf.eu.cc:443&p=de.bestcf.eu.cc:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 端点手动 → 🇩🇪 德国3
+    dialer-proxy: "端点手动"
+    type: vless
+    server: de-proxyip.bestcf.eu.cc
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=de-proxyip.bestcf.eu.cc:443&p=de-proxyip.bestcf.eu.cc:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 端点手动 → 🇳🇱 荷兰1
+    dialer-proxy: "端点手动"
+    type: vless
+    server: proxyip.nl.cmliussss.net
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=proxyip.nl.cmliussss.net:443&p=proxyip.nl.cmliussss.net:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 端点手动 → 🇳🇱 荷兰2
+    dialer-proxy: "端点手动"
+    type: vless
+    server: nl.bestcf.eu.cc
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=nl.bestcf.eu.cc:443&p=nl.bestcf.eu.cc:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 端点手动 → 🇳🇱 荷兰3
+    dialer-proxy: "端点手动"
+    type: vless
+    server: nl-proxyip.bestcf.eu.cc
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=nl-proxyip.bestcf.eu.cc:443&p=nl-proxyip.bestcf.eu.cc:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 端点手动 → 🇸🇬 新加坡1
+    dialer-proxy: "端点手动"
+    type: vless
+    server: proxyip.sg.cmliussss.net
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=proxyip.sg.cmliussss.net:443&p=proxyip.sg.cmliussss.net:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 端点手动 → 🇸🇬 新加坡2
+    dialer-proxy: "端点手动"
+    type: vless
+    server: sg.bestcf.eu.cc
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=sg.bestcf.eu.cc:443&p=sg.bestcf.eu.cc:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 端点手动 → 🇸🇬 新加坡3
+    dialer-proxy: "端点手动"
+    type: vless
+    server: sg-proxyip.bestcf.eu.cc
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=sg-proxyip.bestcf.eu.cc:443&p=sg-proxyip.bestcf.eu.cc:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 端点手动 → 🇨🇦 加拿大1
+    dialer-proxy: "端点手动"
+    type: vless
+    server: proxyip.ca.cmliussss.net
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=proxyip.ca.cmliussss.net:443&p=proxyip.ca.cmliussss.net:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 端点手动 → 🇨🇦 加拿大2
+    dialer-proxy: "端点手动"
+    type: vless
+    server: ca.bestcf.eu.cc
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=ca.bestcf.eu.cc:443&p=ca.bestcf.eu.cc:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 端点手动 → 🇨🇦 加拿大3
+    dialer-proxy: "端点手动"
+    type: vless
+    server: ca-proxyip.bestcf.eu.cc
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=ca-proxyip.bestcf.eu.cc:443&p=ca-proxyip.bestcf.eu.cc:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 端点手动 → 🇫🇮 芬兰1
+    dialer-proxy: "端点手动"
+    type: vless
+    server: proxyip.fi.cmliussss.net
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=proxyip.fi.cmliussss.net:443&p=proxyip.fi.cmliussss.net:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 端点手动 → 🇫🇮 芬兰2
+    dialer-proxy: "端点手动"
+    type: vless
+    server: fi.bestcf.eu.cc
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=fi.bestcf.eu.cc:443&p=fi.bestcf.eu.cc:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 端点手动 → 🇫🇮 芬兰3
+    dialer-proxy: "端点手动"
+    type: vless
+    server: fi-proxyip.bestcf.eu.cc
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=fi-proxyip.bestcf.eu.cc:443&p=fi-proxyip.bestcf.eu.cc:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 端点手动 → 🇵🇱 波兰1
+    dialer-proxy: "端点手动"
+    type: vless
+    server: proxyip.pl.cmliussss.net
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=proxyip.pl.cmliussss.net:443&p=proxyip.pl.cmliussss.net:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 端点手动 → 🇵🇱 波兰2
+    dialer-proxy: "端点手动"
+    type: vless
+    server: pl.bestcf.eu.cc
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=pl.bestcf.eu.cc:443&p=pl.bestcf.eu.cc:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 端点手动 → 🇵🇱 波兰3
+    dialer-proxy: "端点手动"
+    type: vless
+    server: pl-proxyip.bestcf.eu.cc
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=pl-proxyip.bestcf.eu.cc:443&p=pl-proxyip.bestcf.eu.cc:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 端点手动 → 🇨🇭 瑞士1
+    dialer-proxy: "端点手动"
+    type: vless
+    server: proxyip.ch.cmliussss.net
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=proxyip.ch.cmliussss.net:443&p=proxyip.ch.cmliussss.net:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 端点手动 → 🇨🇭 瑞士2
+    dialer-proxy: "端点手动"
+    type: vless
+    server: ch.bestcf.eu.cc
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=ch.bestcf.eu.cc:443&p=ch.bestcf.eu.cc:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 端点手动 → 🇨🇭 瑞士3
+    dialer-proxy: "端点手动"
+    type: vless
+    server: ch-proxyip.bestcf.eu.cc
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=ch-proxyip.bestcf.eu.cc:443&p=ch-proxyip.bestcf.eu.cc:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 端点手动 → 🇸🇪 瑞典1
+    dialer-proxy: "端点手动"
+    type: vless
+    server: proxyip.se.cmliussss.net
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=proxyip.se.cmliussss.net:443&p=proxyip.se.cmliussss.net:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 端点手动 → 🇸🇪 瑞典2
+    dialer-proxy: "端点手动"
+    type: vless
+    server: se.bestcf.eu.cc
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=se.bestcf.eu.cc:443&p=se.bestcf.eu.cc:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 端点手动 → 🇸🇪 瑞典3
+    dialer-proxy: "端点手动"
+    type: vless
+    server: se-proxyip.bestcf.eu.cc
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=se-proxyip.bestcf.eu.cc:443&p=se-proxyip.bestcf.eu.cc:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 端点手动 → 🇮🇳 印度1
+    dialer-proxy: "端点手动"
+    type: vless
+    server: proxyip.in.cmliussss.net
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=proxyip.in.cmliussss.net:443&p=proxyip.in.cmliussss.net:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 端点手动 → 🇮🇳 印度2
+    dialer-proxy: "端点手动"
+    type: vless
+    server: in.bestcf.eu.cc
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=in.bestcf.eu.cc:443&p=in.bestcf.eu.cc:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 端点手动 → 🇮🇳 印度3
+    dialer-proxy: "端点手动"
+    type: vless
+    server: in-proxyip.bestcf.eu.cc
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=in-proxyip.bestcf.eu.cc:443&p=in-proxyip.bestcf.eu.cc:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 端点手动 → 🇨🇳 中国台湾1
+    dialer-proxy: "端点手动"
+    type: vless
+    server: proxyip.tw.cmliussss.net
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=proxyip.tw.cmliussss.net:443&p=proxyip.tw.cmliussss.net:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 端点手动 → 🇨🇳 中国台湾2
+    dialer-proxy: "端点手动"
+    type: vless
+    server: tw.bestcf.eu.cc
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=tw.bestcf.eu.cc:443&p=tw.bestcf.eu.cc:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 端点手动 → 🇨🇳 中国台湾3
+    dialer-proxy: "端点手动"
+    type: vless
+    server: tw-proxyip.bestcf.eu.cc
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=tw-proxyip.bestcf.eu.cc:443&p=tw-proxyip.bestcf.eu.cc:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 端点手动 → 🇭🇰 中国香港1
+    dialer-proxy: "端点手动"
+    type: vless
+    server: proxyip.hk.cmliussss.net
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=proxyip.hk.cmliussss.net:443&p=proxyip.hk.cmliussss.net:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 端点手动 → 🇭🇰 中国香港2
+    dialer-proxy: "端点手动"
+    type: vless
+    server: hk.bestcf.eu.cc
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=hk.bestcf.eu.cc:443&p=hk.bestcf.eu.cc:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 端点手动 → 🇭🇰 中国香港3
+    dialer-proxy: "端点手动"
+    type: vless
+    server: hk-proxyip.bestcf.eu.cc
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=hk-proxyip.bestcf.eu.cc:443&p=hk-proxyip.bestcf.eu.cc:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 端点手动 → 🇱🇻 拉脱维亚1
+    dialer-proxy: "端点手动"
+    type: vless
+    server: proxyip.lv.cmliussss.net
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=proxyip.lv.cmliussss.net:443&p=proxyip.lv.cmliussss.net:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 端点手动 → 🇱🇻 拉脱维亚2
+    dialer-proxy: "端点手动"
+    type: vless
+    server: lv.bestcf.eu.cc
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=lv.bestcf.eu.cc:443&p=lv.bestcf.eu.cc:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 端点手动 → 🇱🇻 拉脱维亚3
+    dialer-proxy: "端点手动"
+    type: vless
+    server: lv-proxyip.bestcf.eu.cc
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=lv-proxyip.bestcf.eu.cc:443&p=lv-proxyip.bestcf.eu.cc:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 端点手动 → 🇷🇺 俄罗斯1
+    dialer-proxy: "端点手动"
+    type: vless
+    server: proxyip.ru.cmliussss.net
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=proxyip.ru.cmliussss.net:443&p=proxyip.ru.cmliussss.net:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 端点手动 → 🇷🇺 俄罗斯2
+    dialer-proxy: "端点手动"
+    type: vless
+    server: ru.bestcf.eu.cc
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=ru.bestcf.eu.cc:443&p=ru.bestcf.eu.cc:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
+
+  - name: 端点手动 → 🇷🇺 俄罗斯3
+    dialer-proxy: "端点手动"
+    type: vless
+    server: ru-proxyip.bestcf.eu.cc
+    port: 443
+    uuid: 66bf5a86-914d-46b9-b372-c54714b8d9c1
+    udp: true
+    tls: true
+    servername: j4m2gz1f.maflya.dpdns.org
+    client-fingerprint: chrome
+    network: ws
+    ws-opts:
+      path: "/ws?ed=2560&proxyip=ru-proxyip.bestcf.eu.cc:443&p=ru-proxyip.bestcf.eu.cc:443"
+      headers:
+        Host: j4m2gz1f.maflya.dpdns.org
