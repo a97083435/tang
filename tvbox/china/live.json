@@ -1,0 +1,27 @@
+{
+  "lives": [
+    {
+      "name": "央視頻",
+      "url": "https://capi.yangshipin.cn/api/oms/pc/navigation/home_top_nav",
+      "api": "./live/yangshipin.py",
+      "ext": "./live/yangshipin.json",
+      "epg": "https://github.com/litiande03/epg/raw/refs/heads/master/pl.xml.gz",
+      "timeZone": "Asia/Shanghai",
+      "timeout": 30
+    },
+    {
+      "name": "央視官網",
+      "url": "https://tv.cctv.com/live/",
+      "api": "./live/cctv.py",
+      "ext": "./live/cctv.json",
+      "timeout": 20
+    },
+    {
+      "name": "廣東廣電",
+      "url": "https://gdtv-api.gdtv.cn/api/tv/v2/tvChannel?category=0",
+      "api": "./live/gdtv.py",
+      "timeZone": "Asia/Shanghai",
+      "timeout": 30
+    }
+  ]
+}
