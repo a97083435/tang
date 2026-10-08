@@ -39,13 +39,11 @@ USER_AGENT = (
 GROUP_NAMES = {"yangshi": "央視頻道", "weishi": "衛視頻道"}
 # Repeated regional-rights rejection, verified 2026-09-05.
 # Recheck playback before restoring these channels.
-EXCLUDED_PIDS = frozenset()
-# EXCLUDED_PIDS = frozenset({
-#     "600001818",  # CCTV5
-#     "600001817",  # CCTV5+
-#     "600098637",  # CCTV16-HD
-#     "600099502",  # CCTV16 4K
-# })
+EXCLUDED_PIDS = frozenset({
+    #"600001818",  # CCTV5
+    #"600001817",  # CCTV5+
+    #"600098637",  # CCTV16-HD
+    #"600099502",  # CCTV16 4K
 })
 XMLTV_NAMES = {
     "CCTV1": "CCTV-1 综合",
