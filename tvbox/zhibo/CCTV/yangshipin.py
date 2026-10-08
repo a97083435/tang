@@ -12,7 +12,6 @@ import time
 from collections import OrderedDict
 from urllib.parse import quote, unquote, urlparse
 
-import requests
 from Crypto.Cipher import AES
 from Crypto.Util.Padding import pad
 from base.spider import Spider as BaseSpider
@@ -28,6 +27,8 @@ EPG_URL = "https://api.cntv.cn/epg/getEpgInfoByChannelNew"
 HLS_MIME = "application/x-mpegURL"
 CATALOG_TIMEOUT = 8
 PLAYER_TIMEOUT = 15
+PLAYER_BUDGET = 25
+KEYGEN_CACHE_SECONDS = 24 * 60 * 60
 EPG_CACHE_SECONDS = 60 * 60
 TAIPEI = datetime.timezone(datetime.timedelta(hours=8))
 LOGO_URL = "https://epg.112114.xyz/logo/{}.png"
@@ -36,6 +37,14 @@ USER_AGENT = (
     "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36"
 )
 GROUP_NAMES = {"yangshi": "央視頻道", "weishi": "衛視頻道"}
+# Repeated regional-rights rejection, verified 2026-09-05.
+# Recheck playback before restoring these channels.
+EXCLUDED_PIDS = frozenset({
+    "600001818",  # CCTV5
+    "600001817",  # CCTV5+
+    "600098637",  # CCTV16-HD
+    "600099502",  # CCTV16 4K
+})
 XMLTV_NAMES = {
     "CCTV1": "CCTV-1 综合",
     "CCTV2": "CCTV-2 财经",
@@ -164,7 +173,48 @@ def _ticket(pid, timestamp, guid):
     ).hex()
 
 
-def _download_keygen():
+class _ProxyError(ValueError):
+
+    def __init__(self, status, message):
+        super().__init__(message)
+        self.status = status
+
+
+def _remaining(deadline, stage):
+    remaining = deadline - time.monotonic()
+    if remaining <= 0:
+        raise _ProxyError(504, stage + ": 取址逾時")
+    return remaining
+
+
+def _net_response(net, url, timeout, headers=None, params=None, buffer=0, data=None,
+                  post_type="json", deadline=None, stage="網路請求"):
+    if deadline is not None:
+        timeout = min(timeout, _remaining(deadline, stage))
+    milliseconds = max(1, int(timeout * 1000))
+    options = {
+        "headers": headers or {},
+        "timeout": milliseconds,
+        "callTimeout": milliseconds,
+        "buffer": buffer,
+    }
+    if params:
+        options["params"] = params
+    if data is not None:
+        options.update({"method": "POST", "data": data, "postType": post_type})
+    result = net.req(url, options)
+    if result.get("error"):
+        error = str(result["error"])
+        status = 504 if "timeout" in error.lower() or "timed out" in error.lower() else 502
+        raise _ProxyError(status, stage + ": " + error)
+    if deadline is not None:
+        _remaining(deadline, stage)
+    if result["code"] >= 400:
+        raise _ProxyError(result["code"], stage + ": HTTP " + str(result["code"]))
+    return result
+
+
+def _download_keygen(net, deadline):
     path = os.path.join(tempfile.gettempdir(), "ysp-keygen-v1.wasm")
     minimum_size = 20000
     maximum_size = 100000
@@ -179,23 +229,58 @@ def _download_keygen():
         except OSError:
             return False
 
-    with _KEYGEN_LOCK:
-        if valid():
+    if not _KEYGEN_LOCK.acquire(timeout=_remaining(deadline, "簽名檔更新")):
+        raise _ProxyError(504, "簽名檔更新: 等待逾時")
+    try:
+        cached = valid()
+        try:
+            with open(path + ".json", encoding="utf-8") as stream:
+                metadata = json.load(stream)
+        except (OSError, ValueError):
+            metadata = {}
+        if not isinstance(metadata, dict) or not cached:
+            metadata = {}
+        checked_at = metadata.get("checkedAt", 0)
+        age = time.time() - checked_at if isinstance(checked_at, (int, float)) else KEYGEN_CACHE_SECONDS
+        if cached and 0 <= age < KEYGEN_CACHE_SECONDS:
             return path
-        with requests.get(
-            KEYGEN_URL,
-            headers={"User-Agent": USER_AGENT},
-            timeout=PLAYER_TIMEOUT,
-        ) as response:
-            response.raise_for_status()
-            payload = response.content
-        if not (minimum_size <= len(payload) <= maximum_size) or payload[:4] != b"\x00asm":
-            raise ValueError("invalid official wasm")
-        temporary = path + ".download"
+        headers = {"User-Agent": USER_AGENT}
+        for key, header in (("etag", "If-None-Match"), ("modified", "If-Modified-Since")):
+            if isinstance(metadata.get(key), str) and metadata[key]:
+                headers[header] = metadata[key]
+        conditional = "If-None-Match" in headers or "If-Modified-Since" in headers
+        result = _net_response(net, KEYGEN_URL, PLAYER_TIMEOUT, headers, buffer=3,
+                               deadline=deadline, stage="簽名檔更新")
+        if result["code"] == 200:
+            payload = result["content"]
+            if not (minimum_size <= len(payload) <= maximum_size) or payload[:4] != b"\x00asm":
+                raise _ProxyError(502, "簽名檔更新: invalid official wasm")
+            _write_file(path, payload)
+            metadata = {}
+        elif result["code"] != 304 or not conditional:
+            raise _ProxyError(502, "簽名檔更新: unexpected HTTP " + str(result["code"]))
+        response_headers = {key.lower(): value for key, value in result.get("headers", {}).items()}
+        for key, header in (("etag", "etag"), ("modified", "last-modified")):
+            value = response_headers.get(header)
+            if isinstance(value, str):
+                metadata[key] = value
+        metadata["checkedAt"] = time.time()
+        _write_file(path + ".json", json.dumps(metadata).encode("utf-8"))
+        return path
+    finally:
+        _KEYGEN_LOCK.release()
+
+
+def _write_file(path, payload):
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    temporary = path + ".download"
+    try:
         with open(temporary, "wb") as stream:
             stream.write(payload)
         os.replace(temporary, path)
-        return path
+    finally:
+        if os.path.exists(temporary):
+            os.remove(temporary)
 
 
 def _load_pywasm():
@@ -295,14 +380,26 @@ class _Keygen:
 
 class _PlayerApi:
 
-    def __init__(self):
-        keygen_path = _download_keygen()
-        self.keygen = _Keygen(keygen_path)
+    def __init__(self, net, deadline):
+        self.net = net
+        self.keygen = None
+        self.keygen_hash = None
+        self._update_keygen(deadline)
 
-    def resolve(self, pid, cnlid):
+    def _update_keygen(self, deadline):
+        path = _download_keygen(self.net, deadline)
+        with open(path, "rb") as stream:
+            digest = hashlib.sha256(stream.read()).digest()
+        if digest != self.keygen_hash:
+            self.keygen = _Keygen(path)
+            self.keygen_hash = digest
+        _remaining(deadline, "簽名初始化")
+
+    def resolve(self, pid, cnlid, deadline):
+        self._update_keygen(deadline)
         guid = "{}_{}".format(self._base36(int(time.time() * 1000)), _random_text(11))
         with self._session(guid) as session:
-            auth = self._auth(session, pid, guid)
+            auth = self._auth(session, pid, guid, deadline)
             timestamp = str(int(time.time() + 0.5))
             params = {
                 "cnlid": cnlid,
@@ -323,33 +420,28 @@ class _PlayerApi:
                 "channel": "ysp_tx",
                 "defn": "fhd",
             }
-            headers = self._sdk_headers(session, guid, params)
+            headers = self._sdk_headers(session, guid, params, deadline)
             headers["yspPlayerToken"] = str(auth["token"])
             headers["yspticket"] = _ticket(pid, str(auth["ts"]), guid)
             params["rand_str"] = _random_text()
             params["signature"] = _signature(params, REQUEST_SALT)
-            response = session.post(
-                PLAYER_URL + "get_live_info",
-                json=params,
-                headers=headers,
-                timeout=PLAYER_TIMEOUT,
+            result = self._request_json(
+                session, PLAYER_URL + "get_live_info", deadline, "取得播放資訊", data=params, headers=headers
             )
-            response.raise_for_status()
-            result = response.json()
         if result.get("code") != 0:
-            raise ValueError(result.get("msg") or "play api rejected channel")
+            raise _ProxyError(502, "取得播放資訊: " + str(result.get("msg") or "play api rejected channel"))
         data = result.get("data") or {}
         if data.get("iretcode") not in (None, 0):
-            raise ValueError(data.get("errinfo") or "channel is unavailable")
+            raise _ProxyError(502, "取得播放資訊: " + str(data.get("errinfo") or "channel is unavailable"))
         candidates = data.get("backurl_list") or []
         locations = [item.get("url") for item in candidates if isinstance(item, dict)]
         locations.append(data.get("playurl"))
         for location in locations:
             if isinstance(location, str) and location.startswith("https://"):
                 return location
-        raise ValueError("missing hls manifest")
+        raise _ProxyError(502, "取得播放資訊: missing hls manifest")
 
-    def _auth(self, session, pid, guid):
+    def _auth(self, session, pid, guid, deadline):
         params = {
             "pid": pid,
             "guid": guid,
@@ -357,20 +449,16 @@ class _PlayerApi:
             "rand_str": _random_text(),
         }
         params["signature"] = _signature(params, AUTH_SALT)
-        response = session.post(
-            PLAYER_URL + "auth",
-            data=params,
+        result = self._request_json(
+            session, PLAYER_URL + "auth", deadline, "播放授權", data=params, post_type="form",
             headers={"Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"},
-            timeout=PLAYER_TIMEOUT,
         )
-        response.raise_for_status()
-        result = response.json()
         data = result.get("data") or {}
         if result.get("code") != 0 or not data.get("token") or not data.get("ts"):
-            raise ValueError(result.get("msg") or "player auth failed")
+            raise _ProxyError(502, "播放授權: " + str(result.get("msg") or "player auth failed"))
         return data
 
-    def _sdk_headers(self, session, guid, params):
+    def _sdk_headers(self, session, guid, params, deadline):
         sdk_input = _md5(_canonical_query(params))
         sequence = "1"
         request_id = "999999{}{}".format(_random_text(), int(time.time() * 1000))
@@ -385,8 +473,8 @@ class _PlayerApi:
             "query": "object",
         }
         token_random = self.keygen.token_random(state)
-        response = session.get(
-            OPEN_TOKEN_URL,
+        result = self._request_json(
+            session, OPEN_TOKEN_URL, deadline, "簽名授權",
             params={
                 "yspappid": YSP_APP_ID,
                 "guid": guid,
@@ -397,13 +485,10 @@ class _PlayerApi:
                 "ts": state["ts"],
                 "rnd": token_random,
             },
-            timeout=PLAYER_TIMEOUT,
         )
-        response.raise_for_status()
-        result = response.json()
         data = result.get("data") or {}
         if not data.get("token"):
-            raise ValueError(result.get("msg") or "open token failed")
+            raise _ProxyError(502, "簽名授權: " + str(result.get("msg") or "open token failed"))
         state["token"] = data["token"]
         state["input"] = composite
         sdk_signature = self.keygen.signature(state) + "-" + composite
@@ -435,10 +520,22 @@ class _PlayerApi:
         )
         return "--01" + cipher.encrypt(pad(source, 16)).hex().upper()
 
+    def _request_json(self, session, url, deadline, stage, params=None, headers=None, data=None, post_type="json"):
+        result = _net_response(
+            session, url, PLAYER_TIMEOUT, {**self._headers(), **(headers or {})},
+            params=params, data=data, post_type=post_type, deadline=deadline, stage=stage,
+        )
+        try:
+            data = json.loads(result["content"])
+            if not isinstance(data, dict):
+                raise ValueError("expected JSON object")
+            return data
+        except (TypeError, ValueError) as error:
+            raise _ProxyError(502, stage + ": invalid JSON response") from error
+
     @staticmethod
-    def _session(guid):
-        session = requests.Session()
-        session.headers.update({
+    def _headers():
+        return {
             "Origin": HOST,
             "Referer": HOST + "/",
             "User-Agent": USER_AGENT,
@@ -446,8 +543,10 @@ class _PlayerApi:
             "sec-ch-ua-mobile": "?0",
             "sec-ch-ua-platform": '"Windows"',
             "yspappid": YSP_APP_ID,
-        })
-        session.cookies.update({
+        }
+
+    def _session(self, guid):
+        cookies = {
             "guid": guid,
             "versionName": "99.99.99",
             "versionCode": "999999",
@@ -456,8 +555,17 @@ class _PlayerApi:
             "deviceModel": "148",
             "newLogin": "1",
             "nseqId": "1",
-        })
-        return session
+        }
+        session = self.net.session()
+        try:
+            # Player and open-token APIs use different Yangshipin subdomains.
+            for name, value in cookies.items():
+                if not session.setCookie(HOST, "{}={}; Domain=yangshipin.cn; Path=/".format(name, value)):
+                    raise ValueError("invalid player cookie")
+            return session
+        except Exception:
+            session.close()
+            raise
 
     @staticmethod
     def _base36(value):
@@ -474,56 +582,73 @@ class Spider(BaseSpider):
     def init(self, extend=""):
         self.snapshot_url = extend
         self.player = None
-        self.play_cache = {}
-        self.epg_cache = {}
+        self.destroyed = False
         self.player_lock = threading.RLock()
-        self.epg_lock = threading.Lock()
+        self.player_ready = threading.Event()
+        threading.Thread(
+            target=self._warm_player,
+            name="yangshipin-player-warmup",
+            daemon=True,
+        ).start()
+
+    def _warm_player(self):
+        try:
+            player = _PlayerApi(self.net, time.monotonic() + PLAYER_BUDGET)
+            with self.player_lock:
+                if not self.destroyed:
+                    self.player = player
+        except Exception as error:
+            print("央視頻 player warmup: {}".format(error))
+        finally:
+            self.player_ready.set()
 
     def getName(self):
         return "央視頻"
 
     def liveContent(self, url):
-        channels = self._load_channels(url, self.snapshot_url)
-        proxy = self.getProxyUrl() + "&siteKey=" + quote(str(self.siteKey), safe="")
+        channels = [
+            channel
+            for channel in self._load_channels(url, self.snapshot_url)
+            if not channel.get("vip")
+            and str(channel.get("pid")) not in EXCLUDED_PIDS
+        ]
         groups = OrderedDict()
         for number, channel in enumerate(channels, 1):
             group = GROUP_NAMES.get(channel.get("type"), "其他頻道")
-            groups.setdefault(group, []).append(self._item(channel, number, proxy))
-        return json.dumps(
-            [{"name": name, "channel": items} for name, items in groups.items()],
-            ensure_ascii=False,
-        )
+            groups.setdefault(group, []).append(self._item(channel, number))
+        return [{"name": name, "channel": items} for name, items in groups.items()]
 
     def localProxy(self, param):
         try:
             if param.get("type") == "epg":
                 content = self._epg(param.get("id", ""), param.get("date", ""))
                 return [200, "application/json", content]
-            location = self._resolve(param.get("pid", ""), param.get("cnlid", ""))
+            refresh = "no-cache" in str(param.get("cache-control", "")).lower().replace(" ", "").split(",")
+            location = self._resolve(param.get("pid", ""), param.get("cnlid", ""), refresh)
             return [302, "text/plain", "", {"Location": location}]
+        except _ProxyError as error:
+            return [error.status, "text/plain; charset=utf-8", "央視頻: " + str(error)]
         except Exception as error:
-            return [502, "text/plain", "央視頻: " + str(error)]
+            return [502, "text/plain; charset=utf-8", "央視頻: " + str(error)]
 
     def destroy(self):
         with self.player_lock:
+            self.destroyed = True
             self.player = None
-            self.play_cache.clear()
-        self.epg_cache = {}
 
     def _epg(self, channel_id, date):
         if not isinstance(channel_id, str) or not re.fullmatch(r"[a-z0-9]+", channel_id):
-            raise ValueError("invalid epg channel id")
+            raise _ProxyError(400, "invalid epg channel id")
         try:
             datetime.date.fromisoformat(date)
         except (TypeError, ValueError):
-            raise ValueError("invalid date") from None
-        key = (channel_id, date)
-        now = time.monotonic()
-        with self.epg_lock:
-            cached = self.epg_cache.get(key)
-            if cached and now < cached[0]:
-                return cached[1]
-        with requests.get(
+            raise _ProxyError(400, "invalid date") from None
+        return self.net.cached("epg:" + channel_id + ":" + date,
+                               {"ttl": EPG_CACHE_SECONDS * 1000, "stale": False},
+                               lambda: self._load_epg(channel_id, date))
+
+    def _load_epg(self, channel_id, date):
+        result = self._get_json(
             EPG_URL,
             params={
                 "c": channel_id,
@@ -531,10 +656,7 @@ class Spider(BaseSpider):
                 "d": date.replace("-", ""),
             },
             headers={"Referer": "https://tv.cctv.com/", "User-Agent": USER_AGENT},
-            timeout=CATALOG_TIMEOUT,
-        ) as response:
-            response.raise_for_status()
-            result = response.json()
+        )
         data = result.get("data") if isinstance(result, dict) else None
         channel = data.get(channel_id) if isinstance(data, dict) else None
         rows = channel.get("list") if isinstance(channel, dict) else None
@@ -562,51 +684,49 @@ class Spider(BaseSpider):
             ensure_ascii=False,
             separators=(",", ":"),
         )
-        with self.epg_lock:
-            self.epg_cache[key] = (now + EPG_CACHE_SECONDS, content)
         return content
 
-    def _resolve(self, pid, cnlid):
-        pid = str(pid)
-        cnlid = str(cnlid)
+    def _resolve(self, pid, cnlid, refresh=False):
+        pid, cnlid = str(pid), str(cnlid)
         if not pid.isdigit() or not cnlid.isdigit():
-            raise ValueError("invalid channel id")
-        cache_key = (pid, cnlid)
-        with self.player_lock:
-            cached = self.play_cache.get(cache_key)
-            if cached and time.monotonic() < cached[0]:
-                return cached[1]
+            raise _ProxyError(400, "invalid channel id")
+        if self.destroyed:
+            raise _ProxyError(503, "播放服務已關閉")
+        deadline = time.monotonic() + PLAYER_BUDGET
+        key = "play:" + pid + ":" + cnlid
+        if refresh:
+            self.net.clearCache(key)
+        return self.net.cached(key,
+                               {"ttl": PLAY_CACHE_SECONDS * 1000, "stale": False},
+                               lambda: self._resolve_player(pid, cnlid, deadline))
+
+    def _resolve_player(self, pid, cnlid, deadline):
+        if not self.player_ready.wait(_remaining(deadline, "簽名初始化")):
+            raise _ProxyError(504, "簽名初始化: 等待逾時")
+        if not self.player_lock.acquire(timeout=_remaining(deadline, "播放取址")):
+            raise _ProxyError(504, "播放取址: 等待逾時")
+        try:
+            if self.destroyed:
+                raise _ProxyError(503, "播放服務已關閉")
             if self.player is None:
-                self.player = _PlayerApi()
-            location = self.player.resolve(pid, cnlid)
-            self.play_cache[cache_key] = (
-                time.monotonic() + PLAY_CACHE_SECONDS,
-                location,
-            )
-            return location
+                self.player = _PlayerApi(self.net, deadline)
+            return self.player.resolve(pid, cnlid, deadline)
+        finally:
+            self.player_lock.release()
 
     def _load_channels(self, url, snapshot_url):
         try:
             return self._fetch_channels(url or NAVIGATION_URL)
-        except (requests.RequestException, ValueError) as error:
+        except (OSError, ValueError) as error:
             print("央視頻 catalog fallback: {}".format(error))
             return self._load_snapshot(snapshot_url)
 
     def _fetch_channels(self, navigation_url):
         cache_key = str(int(time.time() / 5))
-        with self._new_session() as session:
-            navigation = session.get(
-                navigation_url + "?" + cache_key,
-                timeout=CATALOG_TIMEOUT,
-            )
-            navigation.raise_for_status()
-            feed_id = self._decode_navigation(navigation.content)
-            page = session.get(
-                PAGE_URL.format(quote(feed_id, safe="")) + "?" + cache_key,
-                timeout=CATALOG_TIMEOUT,
-            )
-            page.raise_for_status()
-        channels = self._decode_page(page.content)
+        navigation = self._catalog_bytes(navigation_url + "?" + cache_key)
+        feed_id = self._decode_navigation(navigation)
+        page = self._catalog_bytes(PAGE_URL.format(quote(feed_id, safe="")) + "?" + cache_key)
+        channels = self._decode_page(page)
         if len(channels) < MIN_CHANNELS:
             raise ValueError("incomplete channel list")
         return channels
@@ -724,13 +844,10 @@ class Spider(BaseSpider):
         except UnicodeDecodeError:
             return ""
 
-    @staticmethod
-    def _load_snapshot(url):
+    def _load_snapshot(self, url):
         parsed = urlparse(url)
         if parsed.scheme in ("http", "https"):
-            with requests.get(url, timeout=CATALOG_TIMEOUT) as response:
-                response.raise_for_status()
-                result = response.json()
+            result = self._get_json(url)
         elif parsed.scheme in ("", "file"):
             path = unquote(parsed.path if parsed.scheme else url)
             if len(path) > 2 and path[0] == "/" and path[2] == ":":
@@ -744,8 +861,7 @@ class Spider(BaseSpider):
             raise ValueError("invalid channel snapshot")
         return [channel for channel in channels if isinstance(channel, dict)]
 
-    @staticmethod
-    def _item(channel, number, proxy):
+    def _item(self, channel, number):
         pid = str(channel["pid"])
         cnlid = str(channel.get("cnlid") or "")
         name = str(channel["name"])
@@ -758,25 +874,28 @@ class Spider(BaseSpider):
             "logo": _logo(name, str(channel.get("logo") or "")),
             "format": HLS_MIME,
             "ua": USER_AGENT,
-            "urls": [
-                "{}&cmg=1&pid={}&cnlid={}".format(
-                    proxy,
-                    quote(pid, safe=""),
-                    quote(cnlid, safe=""),
-                )
-            ],
+            "urls": [self.getProxyUrl({"cmg": "1", "pid": pid, "cnlid": cnlid})],
         }
         if epg_id:
-            item["epg"] = "{}&type=epg&id={}&date={{date}}".format(
-                proxy,
-                quote(epg_id, safe=""),
-            )
+            item["epg"] = self.getProxyUrl({"type": "epg", "id": epg_id}) + "&date={date}"
         return item
 
+    def _get_json(self, url, params=None, headers=None):
+        options = {"headers": headers or {}, "timeout": CATALOG_TIMEOUT * 1000}
+        if params:
+            options["params"] = params
+        try:
+            return self.net.json(url, options)
+        except Exception as error:
+            raise ValueError(str(error)) from None
+
+    def _catalog_bytes(self, url):
+        return _net_response(self.net, url, CATALOG_TIMEOUT, self._catalog_headers(), buffer=3,
+                             stage="頻道清單")["content"]
+
     @staticmethod
-    def _new_session():
-        session = requests.Session()
-        session.headers.update({
+    def _catalog_headers():
+        return {
             "Accept": "application/octet-stream",
             "Referer": HOST + "/",
             "User-Agent": USER_AGENT,
@@ -784,5 +903,4 @@ class Spider(BaseSpider):
             "app-version": "1.0.0",
             "platform": "109",
             "yspappid": YSP_APP_ID,
-        })
-        return session
+        }
