@@ -34,6 +34,22 @@
       "vip": false
     },
     {
+      "name": "CCTV5",
+      "pid": "600001818",
+      "cnlid": "2024078401",
+      "logo": "https://resources.yangshipin.cn/assets/oms/image/202306/d095e1e19487928d1754407b469502758efc31f4561858597f8c5b058bf5bc73.png?imageMogr2/format/webp",
+      "type": "yangshi",
+      "vip": false
+    },
+    {
+      "name": "CCTV5+",
+      "pid": "600001817",
+      "cnlid": "2024078501",
+      "logo": "https://resources.yangshipin.cn/assets/oms/image/202306/91f6bb95d660e5616b7f34f8a3794bfa25418b760e48ecdf6972e391bde4c5ba.png?imageMogr2/format/webp",
+      "type": "yangshi",
+      "vip": false
+    },
+    {
       "name": "CCTV6",
       "pid": "600108442",
       "cnlid": "2013693901",
@@ -110,6 +126,22 @@
       "pid": "600001815",
       "cnlid": "2027249001",
       "logo": "https://resources.yangshipin.cn/assets/oms/image/202306/2ceee92188ef684efe0d8b90839c4f3ad450d179dc64d59beff417059453af47.png?imageMogr2/format/webp",
+      "type": "yangshi",
+      "vip": false
+    },
+    {
+      "name": "CCTV16-HD",
+      "pid": "600098637",
+      "cnlid": "2025732103",
+      "logo": "https://resources.yangshipin.cn/assets/oms/image/202306/663c62cf7f79a09cdb242e82e4e11fa0e527f4fb26d2cd2684877e68cfb939c0.png?imageMogr2/format/webp",
+      "type": "yangshi",
+      "vip": false
+    },
+    {
+      "name": "CCTV16 4K",
+      "pid": "600099502",
+      "cnlid": "2025732203",
+      "logo": "https://resources.yangshipin.cn/assets/oms/image/202306/663c62cf7f79a09cdb242e82e4e11fa0e527f4fb26d2cd2684877e68cfb939c0.png?imageMogr2/format/webp",
       "type": "yangshi",
       "vip": false
     },
