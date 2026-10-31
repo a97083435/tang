@@ -1,0 +1,1647 @@
+{
+  "_v2rayN | Throne | OneXray ...": [
+    "请及时更新Xray内核和v2ray客户端到最新版本，部分客户端可能不兼容",
+    "仅建议使用MASQUE和官方端点或官方客户端，使用第三方资源可能会造成隐私泄露或损失",
+    "免费使用，谨防上当受骗！记得分享推荐转换器给你的朋友！",
+    "转换器仅用于技术研究，24小时后请删除配置，禁止它用！",
+    "WARP MASQUE 导航 - https://masque.pages.dev",
+    "MASQUE To Xray 转换器 - https://m2xray.pages.dev"
+  ],
+  "log": {
+    "loglevel": "warning"
+  },
+  "outbounds": [
+    {
+      "protocol": "masque",
+      "settings": {
+        "address": "162.159.198.2",
+        "port": 8095,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIB0NXyH4snMERkM1XLhubqPY6HP9ucoBx6utbAMVvfEvoAoGCCqGSM49AwEHoUQDQgAEwiptvGamnxhrQDwAUCg1edvi68RIWgtGe6EE3lRRMTx3LvZIS8GAbZ/3TsGHQ13lEQao5Jmgs7xFb46AudIsOg==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8f39:2e57:9e89:48dd:6a6d/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.microsoft.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      },
+      "tag": "H3 | 官方 | 162.159.198.2 | 8095 | MASQUE导航"
+    },
+    {
+      "protocol": "masque",
+      "settings": {
+        "address": "162.159.198.2",
+        "port": 443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIB0NXyH4snMERkM1XLhubqPY6HP9ucoBx6utbAMVvfEvoAoGCCqGSM49AwEHoUQDQgAEwiptvGamnxhrQDwAUCg1edvi68RIWgtGe6EE3lRRMTx3LvZIS8GAbZ/3TsGHQ13lEQao5Jmgs7xFb46AudIsOg==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8f39:2e57:9e89:48dd:6a6d/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.microsoft.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      },
+      "tag": "H3 | 官方 | 162.159.198.2 | 443 | MASQUE导航"
+    },
+    {
+      "protocol": "masque",
+      "settings": {
+        "address": "162.159.198.2",
+        "port": 8443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIB0NXyH4snMERkM1XLhubqPY6HP9ucoBx6utbAMVvfEvoAoGCCqGSM49AwEHoUQDQgAEwiptvGamnxhrQDwAUCg1edvi68RIWgtGe6EE3lRRMTx3LvZIS8GAbZ/3TsGHQ13lEQao5Jmgs7xFb46AudIsOg==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8f39:2e57:9e89:48dd:6a6d/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.microsoft.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      },
+      "tag": "H3 | 官方 | 162.159.198.2 | 8443 | MASQUE导航"
+    },
+    {
+      "protocol": "masque",
+      "settings": {
+        "address": "162.159.198.2",
+        "port": 4443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIB0NXyH4snMERkM1XLhubqPY6HP9ucoBx6utbAMVvfEvoAoGCCqGSM49AwEHoUQDQgAEwiptvGamnxhrQDwAUCg1edvi68RIWgtGe6EE3lRRMTx3LvZIS8GAbZ/3TsGHQ13lEQao5Jmgs7xFb46AudIsOg==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8f39:2e57:9e89:48dd:6a6d/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.microsoft.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      },
+      "tag": "H3 | 官方 | 162.159.198.2 | 4443 | MASQUE导航"
+    },
+    {
+      "protocol": "masque",
+      "settings": {
+        "address": "162.159.198.2",
+        "port": 1701,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIB0NXyH4snMERkM1XLhubqPY6HP9ucoBx6utbAMVvfEvoAoGCCqGSM49AwEHoUQDQgAEwiptvGamnxhrQDwAUCg1edvi68RIWgtGe6EE3lRRMTx3LvZIS8GAbZ/3TsGHQ13lEQao5Jmgs7xFb46AudIsOg==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8f39:2e57:9e89:48dd:6a6d/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.microsoft.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      },
+      "tag": "H3 | 官方 | 162.159.198.2 | 1701 | MASQUE导航"
+    },
+    {
+      "protocol": "masque",
+      "settings": {
+        "address": "162.159.198.2",
+        "port": 4500,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIB0NXyH4snMERkM1XLhubqPY6HP9ucoBx6utbAMVvfEvoAoGCCqGSM49AwEHoUQDQgAEwiptvGamnxhrQDwAUCg1edvi68RIWgtGe6EE3lRRMTx3LvZIS8GAbZ/3TsGHQ13lEQao5Jmgs7xFb46AudIsOg==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8f39:2e57:9e89:48dd:6a6d/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.microsoft.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      },
+      "tag": "H3 | 官方 | 162.159.198.2 | 4500 | MASQUE导航"
+    },
+    {
+      "protocol": "masque",
+      "settings": {
+        "address": "162.159.198.2",
+        "port": 500,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIB0NXyH4snMERkM1XLhubqPY6HP9ucoBx6utbAMVvfEvoAoGCCqGSM49AwEHoUQDQgAEwiptvGamnxhrQDwAUCg1edvi68RIWgtGe6EE3lRRMTx3LvZIS8GAbZ/3TsGHQ13lEQao5Jmgs7xFb46AudIsOg==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8f39:2e57:9e89:48dd:6a6d/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.microsoft.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      },
+      "tag": "H3 | 官方 | 162.159.198.2 | 500 | MASQUE导航"
+    },
+    {
+      "protocol": "masque",
+      "settings": {
+        "address": "162.159.199.2",
+        "port": 8095,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIB0NXyH4snMERkM1XLhubqPY6HP9ucoBx6utbAMVvfEvoAoGCCqGSM49AwEHoUQDQgAEwiptvGamnxhrQDwAUCg1edvi68RIWgtGe6EE3lRRMTx3LvZIS8GAbZ/3TsGHQ13lEQao5Jmgs7xFb46AudIsOg==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8f39:2e57:9e89:48dd:6a6d/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.microsoft.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      },
+      "tag": "H3 | 官方 | 162.159.199.2 | 8095 | MASQUE导航"
+    },
+    {
+      "protocol": "masque",
+      "settings": {
+        "address": "162.159.199.2",
+        "port": 443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIB0NXyH4snMERkM1XLhubqPY6HP9ucoBx6utbAMVvfEvoAoGCCqGSM49AwEHoUQDQgAEwiptvGamnxhrQDwAUCg1edvi68RIWgtGe6EE3lRRMTx3LvZIS8GAbZ/3TsGHQ13lEQao5Jmgs7xFb46AudIsOg==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8f39:2e57:9e89:48dd:6a6d/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.microsoft.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      },
+      "tag": "H3 | 官方 | 162.159.199.2 | 443 | MASQUE导航"
+    },
+    {
+      "protocol": "masque",
+      "settings": {
+        "address": "162.159.199.2",
+        "port": 8443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIB0NXyH4snMERkM1XLhubqPY6HP9ucoBx6utbAMVvfEvoAoGCCqGSM49AwEHoUQDQgAEwiptvGamnxhrQDwAUCg1edvi68RIWgtGe6EE3lRRMTx3LvZIS8GAbZ/3TsGHQ13lEQao5Jmgs7xFb46AudIsOg==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8f39:2e57:9e89:48dd:6a6d/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.microsoft.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      },
+      "tag": "H3 | 官方 | 162.159.199.2 | 8443 | MASQUE导航"
+    },
+    {
+      "protocol": "masque",
+      "settings": {
+        "address": "162.159.199.2",
+        "port": 4443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIB0NXyH4snMERkM1XLhubqPY6HP9ucoBx6utbAMVvfEvoAoGCCqGSM49AwEHoUQDQgAEwiptvGamnxhrQDwAUCg1edvi68RIWgtGe6EE3lRRMTx3LvZIS8GAbZ/3TsGHQ13lEQao5Jmgs7xFb46AudIsOg==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8f39:2e57:9e89:48dd:6a6d/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.microsoft.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      },
+      "tag": "H3 | 官方 | 162.159.199.2 | 4443 | MASQUE导航"
+    },
+    {
+      "protocol": "masque",
+      "settings": {
+        "address": "162.159.199.2",
+        "port": 1701,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIB0NXyH4snMERkM1XLhubqPY6HP9ucoBx6utbAMVvfEvoAoGCCqGSM49AwEHoUQDQgAEwiptvGamnxhrQDwAUCg1edvi68RIWgtGe6EE3lRRMTx3LvZIS8GAbZ/3TsGHQ13lEQao5Jmgs7xFb46AudIsOg==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8f39:2e57:9e89:48dd:6a6d/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.microsoft.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      },
+      "tag": "H3 | 官方 | 162.159.199.2 | 1701 | MASQUE导航"
+    },
+    {
+      "protocol": "masque",
+      "settings": {
+        "address": "162.159.199.2",
+        "port": 4500,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIB0NXyH4snMERkM1XLhubqPY6HP9ucoBx6utbAMVvfEvoAoGCCqGSM49AwEHoUQDQgAEwiptvGamnxhrQDwAUCg1edvi68RIWgtGe6EE3lRRMTx3LvZIS8GAbZ/3TsGHQ13lEQao5Jmgs7xFb46AudIsOg==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8f39:2e57:9e89:48dd:6a6d/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.microsoft.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      },
+      "tag": "H3 | 官方 | 162.159.199.2 | 4500 | MASQUE导航"
+    },
+    {
+      "protocol": "masque",
+      "settings": {
+        "address": "162.159.199.2",
+        "port": 500,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIB0NXyH4snMERkM1XLhubqPY6HP9ucoBx6utbAMVvfEvoAoGCCqGSM49AwEHoUQDQgAEwiptvGamnxhrQDwAUCg1edvi68RIWgtGe6EE3lRRMTx3LvZIS8GAbZ/3TsGHQ13lEQao5Jmgs7xFb46AudIsOg==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8f39:2e57:9e89:48dd:6a6d/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.microsoft.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      },
+      "tag": "H3 | 官方 | 162.159.199.2 | 500 | MASQUE导航"
+    },
+    {
+      "protocol": "masque",
+      "settings": {
+        "address": "2606:4700:103::2",
+        "port": 8095,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIB0NXyH4snMERkM1XLhubqPY6HP9ucoBx6utbAMVvfEvoAoGCCqGSM49AwEHoUQDQgAEwiptvGamnxhrQDwAUCg1edvi68RIWgtGe6EE3lRRMTx3LvZIS8GAbZ/3TsGHQ13lEQao5Jmgs7xFb46AudIsOg==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8f39:2e57:9e89:48dd:6a6d/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.microsoft.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      },
+      "tag": "H3 | 官方 IPv6 | 2606:4700:103::2 | 8095 | MASQUE导航"
+    },
+    {
+      "protocol": "masque",
+      "settings": {
+        "address": "2606:4700:103::2",
+        "port": 443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIB0NXyH4snMERkM1XLhubqPY6HP9ucoBx6utbAMVvfEvoAoGCCqGSM49AwEHoUQDQgAEwiptvGamnxhrQDwAUCg1edvi68RIWgtGe6EE3lRRMTx3LvZIS8GAbZ/3TsGHQ13lEQao5Jmgs7xFb46AudIsOg==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8f39:2e57:9e89:48dd:6a6d/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.microsoft.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      },
+      "tag": "H3 | 官方 IPv6 | 2606:4700:103::2 | 443 | MASQUE导航"
+    },
+    {
+      "protocol": "masque",
+      "settings": {
+        "address": "2606:4700:103::2",
+        "port": 8443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIB0NXyH4snMERkM1XLhubqPY6HP9ucoBx6utbAMVvfEvoAoGCCqGSM49AwEHoUQDQgAEwiptvGamnxhrQDwAUCg1edvi68RIWgtGe6EE3lRRMTx3LvZIS8GAbZ/3TsGHQ13lEQao5Jmgs7xFb46AudIsOg==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8f39:2e57:9e89:48dd:6a6d/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.microsoft.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      },
+      "tag": "H3 | 官方 IPv6 | 2606:4700:103::2 | 8443 | MASQUE导航"
+    },
+    {
+      "protocol": "masque",
+      "settings": {
+        "address": "2606:4700:103::2",
+        "port": 4443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIB0NXyH4snMERkM1XLhubqPY6HP9ucoBx6utbAMVvfEvoAoGCCqGSM49AwEHoUQDQgAEwiptvGamnxhrQDwAUCg1edvi68RIWgtGe6EE3lRRMTx3LvZIS8GAbZ/3TsGHQ13lEQao5Jmgs7xFb46AudIsOg==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8f39:2e57:9e89:48dd:6a6d/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.microsoft.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      },
+      "tag": "H3 | 官方 IPv6 | 2606:4700:103::2 | 4443 | MASQUE导航"
+    },
+    {
+      "protocol": "masque",
+      "settings": {
+        "address": "2606:4700:103::2",
+        "port": 1701,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIB0NXyH4snMERkM1XLhubqPY6HP9ucoBx6utbAMVvfEvoAoGCCqGSM49AwEHoUQDQgAEwiptvGamnxhrQDwAUCg1edvi68RIWgtGe6EE3lRRMTx3LvZIS8GAbZ/3TsGHQ13lEQao5Jmgs7xFb46AudIsOg==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8f39:2e57:9e89:48dd:6a6d/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.microsoft.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      },
+      "tag": "H3 | 官方 IPv6 | 2606:4700:103::2 | 1701 | MASQUE导航"
+    },
+    {
+      "protocol": "masque",
+      "settings": {
+        "address": "2606:4700:103::2",
+        "port": 4500,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIB0NXyH4snMERkM1XLhubqPY6HP9ucoBx6utbAMVvfEvoAoGCCqGSM49AwEHoUQDQgAEwiptvGamnxhrQDwAUCg1edvi68RIWgtGe6EE3lRRMTx3LvZIS8GAbZ/3TsGHQ13lEQao5Jmgs7xFb46AudIsOg==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8f39:2e57:9e89:48dd:6a6d/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.microsoft.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      },
+      "tag": "H3 | 官方 IPv6 | 2606:4700:103::2 | 4500 | MASQUE导航"
+    },
+    {
+      "protocol": "masque",
+      "settings": {
+        "address": "2606:4700:103::2",
+        "port": 500,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIB0NXyH4snMERkM1XLhubqPY6HP9ucoBx6utbAMVvfEvoAoGCCqGSM49AwEHoUQDQgAEwiptvGamnxhrQDwAUCg1edvi68RIWgtGe6EE3lRRMTx3LvZIS8GAbZ/3TsGHQ13lEQao5Jmgs7xFb46AudIsOg==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8f39:2e57:9e89:48dd:6a6d/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.microsoft.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      },
+      "tag": "H3 | 官方 IPv6 | 2606:4700:103::2 | 500 | MASQUE导航"
+    },
+    {
+      "protocol": "masque",
+      "settings": {
+        "address": "2606:4700:104::2",
+        "port": 8095,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIB0NXyH4snMERkM1XLhubqPY6HP9ucoBx6utbAMVvfEvoAoGCCqGSM49AwEHoUQDQgAEwiptvGamnxhrQDwAUCg1edvi68RIWgtGe6EE3lRRMTx3LvZIS8GAbZ/3TsGHQ13lEQao5Jmgs7xFb46AudIsOg==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8f39:2e57:9e89:48dd:6a6d/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.microsoft.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      },
+      "tag": "H3 | 官方 IPv6 | 2606:4700:104::2 | 8095 | MASQUE导航"
+    },
+    {
+      "protocol": "masque",
+      "settings": {
+        "address": "2606:4700:104::2",
+        "port": 443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIB0NXyH4snMERkM1XLhubqPY6HP9ucoBx6utbAMVvfEvoAoGCCqGSM49AwEHoUQDQgAEwiptvGamnxhrQDwAUCg1edvi68RIWgtGe6EE3lRRMTx3LvZIS8GAbZ/3TsGHQ13lEQao5Jmgs7xFb46AudIsOg==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8f39:2e57:9e89:48dd:6a6d/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.microsoft.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      },
+      "tag": "H3 | 官方 IPv6 | 2606:4700:104::2 | 443 | MASQUE导航"
+    },
+    {
+      "protocol": "masque",
+      "settings": {
+        "address": "2606:4700:104::2",
+        "port": 8443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIB0NXyH4snMERkM1XLhubqPY6HP9ucoBx6utbAMVvfEvoAoGCCqGSM49AwEHoUQDQgAEwiptvGamnxhrQDwAUCg1edvi68RIWgtGe6EE3lRRMTx3LvZIS8GAbZ/3TsGHQ13lEQao5Jmgs7xFb46AudIsOg==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8f39:2e57:9e89:48dd:6a6d/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.microsoft.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      },
+      "tag": "H3 | 官方 IPv6 | 2606:4700:104::2 | 8443 | MASQUE导航"
+    },
+    {
+      "protocol": "masque",
+      "settings": {
+        "address": "2606:4700:104::2",
+        "port": 4443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIB0NXyH4snMERkM1XLhubqPY6HP9ucoBx6utbAMVvfEvoAoGCCqGSM49AwEHoUQDQgAEwiptvGamnxhrQDwAUCg1edvi68RIWgtGe6EE3lRRMTx3LvZIS8GAbZ/3TsGHQ13lEQao5Jmgs7xFb46AudIsOg==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8f39:2e57:9e89:48dd:6a6d/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.microsoft.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      },
+      "tag": "H3 | 官方 IPv6 | 2606:4700:104::2 | 4443 | MASQUE导航"
+    },
+    {
+      "protocol": "masque",
+      "settings": {
+        "address": "2606:4700:104::2",
+        "port": 1701,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIB0NXyH4snMERkM1XLhubqPY6HP9ucoBx6utbAMVvfEvoAoGCCqGSM49AwEHoUQDQgAEwiptvGamnxhrQDwAUCg1edvi68RIWgtGe6EE3lRRMTx3LvZIS8GAbZ/3TsGHQ13lEQao5Jmgs7xFb46AudIsOg==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8f39:2e57:9e89:48dd:6a6d/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.microsoft.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      },
+      "tag": "H3 | 官方 IPv6 | 2606:4700:104::2 | 1701 | MASQUE导航"
+    },
+    {
+      "protocol": "masque",
+      "settings": {
+        "address": "2606:4700:104::2",
+        "port": 4500,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIB0NXyH4snMERkM1XLhubqPY6HP9ucoBx6utbAMVvfEvoAoGCCqGSM49AwEHoUQDQgAEwiptvGamnxhrQDwAUCg1edvi68RIWgtGe6EE3lRRMTx3LvZIS8GAbZ/3TsGHQ13lEQao5Jmgs7xFb46AudIsOg==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8f39:2e57:9e89:48dd:6a6d/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.microsoft.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      },
+      "tag": "H3 | 官方 IPv6 | 2606:4700:104::2 | 4500 | MASQUE导航"
+    },
+    {
+      "protocol": "masque",
+      "settings": {
+        "address": "2606:4700:104::2",
+        "port": 500,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIB0NXyH4snMERkM1XLhubqPY6HP9ucoBx6utbAMVvfEvoAoGCCqGSM49AwEHoUQDQgAEwiptvGamnxhrQDwAUCg1edvi68RIWgtGe6EE3lRRMTx3LvZIS8GAbZ/3TsGHQ13lEQao5Jmgs7xFb46AudIsOg==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8f39:2e57:9e89:48dd:6a6d/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.microsoft.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      },
+      "tag": "H3 | 官方 IPv6 | 2606:4700:104::2 | 500 | MASQUE导航"
+    },
+    {
+      "protocol": "masque",
+      "settings": {
+        "address": "us.v6.free.bestcf.eu.cc",
+        "port": 443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIB0NXyH4snMERkM1XLhubqPY6HP9ucoBx6utbAMVvfEvoAoGCCqGSM49AwEHoUQDQgAEwiptvGamnxhrQDwAUCg1edvi68RIWgtGe6EE3lRRMTx3LvZIS8GAbZ/3TsGHQ13lEQao5Jmgs7xFb46AudIsOg==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8f39:2e57:9e89:48dd:6a6d/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.microsoft.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      },
+      "tag": "H3 | 美国 IPv6 | us.v6.free.bestcf.eu.cc | 443 | MASQUE导航"
+    },
+    {
+      "protocol": "masque",
+      "settings": {
+        "address": "2602:fc59:b0:64::a29f:c601",
+        "port": 443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIB0NXyH4snMERkM1XLhubqPY6HP9ucoBx6utbAMVvfEvoAoGCCqGSM49AwEHoUQDQgAEwiptvGamnxhrQDwAUCg1edvi68RIWgtGe6EE3lRRMTx3LvZIS8GAbZ/3TsGHQ13lEQao5Jmgs7xFb46AudIsOg==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8f39:2e57:9e89:48dd:6a6d/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.microsoft.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      },
+      "tag": "H3 | 美国 IPv6 | 2602:fc59:b0:64::a29f:c601 | 443 | MASQUE导航"
+    },
+    {
+      "protocol": "masque",
+      "settings": {
+        "address": "2602:fc59:b0:64::a29f:c602",
+        "port": 443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIB0NXyH4snMERkM1XLhubqPY6HP9ucoBx6utbAMVvfEvoAoGCCqGSM49AwEHoUQDQgAEwiptvGamnxhrQDwAUCg1edvi68RIWgtGe6EE3lRRMTx3LvZIS8GAbZ/3TsGHQ13lEQao5Jmgs7xFb46AudIsOg==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8f39:2e57:9e89:48dd:6a6d/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.microsoft.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      },
+      "tag": "H3 | 美国 IPv6 | 2602:fc59:b0:64::a29f:c602 | 443 | MASQUE导航"
+    },
+    {
+      "protocol": "masque",
+      "settings": {
+        "address": "2602:fc59:b0:64::a29f:c701",
+        "port": 443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIB0NXyH4snMERkM1XLhubqPY6HP9ucoBx6utbAMVvfEvoAoGCCqGSM49AwEHoUQDQgAEwiptvGamnxhrQDwAUCg1edvi68RIWgtGe6EE3lRRMTx3LvZIS8GAbZ/3TsGHQ13lEQao5Jmgs7xFb46AudIsOg==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8f39:2e57:9e89:48dd:6a6d/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.microsoft.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      },
+      "tag": "H3 | 美国 IPv6 | 2602:fc59:b0:64::a29f:c701 | 443 | MASQUE导航"
+    },
+    {
+      "protocol": "masque",
+      "settings": {
+        "address": "2602:fc59:b0:64::a29f:c702",
+        "port": 443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIB0NXyH4snMERkM1XLhubqPY6HP9ucoBx6utbAMVvfEvoAoGCCqGSM49AwEHoUQDQgAEwiptvGamnxhrQDwAUCg1edvi68RIWgtGe6EE3lRRMTx3LvZIS8GAbZ/3TsGHQ13lEQao5Jmgs7xFb46AudIsOg==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8f39:2e57:9e89:48dd:6a6d/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.microsoft.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      },
+      "tag": "H3 | 美国 IPv6 | 2602:fc59:b0:64::a29f:c702 | 443 | MASQUE导航"
+    },
+    {
+      "protocol": "masque",
+      "settings": {
+        "address": "2a14:7583:f764:64::a29f:c601",
+        "port": 443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIB0NXyH4snMERkM1XLhubqPY6HP9ucoBx6utbAMVvfEvoAoGCCqGSM49AwEHoUQDQgAEwiptvGamnxhrQDwAUCg1edvi68RIWgtGe6EE3lRRMTx3LvZIS8GAbZ/3TsGHQ13lEQao5Jmgs7xFb46AudIsOg==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8f39:2e57:9e89:48dd:6a6d/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.microsoft.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      },
+      "tag": "H3 | 美国 IPv6 | 2a14:7583:f764:64::a29f:c601 | 443 | MASQUE导航"
+    },
+    {
+      "protocol": "masque",
+      "settings": {
+        "address": "2a14:7583:f764:64::a29f:c602",
+        "port": 443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIB0NXyH4snMERkM1XLhubqPY6HP9ucoBx6utbAMVvfEvoAoGCCqGSM49AwEHoUQDQgAEwiptvGamnxhrQDwAUCg1edvi68RIWgtGe6EE3lRRMTx3LvZIS8GAbZ/3TsGHQ13lEQao5Jmgs7xFb46AudIsOg==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8f39:2e57:9e89:48dd:6a6d/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.microsoft.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      },
+      "tag": "H3 | 美国 IPv6 | 2a14:7583:f764:64::a29f:c602 | 443 | MASQUE导航"
+    },
+    {
+      "protocol": "masque",
+      "settings": {
+        "address": "2a14:7583:f764:64::a29f:c701",
+        "port": 443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIB0NXyH4snMERkM1XLhubqPY6HP9ucoBx6utbAMVvfEvoAoGCCqGSM49AwEHoUQDQgAEwiptvGamnxhrQDwAUCg1edvi68RIWgtGe6EE3lRRMTx3LvZIS8GAbZ/3TsGHQ13lEQao5Jmgs7xFb46AudIsOg==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8f39:2e57:9e89:48dd:6a6d/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.microsoft.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      },
+      "tag": "H3 | 美国 IPv6 | 2a14:7583:f764:64::a29f:c701 | 443 | MASQUE导航"
+    },
+    {
+      "protocol": "masque",
+      "settings": {
+        "address": "2a14:7583:f764:64::a29f:c702",
+        "port": 443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIB0NXyH4snMERkM1XLhubqPY6HP9ucoBx6utbAMVvfEvoAoGCCqGSM49AwEHoUQDQgAEwiptvGamnxhrQDwAUCg1edvi68RIWgtGe6EE3lRRMTx3LvZIS8GAbZ/3TsGHQ13lEQao5Jmgs7xFb46AudIsOg==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8f39:2e57:9e89:48dd:6a6d/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.microsoft.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      },
+      "tag": "H3 | 美国 IPv6 | 2a14:7583:f764:64::a29f:c702 | 443 | MASQUE导航"
+    },
+    {
+      "protocol": "masque",
+      "settings": {
+        "address": "de.v6.free.bestcf.eu.cc",
+        "port": 443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIB0NXyH4snMERkM1XLhubqPY6HP9ucoBx6utbAMVvfEvoAoGCCqGSM49AwEHoUQDQgAEwiptvGamnxhrQDwAUCg1edvi68RIWgtGe6EE3lRRMTx3LvZIS8GAbZ/3TsGHQ13lEQao5Jmgs7xFb46AudIsOg==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8f39:2e57:9e89:48dd:6a6d/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.microsoft.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      },
+      "tag": "H3 | 德国 IPv6 | de.v6.free.bestcf.eu.cc | 443 | MASQUE导航"
+    },
+    {
+      "protocol": "masque",
+      "settings": {
+        "address": "2001:67c:2960:6464::a29f:c601",
+        "port": 443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIB0NXyH4snMERkM1XLhubqPY6HP9ucoBx6utbAMVvfEvoAoGCCqGSM49AwEHoUQDQgAEwiptvGamnxhrQDwAUCg1edvi68RIWgtGe6EE3lRRMTx3LvZIS8GAbZ/3TsGHQ13lEQao5Jmgs7xFb46AudIsOg==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8f39:2e57:9e89:48dd:6a6d/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.microsoft.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      },
+      "tag": "H3 | 德国 IPv6 | 2001:67c:2960:6464::a29f:c601 | 443 | MASQUE导航"
+    },
+    {
+      "protocol": "masque",
+      "settings": {
+        "address": "2001:67c:2960:6464::a29f:c602",
+        "port": 443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIB0NXyH4snMERkM1XLhubqPY6HP9ucoBx6utbAMVvfEvoAoGCCqGSM49AwEHoUQDQgAEwiptvGamnxhrQDwAUCg1edvi68RIWgtGe6EE3lRRMTx3LvZIS8GAbZ/3TsGHQ13lEQao5Jmgs7xFb46AudIsOg==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8f39:2e57:9e89:48dd:6a6d/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.microsoft.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      },
+      "tag": "H3 | 德国 IPv6 | 2001:67c:2960:6464::a29f:c602 | 443 | MASQUE导航"
+    },
+    {
+      "protocol": "masque",
+      "settings": {
+        "address": "2001:67c:2960:6464::a29f:c701",
+        "port": 443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIB0NXyH4snMERkM1XLhubqPY6HP9ucoBx6utbAMVvfEvoAoGCCqGSM49AwEHoUQDQgAEwiptvGamnxhrQDwAUCg1edvi68RIWgtGe6EE3lRRMTx3LvZIS8GAbZ/3TsGHQ13lEQao5Jmgs7xFb46AudIsOg==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8f39:2e57:9e89:48dd:6a6d/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.microsoft.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      },
+      "tag": "H3 | 德国 IPv6 | 2001:67c:2960:6464::a29f:c701 | 443 | MASQUE导航"
+    },
+    {
+      "protocol": "masque",
+      "settings": {
+        "address": "2001:67c:2960:6464::a29f:c702",
+        "port": 443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIB0NXyH4snMERkM1XLhubqPY6HP9ucoBx6utbAMVvfEvoAoGCCqGSM49AwEHoUQDQgAEwiptvGamnxhrQDwAUCg1edvi68RIWgtGe6EE3lRRMTx3LvZIS8GAbZ/3TsGHQ13lEQao5Jmgs7xFb46AudIsOg==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8f39:2e57:9e89:48dd:6a6d/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.microsoft.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      },
+      "tag": "H3 | 德国 IPv6 | 2001:67c:2960:6464::a29f:c702 | 443 | MASQUE导航"
+    },
+    {
+      "protocol": "masque",
+      "settings": {
+        "address": "fi.v6.free.bestcf.eu.cc",
+        "port": 443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIB0NXyH4snMERkM1XLhubqPY6HP9ucoBx6utbAMVvfEvoAoGCCqGSM49AwEHoUQDQgAEwiptvGamnxhrQDwAUCg1edvi68RIWgtGe6EE3lRRMTx3LvZIS8GAbZ/3TsGHQ13lEQao5Jmgs7xFb46AudIsOg==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8f39:2e57:9e89:48dd:6a6d/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.microsoft.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      },
+      "tag": "H3 | 芬兰 IPv6 | fi.v6.free.bestcf.eu.cc | 443 | MASQUE导航"
+    },
+    {
+      "protocol": "masque",
+      "settings": {
+        "address": "2001:67c:2b0:db32::a29f:c601",
+        "port": 443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIB0NXyH4snMERkM1XLhubqPY6HP9ucoBx6utbAMVvfEvoAoGCCqGSM49AwEHoUQDQgAEwiptvGamnxhrQDwAUCg1edvi68RIWgtGe6EE3lRRMTx3LvZIS8GAbZ/3TsGHQ13lEQao5Jmgs7xFb46AudIsOg==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8f39:2e57:9e89:48dd:6a6d/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.microsoft.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      },
+      "tag": "H3 | 芬兰 IPv6 | 2001:67c:2b0:db32::a29f:c601 | 443 | MASQUE导航"
+    },
+    {
+      "protocol": "masque",
+      "settings": {
+        "address": "2001:67c:2b0:db32::a29f:c602",
+        "port": 443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIB0NXyH4snMERkM1XLhubqPY6HP9ucoBx6utbAMVvfEvoAoGCCqGSM49AwEHoUQDQgAEwiptvGamnxhrQDwAUCg1edvi68RIWgtGe6EE3lRRMTx3LvZIS8GAbZ/3TsGHQ13lEQao5Jmgs7xFb46AudIsOg==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8f39:2e57:9e89:48dd:6a6d/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.microsoft.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      },
+      "tag": "H3 | 芬兰 IPv6 | 2001:67c:2b0:db32::a29f:c602 | 443 | MASQUE导航"
+    },
+    {
+      "protocol": "masque",
+      "settings": {
+        "address": "2001:67c:2b0:db32::a29f:c701",
+        "port": 443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIB0NXyH4snMERkM1XLhubqPY6HP9ucoBx6utbAMVvfEvoAoGCCqGSM49AwEHoUQDQgAEwiptvGamnxhrQDwAUCg1edvi68RIWgtGe6EE3lRRMTx3LvZIS8GAbZ/3TsGHQ13lEQao5Jmgs7xFb46AudIsOg==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8f39:2e57:9e89:48dd:6a6d/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.microsoft.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      },
+      "tag": "H3 | 芬兰 IPv6 | 2001:67c:2b0:db32::a29f:c701 | 443 | MASQUE导航"
+    },
+    {
+      "protocol": "masque",
+      "settings": {
+        "address": "2001:67c:2b0:db32::a29f:c702",
+        "port": 443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIB0NXyH4snMERkM1XLhubqPY6HP9ucoBx6utbAMVvfEvoAoGCCqGSM49AwEHoUQDQgAEwiptvGamnxhrQDwAUCg1edvi68RIWgtGe6EE3lRRMTx3LvZIS8GAbZ/3TsGHQ13lEQao5Jmgs7xFb46AudIsOg==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8f39:2e57:9e89:48dd:6a6d/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.microsoft.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      },
+      "tag": "H3 | 芬兰 IPv6 | 2001:67c:2b0:db32::a29f:c702 | 443 | MASQUE导航"
+    },
+    {
+      "protocol": "masque",
+      "settings": {
+        "address": "masque1.bestcf.eu.cc",
+        "port": 443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIB0NXyH4snMERkM1XLhubqPY6HP9ucoBx6utbAMVvfEvoAoGCCqGSM49AwEHoUQDQgAEwiptvGamnxhrQDwAUCg1edvi68RIWgtGe6EE3lRRMTx3LvZIS8GAbZ/3TsGHQ13lEQao5Jmgs7xFb46AudIsOg==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8f39:2e57:9e89:48dd:6a6d/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.microsoft.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      },
+      "tag": "H3 | 预备 | masque1.bestcf.eu.cc | 443 | MASQUE导航"
+    },
+    {
+      "protocol": "masque",
+      "settings": {
+        "address": "masque2.bestcf.eu.cc",
+        "port": 443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIB0NXyH4snMERkM1XLhubqPY6HP9ucoBx6utbAMVvfEvoAoGCCqGSM49AwEHoUQDQgAEwiptvGamnxhrQDwAUCg1edvi68RIWgtGe6EE3lRRMTx3LvZIS8GAbZ/3TsGHQ13lEQao5Jmgs7xFb46AudIsOg==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8f39:2e57:9e89:48dd:6a6d/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.microsoft.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      },
+      "tag": "H3 | 预备 | masque2.bestcf.eu.cc | 443 | MASQUE导航"
+    },
+    {
+      "protocol": "masque",
+      "settings": {
+        "address": "masque3.bestcf.eu.cc",
+        "port": 443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIB0NXyH4snMERkM1XLhubqPY6HP9ucoBx6utbAMVvfEvoAoGCCqGSM49AwEHoUQDQgAEwiptvGamnxhrQDwAUCg1edvi68RIWgtGe6EE3lRRMTx3LvZIS8GAbZ/3TsGHQ13lEQao5Jmgs7xFb46AudIsOg==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8f39:2e57:9e89:48dd:6a6d/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.microsoft.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      },
+      "tag": "H3 | 预备 IPv6 | masque3.bestcf.eu.cc | 443 | MASQUE导航"
+    },
+    {
+      "protocol": "masque",
+      "settings": {
+        "address": "masque4.bestcf.eu.cc",
+        "port": 443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIB0NXyH4snMERkM1XLhubqPY6HP9ucoBx6utbAMVvfEvoAoGCCqGSM49AwEHoUQDQgAEwiptvGamnxhrQDwAUCg1edvi68RIWgtGe6EE3lRRMTx3LvZIS8GAbZ/3TsGHQ13lEQao5Jmgs7xFb46AudIsOg==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8f39:2e57:9e89:48dd:6a6d/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.microsoft.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      },
+      "tag": "H3 | 预备 IPv6 | masque4.bestcf.eu.cc | 443 | MASQUE导航"
+    }
+  ]
+}
