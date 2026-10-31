@@ -37,7 +37,11 @@ USER_AGENT = (
     "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36"
 )
 GROUP_NAMES = {"yangshi": "央視頻道", "weishi": "衛視頻道"}
-EXCLUDED_PIDS = frozenset({})
+# Repeated regional-rights rejection, verified 2026-09-05.
+# Recheck playback before restoring these channels.
+EXCLUDED_PIDS = frozenset({
+    # 允许加载 CCTV5、CCTV5+、CCTV16-HD、CCTV16 4K
+})
 XMLTV_NAMES = {
     "CCTV1": "CCTV-1 综合",
     "CCTV2": "CCTV-2 财经",
@@ -103,10 +107,6 @@ TICKET_KEYSTREAM = bytes.fromhex(
 TICKET_SUFFIX = "bSCz8SqH8T"
 PLAY_CACHE_SECONDS = 60
 _KEYGEN_LOCK = threading.Lock()
-
-# 全局 Wasm 实例缓存，避免重复加载
-_GLOBAL_KEYGEN_INSTANCE = None
-_GLOBAL_KEYGEN_MTIME = 0
 
 
 def _cntv_epg_id(name):
@@ -379,27 +379,23 @@ class _PlayerApi:
 
     def __init__(self, net, deadline):
         self.net = net
-        self.keygen = self._get_cached_keygen(deadline)
+        self.keygen = None
+        self.keygen_hash = None
+        self._update_keygen(deadline)
 
-    def _get_cached_keygen(self, deadline):
-        global _GLOBAL_KEYGEN_INSTANCE, _GLOBAL_KEYGEN_MTIME
+    def _update_keygen(self, deadline):
         path = _download_keygen(self.net, deadline)
-        try:
-            mtime = os.path.getmtime(path)
-        except OSError:
-            mtime = 0
-
-        if _GLOBAL_KEYGEN_INSTANCE is None or mtime != _GLOBAL_KEYGEN_MTIME:
-            _GLOBAL_KEYGEN_INSTANCE = _Keygen(path)
-            _GLOBAL_KEYGEN_MTIME = mtime
-        
+        with open(path, "rb") as stream:
+            digest = hashlib.sha256(stream.read()).digest()
+        if digest != self.keygen_hash:
+            self.keygen = _Keygen(path)
+            self.keygen_hash = digest
         _remaining(deadline, "簽名初始化")
-        return _GLOBAL_KEYGEN_INSTANCE
 
     def resolve(self, pid, cnlid, deadline):
+        self._update_keygen(deadline)
         guid = "{}_{}".format(self._base36(int(time.time() * 1000)), _random_text(11))
-        session = self._session(guid)
-        try:
+        with self._session(guid) as session:
             auth = self._auth(session, pid, guid, deadline)
             timestamp = str(int(time.time() + 0.5))
             params = {
@@ -429,13 +425,6 @@ class _PlayerApi:
             result = self._request_json(
                 session, PLAYER_URL + "get_live_info", deadline, "取得播放資訊", data=params, headers=headers
             )
-        finally:
-            if hasattr(session, "close"):
-                try:
-                    session.close()
-                except Exception:
-                    pass
-
         if result.get("code") != 0:
             raise _ProxyError(502, "取得播放資訊: " + str(result.get("msg") or "play api rejected channel"))
         data = result.get("data") or {}
@@ -566,15 +555,13 @@ class _PlayerApi:
         }
         session = self.net.session()
         try:
+            # Player and open-token APIs use different Yangshipin subdomains.
             for name, value in cookies.items():
                 if not session.setCookie(HOST, "{}={}; Domain=yangshipin.cn; Path=/".format(name, value)):
                     raise ValueError("invalid player cookie")
             return session
         except Exception:
-            try:
-                session.close()
-            except Exception:
-                pass
+            session.close()
             raise
 
     @staticmethod
