@@ -1,0 +1,24 @@
+{
+  "channels": [
+    {"id": "cctv1", "name": "CCTV-1 综合"},
+    {"id": "cctv2", "name": "CCTV-2 财经"},
+    {"id": "cctv3", "name": "CCTV-3 综艺"},
+    {"id": "cctv4", "name": "CCTV-4 中文国际（亚）"},
+    {"id": "cctv5", "name": "CCTV-5 体育"},
+    {"id": "cctv5plus", "name": "CCTV-5+ 体育赛事"},
+    {"id": "cctv6", "name": "CCTV-6 电影"},
+    {"id": "cctv7", "name": "CCTV-7 国防军事"},
+    {"id": "cctv8", "name": "CCTV-8 电视剧"},
+    {"id": "cctvjilu", "name": "CCTV-9 纪录"},
+    {"id": "cctv10", "name": "CCTV-10 科教"},
+    {"id": "cctv11", "name": "CCTV-11 戏曲"},
+    {"id": "cctv12", "name": "CCTV-12 社会与法"},
+    {"id": "cctv13", "name": "CCTV-13 新闻"},
+    {"id": "cctvchild", "name": "CCTV-14 少儿"},
+    {"id": "cctv15", "name": "CCTV-15 音乐"},
+    {"id": "cctv16", "name": "CCTV-16 奥林匹克"},
+    {"id": "cctv17", "name": "CCTV-17 农业农村"},
+    {"id": "cctveurope", "name": "CCTV-4 中文国际（欧）"},
+    {"id": "cctvamerica", "name": "CCTV-4 中文国际（美）"}
+  ]
+}
