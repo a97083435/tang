@@ -1,0 +1,1031 @@
+{
+  "_Sing-box_Throne": [
+    "当前仅支持Throne客户端，请及时更新到最新版本",
+    "仅建议使用MASQUE和官方端点或官方客户端，使用第三方资源可能会造成隐私泄露或损失",
+    "免费使用，谨防上当受骗！记得分享推荐转换器给你的朋友！",
+    "转换器仅用于技术研究，24小时后请删除配置，禁止它用！",
+    "WARP MASQUE 导航 - https://masque.pages.dev",
+    "MASQUE To SingBox转换器 - https://m2singbox.pages.dev"
+  ],
+  "log": {
+    "level": "info"
+  },
+  "dns": {
+    "servers": [
+      {
+        "tag": "dns-remote",
+        "type": "udp",
+        "server": "1.1.1.1",
+        "detour": "proxy",
+        "domain_resolver": "dns-local"
+      },
+      {
+        "tag": "dns-direct",
+        "type": "local",
+        "domain_resolver": "dns-local"
+      },
+      {
+        "tag": "dns-local",
+        "type": "local"
+      }
+    ],
+    "rules": [
+      {
+        "action": "predefined",
+        "domain": "localhost",
+        "query_type": "A",
+        "answer": [
+          "*. IN A 127.0.0.1"
+        ],
+        "rcode": "NOERROR"
+      },
+      {
+        "action": "predefined",
+        "domain": "localhost",
+        "query_type": "AAAA",
+        "rcode": "NXDOMAIN"
+      },
+      {
+        "action": "route",
+        "rule_set": [
+          "geosite-cn",
+          "geosite-geolocation-cn"
+        ],
+        "server": "dns-direct"
+      },
+      {
+        "action": "route",
+        "server": "dns-remote"
+      }
+    ],
+    "cache_capacity": 65536
+  },
+  "inbounds": [
+    {
+      "type": "direct",
+      "tag": "dns-in",
+      "listen": "127.0.0.1",
+      "listen_port": 5533
+    },
+    {
+      "type": "mixed",
+      "tag": "mixed-in",
+      "listen": "127.0.0.1",
+      "listen_port": 2080
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "direct",
+      "tag": "direct"
+    }
+  ],
+  "endpoints": [
+    {
+      "type": "masque",
+      "tag": "H3 | 官方 | 162.159.198.2 | 8095 | MASQUE导航",
+      "server": "162.159.198.2",
+      "server_port": 8095,
+      "private_key": "MHcCAQEEID8hCKLMQJ5P/+CMKVv4oqu5wdEmAuK20oEvdZxMkvdxoAoGCCqGSM49AwEHoUQDQgAEEGo8Y0gkyDGcVpKPW1DRzlbtrxDn0Fzfjl2ADTFl1T4y7gauC1doyjFqTYkM74+97dJ/VMgVntjyIPevj/y/yQ==",
+      "peer_public_key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+      "mtu": 1280,
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8281:de0b:4bc9:3438:5d8d/128"
+      ],
+      "tls": {
+        "enabled": true,
+        "server_name": "www.microsoft.com"
+      }
+    },
+    {
+      "type": "masque",
+      "tag": "H3 | 官方 | 162.159.198.2 | 443 | MASQUE导航",
+      "server": "162.159.198.2",
+      "server_port": 443,
+      "private_key": "MHcCAQEEID8hCKLMQJ5P/+CMKVv4oqu5wdEmAuK20oEvdZxMkvdxoAoGCCqGSM49AwEHoUQDQgAEEGo8Y0gkyDGcVpKPW1DRzlbtrxDn0Fzfjl2ADTFl1T4y7gauC1doyjFqTYkM74+97dJ/VMgVntjyIPevj/y/yQ==",
+      "peer_public_key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+      "mtu": 1280,
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8281:de0b:4bc9:3438:5d8d/128"
+      ],
+      "tls": {
+        "enabled": true,
+        "server_name": "www.microsoft.com"
+      }
+    },
+    {
+      "type": "masque",
+      "tag": "H3 | 官方 | 162.159.198.2 | 8443 | MASQUE导航",
+      "server": "162.159.198.2",
+      "server_port": 8443,
+      "private_key": "MHcCAQEEID8hCKLMQJ5P/+CMKVv4oqu5wdEmAuK20oEvdZxMkvdxoAoGCCqGSM49AwEHoUQDQgAEEGo8Y0gkyDGcVpKPW1DRzlbtrxDn0Fzfjl2ADTFl1T4y7gauC1doyjFqTYkM74+97dJ/VMgVntjyIPevj/y/yQ==",
+      "peer_public_key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+      "mtu": 1280,
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8281:de0b:4bc9:3438:5d8d/128"
+      ],
+      "tls": {
+        "enabled": true,
+        "server_name": "www.microsoft.com"
+      }
+    },
+    {
+      "type": "masque",
+      "tag": "H3 | 官方 | 162.159.198.2 | 4443 | MASQUE导航",
+      "server": "162.159.198.2",
+      "server_port": 4443,
+      "private_key": "MHcCAQEEID8hCKLMQJ5P/+CMKVv4oqu5wdEmAuK20oEvdZxMkvdxoAoGCCqGSM49AwEHoUQDQgAEEGo8Y0gkyDGcVpKPW1DRzlbtrxDn0Fzfjl2ADTFl1T4y7gauC1doyjFqTYkM74+97dJ/VMgVntjyIPevj/y/yQ==",
+      "peer_public_key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+      "mtu": 1280,
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8281:de0b:4bc9:3438:5d8d/128"
+      ],
+      "tls": {
+        "enabled": true,
+        "server_name": "www.microsoft.com"
+      }
+    },
+    {
+      "type": "masque",
+      "tag": "H3 | 官方 | 162.159.198.2 | 1701 | MASQUE导航",
+      "server": "162.159.198.2",
+      "server_port": 1701,
+      "private_key": "MHcCAQEEID8hCKLMQJ5P/+CMKVv4oqu5wdEmAuK20oEvdZxMkvdxoAoGCCqGSM49AwEHoUQDQgAEEGo8Y0gkyDGcVpKPW1DRzlbtrxDn0Fzfjl2ADTFl1T4y7gauC1doyjFqTYkM74+97dJ/VMgVntjyIPevj/y/yQ==",
+      "peer_public_key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+      "mtu": 1280,
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8281:de0b:4bc9:3438:5d8d/128"
+      ],
+      "tls": {
+        "enabled": true,
+        "server_name": "www.microsoft.com"
+      }
+    },
+    {
+      "type": "masque",
+      "tag": "H3 | 官方 | 162.159.198.2 | 4500 | MASQUE导航",
+      "server": "162.159.198.2",
+      "server_port": 4500,
+      "private_key": "MHcCAQEEID8hCKLMQJ5P/+CMKVv4oqu5wdEmAuK20oEvdZxMkvdxoAoGCCqGSM49AwEHoUQDQgAEEGo8Y0gkyDGcVpKPW1DRzlbtrxDn0Fzfjl2ADTFl1T4y7gauC1doyjFqTYkM74+97dJ/VMgVntjyIPevj/y/yQ==",
+      "peer_public_key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+      "mtu": 1280,
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8281:de0b:4bc9:3438:5d8d/128"
+      ],
+      "tls": {
+        "enabled": true,
+        "server_name": "www.microsoft.com"
+      }
+    },
+    {
+      "type": "masque",
+      "tag": "H3 | 官方 | 162.159.198.2 | 500 | MASQUE导航",
+      "server": "162.159.198.2",
+      "server_port": 500,
+      "private_key": "MHcCAQEEID8hCKLMQJ5P/+CMKVv4oqu5wdEmAuK20oEvdZxMkvdxoAoGCCqGSM49AwEHoUQDQgAEEGo8Y0gkyDGcVpKPW1DRzlbtrxDn0Fzfjl2ADTFl1T4y7gauC1doyjFqTYkM74+97dJ/VMgVntjyIPevj/y/yQ==",
+      "peer_public_key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+      "mtu": 1280,
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8281:de0b:4bc9:3438:5d8d/128"
+      ],
+      "tls": {
+        "enabled": true,
+        "server_name": "www.microsoft.com"
+      }
+    },
+    {
+      "type": "masque",
+      "tag": "H3 | 官方 | 162.159.199.2 | 8095 | MASQUE导航",
+      "server": "162.159.199.2",
+      "server_port": 8095,
+      "private_key": "MHcCAQEEID8hCKLMQJ5P/+CMKVv4oqu5wdEmAuK20oEvdZxMkvdxoAoGCCqGSM49AwEHoUQDQgAEEGo8Y0gkyDGcVpKPW1DRzlbtrxDn0Fzfjl2ADTFl1T4y7gauC1doyjFqTYkM74+97dJ/VMgVntjyIPevj/y/yQ==",
+      "peer_public_key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+      "mtu": 1280,
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8281:de0b:4bc9:3438:5d8d/128"
+      ],
+      "tls": {
+        "enabled": true,
+        "server_name": "www.microsoft.com"
+      }
+    },
+    {
+      "type": "masque",
+      "tag": "H3 | 官方 | 162.159.199.2 | 443 | MASQUE导航",
+      "server": "162.159.199.2",
+      "server_port": 443,
+      "private_key": "MHcCAQEEID8hCKLMQJ5P/+CMKVv4oqu5wdEmAuK20oEvdZxMkvdxoAoGCCqGSM49AwEHoUQDQgAEEGo8Y0gkyDGcVpKPW1DRzlbtrxDn0Fzfjl2ADTFl1T4y7gauC1doyjFqTYkM74+97dJ/VMgVntjyIPevj/y/yQ==",
+      "peer_public_key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+      "mtu": 1280,
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8281:de0b:4bc9:3438:5d8d/128"
+      ],
+      "tls": {
+        "enabled": true,
+        "server_name": "www.microsoft.com"
+      }
+    },
+    {
+      "type": "masque",
+      "tag": "H3 | 官方 | 162.159.199.2 | 8443 | MASQUE导航",
+      "server": "162.159.199.2",
+      "server_port": 8443,
+      "private_key": "MHcCAQEEID8hCKLMQJ5P/+CMKVv4oqu5wdEmAuK20oEvdZxMkvdxoAoGCCqGSM49AwEHoUQDQgAEEGo8Y0gkyDGcVpKPW1DRzlbtrxDn0Fzfjl2ADTFl1T4y7gauC1doyjFqTYkM74+97dJ/VMgVntjyIPevj/y/yQ==",
+      "peer_public_key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+      "mtu": 1280,
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8281:de0b:4bc9:3438:5d8d/128"
+      ],
+      "tls": {
+        "enabled": true,
+        "server_name": "www.microsoft.com"
+      }
+    },
+    {
+      "type": "masque",
+      "tag": "H3 | 官方 | 162.159.199.2 | 4443 | MASQUE导航",
+      "server": "162.159.199.2",
+      "server_port": 4443,
+      "private_key": "MHcCAQEEID8hCKLMQJ5P/+CMKVv4oqu5wdEmAuK20oEvdZxMkvdxoAoGCCqGSM49AwEHoUQDQgAEEGo8Y0gkyDGcVpKPW1DRzlbtrxDn0Fzfjl2ADTFl1T4y7gauC1doyjFqTYkM74+97dJ/VMgVntjyIPevj/y/yQ==",
+      "peer_public_key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+      "mtu": 1280,
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8281:de0b:4bc9:3438:5d8d/128"
+      ],
+      "tls": {
+        "enabled": true,
+        "server_name": "www.microsoft.com"
+      }
+    },
+    {
+      "type": "masque",
+      "tag": "H3 | 官方 | 162.159.199.2 | 1701 | MASQUE导航",
+      "server": "162.159.199.2",
+      "server_port": 1701,
+      "private_key": "MHcCAQEEID8hCKLMQJ5P/+CMKVv4oqu5wdEmAuK20oEvdZxMkvdxoAoGCCqGSM49AwEHoUQDQgAEEGo8Y0gkyDGcVpKPW1DRzlbtrxDn0Fzfjl2ADTFl1T4y7gauC1doyjFqTYkM74+97dJ/VMgVntjyIPevj/y/yQ==",
+      "peer_public_key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+      "mtu": 1280,
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8281:de0b:4bc9:3438:5d8d/128"
+      ],
+      "tls": {
+        "enabled": true,
+        "server_name": "www.microsoft.com"
+      }
+    },
+    {
+      "type": "masque",
+      "tag": "H3 | 官方 | 162.159.199.2 | 4500 | MASQUE导航",
+      "server": "162.159.199.2",
+      "server_port": 4500,
+      "private_key": "MHcCAQEEID8hCKLMQJ5P/+CMKVv4oqu5wdEmAuK20oEvdZxMkvdxoAoGCCqGSM49AwEHoUQDQgAEEGo8Y0gkyDGcVpKPW1DRzlbtrxDn0Fzfjl2ADTFl1T4y7gauC1doyjFqTYkM74+97dJ/VMgVntjyIPevj/y/yQ==",
+      "peer_public_key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+      "mtu": 1280,
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8281:de0b:4bc9:3438:5d8d/128"
+      ],
+      "tls": {
+        "enabled": true,
+        "server_name": "www.microsoft.com"
+      }
+    },
+    {
+      "type": "masque",
+      "tag": "H3 | 官方 | 162.159.199.2 | 500 | MASQUE导航",
+      "server": "162.159.199.2",
+      "server_port": 500,
+      "private_key": "MHcCAQEEID8hCKLMQJ5P/+CMKVv4oqu5wdEmAuK20oEvdZxMkvdxoAoGCCqGSM49AwEHoUQDQgAEEGo8Y0gkyDGcVpKPW1DRzlbtrxDn0Fzfjl2ADTFl1T4y7gauC1doyjFqTYkM74+97dJ/VMgVntjyIPevj/y/yQ==",
+      "peer_public_key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+      "mtu": 1280,
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8281:de0b:4bc9:3438:5d8d/128"
+      ],
+      "tls": {
+        "enabled": true,
+        "server_name": "www.microsoft.com"
+      }
+    },
+    {
+      "type": "masque",
+      "tag": "H3 | 官方 IPv6 | 2606:4700:103::2 | 8095 | MASQUE导航",
+      "server": "2606:4700:103::2",
+      "server_port": 8095,
+      "private_key": "MHcCAQEEID8hCKLMQJ5P/+CMKVv4oqu5wdEmAuK20oEvdZxMkvdxoAoGCCqGSM49AwEHoUQDQgAEEGo8Y0gkyDGcVpKPW1DRzlbtrxDn0Fzfjl2ADTFl1T4y7gauC1doyjFqTYkM74+97dJ/VMgVntjyIPevj/y/yQ==",
+      "peer_public_key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+      "mtu": 1280,
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8281:de0b:4bc9:3438:5d8d/128"
+      ],
+      "tls": {
+        "enabled": true,
+        "server_name": "www.microsoft.com"
+      }
+    },
+    {
+      "type": "masque",
+      "tag": "H3 | 官方 IPv6 | 2606:4700:103::2 | 443 | MASQUE导航",
+      "server": "2606:4700:103::2",
+      "server_port": 443,
+      "private_key": "MHcCAQEEID8hCKLMQJ5P/+CMKVv4oqu5wdEmAuK20oEvdZxMkvdxoAoGCCqGSM49AwEHoUQDQgAEEGo8Y0gkyDGcVpKPW1DRzlbtrxDn0Fzfjl2ADTFl1T4y7gauC1doyjFqTYkM74+97dJ/VMgVntjyIPevj/y/yQ==",
+      "peer_public_key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+      "mtu": 1280,
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8281:de0b:4bc9:3438:5d8d/128"
+      ],
+      "tls": {
+        "enabled": true,
+        "server_name": "www.microsoft.com"
+      }
+    },
+    {
+      "type": "masque",
+      "tag": "H3 | 官方 IPv6 | 2606:4700:103::2 | 8443 | MASQUE导航",
+      "server": "2606:4700:103::2",
+      "server_port": 8443,
+      "private_key": "MHcCAQEEID8hCKLMQJ5P/+CMKVv4oqu5wdEmAuK20oEvdZxMkvdxoAoGCCqGSM49AwEHoUQDQgAEEGo8Y0gkyDGcVpKPW1DRzlbtrxDn0Fzfjl2ADTFl1T4y7gauC1doyjFqTYkM74+97dJ/VMgVntjyIPevj/y/yQ==",
+      "peer_public_key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+      "mtu": 1280,
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8281:de0b:4bc9:3438:5d8d/128"
+      ],
+      "tls": {
+        "enabled": true,
+        "server_name": "www.microsoft.com"
+      }
+    },
+    {
+      "type": "masque",
+      "tag": "H3 | 官方 IPv6 | 2606:4700:103::2 | 4443 | MASQUE导航",
+      "server": "2606:4700:103::2",
+      "server_port": 4443,
+      "private_key": "MHcCAQEEID8hCKLMQJ5P/+CMKVv4oqu5wdEmAuK20oEvdZxMkvdxoAoGCCqGSM49AwEHoUQDQgAEEGo8Y0gkyDGcVpKPW1DRzlbtrxDn0Fzfjl2ADTFl1T4y7gauC1doyjFqTYkM74+97dJ/VMgVntjyIPevj/y/yQ==",
+      "peer_public_key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+      "mtu": 1280,
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8281:de0b:4bc9:3438:5d8d/128"
+      ],
+      "tls": {
+        "enabled": true,
+        "server_name": "www.microsoft.com"
+      }
+    },
+    {
+      "type": "masque",
+      "tag": "H3 | 官方 IPv6 | 2606:4700:103::2 | 1701 | MASQUE导航",
+      "server": "2606:4700:103::2",
+      "server_port": 1701,
+      "private_key": "MHcCAQEEID8hCKLMQJ5P/+CMKVv4oqu5wdEmAuK20oEvdZxMkvdxoAoGCCqGSM49AwEHoUQDQgAEEGo8Y0gkyDGcVpKPW1DRzlbtrxDn0Fzfjl2ADTFl1T4y7gauC1doyjFqTYkM74+97dJ/VMgVntjyIPevj/y/yQ==",
+      "peer_public_key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+      "mtu": 1280,
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8281:de0b:4bc9:3438:5d8d/128"
+      ],
+      "tls": {
+        "enabled": true,
+        "server_name": "www.microsoft.com"
+      }
+    },
+    {
+      "type": "masque",
+      "tag": "H3 | 官方 IPv6 | 2606:4700:103::2 | 4500 | MASQUE导航",
+      "server": "2606:4700:103::2",
+      "server_port": 4500,
+      "private_key": "MHcCAQEEID8hCKLMQJ5P/+CMKVv4oqu5wdEmAuK20oEvdZxMkvdxoAoGCCqGSM49AwEHoUQDQgAEEGo8Y0gkyDGcVpKPW1DRzlbtrxDn0Fzfjl2ADTFl1T4y7gauC1doyjFqTYkM74+97dJ/VMgVntjyIPevj/y/yQ==",
+      "peer_public_key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+      "mtu": 1280,
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8281:de0b:4bc9:3438:5d8d/128"
+      ],
+      "tls": {
+        "enabled": true,
+        "server_name": "www.microsoft.com"
+      }
+    },
+    {
+      "type": "masque",
+      "tag": "H3 | 官方 IPv6 | 2606:4700:103::2 | 500 | MASQUE导航",
+      "server": "2606:4700:103::2",
+      "server_port": 500,
+      "private_key": "MHcCAQEEID8hCKLMQJ5P/+CMKVv4oqu5wdEmAuK20oEvdZxMkvdxoAoGCCqGSM49AwEHoUQDQgAEEGo8Y0gkyDGcVpKPW1DRzlbtrxDn0Fzfjl2ADTFl1T4y7gauC1doyjFqTYkM74+97dJ/VMgVntjyIPevj/y/yQ==",
+      "peer_public_key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+      "mtu": 1280,
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8281:de0b:4bc9:3438:5d8d/128"
+      ],
+      "tls": {
+        "enabled": true,
+        "server_name": "www.microsoft.com"
+      }
+    },
+    {
+      "type": "masque",
+      "tag": "H3 | 官方 IPv6 | 2606:4700:104::2 | 8095 | MASQUE导航",
+      "server": "2606:4700:104::2",
+      "server_port": 8095,
+      "private_key": "MHcCAQEEID8hCKLMQJ5P/+CMKVv4oqu5wdEmAuK20oEvdZxMkvdxoAoGCCqGSM49AwEHoUQDQgAEEGo8Y0gkyDGcVpKPW1DRzlbtrxDn0Fzfjl2ADTFl1T4y7gauC1doyjFqTYkM74+97dJ/VMgVntjyIPevj/y/yQ==",
+      "peer_public_key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+      "mtu": 1280,
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8281:de0b:4bc9:3438:5d8d/128"
+      ],
+      "tls": {
+        "enabled": true,
+        "server_name": "www.microsoft.com"
+      }
+    },
+    {
+      "type": "masque",
+      "tag": "H3 | 官方 IPv6 | 2606:4700:104::2 | 443 | MASQUE导航",
+      "server": "2606:4700:104::2",
+      "server_port": 443,
+      "private_key": "MHcCAQEEID8hCKLMQJ5P/+CMKVv4oqu5wdEmAuK20oEvdZxMkvdxoAoGCCqGSM49AwEHoUQDQgAEEGo8Y0gkyDGcVpKPW1DRzlbtrxDn0Fzfjl2ADTFl1T4y7gauC1doyjFqTYkM74+97dJ/VMgVntjyIPevj/y/yQ==",
+      "peer_public_key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+      "mtu": 1280,
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8281:de0b:4bc9:3438:5d8d/128"
+      ],
+      "tls": {
+        "enabled": true,
+        "server_name": "www.microsoft.com"
+      }
+    },
+    {
+      "type": "masque",
+      "tag": "H3 | 官方 IPv6 | 2606:4700:104::2 | 8443 | MASQUE导航",
+      "server": "2606:4700:104::2",
+      "server_port": 8443,
+      "private_key": "MHcCAQEEID8hCKLMQJ5P/+CMKVv4oqu5wdEmAuK20oEvdZxMkvdxoAoGCCqGSM49AwEHoUQDQgAEEGo8Y0gkyDGcVpKPW1DRzlbtrxDn0Fzfjl2ADTFl1T4y7gauC1doyjFqTYkM74+97dJ/VMgVntjyIPevj/y/yQ==",
+      "peer_public_key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+      "mtu": 1280,
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8281:de0b:4bc9:3438:5d8d/128"
+      ],
+      "tls": {
+        "enabled": true,
+        "server_name": "www.microsoft.com"
+      }
+    },
+    {
+      "type": "masque",
+      "tag": "H3 | 官方 IPv6 | 2606:4700:104::2 | 4443 | MASQUE导航",
+      "server": "2606:4700:104::2",
+      "server_port": 4443,
+      "private_key": "MHcCAQEEID8hCKLMQJ5P/+CMKVv4oqu5wdEmAuK20oEvdZxMkvdxoAoGCCqGSM49AwEHoUQDQgAEEGo8Y0gkyDGcVpKPW1DRzlbtrxDn0Fzfjl2ADTFl1T4y7gauC1doyjFqTYkM74+97dJ/VMgVntjyIPevj/y/yQ==",
+      "peer_public_key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+      "mtu": 1280,
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8281:de0b:4bc9:3438:5d8d/128"
+      ],
+      "tls": {
+        "enabled": true,
+        "server_name": "www.microsoft.com"
+      }
+    },
+    {
+      "type": "masque",
+      "tag": "H3 | 官方 IPv6 | 2606:4700:104::2 | 1701 | MASQUE导航",
+      "server": "2606:4700:104::2",
+      "server_port": 1701,
+      "private_key": "MHcCAQEEID8hCKLMQJ5P/+CMKVv4oqu5wdEmAuK20oEvdZxMkvdxoAoGCCqGSM49AwEHoUQDQgAEEGo8Y0gkyDGcVpKPW1DRzlbtrxDn0Fzfjl2ADTFl1T4y7gauC1doyjFqTYkM74+97dJ/VMgVntjyIPevj/y/yQ==",
+      "peer_public_key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+      "mtu": 1280,
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8281:de0b:4bc9:3438:5d8d/128"
+      ],
+      "tls": {
+        "enabled": true,
+        "server_name": "www.microsoft.com"
+      }
+    },
+    {
+      "type": "masque",
+      "tag": "H3 | 官方 IPv6 | 2606:4700:104::2 | 4500 | MASQUE导航",
+      "server": "2606:4700:104::2",
+      "server_port": 4500,
+      "private_key": "MHcCAQEEID8hCKLMQJ5P/+CMKVv4oqu5wdEmAuK20oEvdZxMkvdxoAoGCCqGSM49AwEHoUQDQgAEEGo8Y0gkyDGcVpKPW1DRzlbtrxDn0Fzfjl2ADTFl1T4y7gauC1doyjFqTYkM74+97dJ/VMgVntjyIPevj/y/yQ==",
+      "peer_public_key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+      "mtu": 1280,
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8281:de0b:4bc9:3438:5d8d/128"
+      ],
+      "tls": {
+        "enabled": true,
+        "server_name": "www.microsoft.com"
+      }
+    },
+    {
+      "type": "masque",
+      "tag": "H3 | 官方 IPv6 | 2606:4700:104::2 | 500 | MASQUE导航",
+      "server": "2606:4700:104::2",
+      "server_port": 500,
+      "private_key": "MHcCAQEEID8hCKLMQJ5P/+CMKVv4oqu5wdEmAuK20oEvdZxMkvdxoAoGCCqGSM49AwEHoUQDQgAEEGo8Y0gkyDGcVpKPW1DRzlbtrxDn0Fzfjl2ADTFl1T4y7gauC1doyjFqTYkM74+97dJ/VMgVntjyIPevj/y/yQ==",
+      "peer_public_key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+      "mtu": 1280,
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8281:de0b:4bc9:3438:5d8d/128"
+      ],
+      "tls": {
+        "enabled": true,
+        "server_name": "www.microsoft.com"
+      }
+    },
+    {
+      "type": "masque",
+      "tag": "H3 | 美国 IPv6 | us.v6.free.bestcf.eu.cc | 443 | MASQUE导航",
+      "server": "us.v6.free.bestcf.eu.cc",
+      "server_port": 443,
+      "private_key": "MHcCAQEEID8hCKLMQJ5P/+CMKVv4oqu5wdEmAuK20oEvdZxMkvdxoAoGCCqGSM49AwEHoUQDQgAEEGo8Y0gkyDGcVpKPW1DRzlbtrxDn0Fzfjl2ADTFl1T4y7gauC1doyjFqTYkM74+97dJ/VMgVntjyIPevj/y/yQ==",
+      "peer_public_key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+      "mtu": 1280,
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8281:de0b:4bc9:3438:5d8d/128"
+      ],
+      "tls": {
+        "enabled": true,
+        "server_name": "www.microsoft.com"
+      }
+    },
+    {
+      "type": "masque",
+      "tag": "H3 | 美国 IPv6 | 2602:fc59:b0:64::a29f:c601 | 443 | MASQUE导航",
+      "server": "2602:fc59:b0:64::a29f:c601",
+      "server_port": 443,
+      "private_key": "MHcCAQEEID8hCKLMQJ5P/+CMKVv4oqu5wdEmAuK20oEvdZxMkvdxoAoGCCqGSM49AwEHoUQDQgAEEGo8Y0gkyDGcVpKPW1DRzlbtrxDn0Fzfjl2ADTFl1T4y7gauC1doyjFqTYkM74+97dJ/VMgVntjyIPevj/y/yQ==",
+      "peer_public_key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+      "mtu": 1280,
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8281:de0b:4bc9:3438:5d8d/128"
+      ],
+      "tls": {
+        "enabled": true,
+        "server_name": "www.microsoft.com"
+      }
+    },
+    {
+      "type": "masque",
+      "tag": "H3 | 美国 IPv6 | 2602:fc59:b0:64::a29f:c602 | 443 | MASQUE导航",
+      "server": "2602:fc59:b0:64::a29f:c602",
+      "server_port": 443,
+      "private_key": "MHcCAQEEID8hCKLMQJ5P/+CMKVv4oqu5wdEmAuK20oEvdZxMkvdxoAoGCCqGSM49AwEHoUQDQgAEEGo8Y0gkyDGcVpKPW1DRzlbtrxDn0Fzfjl2ADTFl1T4y7gauC1doyjFqTYkM74+97dJ/VMgVntjyIPevj/y/yQ==",
+      "peer_public_key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+      "mtu": 1280,
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8281:de0b:4bc9:3438:5d8d/128"
+      ],
+      "tls": {
+        "enabled": true,
+        "server_name": "www.microsoft.com"
+      }
+    },
+    {
+      "type": "masque",
+      "tag": "H3 | 美国 IPv6 | 2602:fc59:b0:64::a29f:c701 | 443 | MASQUE导航",
+      "server": "2602:fc59:b0:64::a29f:c701",
+      "server_port": 443,
+      "private_key": "MHcCAQEEID8hCKLMQJ5P/+CMKVv4oqu5wdEmAuK20oEvdZxMkvdxoAoGCCqGSM49AwEHoUQDQgAEEGo8Y0gkyDGcVpKPW1DRzlbtrxDn0Fzfjl2ADTFl1T4y7gauC1doyjFqTYkM74+97dJ/VMgVntjyIPevj/y/yQ==",
+      "peer_public_key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+      "mtu": 1280,
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8281:de0b:4bc9:3438:5d8d/128"
+      ],
+      "tls": {
+        "enabled": true,
+        "server_name": "www.microsoft.com"
+      }
+    },
+    {
+      "type": "masque",
+      "tag": "H3 | 美国 IPv6 | 2602:fc59:b0:64::a29f:c702 | 443 | MASQUE导航",
+      "server": "2602:fc59:b0:64::a29f:c702",
+      "server_port": 443,
+      "private_key": "MHcCAQEEID8hCKLMQJ5P/+CMKVv4oqu5wdEmAuK20oEvdZxMkvdxoAoGCCqGSM49AwEHoUQDQgAEEGo8Y0gkyDGcVpKPW1DRzlbtrxDn0Fzfjl2ADTFl1T4y7gauC1doyjFqTYkM74+97dJ/VMgVntjyIPevj/y/yQ==",
+      "peer_public_key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+      "mtu": 1280,
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8281:de0b:4bc9:3438:5d8d/128"
+      ],
+      "tls": {
+        "enabled": true,
+        "server_name": "www.microsoft.com"
+      }
+    },
+    {
+      "type": "masque",
+      "tag": "H3 | 美国 IPv6 | 2a14:7583:f764:64::a29f:c601 | 443 | MASQUE导航",
+      "server": "2a14:7583:f764:64::a29f:c601",
+      "server_port": 443,
+      "private_key": "MHcCAQEEID8hCKLMQJ5P/+CMKVv4oqu5wdEmAuK20oEvdZxMkvdxoAoGCCqGSM49AwEHoUQDQgAEEGo8Y0gkyDGcVpKPW1DRzlbtrxDn0Fzfjl2ADTFl1T4y7gauC1doyjFqTYkM74+97dJ/VMgVntjyIPevj/y/yQ==",
+      "peer_public_key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+      "mtu": 1280,
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8281:de0b:4bc9:3438:5d8d/128"
+      ],
+      "tls": {
+        "enabled": true,
+        "server_name": "www.microsoft.com"
+      }
+    },
+    {
+      "type": "masque",
+      "tag": "H3 | 美国 IPv6 | 2a14:7583:f764:64::a29f:c602 | 443 | MASQUE导航",
+      "server": "2a14:7583:f764:64::a29f:c602",
+      "server_port": 443,
+      "private_key": "MHcCAQEEID8hCKLMQJ5P/+CMKVv4oqu5wdEmAuK20oEvdZxMkvdxoAoGCCqGSM49AwEHoUQDQgAEEGo8Y0gkyDGcVpKPW1DRzlbtrxDn0Fzfjl2ADTFl1T4y7gauC1doyjFqTYkM74+97dJ/VMgVntjyIPevj/y/yQ==",
+      "peer_public_key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+      "mtu": 1280,
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8281:de0b:4bc9:3438:5d8d/128"
+      ],
+      "tls": {
+        "enabled": true,
+        "server_name": "www.microsoft.com"
+      }
+    },
+    {
+      "type": "masque",
+      "tag": "H3 | 美国 IPv6 | 2a14:7583:f764:64::a29f:c701 | 443 | MASQUE导航",
+      "server": "2a14:7583:f764:64::a29f:c701",
+      "server_port": 443,
+      "private_key": "MHcCAQEEID8hCKLMQJ5P/+CMKVv4oqu5wdEmAuK20oEvdZxMkvdxoAoGCCqGSM49AwEHoUQDQgAEEGo8Y0gkyDGcVpKPW1DRzlbtrxDn0Fzfjl2ADTFl1T4y7gauC1doyjFqTYkM74+97dJ/VMgVntjyIPevj/y/yQ==",
+      "peer_public_key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+      "mtu": 1280,
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8281:de0b:4bc9:3438:5d8d/128"
+      ],
+      "tls": {
+        "enabled": true,
+        "server_name": "www.microsoft.com"
+      }
+    },
+    {
+      "type": "masque",
+      "tag": "H3 | 美国 IPv6 | 2a14:7583:f764:64::a29f:c702 | 443 | MASQUE导航",
+      "server": "2a14:7583:f764:64::a29f:c702",
+      "server_port": 443,
+      "private_key": "MHcCAQEEID8hCKLMQJ5P/+CMKVv4oqu5wdEmAuK20oEvdZxMkvdxoAoGCCqGSM49AwEHoUQDQgAEEGo8Y0gkyDGcVpKPW1DRzlbtrxDn0Fzfjl2ADTFl1T4y7gauC1doyjFqTYkM74+97dJ/VMgVntjyIPevj/y/yQ==",
+      "peer_public_key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+      "mtu": 1280,
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8281:de0b:4bc9:3438:5d8d/128"
+      ],
+      "tls": {
+        "enabled": true,
+        "server_name": "www.microsoft.com"
+      }
+    },
+    {
+      "type": "masque",
+      "tag": "H3 | 芬兰 IPv6 | fi.v6.free.bestcf.eu.cc | 443 | MASQUE导航",
+      "server": "fi.v6.free.bestcf.eu.cc",
+      "server_port": 443,
+      "private_key": "MHcCAQEEID8hCKLMQJ5P/+CMKVv4oqu5wdEmAuK20oEvdZxMkvdxoAoGCCqGSM49AwEHoUQDQgAEEGo8Y0gkyDGcVpKPW1DRzlbtrxDn0Fzfjl2ADTFl1T4y7gauC1doyjFqTYkM74+97dJ/VMgVntjyIPevj/y/yQ==",
+      "peer_public_key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+      "mtu": 1280,
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8281:de0b:4bc9:3438:5d8d/128"
+      ],
+      "tls": {
+        "enabled": true,
+        "server_name": "www.microsoft.com"
+      }
+    },
+    {
+      "type": "masque",
+      "tag": "H3 | 芬兰 IPv6 | 2001:67c:2b0:db32::a29f:c601 | 443 | MASQUE导航",
+      "server": "2001:67c:2b0:db32::a29f:c601",
+      "server_port": 443,
+      "private_key": "MHcCAQEEID8hCKLMQJ5P/+CMKVv4oqu5wdEmAuK20oEvdZxMkvdxoAoGCCqGSM49AwEHoUQDQgAEEGo8Y0gkyDGcVpKPW1DRzlbtrxDn0Fzfjl2ADTFl1T4y7gauC1doyjFqTYkM74+97dJ/VMgVntjyIPevj/y/yQ==",
+      "peer_public_key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+      "mtu": 1280,
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8281:de0b:4bc9:3438:5d8d/128"
+      ],
+      "tls": {
+        "enabled": true,
+        "server_name": "www.microsoft.com"
+      }
+    },
+    {
+      "type": "masque",
+      "tag": "H3 | 芬兰 IPv6 | 2001:67c:2b0:db32::a29f:c602 | 443 | MASQUE导航",
+      "server": "2001:67c:2b0:db32::a29f:c602",
+      "server_port": 443,
+      "private_key": "MHcCAQEEID8hCKLMQJ5P/+CMKVv4oqu5wdEmAuK20oEvdZxMkvdxoAoGCCqGSM49AwEHoUQDQgAEEGo8Y0gkyDGcVpKPW1DRzlbtrxDn0Fzfjl2ADTFl1T4y7gauC1doyjFqTYkM74+97dJ/VMgVntjyIPevj/y/yQ==",
+      "peer_public_key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+      "mtu": 1280,
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8281:de0b:4bc9:3438:5d8d/128"
+      ],
+      "tls": {
+        "enabled": true,
+        "server_name": "www.microsoft.com"
+      }
+    },
+    {
+      "type": "masque",
+      "tag": "H3 | 芬兰 IPv6 | 2001:67c:2b0:db32::a29f:c701 | 443 | MASQUE导航",
+      "server": "2001:67c:2b0:db32::a29f:c701",
+      "server_port": 443,
+      "private_key": "MHcCAQEEID8hCKLMQJ5P/+CMKVv4oqu5wdEmAuK20oEvdZxMkvdxoAoGCCqGSM49AwEHoUQDQgAEEGo8Y0gkyDGcVpKPW1DRzlbtrxDn0Fzfjl2ADTFl1T4y7gauC1doyjFqTYkM74+97dJ/VMgVntjyIPevj/y/yQ==",
+      "peer_public_key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+      "mtu": 1280,
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8281:de0b:4bc9:3438:5d8d/128"
+      ],
+      "tls": {
+        "enabled": true,
+        "server_name": "www.microsoft.com"
+      }
+    },
+    {
+      "type": "masque",
+      "tag": "H3 | 芬兰 IPv6 | 2001:67c:2b0:db32::a29f:c702 | 443 | MASQUE导航",
+      "server": "2001:67c:2b0:db32::a29f:c702",
+      "server_port": 443,
+      "private_key": "MHcCAQEEID8hCKLMQJ5P/+CMKVv4oqu5wdEmAuK20oEvdZxMkvdxoAoGCCqGSM49AwEHoUQDQgAEEGo8Y0gkyDGcVpKPW1DRzlbtrxDn0Fzfjl2ADTFl1T4y7gauC1doyjFqTYkM74+97dJ/VMgVntjyIPevj/y/yQ==",
+      "peer_public_key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+      "mtu": 1280,
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8281:de0b:4bc9:3438:5d8d/128"
+      ],
+      "tls": {
+        "enabled": true,
+        "server_name": "www.microsoft.com"
+      }
+    },
+    {
+      "type": "masque",
+      "tag": "H3 | 德国 IPv6 | de.v6.free.bestcf.eu.cc | 443 | MASQUE导航",
+      "server": "de.v6.free.bestcf.eu.cc",
+      "server_port": 443,
+      "private_key": "MHcCAQEEID8hCKLMQJ5P/+CMKVv4oqu5wdEmAuK20oEvdZxMkvdxoAoGCCqGSM49AwEHoUQDQgAEEGo8Y0gkyDGcVpKPW1DRzlbtrxDn0Fzfjl2ADTFl1T4y7gauC1doyjFqTYkM74+97dJ/VMgVntjyIPevj/y/yQ==",
+      "peer_public_key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+      "mtu": 1280,
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8281:de0b:4bc9:3438:5d8d/128"
+      ],
+      "tls": {
+        "enabled": true,
+        "server_name": "www.microsoft.com"
+      }
+    },
+    {
+      "type": "masque",
+      "tag": "H3 | 德国 IPv6 | 2001:67c:2960:6464::a29f:c601 | 443 | MASQUE导航",
+      "server": "2001:67c:2960:6464::a29f:c601",
+      "server_port": 443,
+      "private_key": "MHcCAQEEID8hCKLMQJ5P/+CMKVv4oqu5wdEmAuK20oEvdZxMkvdxoAoGCCqGSM49AwEHoUQDQgAEEGo8Y0gkyDGcVpKPW1DRzlbtrxDn0Fzfjl2ADTFl1T4y7gauC1doyjFqTYkM74+97dJ/VMgVntjyIPevj/y/yQ==",
+      "peer_public_key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+      "mtu": 1280,
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8281:de0b:4bc9:3438:5d8d/128"
+      ],
+      "tls": {
+        "enabled": true,
+        "server_name": "www.microsoft.com"
+      }
+    },
+    {
+      "type": "masque",
+      "tag": "H3 | 德国 IPv6 | 2001:67c:2960:6464::a29f:c602 | 443 | MASQUE导航",
+      "server": "2001:67c:2960:6464::a29f:c602",
+      "server_port": 443,
+      "private_key": "MHcCAQEEID8hCKLMQJ5P/+CMKVv4oqu5wdEmAuK20oEvdZxMkvdxoAoGCCqGSM49AwEHoUQDQgAEEGo8Y0gkyDGcVpKPW1DRzlbtrxDn0Fzfjl2ADTFl1T4y7gauC1doyjFqTYkM74+97dJ/VMgVntjyIPevj/y/yQ==",
+      "peer_public_key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+      "mtu": 1280,
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8281:de0b:4bc9:3438:5d8d/128"
+      ],
+      "tls": {
+        "enabled": true,
+        "server_name": "www.microsoft.com"
+      }
+    },
+    {
+      "type": "masque",
+      "tag": "H3 | 德国 IPv6 | 2001:67c:2960:6464::a29f:c701 | 443 | MASQUE导航",
+      "server": "2001:67c:2960:6464::a29f:c701",
+      "server_port": 443,
+      "private_key": "MHcCAQEEID8hCKLMQJ5P/+CMKVv4oqu5wdEmAuK20oEvdZxMkvdxoAoGCCqGSM49AwEHoUQDQgAEEGo8Y0gkyDGcVpKPW1DRzlbtrxDn0Fzfjl2ADTFl1T4y7gauC1doyjFqTYkM74+97dJ/VMgVntjyIPevj/y/yQ==",
+      "peer_public_key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+      "mtu": 1280,
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8281:de0b:4bc9:3438:5d8d/128"
+      ],
+      "tls": {
+        "enabled": true,
+        "server_name": "www.microsoft.com"
+      }
+    },
+    {
+      "type": "masque",
+      "tag": "H3 | 德国 IPv6 | 2001:67c:2960:6464::a29f:c702 | 443 | MASQUE导航",
+      "server": "2001:67c:2960:6464::a29f:c702",
+      "server_port": 443,
+      "private_key": "MHcCAQEEID8hCKLMQJ5P/+CMKVv4oqu5wdEmAuK20oEvdZxMkvdxoAoGCCqGSM49AwEHoUQDQgAEEGo8Y0gkyDGcVpKPW1DRzlbtrxDn0Fzfjl2ADTFl1T4y7gauC1doyjFqTYkM74+97dJ/VMgVntjyIPevj/y/yQ==",
+      "peer_public_key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+      "mtu": 1280,
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8281:de0b:4bc9:3438:5d8d/128"
+      ],
+      "tls": {
+        "enabled": true,
+        "server_name": "www.microsoft.com"
+      }
+    },
+    {
+      "type": "masque",
+      "tag": "H3 | 预备 | masque1.bestcf.eu.cc | 443 | MASQUE导航",
+      "server": "masque1.bestcf.eu.cc",
+      "server_port": 443,
+      "private_key": "MHcCAQEEID8hCKLMQJ5P/+CMKVv4oqu5wdEmAuK20oEvdZxMkvdxoAoGCCqGSM49AwEHoUQDQgAEEGo8Y0gkyDGcVpKPW1DRzlbtrxDn0Fzfjl2ADTFl1T4y7gauC1doyjFqTYkM74+97dJ/VMgVntjyIPevj/y/yQ==",
+      "peer_public_key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+      "mtu": 1280,
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8281:de0b:4bc9:3438:5d8d/128"
+      ],
+      "tls": {
+        "enabled": true,
+        "server_name": "www.microsoft.com"
+      }
+    },
+    {
+      "type": "masque",
+      "tag": "H3 | 预备 | masque2.bestcf.eu.cc | 443 | MASQUE导航",
+      "server": "masque2.bestcf.eu.cc",
+      "server_port": 443,
+      "private_key": "MHcCAQEEID8hCKLMQJ5P/+CMKVv4oqu5wdEmAuK20oEvdZxMkvdxoAoGCCqGSM49AwEHoUQDQgAEEGo8Y0gkyDGcVpKPW1DRzlbtrxDn0Fzfjl2ADTFl1T4y7gauC1doyjFqTYkM74+97dJ/VMgVntjyIPevj/y/yQ==",
+      "peer_public_key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+      "mtu": 1280,
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8281:de0b:4bc9:3438:5d8d/128"
+      ],
+      "tls": {
+        "enabled": true,
+        "server_name": "www.microsoft.com"
+      }
+    },
+    {
+      "type": "masque",
+      "tag": "H3 | 预备 IPv6 | masque3.bestcf.eu.cc | 443 | MASQUE导航",
+      "server": "masque3.bestcf.eu.cc",
+      "server_port": 443,
+      "private_key": "MHcCAQEEID8hCKLMQJ5P/+CMKVv4oqu5wdEmAuK20oEvdZxMkvdxoAoGCCqGSM49AwEHoUQDQgAEEGo8Y0gkyDGcVpKPW1DRzlbtrxDn0Fzfjl2ADTFl1T4y7gauC1doyjFqTYkM74+97dJ/VMgVntjyIPevj/y/yQ==",
+      "peer_public_key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+      "mtu": 1280,
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8281:de0b:4bc9:3438:5d8d/128"
+      ],
+      "tls": {
+        "enabled": true,
+        "server_name": "www.microsoft.com"
+      }
+    },
+    {
+      "type": "masque",
+      "tag": "H3 | 预备 IPv6 | masque4.bestcf.eu.cc | 443 | MASQUE导航",
+      "server": "masque4.bestcf.eu.cc",
+      "server_port": 443,
+      "private_key": "MHcCAQEEID8hCKLMQJ5P/+CMKVv4oqu5wdEmAuK20oEvdZxMkvdxoAoGCCqGSM49AwEHoUQDQgAEEGo8Y0gkyDGcVpKPW1DRzlbtrxDn0Fzfjl2ADTFl1T4y7gauC1doyjFqTYkM74+97dJ/VMgVntjyIPevj/y/yQ==",
+      "peer_public_key": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+      "mtu": 1280,
+      "address": [
+        "172.16.0.2/32",
+        "2606:4700:110:8281:de0b:4bc9:3438:5d8d/128"
+      ],
+      "tls": {
+        "enabled": true,
+        "server_name": "www.microsoft.com"
+      }
+    }
+  ],
+  "route": {
+    "rules": [
+      {
+        "action": "sniff"
+      },
+      {
+        "action": "hijack-dns",
+        "protocol": "dns"
+      },
+      {
+        "action": "reject",
+        "inbound": "dns-in"
+      },
+      {
+        "action": "hijack-dns",
+        "protocol": "dns"
+      },
+      {
+        "action": "route",
+        "ip_is_private": true,
+        "outbound": "direct"
+      },
+      {
+        "action": "route",
+        "outbound": "proxy",
+        "rule_set": [
+          "geosite-category-anticensorship"
+        ]
+      },
+      {
+        "action": "route",
+        "outbound": "direct",
+        "rule_set": [
+          "geoip-cn",
+          "geosite-cn",
+          "geosite-geolocation-cn"
+        ]
+      }
+    ],
+    "rule_set": [
+      {
+        "tag": "geosite-category-anticensorship",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/category-anticensorship.srs"
+      },
+      {
+        "tag": "geoip-cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geoip/cn.srs"
+      },
+      {
+        "tag": "geosite-cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/cn.srs"
+      },
+      {
+        "tag": "geosite-geolocation-cn",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://cdn.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@sing/geo/geosite/geolocation-cn.srs"
+      }
+    ],
+    "final": "proxy",
+    "find_process": true,
+    "default_domain_resolver": {
+      "server": "dns-direct",
+      "strategy": ""
+    }
+  },
+  "experimental": {
+    "cache_file": {
+      "enabled": true,
+      "store_dns": false,
+      "store_fakeip": false
+    }
+  }
+}
