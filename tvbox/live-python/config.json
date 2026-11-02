@@ -22,11 +22,8 @@
       "api": "./live/gdtv.py",
       "timeZone": "Asia/Shanghai",
       "timeout": 30
-    }
-  ],
-  "sites": [
+    },
     {
-      "key": "直播",
       "name": "直播",
       "type": 3,
       "api": "./vod/game_live.py",
