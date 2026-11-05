@@ -18,7 +18,7 @@
     },
     {
       "name": "廣東廣電",
-      "url": "https://gdtv-api.gdtv.cn/api/tv/v2/tvChannel?category=0",
+      "url": "https://api.itouchtv.cn/liveservice/v7/tvCategoryList?pageSize=100&pageNumber=1",
       "api": "./live/gdtv.py",
       "timeZone": "Asia/Shanghai",
       "timeout": 30
