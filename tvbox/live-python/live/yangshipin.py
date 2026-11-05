@@ -14,7 +14,7 @@ import time
 import uuid
 from collections import OrderedDict
 from contextlib import contextmanager, suppress
-from urllib.parse import quote, unquote, urljoin, urlparse
+from urllib.parse import parse_qsl, quote, unquote, urlencode, urljoin, urlparse, urlsplit, urlunsplit
 
 from Crypto.Cipher import AES, PKCS1_OAEP
 from Crypto.Hash import SHA256
@@ -159,6 +159,16 @@ PLAY_SESSION_SECONDS = 7200
 AUTO_SOURCE_SECONDS = 8
 AUTO_CHOICE_SECONDS = 300
 AUTO_FAILURE_SECONDS = 30
+PROBE_SECONDS = 1.8
+# Compiled client defaults; provenance matches the independent JS branch.
+CDRM_MATERIAL = {
+    "guid": "c8a922f65847196e073ebca0000a7112",
+    "session_hex": "009DF0A7B3CAEF867BF84AC4FAF092CCA3D302A8467C451604C53A0691DA6CA9DFE6C44FB39195BDBC5484AB5CDA4AC0DB336340F3294F8A1FA1F1A688D99328C6D4FA7BAE387B575E76439B81B8AF364AD54F14",
+    "drm_material": "56D1C1BBAF51500D2E959BC35E8A5A8F58220FE19E0856911E03689E3D70F8A30FAF16F6B08F97C0F0A2BB34",
+    "wrapping_key": "1f51d36b8cc8dc9f0842880c7486bab5",
+    "output_mask": "842eed08f066e6ea48b4caa991ed6ff3"
+}
+DLNA_CHANNELS = {'600001809', '600001807', '600001806', '600099502', '600002264', '600001815', '600099655', '600001810', '600099620', '600099658'}
 _KEYGEN_LOCK = threading.Lock()
 
 
@@ -732,9 +742,9 @@ class _AppPlayerApi:
         return {"cKey": "--01" + ckey, "guid": guid, "fntick": str(timestamp),
                 "flowid": uuid.uuid4().hex.upper() + "_" + str(APP_LIVE_PLATFORM)}
 
-    def resolve(self, pid, cnlid, deadline, definition="fhd"):
-        self.owner._assert_active()
-        params = {
+    @classmethod
+    def _parameters(cls, pid, cnlid, definition):
+        return {
             "atime": "120", "livepid": pid, "cnlid": cnlid, "appVer": APP_LIVE_VERSION,
             "app_version": "300090", "caplv": "1", "cmd": "2", "defn": definition,
             "device": "iPhone", "encryptVer": "4.2", "getpreviewinfo": "0", "hevclv": "0",
@@ -744,9 +754,15 @@ class _AppPlayerApi:
             "spflv": "1", "spflvaudio": "1", "sphdrfps": "60", "sphttps": "1",
             "spvcode": base64.b64encode(b"H(30:1080,60:1080|30:1080,60:1080)").decode(),
             "spvideo": "4", "stream": "1", "system": "1", "sysver": "ios18.2.1",
-            "uhd_flag": "0", "playbacktime": "0", **self._ckey(cnlid),
+            "uhd_flag": "0", "playbacktime": "0", **cls._ckey(cnlid),
         }
-        result = _net_response(self.net, APP_LIVE_URL, PLAYER_TIMEOUT,
+
+    def resolve(self, pid, cnlid, deadline, definition="fhd"):
+        return self._request(APP_LIVE_URL, self._parameters(pid, cnlid, definition), deadline)
+
+    def _request(self, endpoint, params, deadline):
+        self.owner._assert_active()
+        result = _net_response(self.net, endpoint, PLAYER_TIMEOUT,
                                {"User-Agent": "qqlive", "Accept": "application/json"},
                                params=params, deadline=deadline, stage="App 直播取址")
         self.owner._assert_active()
@@ -762,6 +778,8 @@ class _AppPlayerApi:
         if type(code) not in (int, str) or str(code) != "0":
             code = str(code) if str(code).lstrip("-").isdigit() else "invalid"
             raise _ProxyError(502, "App 直播取址: iretcode=" + code)
+        if params["defn"] == "sfhd" and "sfhd" not in str(value.get("defn") or "").lower():
+            raise _ProxyError(502, "App 畫質不符: 要求 SFHD")
         candidates = [value.get("playurl")]
         backup = value.get("backurl_list") or value.get("backurlList") or value.get("backurl")
         if isinstance(backup, list):
@@ -773,9 +791,142 @@ class _AppPlayerApi:
         if location is None:
             raise _ProxyError(502, "App 直播取址: no usable HLS URL")
         headers = value.get("http_header", {})
-        if not isinstance(headers, dict) or any(not isinstance(k, str) or not isinstance(v, str) for k, v in headers.items()):
+        if not isinstance(headers, dict) or any(not isinstance(k, str) or not re.fullmatch(r"[!#$%&'*+.^_`|~0-9A-Za-z-]+", k)
+                                                or not isinstance(v, str) or re.search(r"[\r\n\0]", v) for k, v in headers.items()):
             raise _ProxyError(502, "App 直播取址: invalid playback headers")
         return {"url": _media_url(location, value), "headers": {"User-Agent": "qqlive", "Referer": "https://live.cctv.cn/", **headers}}
+
+
+class _CdrmPlayerApi(_AppPlayerApi):
+
+    @staticmethod
+    def _tea_decrypt(block, key):
+        left, right = struct.unpack(">2I", block)
+        keys = struct.unpack(">4I", key)
+        total = (0x9E3779B9 * 16) & 0xFFFFFFFF
+        for _ in range(16):
+            right = (right - (((left << 4) + keys[2]) ^ (left + total) ^ ((left >> 5) + keys[3]))) & 0xFFFFFFFF
+            left = (left - (((right << 4) + keys[0]) ^ (right + total) ^ ((right >> 5) + keys[1]))) & 0xFFFFFFFF
+            total = (total - 0x9E3779B9) & 0xFFFFFFFF
+        return struct.pack(">2I", left, right)
+
+    @classmethod
+    def _material(cls, value):
+        if (not re.fullmatch(r"[0-9a-fA-F]{168}", value.get("session_hex", ""))
+                or any(not re.fullmatch(r"[0-9a-fA-F]{32}", value.get(key, "")) for key in ("wrapping_key", "output_mask", "guid"))
+                or len(base64.b64decode(value.get("drm_material", ""), validate=True)) != 66):
+            raise _ProxyError(502, "BA48: invalid client material")
+        encoded = bytes.fromhex(value["session_hex"])
+        cipher, wrapping = encoded[:-4], bytes.fromhex(value["wrapping_key"])
+        if len(cipher) % 8:
+            raise _ProxyError(502, "BA48: invalid packet length")
+        plain = bytearray()
+        previous_plain = previous_cipher = bytes(8)
+        for offset in range(0, len(cipher), 8):
+            block = cipher[offset:offset + 8]
+            mixed = cls._tea_decrypt(bytes(a ^ b for a, b in zip(block, previous_plain)), wrapping)
+            plain.extend(a ^ b for a, b in zip(mixed, previous_cipher))
+            previous_plain, previous_cipher = mixed, block
+        body = bytes(plain[(plain[0] & 7) + 3:-7])
+        if any(plain[-7:]) or cls._checksum(body) not in (int.from_bytes(encoded[-4:], "big"), int.from_bytes(encoded[-4:], "little")):
+            raise _ProxyError(502, "BA48: checksum or padding mismatch")
+        position, fields = 2, []
+        for _ in range(3):
+            if position + 2 > len(body):
+                raise _ProxyError(502, "BA48: truncated field")
+            length = int.from_bytes(body[position:position + 2], "big")
+            position += 2
+            if position + length > len(body):
+                raise _ProxyError(502, "BA48: truncated field")
+            fields.append(body[position:position + length])
+            position += length
+        if len(fields[2]) < 16:
+            raise _ProxyError(502, "BA48: missing session key")
+        return {"platform": fields[0], "package": fields[1], "key": fields[2][:16]}
+
+    @classmethod
+    def _ckey(cls, cnlid, value=None, dlna=False):
+        value = CDRM_MATERIAL if value is None else value
+        material, timestamp = cls._material(value), int(time.time())
+        platform = APP_LIVE_PLATFORM if dlna else 4330303
+        version = APP_LIVE_VERSION if dlna else "V8.25.1034.0169"
+        body = struct.pack(">2I", 0x42, 3) + b"ming" + struct.pack(">3I", platform, cls._checksum(value["session_hex"].encode()), timestamp)
+        for field in ("v3021" if dlna else "fcgo", "", version, cnlid, value["guid"]):
+            body += cls._pack(field)
+        body += struct.pack(">4I", 7, 0, 0, 0)
+        package = "com.cctv.yangshipin.app.androidp"
+        for field in (package, package, "C0764B5A", "", "C0764B5A", "", "", package, "", "01", value["session_hex"][:8],
+                      "ckey.4.2.2.5", material["package"], material["platform"], "", value["drm_material"]):
+            body += cls._pack(field)
+        packet, mask = cls._pack(body), bytes.fromhex(value["output_mask"])
+        encrypted = cls._tea_packet(packet, material["key"]) + struct.pack(">I", cls._checksum(packet))
+        encoded = bytes(byte ^ mask[index % len(mask)] for index, byte in enumerate(encrypted))
+        return {"cKey": "--01" + base64.b64encode(encoded).decode().replace("+", "_").replace("/", "-").rstrip("="),
+                "guid": value["guid"], "fntick": str(timestamp)}
+
+    @classmethod
+    def _parameters(cls, pid, cnlid, definition, dlna=False):
+        if dlna:
+            return {"cmd": "2", "cnlid": cnlid, "livepid": pid, "stream": "1", "appVer": APP_LIVE_VERSION,
+                    "encryptVer": "4.2", "defn": definition, "platform": str(APP_LIVE_PLATFORM), "newplatform": str(APP_LIVE_PLATFORM),
+                    "sdtfrom": "v3021", **cls._ckey(cnlid, dlna=True), "app_version": "300090", "hevclv": "0", "uhd_flag": "0",
+                    "sphttps": "1", "spdrm": "2", "spdynamicrange": "1", "spvcode": "SygzMDoxMDgwLDYwOjEwODB8MzA6MTA4MCw2MDoxMDgwKQ==",
+                    "spdemuxer": "6", "spvideo": "4", "caplv": "1", "spflv": "1", "spflvaudio": "1", "sphdrfps": "60",
+                    "newnettype": "1", "device": "iPhone", "sysver": "ios18.2.1", "logintype": "1", "nettype": "1",
+                    "lang": "zh-Hans_CN", "livequeue": "0", "atime": "120", "spacode": "23", "spaudio": "1"}
+        params = {"cmd": "2", "cnlid": cnlid, "livepid": pid, "stream": "3", "appVer": "V8.25.1034.0169", "encryptVer": "4.2",
+                  "defn": definition, "platform": "4330303", "sdtfrom": "v5028", **cls._ckey(cnlid), "spwm": "2", "spacode": "23",
+                  "app_version": "305000", "hevclv": "26", "uhd_flag": "4", "sphttps": "0", "spdrm": "2", "spdynamicrange": "1",
+                  "spvcode": "MSgzMDoyMTYwLDYwOjIxNjAsOTA6MTQ0MCwxMjA6MTQ0MHwzMDoyMTYwLDYwOjIxNjAsOTA6MTQ0\n"
+                             "MCwxMjA6MTQ0MCk7MigzMDoyMTYwLDYwOjIxNjAsOTA6MTQ0MCwxMjA6MTQ0MHwzMDoxMDgwLDYw\nOjEwODAsOTA6MTA4MCk=\n",
+                  "spdemuxer": "14", "otype": "json", "defnsrc": "3", "caplv": "1", "vip_status": "0", "adjust": "1", "spflv": "1",
+                  "spflvaudio": "1", "sphdrfps": "60", "newnettype": "1", "pageId": "page_tv_500102", "refer_pageId": "none",
+                  "randnum": str(random.random())}
+        if definition == "sfhd":
+            params["spaudio"] = "1"
+        return params
+
+    def resolve(self, pid, cnlid, deadline, definition="fhd"):
+        if definition == "sfhd" and pid in DLNA_CHANNELS:
+            try:
+                entry = self._request("https://liveinfo.ysp.cctv.cn/", self._parameters(pid, cnlid, definition, True), deadline)
+                playlist, _ = self.owner._fetch_playlist(entry["url"], entry["headers"], deadline)
+                if re.search(r"#EXT-X-KEY\s*:|METHOD=SM4|enschema", playlist, re.I):
+                    raise _ProxyError(502, "DLNA 回傳加密清單，需 CDRM 授權")
+                return {**entry, "frontend": "dlna"}
+            except Exception as error:
+                self.owner._assert_active()
+                if _is_cancellation(error):
+                    raise
+                _remaining(deadline, "CDRM 直播取址")
+                print("央視頻 DLNA: " + re.sub(r"https?://[^\s]+", "[網址]", str(error))[:160])
+        return {**self._request("https://liveinfo.ysp.cctv.cn/", self._parameters(pid, cnlid, definition), deadline), "frontend": "cdrm"}
+
+
+def _select_tv_video(candidates, rate="high", cdn="auto"):
+    allowed = ("", "10p") if rate == "low" else ("", "10p", "36p")
+    usable = [item for item in candidates if _playback_url(item["url"]) and (item.get("rate") or "") in allowed]
+    if not usable:
+        raise _ProxyError(502, "電視端畫質列表: no matching rate")
+    markers = ("liveali", "tp4k", "aliyun", "alicdn", "live-tpg", "cctv.cn/live")
+    def preferred(item):
+        return (any(marker in item["url"].lower() for marker in markers) if cdn == "auto"
+                else urlparse(item["url"]).hostname == cdn.lower())
+    return (next((item for item in usable if preferred(item) and (rate == "low" or item.get("rate") == "36p")), None)
+            or next((item for item in usable if preferred(item)), None)
+            or next((item for item in usable if rate == "high" and item.get("rate") == "36p"), None) or usable[0])
+
+
+def _is_cancellation(error):
+    return isinstance(error, InterruptedError) or re.search(r"AbortError|CancellationException|InterruptedException|Network owner closed", str(error)) is not None
+
+
+def _check_selection(params):
+    if params.get("rate", "high") not in ("high", "low"):
+        raise _ProxyError(400, "invalid TV rate")
+    cdn = params.get("cdn")
+    if cdn and cdn != "auto" and (not isinstance(cdn, str) or not re.fullmatch(r"[a-z0-9.-]+", cdn, re.I) or not _playback_url("https://" + cdn + "/")):
+        raise _ProxyError(400, "invalid TV CDN")
 
 
 class _TvPlayerApi:
@@ -937,7 +1088,7 @@ class _TvPlayerApi:
             raise _ProxyError(502, "電視設備心跳: code=" + str(code))
         self.last_heartbeat = time.monotonic()
 
-    def resolve(self, live_id, deadline):
+    def resolve(self, live_id, deadline, rate="high", cdn="auto"):
         try:
             if not self.session_key or time.monotonic() - self.created_at >= PLAY_SESSION_SECONDS:
                 self._bootstrap(deadline)
@@ -954,10 +1105,12 @@ class _TvPlayerApi:
             if not candidates:
                 raise _ProxyError(502, "電視端畫質列表: no usable URL")
 
-            video = next((item for item in candidates if item.get("rate") == "36p"), candidates[0])
+            decoded = []
+            for item in candidates:
+                url = item["url"] if item["url"].startswith(("http://", "https://")) else self._decrypt(item["url"], self.session_key)
+                decoded.append({**item, "url": url})
+            video = _select_tv_video(decoded, rate, cdn)
             raw_url = video["url"]
-            if not raw_url.startswith(("http://", "https://")):
-                raw_url = self._decrypt(raw_url, self.session_key)
             result = self._request(TV_BASE + "api/live/v1/02", {"guid": self._encrypt("")}, deadline, "電視端播放授權")
             data = self._data(result, "電視端播放授權")
             secret = data.get("appSecret", data.get("app_secret")) if isinstance(data, dict) else data
@@ -971,7 +1124,7 @@ class _TvPlayerApi:
             if str(result.get("succeed")) != "1" or not _playback_url(result.get("url")):
                 raise _ProxyError(502, "電視端播放地址: no usable HLS URL")
             return {"url": result["url"], "headers": {**headers, "UID": self.profile["android_id"],
-                    "Referer": "api.cctv.cn", "User-Agent": "cctv_app_tv"}, "rate": video.get("rate", "")}
+                    "Referer": "api.cctv.cn", "User-Agent": "cctv_app_tv"}, "actualRate": video.get("rate", "")}
         except Exception:
             self.session_key = ""
             raise
@@ -1005,7 +1158,7 @@ class Spider(BaseSpider):
                 return [200, "application/json", content]
             if params.get("type") == "auto":
                 return self._proxy_auto(params)
-            if params.get("type") in ("tv", "app", "web"):
+            if params.get("type") in ("tv", "app", "cdrm", "web"):
                 return self._proxy_live(params)
             refresh = "no-cache" in str(params.get("cache-control", "")).lower().replace(" ", "").split(",")
             location = self._resolve(params.get("pid", ""), params.get("cnlid", ""), refresh)
@@ -1030,19 +1183,19 @@ class Spider(BaseSpider):
         self.tv_player = None
         self.tv_cache_prefix = "tvplay:" + secrets.token_hex(8) + ":"
 
-    def _tv_entry(self, pid, cnlid, deadline, refresh=False):
+    def _tv_entry(self, pid, cnlid, deadline, refresh=False, rate="high", cdn="auto"):
         if pid not in TV_CHANNELS or not _is_channel_id(cnlid):
             raise _ProxyError(400, "invalid TV channel id")
         self._assert_active()
-        key = self.tv_cache_prefix + pid
+        key = self.tv_cache_prefix + pid + ":" + rate + ":" + cdn
         if refresh:
             self.net.clearCache(key)
         entry = self.net.cached(key, {"ttl": PLAY_CACHE_SECONDS * 1000, "stale": False},
-                                lambda: self._resolve_tv(pid, deadline))
+                                lambda: self._resolve_tv(pid, deadline, rate, cdn))
         self._assert_active()
         return {**entry, "cache_key": key}
 
-    def _resolve_tv(self, pid, deadline):
+    def _resolve_tv(self, pid, deadline, rate="high", cdn="auto"):
         if not self.player_lock.acquire(timeout=_remaining(deadline, "電視端播放取址")):
             raise _ProxyError(504, "電視端播放取址: 等待逾時")
         try:
@@ -1050,7 +1203,7 @@ class Spider(BaseSpider):
             if self.tv_player is None:
                 self.tv_player = _TvPlayerApi(self)
             with _timing("tv_resolve"):
-                entry = self.tv_player.resolve(TV_CHANNELS[pid], deadline)
+                entry = self.tv_player.resolve(TV_CHANNELS[pid], deadline, rate, cdn)
             self._assert_active()
             return entry
         except Exception:
@@ -1059,17 +1212,17 @@ class Spider(BaseSpider):
         finally:
             self.player_lock.release()
 
-    def _app_entry(self, pid, cnlid, definition, deadline, refresh=False):
-        if not _is_channel_id(pid) or not _is_channel_id(cnlid) or definition not in ("fhd", "shd"):
+    def _app_entry(self, pid, cnlid, definition, deadline, refresh=False, source="app"):
+        if not _is_channel_id(pid) or not _is_channel_id(cnlid) or definition not in ("fhd", "shd", "sfhd"):
             raise _ProxyError(400, "invalid App channel id")
         self._assert_active()
-        key = "appplay:" + pid + ":" + cnlid + ":" + definition
+        key = source + "play:" + pid + ":" + cnlid + ":" + definition
         if refresh:
             self.net.clearCache(key)
 
         def resolve():
             with _timing("app_resolve"):
-                entry = _AppPlayerApi(self).resolve(pid, cnlid, deadline, definition)
+                entry = (_CdrmPlayerApi(self) if source == "cdrm" else _AppPlayerApi(self)).resolve(pid, cnlid, deadline, definition)
             self._assert_active()
             return entry
 
@@ -1080,18 +1233,19 @@ class Spider(BaseSpider):
     def _live_entry(self, source, params, deadline, refresh=False):
         pid, cnlid, definition = params["pid"], params["cnlid"], params.get("defn", "fhd")
         if source == "tv":
-            entry = self._tv_entry(pid, cnlid, deadline, refresh)
-        elif source == "app":
-            entry = self._app_entry(pid, cnlid, definition, deadline, refresh)
+            entry = self._tv_entry(pid, cnlid, deadline, refresh, params.get("rate", "high"), params.get("cdn", "auto"))
+        elif source in ("app", "cdrm"):
+            entry = self._app_entry(pid, cnlid, definition, deadline, refresh, source)
         else:
             entry = {"url": self._resolve(pid, cnlid, refresh, deadline), "headers": _PlayerApi._headers(),
                      "cache_key": "play:" + pid + ":" + cnlid}
         generation = _md5(entry["url"] + "\n" + _canonical_query(entry["headers"]))
-        return {**entry, "source": source, "pid": pid, "cnlid": cnlid, "defn": definition, "generation": generation}
+        return {**entry, "source": source, "pid": pid, "cnlid": cnlid, "defn": definition,
+                "rate": params.get("rate", "high"), "cdn": params.get("cdn", "auto"), "generation": generation}
 
     @staticmethod
     def _auto_key(params):
-        return "auto:" + params["pid"] + ":" + params["cnlid"] + ":" + params.get("defn", "fhd")
+        return "auto:v2:" + params["pid"] + ":" + params["cnlid"] + ":" + params.get("defn", "fhd") + ":" + params.get("rate", "high") + ":" + params.get("cdn", "auto")
 
     def _source_failure(self, params, source):
         return self.net.cached(self._auto_key(params) + ":" + source, {"ttl": AUTO_FAILURE_SECONDS * 1000, "stale": False}, lambda: "")
@@ -1110,7 +1264,7 @@ class Spider(BaseSpider):
 
     def _fail_source(self, params, source, error, entry=None):
         self._assert_active()
-        if isinstance(error, InterruptedError) or re.search(r"CancellationException|InterruptedException", str(error)):
+        if _is_cancellation(error):
             raise error
         if entry:
             if params.get("generation"):
@@ -1127,12 +1281,14 @@ class Spider(BaseSpider):
 
     def _proxy_auto(self, params):
         self._assert_active()
+        _check_selection(params)
         if (not _is_channel_id(params.get("pid")) or not _is_channel_id(params.get("cnlid"))
-                or params.get("defn", "fhd") not in ("fhd", "shd") or params.get("url")
+                or params.get("defn", "fhd") not in ("fhd", "shd", "sfhd") or params.get("url")
                 or params.get("kind", "playlist") != "playlist" or params.get("generation")):
             raise _ProxyError(400, "invalid automatic playback request")
         deadline = time.monotonic() + PLAYER_BUDGET
-        sources = (["tv"] if params["pid"] in TV_CHANNELS else []) + ["web", "app"]
+        sources = (["cdrm", "app"] if params.get("defn") == "sfhd" else
+                   (["tv"] if params["pid"] in TV_CHANNELS else []) + ["web", "cdrm", "app"])
         key = self._auto_key(params)
         choice = self.net.cached(key, {"ttl": AUTO_CHOICE_SECONDS * 1000, "stale": False},
                                  lambda: {"source": sources[0], "generation": ""})
@@ -1152,17 +1308,20 @@ class Spider(BaseSpider):
             entry = None
             try:
                 entry = self._live_entry(source, params, attempt_deadline, refresh)
-                self._proxy_entry(entry, params, attempt_deadline, probe=True)
+                playlist, base_url = self._fetch_playlist(entry["url"], entry["headers"], attempt_deadline)
+                self._probe_playlist(playlist, base_url, entry["headers"], attempt_deadline)
                 self._assert_active()
-                selected = {"source": source, "generation": entry["generation"]}
-                if selected != choice:
-                    self.net.clearCache(key)
-                    self.net.cached(key, {"ttl": AUTO_CHOICE_SECONDS * 1000, "stale": False}, lambda: selected)
-                target = {"type": source, "pid": entry["pid"], "cnlid": entry["cnlid"], "defn": entry["defn"], "generation": entry["generation"]}
-                return [302, "text/plain", "", {"Location": self.proxyUrl(target), "Cache-Control": "no-store"}]
             except Exception as error:
                 self._fail_source(params, source, error, entry)
                 errors.append(source + ": " + self._source_failure(params, source))
+                continue
+            selected = {"source": entry["source"], "generation": entry["generation"]}
+            if selected != choice:
+                self.net.clearCache(key)
+                self.net.cached(key, {"ttl": AUTO_CHOICE_SECONDS * 1000, "stale": False}, lambda: selected)
+            target = self._entry_target(entry)
+            self.net.cached(self._entry_key(target), {"ttl": PLAY_SESSION_SECONDS * 1000, "stale": False}, lambda: entry)
+            return [302, "text/plain", "", {"Location": self.proxyUrl(target), "Cache-Control": "no-store"}]
         raise _ProxyError(502, "所有播放來源均失敗（" + "；".join(errors) + "）")
 
     def _proxy_live(self, params):
@@ -1170,12 +1329,15 @@ class Spider(BaseSpider):
         source = params.get("type")
         definition = params.get("defn", "fhd")
         kind = params.get("kind", "playlist")
-        if source not in ("tv", "app", "web") or kind not in ("playlist", "segment"):
+        if source not in ("tv", "app", "cdrm", "web") or kind not in ("playlist", "segment"):
             raise _ProxyError(400, "invalid playback resource type")
         if params.get("url") and not _playback_url(params["url"]):
             raise _ProxyError(400, "invalid playback URL")
+        _check_selection(params)
         deadline = time.monotonic() + PLAYER_BUDGET
-        if not _is_channel_id(pid) or not _is_channel_id(cnlid) or definition not in ("fhd", "shd"):
+        if definition == "sfhd" and source not in ("app", "cdrm"):
+            raise _ProxyError(400, "SFHD requires App response validation")
+        if not _is_channel_id(pid) or not _is_channel_id(cnlid) or definition not in ("fhd", "shd", "sfhd"):
             raise _ProxyError(400, "invalid playback channel id")
         entry = (self._resource_entry(params, deadline) if params.get("generation")
                  else self._live_entry(source, params, deadline))
@@ -1185,7 +1347,7 @@ class Spider(BaseSpider):
             self._fail_source(params, source, error, entry)
             raise
 
-    def _proxy_entry(self, entry, params, deadline, probe=False):
+    def _proxy_entry(self, entry, params, deadline):
         source, pid, cnlid = entry["source"], entry["pid"], entry["cnlid"]
         kind = params.get("kind", "playlist")
         url = params.get("url") or entry["url"]
@@ -1221,16 +1383,23 @@ class Spider(BaseSpider):
         if "no-cache" in str(params.get("cache-control", "")).lower().replace(" ", "").split(","):
             headers["Cache-Control"] = "no-cache"
         playlist, base_url = self._fetch_playlist(url, headers, deadline)
-        if probe:
-            self._probe_playlist(playlist, base_url, headers, deadline)
-        target = {"type": source, "pid": pid, "cnlid": cnlid, "defn": entry["defn"], "generation": entry["generation"]}
+        if re.search(r"METHOD=SM4|enschema", playlist, re.I):
+            raise _ProxyError(501, "不支援 SM4 授權型串流")
+        target = self._entry_target(entry)
         self.net.cached(self._entry_key(target), {"ttl": PLAY_SESSION_SECONDS * 1000, "stale": False}, lambda: entry)
         content = self._rewrite_playlist(playlist, base_url, target)
         self._assert_active()
         return [200, HLS_MIME, content, {"Cache-Control": "no-store"}]
 
+    @staticmethod
+    def _entry_target(entry):
+        return {"type": entry["source"], "pid": entry["pid"], "cnlid": entry["cnlid"], "defn": entry["defn"],
+                "rate": entry.get("rate", "high"), "cdn": entry.get("cdn", "auto"), "generation": entry["generation"], "cmg": "1"}
+
     def _probe_playlist(self, playlist, base_url, headers, deadline):
         for _ in range(3):
+            if re.search(r"METHOD=SM4|enschema", playlist, re.I):
+                raise _ProxyError(501, "不支援 SM4 授權型串流")
             variant = False
             for line in playlist.splitlines():
                 line = line.strip()
@@ -1251,24 +1420,37 @@ class Spider(BaseSpider):
                 if not _playback_url(resource_url):
                     raise _ProxyError(502, "直播 HLS: invalid media URL")
                 self._probe_media(resource_url, headers, deadline)
-            self._probe_media(url, headers, deadline)
+            encrypted = re.search(r"#EXT-X-KEY:[^\r\n]*METHOD=(?!NONE(?:,|$))", playlist, re.I) is not None
+            self._probe_media(url, headers, deadline, True, encrypted)
             return
         raise _ProxyError(502, "直播 HLS: playlist nesting too deep")
 
-    def _probe_media(self, url, headers, deadline):
-        milliseconds = max(1, int(_remaining(deadline, "直播切片驗證") * 1000))
+    def _probe_media(self, url, headers, deadline, validate=False, encrypted=False):
+        seconds = min(PROBE_SECONDS, _remaining(deadline, "直播切片驗證"))
+        milliseconds = max(1, int(seconds * 1000))
         reader = self.net.openStream(url, {"headers": headers, "timeout": milliseconds, "callTimeout": milliseconds})
         try:
             if reader.code not in (200, 206):
                 raise _ProxyError(502, "直播切片驗證: HTTP " + str(reader.code))
             if str(reader.contentType).lower().startswith(("text/html", "application/json")):
                 raise _ProxyError(502, "直播切片驗證: unexpected content type")
-            if not reader.read(1):
+            limit = 376 if validate and not encrypted else 1
+            sample = bytearray()
+            while len(sample) < limit:
+                chunk = reader.read(limit - len(sample))
+                if not chunk:
+                    break
+                sample.extend(chunk)
+                self._assert_active()
+            if not sample:
                 raise _ProxyError(502, "直播切片驗證: empty response")
-            self._assert_active()
+            if (validate and not encrypted and not (len(sample) >= 376 and sample[0] == 0x47 and sample[188] == 0x47)
+                    and not (len(sample) >= 8 and sample[4:8] in (b"ftyp", b"styp", b"moof", b"moov", b"sidx"))):
+                raise _ProxyError(502, "直播切片驗證: invalid TS/MP4 sample")
             _remaining(deadline, "直播切片驗證")
         finally:
             reader.close()
+
 
     def _fetch_playlist(self, url, headers, deadline):
         for _ in range(6):
@@ -1299,7 +1481,12 @@ class Spider(BaseSpider):
             if target["type"] == "web" and kind == "segment":
                 return url
             params = {**target, "kind": kind, "url": url}
-            return self.proxyUrl(params)
+            local = self.proxyUrl(params)
+            path = urlsplit(url).path
+            if kind == "segment" and re.search(r"\.ts$", path, re.I):
+                parsed = urlsplit(local)
+                local = urlunsplit(parsed._replace(path=parsed.path + path))
+            return local
 
         lines = []
         variant = False
@@ -1406,12 +1593,17 @@ class Spider(BaseSpider):
         try:
             return self._fetch_channels(url or NAVIGATION_URL)
         except (OSError, ValueError) as error:
+            if not snapshot_url or self.destroyed or _is_cancellation(error):
+                raise
             print("央視頻 catalog fallback: {}".format(error))
             return self._load_snapshot(snapshot_url)
 
     def _fetch_channels(self, navigation_url):
         cache_key = str(int(time.time() / 5))
-        navigation = self._catalog_bytes(navigation_url + "?" + cache_key)
+        parsed = urlsplit(navigation_url)
+        query = [(name, value) for name, value in parse_qsl(parsed.query, keep_blank_values=True) if name != "_"]
+        query.append(("_", cache_key))
+        navigation = self._catalog_bytes(urlunsplit(parsed._replace(query=urlencode(query))))
         feed_id = self._decode_navigation(navigation)
         page = self._catalog_bytes(PAGE_URL.format(quote(feed_id, safe="")) + "?" + cache_key)
         channels = self._decode_page(page)
@@ -1452,13 +1644,14 @@ class Spider(BaseSpider):
                 channel = cls._message(channel_bytes)
                 pid = cls._text(channel.get(4))
                 name = cls._text(channel.get(2))
-                if not pid or not name or pid in seen:
+                cnlid = cls._text(channel.get(6))
+                if not _is_channel_id(pid) or not _is_channel_id(cnlid) or not name or pid in seen:
                     continue
                 seen.add(pid)
                 channels.append({
                     "name": name,
                     "pid": pid,
-                    "cnlid": cls._text(channel.get(6)),
+                    "cnlid": cnlid,
                     "logo": cls._text(channel.get(5)),
                     "type": cls._text(channel.get(11)),
                     "vip": bool(channel.get(7, 0)),
@@ -1547,7 +1740,28 @@ class Spider(BaseSpider):
         channels = result.get("channels") if isinstance(result, dict) else None
         if not isinstance(channels, list) or not channels:
             raise ValueError("invalid channel snapshot")
-        return [channel for channel in channels if isinstance(channel, dict)]
+        normalized = []
+        for channel in channels:
+            if not isinstance(channel, dict):
+                continue
+            name = channel.get("name")
+            ids = []
+            for key in ("pid", "cnlid"):
+                value = channel.get(key)
+                if type(value) in (int, float) and abs(value) <= 9007199254740991 and value == int(value):
+                    value = str(int(value))
+                ids.append(value)
+            if not isinstance(name, str) or not name.strip() or not all(_is_channel_id(value) for value in ids):
+                raise ValueError("invalid snapshot channel")
+            normalized.append({**channel, "name": name.strip(), "pid": ids[0], "cnlid": ids[1],
+                               "logo": channel.get("logo") if isinstance(channel.get("logo"), str) else ""})
+        if not normalized:
+            raise ValueError("invalid channel snapshot")
+        self._assert_active()
+        return normalized
+
+    def _playback_proxy_url(self, params):
+        return "proxy://" + urlsplit(self.proxyUrl(params)).query
 
     def _item(self, channel, number):
         pid = str(channel["pid"])
@@ -1563,9 +1777,14 @@ class Spider(BaseSpider):
             "format": HLS_MIME,
             "ua": USER_AGENT,
             "referer": HOST + "/",
-            "urls": [self.proxyUrl({"type": "auto", "pid": pid, "cnlid": cnlid,
-                                    "defn": "shd" if channel.get("vip") else "fhd", "cmg": "1"})],
+            "urls": [self._playback_proxy_url({"type": "auto", "pid": pid, "cnlid": cnlid,
+                                    "defn": "shd" if channel.get("vip") else "fhd", "cmg": "1"}) + "$自動",
+                     self._playback_proxy_url({"type": "auto", "pid": pid, "cnlid": cnlid, "defn": "sfhd", "cmg": "1"}) + "$超清"],
         }
+        if pid in TV_CHANNELS:
+            item["urls"].append(self._playback_proxy_url({"type": "tv", "pid": pid, "cnlid": cnlid, "rate": "high", "cmg": "1"}) + "$電視")
+        item["urls"].append(self._playback_proxy_url({"type": "cdrm", "pid": pid, "cnlid": cnlid,
+                                         "defn": "shd" if channel.get("vip") else "fhd", "cmg": "1"}) + "$手機")
         if epg_id:
             item["epg"] = self.proxyUrl({"type": "epg", "id": epg_id}) + "&date={date}"
         return item
