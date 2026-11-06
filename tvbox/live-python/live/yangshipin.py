@@ -1288,7 +1288,7 @@ class Spider(BaseSpider):
             raise _ProxyError(400, "invalid automatic playback request")
         deadline = time.monotonic() + PLAYER_BUDGET
         sources = (["cdrm", "app"] if params.get("defn") == "sfhd" else
-                   (["tv"] if params["pid"] in TV_CHANNELS else []) + ["web", "cdrm", "app"])
+                   (["tv"] if params["pid"] in TV_CHANNELS else []) + ["app", "web", "cdrm"])
         key = self._auto_key(params)
         choice = self.net.cached(key, {"ttl": AUTO_CHOICE_SECONDS * 1000, "stale": False},
                                  lambda: {"source": sources[0], "generation": ""})
@@ -1783,7 +1783,7 @@ class Spider(BaseSpider):
         }
         if pid in TV_CHANNELS:
             item["urls"].append(self._playback_proxy_url({"type": "tv", "pid": pid, "cnlid": cnlid, "rate": "high", "cmg": "1"}) + "$電視")
-        item["urls"].append(self._playback_proxy_url({"type": "cdrm", "pid": pid, "cnlid": cnlid,
+        item["urls"].append(self._playback_proxy_url({"type": "app", "pid": pid, "cnlid": cnlid,
                                          "defn": "shd" if channel.get("vip") else "fhd", "cmg": "1"}) + "$手機")
         if epg_id:
             item["epg"] = self.proxyUrl({"type": "epg", "id": epg_id}) + "&date={date}"
