@@ -1217,7 +1217,7 @@ class Spider(BaseSpider):
             raise _ProxyError(400, "invalid App channel id")
         self._assert_active()
         key = source + "play:" + pid + ":" + cnlid + ":" + definition
-        if refresh:
+        if refresh and source != "app":
             self.net.clearCache(key)
 
         def resolve():
@@ -1226,7 +1226,7 @@ class Spider(BaseSpider):
             self._assert_active()
             return entry
 
-        entry = self.net.cached(key, {"ttl": PLAY_CACHE_SECONDS * 1000, "stale": False}, resolve)
+        entry = resolve() if source == "app" else self.net.cached(key, {"ttl": PLAY_CACHE_SECONDS * 1000, "stale": False}, resolve)
         self._assert_active()
         return {**entry, "cache_key": key}
 
@@ -1268,9 +1268,10 @@ class Spider(BaseSpider):
             raise error
         if entry:
             if params.get("generation"):
+                owner = params.get("owner") or params["generation"]
                 choice = self.net.cached(self._auto_key(params), {"ttl": AUTO_CHOICE_SECONDS * 1000, "stale": False},
-                                         lambda: {"source": source, "generation": entry["generation"]})
-                if choice != {"source": source, "generation": params["generation"]}:
+                                         lambda: {"source": source, "generation": owner})
+                if choice != {"source": source, "generation": owner}:
                     return
             self.net.clearCache(entry["cache_key"])
         message = re.sub(r"https?://[^\s]+", "[網址]", str(error).split("\n", 1)[0])[:160] or type(error).__name__
@@ -1339,7 +1340,8 @@ class Spider(BaseSpider):
             raise _ProxyError(400, "SFHD requires App response validation")
         if not _is_channel_id(pid) or not _is_channel_id(cnlid) or definition not in ("fhd", "shd", "sfhd"):
             raise _ProxyError(400, "invalid playback channel id")
-        entry = (self._resource_entry(params, deadline) if params.get("generation")
+        renew = source == "app" and kind == "playlist" and not params.get("url")
+        entry = (self._resource_entry(params, deadline) if params.get("generation") and not renew
                  else self._live_entry(source, params, deadline))
         try:
             return self._proxy_entry(entry, params, deadline)
@@ -1348,7 +1350,7 @@ class Spider(BaseSpider):
             raise
 
     def _proxy_entry(self, entry, params, deadline):
-        source, pid, cnlid = entry["source"], entry["pid"], entry["cnlid"]
+        source = entry["source"]
         kind = params.get("kind", "playlist")
         url = params.get("url") or entry["url"]
         if not _playback_url(url):
@@ -1386,6 +1388,9 @@ class Spider(BaseSpider):
         if re.search(r"METHOD=SM4|enschema", playlist, re.I):
             raise _ProxyError(501, "不支援 SM4 授權型串流")
         target = self._entry_target(entry)
+        owner = params.get("owner") or (params.get("generation") if source == "app" and not params.get("url") else "")
+        if owner:
+            target["owner"] = owner
         self.net.cached(self._entry_key(target), {"ttl": PLAY_SESSION_SECONDS * 1000, "stale": False}, lambda: entry)
         content = self._rewrite_playlist(playlist, base_url, target)
         self._assert_active()
