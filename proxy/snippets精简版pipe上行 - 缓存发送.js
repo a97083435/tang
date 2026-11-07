@@ -272,7 +272,7 @@ const handleWebSocketConn = async (webSocket, request) => {
             } else if ((parsedRequest = parseRequestData(chunk))) {
                 webSocket.send(new Uint8Array([chunk[0], 0]));
             } else {parsedRequest = parseShadow(chunk)}
-            if (!parsedRequest) throw new Error();
+            if (!parsedRequest || parsedRequest.dataOffset > chunk.length) throw new Error();
             const payload = chunk.subarray(parsedRequest.dataOffset);
             tcpSocket = await establishTcpConnection(parsedRequest, request);
             if (!tcpSocket) throw new Error();
