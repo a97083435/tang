@@ -1,0 +1,1775 @@
+{
+  "_Tips": [
+    "请及时更新Xray内核和客户端到最新版本，部分客户端可能不兼容",
+    "仅建议使用MASQUE和官方端点或官方客户端，使用第三方资源可能会造成隐私泄露或损失",
+    "免费使用，谨防上当受骗！记得分享推荐转换器给你的朋友！",
+    "转换器仅用于技术研究，24小时后请删除配置，禁止它用！",
+    "WARP MASQUE 导航 - https://masque.pages.dev",
+    "MASQUE To Xray 转换器 - https://m2xray.pages.dev"
+  ],
+  "log": {
+    "loglevel": "warning"
+  },
+  "outbounds": [
+    {
+      "protocol": "masque",
+      "tag": "H3 | 官方 | 162.159.198.2 | 443 | MASQUE导航",
+      "settings": {
+        "address": "162.159.198.2",
+        "port": 443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIMOnF6NCOZ2gl3fU/bJ1wBDGy1B1sCI3rR991Y5Tc3PxoAoGCCqGSM49AwEHoUQDQgAE49Glku3VecPBJsdLKW7NXAHPsyHzX+9jG1lFSHgE3jBHeN3rfU7Eh3/SuUONSRjp3NuU+sup3QYAZYvC8t0X5w==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8a1b:95f2:83ef:8849:2ca6/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.cloudflareaccess.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      }
+    },
+    {
+      "protocol": "masque",
+      "tag": "H3 | 官方 | 162.159.198.2 | 4443 | MASQUE导航",
+      "settings": {
+        "address": "162.159.198.2",
+        "port": 4443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIMOnF6NCOZ2gl3fU/bJ1wBDGy1B1sCI3rR991Y5Tc3PxoAoGCCqGSM49AwEHoUQDQgAE49Glku3VecPBJsdLKW7NXAHPsyHzX+9jG1lFSHgE3jBHeN3rfU7Eh3/SuUONSRjp3NuU+sup3QYAZYvC8t0X5w==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8a1b:95f2:83ef:8849:2ca6/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.cloudflareaccess.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      }
+    },
+    {
+      "protocol": "masque",
+      "tag": "H3 | 官方 | 162.159.198.2 | 8443 | MASQUE导航",
+      "settings": {
+        "address": "162.159.198.2",
+        "port": 8443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIMOnF6NCOZ2gl3fU/bJ1wBDGy1B1sCI3rR991Y5Tc3PxoAoGCCqGSM49AwEHoUQDQgAE49Glku3VecPBJsdLKW7NXAHPsyHzX+9jG1lFSHgE3jBHeN3rfU7Eh3/SuUONSRjp3NuU+sup3QYAZYvC8t0X5w==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8a1b:95f2:83ef:8849:2ca6/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.cloudflareaccess.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      }
+    },
+    {
+      "protocol": "masque",
+      "tag": "H3 | 官方 | 162.159.198.2 | 8095 | MASQUE导航",
+      "settings": {
+        "address": "162.159.198.2",
+        "port": 8095,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIMOnF6NCOZ2gl3fU/bJ1wBDGy1B1sCI3rR991Y5Tc3PxoAoGCCqGSM49AwEHoUQDQgAE49Glku3VecPBJsdLKW7NXAHPsyHzX+9jG1lFSHgE3jBHeN3rfU7Eh3/SuUONSRjp3NuU+sup3QYAZYvC8t0X5w==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8a1b:95f2:83ef:8849:2ca6/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.cloudflareaccess.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      }
+    },
+    {
+      "protocol": "masque",
+      "tag": "H3 | 官方 | 162.159.199.2 | 443 | MASQUE导航",
+      "settings": {
+        "address": "162.159.199.2",
+        "port": 443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIMOnF6NCOZ2gl3fU/bJ1wBDGy1B1sCI3rR991Y5Tc3PxoAoGCCqGSM49AwEHoUQDQgAE49Glku3VecPBJsdLKW7NXAHPsyHzX+9jG1lFSHgE3jBHeN3rfU7Eh3/SuUONSRjp3NuU+sup3QYAZYvC8t0X5w==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8a1b:95f2:83ef:8849:2ca6/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.cloudflareaccess.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      }
+    },
+    {
+      "protocol": "masque",
+      "tag": "H3 | 官方 | 162.159.199.2 | 4443 | MASQUE导航",
+      "settings": {
+        "address": "162.159.199.2",
+        "port": 4443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIMOnF6NCOZ2gl3fU/bJ1wBDGy1B1sCI3rR991Y5Tc3PxoAoGCCqGSM49AwEHoUQDQgAE49Glku3VecPBJsdLKW7NXAHPsyHzX+9jG1lFSHgE3jBHeN3rfU7Eh3/SuUONSRjp3NuU+sup3QYAZYvC8t0X5w==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8a1b:95f2:83ef:8849:2ca6/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.cloudflareaccess.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      }
+    },
+    {
+      "protocol": "masque",
+      "tag": "H3 | 官方 | 162.159.199.2 | 8443 | MASQUE导航",
+      "settings": {
+        "address": "162.159.199.2",
+        "port": 8443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIMOnF6NCOZ2gl3fU/bJ1wBDGy1B1sCI3rR991Y5Tc3PxoAoGCCqGSM49AwEHoUQDQgAE49Glku3VecPBJsdLKW7NXAHPsyHzX+9jG1lFSHgE3jBHeN3rfU7Eh3/SuUONSRjp3NuU+sup3QYAZYvC8t0X5w==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8a1b:95f2:83ef:8849:2ca6/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.cloudflareaccess.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      }
+    },
+    {
+      "protocol": "masque",
+      "tag": "H3 | 官方 | 162.159.199.2 | 8095 | MASQUE导航",
+      "settings": {
+        "address": "162.159.199.2",
+        "port": 8095,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIMOnF6NCOZ2gl3fU/bJ1wBDGy1B1sCI3rR991Y5Tc3PxoAoGCCqGSM49AwEHoUQDQgAE49Glku3VecPBJsdLKW7NXAHPsyHzX+9jG1lFSHgE3jBHeN3rfU7Eh3/SuUONSRjp3NuU+sup3QYAZYvC8t0X5w==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8a1b:95f2:83ef:8849:2ca6/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.cloudflareaccess.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      }
+    },
+    {
+      "protocol": "masque",
+      "tag": "H3 | 官方 | 162.159.198.1 | 443 | MASQUE导航",
+      "settings": {
+        "address": "162.159.198.1",
+        "port": 443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIMOnF6NCOZ2gl3fU/bJ1wBDGy1B1sCI3rR991Y5Tc3PxoAoGCCqGSM49AwEHoUQDQgAE49Glku3VecPBJsdLKW7NXAHPsyHzX+9jG1lFSHgE3jBHeN3rfU7Eh3/SuUONSRjp3NuU+sup3QYAZYvC8t0X5w==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8a1b:95f2:83ef:8849:2ca6/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.cloudflareaccess.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      }
+    },
+    {
+      "protocol": "masque",
+      "tag": "H3 | 官方 | 162.159.198.1 | 4443 | MASQUE导航",
+      "settings": {
+        "address": "162.159.198.1",
+        "port": 4443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIMOnF6NCOZ2gl3fU/bJ1wBDGy1B1sCI3rR991Y5Tc3PxoAoGCCqGSM49AwEHoUQDQgAE49Glku3VecPBJsdLKW7NXAHPsyHzX+9jG1lFSHgE3jBHeN3rfU7Eh3/SuUONSRjp3NuU+sup3QYAZYvC8t0X5w==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8a1b:95f2:83ef:8849:2ca6/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.cloudflareaccess.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      }
+    },
+    {
+      "protocol": "masque",
+      "tag": "H3 | 官方 | 162.159.198.1 | 8443 | MASQUE导航",
+      "settings": {
+        "address": "162.159.198.1",
+        "port": 8443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIMOnF6NCOZ2gl3fU/bJ1wBDGy1B1sCI3rR991Y5Tc3PxoAoGCCqGSM49AwEHoUQDQgAE49Glku3VecPBJsdLKW7NXAHPsyHzX+9jG1lFSHgE3jBHeN3rfU7Eh3/SuUONSRjp3NuU+sup3QYAZYvC8t0X5w==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8a1b:95f2:83ef:8849:2ca6/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.cloudflareaccess.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      }
+    },
+    {
+      "protocol": "masque",
+      "tag": "H3 | 官方 | 162.159.198.1 | 8095 | MASQUE导航",
+      "settings": {
+        "address": "162.159.198.1",
+        "port": 8095,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIMOnF6NCOZ2gl3fU/bJ1wBDGy1B1sCI3rR991Y5Tc3PxoAoGCCqGSM49AwEHoUQDQgAE49Glku3VecPBJsdLKW7NXAHPsyHzX+9jG1lFSHgE3jBHeN3rfU7Eh3/SuUONSRjp3NuU+sup3QYAZYvC8t0X5w==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8a1b:95f2:83ef:8849:2ca6/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.cloudflareaccess.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      }
+    },
+    {
+      "protocol": "masque",
+      "tag": "H3 | 官方 | 162.159.199.1 | 443 | MASQUE导航",
+      "settings": {
+        "address": "162.159.199.1",
+        "port": 443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIMOnF6NCOZ2gl3fU/bJ1wBDGy1B1sCI3rR991Y5Tc3PxoAoGCCqGSM49AwEHoUQDQgAE49Glku3VecPBJsdLKW7NXAHPsyHzX+9jG1lFSHgE3jBHeN3rfU7Eh3/SuUONSRjp3NuU+sup3QYAZYvC8t0X5w==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8a1b:95f2:83ef:8849:2ca6/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.cloudflareaccess.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      }
+    },
+    {
+      "protocol": "masque",
+      "tag": "H3 | 官方 | 162.159.199.1 | 4443 | MASQUE导航",
+      "settings": {
+        "address": "162.159.199.1",
+        "port": 4443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIMOnF6NCOZ2gl3fU/bJ1wBDGy1B1sCI3rR991Y5Tc3PxoAoGCCqGSM49AwEHoUQDQgAE49Glku3VecPBJsdLKW7NXAHPsyHzX+9jG1lFSHgE3jBHeN3rfU7Eh3/SuUONSRjp3NuU+sup3QYAZYvC8t0X5w==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8a1b:95f2:83ef:8849:2ca6/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.cloudflareaccess.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      }
+    },
+    {
+      "protocol": "masque",
+      "tag": "H3 | 官方 | 162.159.199.1 | 8443 | MASQUE导航",
+      "settings": {
+        "address": "162.159.199.1",
+        "port": 8443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIMOnF6NCOZ2gl3fU/bJ1wBDGy1B1sCI3rR991Y5Tc3PxoAoGCCqGSM49AwEHoUQDQgAE49Glku3VecPBJsdLKW7NXAHPsyHzX+9jG1lFSHgE3jBHeN3rfU7Eh3/SuUONSRjp3NuU+sup3QYAZYvC8t0X5w==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8a1b:95f2:83ef:8849:2ca6/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.cloudflareaccess.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      }
+    },
+    {
+      "protocol": "masque",
+      "tag": "H3 | 官方 | 162.159.199.1 | 8095 | MASQUE导航",
+      "settings": {
+        "address": "162.159.199.1",
+        "port": 8095,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIMOnF6NCOZ2gl3fU/bJ1wBDGy1B1sCI3rR991Y5Tc3PxoAoGCCqGSM49AwEHoUQDQgAE49Glku3VecPBJsdLKW7NXAHPsyHzX+9jG1lFSHgE3jBHeN3rfU7Eh3/SuUONSRjp3NuU+sup3QYAZYvC8t0X5w==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8a1b:95f2:83ef:8849:2ca6/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.cloudflareaccess.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      }
+    },
+    {
+      "protocol": "masque",
+      "tag": "H3 | 官方 IPv6 | 2606:4700:103::2 | 443 | MASQUE导航",
+      "settings": {
+        "address": "2606:4700:103::2",
+        "port": 443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIMOnF6NCOZ2gl3fU/bJ1wBDGy1B1sCI3rR991Y5Tc3PxoAoGCCqGSM49AwEHoUQDQgAE49Glku3VecPBJsdLKW7NXAHPsyHzX+9jG1lFSHgE3jBHeN3rfU7Eh3/SuUONSRjp3NuU+sup3QYAZYvC8t0X5w==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8a1b:95f2:83ef:8849:2ca6/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.cloudflareaccess.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      }
+    },
+    {
+      "protocol": "masque",
+      "tag": "H3 | 官方 IPv6 | 2606:4700:103::2 | 4443 | MASQUE导航",
+      "settings": {
+        "address": "2606:4700:103::2",
+        "port": 4443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIMOnF6NCOZ2gl3fU/bJ1wBDGy1B1sCI3rR991Y5Tc3PxoAoGCCqGSM49AwEHoUQDQgAE49Glku3VecPBJsdLKW7NXAHPsyHzX+9jG1lFSHgE3jBHeN3rfU7Eh3/SuUONSRjp3NuU+sup3QYAZYvC8t0X5w==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8a1b:95f2:83ef:8849:2ca6/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.cloudflareaccess.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      }
+    },
+    {
+      "protocol": "masque",
+      "tag": "H3 | 官方 IPv6 | 2606:4700:103::2 | 8443 | MASQUE导航",
+      "settings": {
+        "address": "2606:4700:103::2",
+        "port": 8443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIMOnF6NCOZ2gl3fU/bJ1wBDGy1B1sCI3rR991Y5Tc3PxoAoGCCqGSM49AwEHoUQDQgAE49Glku3VecPBJsdLKW7NXAHPsyHzX+9jG1lFSHgE3jBHeN3rfU7Eh3/SuUONSRjp3NuU+sup3QYAZYvC8t0X5w==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8a1b:95f2:83ef:8849:2ca6/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.cloudflareaccess.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      }
+    },
+    {
+      "protocol": "masque",
+      "tag": "H3 | 官方 IPv6 | 2606:4700:103::2 | 8095 | MASQUE导航",
+      "settings": {
+        "address": "2606:4700:103::2",
+        "port": 8095,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIMOnF6NCOZ2gl3fU/bJ1wBDGy1B1sCI3rR991Y5Tc3PxoAoGCCqGSM49AwEHoUQDQgAE49Glku3VecPBJsdLKW7NXAHPsyHzX+9jG1lFSHgE3jBHeN3rfU7Eh3/SuUONSRjp3NuU+sup3QYAZYvC8t0X5w==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8a1b:95f2:83ef:8849:2ca6/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.cloudflareaccess.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      }
+    },
+    {
+      "protocol": "masque",
+      "tag": "H3 | 官方 IPv6 | 2606:4700:104::2 | 443 | MASQUE导航",
+      "settings": {
+        "address": "2606:4700:104::2",
+        "port": 443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIMOnF6NCOZ2gl3fU/bJ1wBDGy1B1sCI3rR991Y5Tc3PxoAoGCCqGSM49AwEHoUQDQgAE49Glku3VecPBJsdLKW7NXAHPsyHzX+9jG1lFSHgE3jBHeN3rfU7Eh3/SuUONSRjp3NuU+sup3QYAZYvC8t0X5w==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8a1b:95f2:83ef:8849:2ca6/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.cloudflareaccess.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      }
+    },
+    {
+      "protocol": "masque",
+      "tag": "H3 | 官方 IPv6 | 2606:4700:104::2 | 4443 | MASQUE导航",
+      "settings": {
+        "address": "2606:4700:104::2",
+        "port": 4443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIMOnF6NCOZ2gl3fU/bJ1wBDGy1B1sCI3rR991Y5Tc3PxoAoGCCqGSM49AwEHoUQDQgAE49Glku3VecPBJsdLKW7NXAHPsyHzX+9jG1lFSHgE3jBHeN3rfU7Eh3/SuUONSRjp3NuU+sup3QYAZYvC8t0X5w==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8a1b:95f2:83ef:8849:2ca6/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.cloudflareaccess.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      }
+    },
+    {
+      "protocol": "masque",
+      "tag": "H3 | 官方 IPv6 | 2606:4700:104::2 | 8443 | MASQUE导航",
+      "settings": {
+        "address": "2606:4700:104::2",
+        "port": 8443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIMOnF6NCOZ2gl3fU/bJ1wBDGy1B1sCI3rR991Y5Tc3PxoAoGCCqGSM49AwEHoUQDQgAE49Glku3VecPBJsdLKW7NXAHPsyHzX+9jG1lFSHgE3jBHeN3rfU7Eh3/SuUONSRjp3NuU+sup3QYAZYvC8t0X5w==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8a1b:95f2:83ef:8849:2ca6/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.cloudflareaccess.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      }
+    },
+    {
+      "protocol": "masque",
+      "tag": "H3 | 官方 IPv6 | 2606:4700:104::2 | 8095 | MASQUE导航",
+      "settings": {
+        "address": "2606:4700:104::2",
+        "port": 8095,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIMOnF6NCOZ2gl3fU/bJ1wBDGy1B1sCI3rR991Y5Tc3PxoAoGCCqGSM49AwEHoUQDQgAE49Glku3VecPBJsdLKW7NXAHPsyHzX+9jG1lFSHgE3jBHeN3rfU7Eh3/SuUONSRjp3NuU+sup3QYAZYvC8t0X5w==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8a1b:95f2:83ef:8849:2ca6/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.cloudflareaccess.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      }
+    },
+    {
+      "protocol": "masque",
+      "tag": "H3 | 官方 IPv6 | 2606:4700:103::1 | 443 | MASQUE导航",
+      "settings": {
+        "address": "2606:4700:103::1",
+        "port": 443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIMOnF6NCOZ2gl3fU/bJ1wBDGy1B1sCI3rR991Y5Tc3PxoAoGCCqGSM49AwEHoUQDQgAE49Glku3VecPBJsdLKW7NXAHPsyHzX+9jG1lFSHgE3jBHeN3rfU7Eh3/SuUONSRjp3NuU+sup3QYAZYvC8t0X5w==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8a1b:95f2:83ef:8849:2ca6/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.cloudflareaccess.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      }
+    },
+    {
+      "protocol": "masque",
+      "tag": "H3 | 官方 IPv6 | 2606:4700:103::1 | 4443 | MASQUE导航",
+      "settings": {
+        "address": "2606:4700:103::1",
+        "port": 4443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIMOnF6NCOZ2gl3fU/bJ1wBDGy1B1sCI3rR991Y5Tc3PxoAoGCCqGSM49AwEHoUQDQgAE49Glku3VecPBJsdLKW7NXAHPsyHzX+9jG1lFSHgE3jBHeN3rfU7Eh3/SuUONSRjp3NuU+sup3QYAZYvC8t0X5w==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8a1b:95f2:83ef:8849:2ca6/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.cloudflareaccess.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      }
+    },
+    {
+      "protocol": "masque",
+      "tag": "H3 | 官方 IPv6 | 2606:4700:103::1 | 8443 | MASQUE导航",
+      "settings": {
+        "address": "2606:4700:103::1",
+        "port": 8443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIMOnF6NCOZ2gl3fU/bJ1wBDGy1B1sCI3rR991Y5Tc3PxoAoGCCqGSM49AwEHoUQDQgAE49Glku3VecPBJsdLKW7NXAHPsyHzX+9jG1lFSHgE3jBHeN3rfU7Eh3/SuUONSRjp3NuU+sup3QYAZYvC8t0X5w==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8a1b:95f2:83ef:8849:2ca6/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.cloudflareaccess.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      }
+    },
+    {
+      "protocol": "masque",
+      "tag": "H3 | 官方 IPv6 | 2606:4700:103::1 | 8095 | MASQUE导航",
+      "settings": {
+        "address": "2606:4700:103::1",
+        "port": 8095,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIMOnF6NCOZ2gl3fU/bJ1wBDGy1B1sCI3rR991Y5Tc3PxoAoGCCqGSM49AwEHoUQDQgAE49Glku3VecPBJsdLKW7NXAHPsyHzX+9jG1lFSHgE3jBHeN3rfU7Eh3/SuUONSRjp3NuU+sup3QYAZYvC8t0X5w==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8a1b:95f2:83ef:8849:2ca6/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.cloudflareaccess.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      }
+    },
+    {
+      "protocol": "masque",
+      "tag": "H3 | 官方 IPv6 | 2606:4700:104::1 | 443 | MASQUE导航",
+      "settings": {
+        "address": "2606:4700:104::1",
+        "port": 443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIMOnF6NCOZ2gl3fU/bJ1wBDGy1B1sCI3rR991Y5Tc3PxoAoGCCqGSM49AwEHoUQDQgAE49Glku3VecPBJsdLKW7NXAHPsyHzX+9jG1lFSHgE3jBHeN3rfU7Eh3/SuUONSRjp3NuU+sup3QYAZYvC8t0X5w==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8a1b:95f2:83ef:8849:2ca6/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.cloudflareaccess.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      }
+    },
+    {
+      "protocol": "masque",
+      "tag": "H3 | 官方 IPv6 | 2606:4700:104::1 | 4443 | MASQUE导航",
+      "settings": {
+        "address": "2606:4700:104::1",
+        "port": 4443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIMOnF6NCOZ2gl3fU/bJ1wBDGy1B1sCI3rR991Y5Tc3PxoAoGCCqGSM49AwEHoUQDQgAE49Glku3VecPBJsdLKW7NXAHPsyHzX+9jG1lFSHgE3jBHeN3rfU7Eh3/SuUONSRjp3NuU+sup3QYAZYvC8t0X5w==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8a1b:95f2:83ef:8849:2ca6/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.cloudflareaccess.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      }
+    },
+    {
+      "protocol": "masque",
+      "tag": "H3 | 官方 IPv6 | 2606:4700:104::1 | 8443 | MASQUE导航",
+      "settings": {
+        "address": "2606:4700:104::1",
+        "port": 8443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIMOnF6NCOZ2gl3fU/bJ1wBDGy1B1sCI3rR991Y5Tc3PxoAoGCCqGSM49AwEHoUQDQgAE49Glku3VecPBJsdLKW7NXAHPsyHzX+9jG1lFSHgE3jBHeN3rfU7Eh3/SuUONSRjp3NuU+sup3QYAZYvC8t0X5w==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8a1b:95f2:83ef:8849:2ca6/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.cloudflareaccess.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      }
+    },
+    {
+      "protocol": "masque",
+      "tag": "H3 | 官方 IPv6 | 2606:4700:104::1 | 8095 | MASQUE导航",
+      "settings": {
+        "address": "2606:4700:104::1",
+        "port": 8095,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIMOnF6NCOZ2gl3fU/bJ1wBDGy1B1sCI3rR991Y5Tc3PxoAoGCCqGSM49AwEHoUQDQgAE49Glku3VecPBJsdLKW7NXAHPsyHzX+9jG1lFSHgE3jBHeN3rfU7Eh3/SuUONSRjp3NuU+sup3QYAZYvC8t0X5w==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8a1b:95f2:83ef:8849:2ca6/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.cloudflareaccess.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      }
+    },
+    {
+      "protocol": "masque",
+      "tag": "H3 | 美国 IPv6 | us.v6.free.bestcf.eu.cc | 443 | MASQUE导航",
+      "settings": {
+        "address": "us.v6.free.bestcf.eu.cc",
+        "port": 443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIMOnF6NCOZ2gl3fU/bJ1wBDGy1B1sCI3rR991Y5Tc3PxoAoGCCqGSM49AwEHoUQDQgAE49Glku3VecPBJsdLKW7NXAHPsyHzX+9jG1lFSHgE3jBHeN3rfU7Eh3/SuUONSRjp3NuU+sup3QYAZYvC8t0X5w==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8a1b:95f2:83ef:8849:2ca6/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.cloudflareaccess.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      }
+    },
+    {
+      "protocol": "masque",
+      "tag": "H3 | 美国 IPv6 | 2602:fc59:b0:64::a29f:c601 | 443 | MASQUE导航",
+      "settings": {
+        "address": "2602:fc59:b0:64::a29f:c601",
+        "port": 443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIMOnF6NCOZ2gl3fU/bJ1wBDGy1B1sCI3rR991Y5Tc3PxoAoGCCqGSM49AwEHoUQDQgAE49Glku3VecPBJsdLKW7NXAHPsyHzX+9jG1lFSHgE3jBHeN3rfU7Eh3/SuUONSRjp3NuU+sup3QYAZYvC8t0X5w==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8a1b:95f2:83ef:8849:2ca6/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.cloudflareaccess.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      }
+    },
+    {
+      "protocol": "masque",
+      "tag": "H3 | 美国 IPv6 | 2602:fc59:b0:64::a29f:c602 | 443 | MASQUE导航",
+      "settings": {
+        "address": "2602:fc59:b0:64::a29f:c602",
+        "port": 443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIMOnF6NCOZ2gl3fU/bJ1wBDGy1B1sCI3rR991Y5Tc3PxoAoGCCqGSM49AwEHoUQDQgAE49Glku3VecPBJsdLKW7NXAHPsyHzX+9jG1lFSHgE3jBHeN3rfU7Eh3/SuUONSRjp3NuU+sup3QYAZYvC8t0X5w==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8a1b:95f2:83ef:8849:2ca6/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.cloudflareaccess.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      }
+    },
+    {
+      "protocol": "masque",
+      "tag": "H3 | 美国 IPv6 | 2602:fc59:b0:64::a29f:c701 | 443 | MASQUE导航",
+      "settings": {
+        "address": "2602:fc59:b0:64::a29f:c701",
+        "port": 443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIMOnF6NCOZ2gl3fU/bJ1wBDGy1B1sCI3rR991Y5Tc3PxoAoGCCqGSM49AwEHoUQDQgAE49Glku3VecPBJsdLKW7NXAHPsyHzX+9jG1lFSHgE3jBHeN3rfU7Eh3/SuUONSRjp3NuU+sup3QYAZYvC8t0X5w==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8a1b:95f2:83ef:8849:2ca6/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.cloudflareaccess.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      }
+    },
+    {
+      "protocol": "masque",
+      "tag": "H3 | 美国 IPv6 | 2602:fc59:b0:64::a29f:c702 | 443 | MASQUE导航",
+      "settings": {
+        "address": "2602:fc59:b0:64::a29f:c702",
+        "port": 443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIMOnF6NCOZ2gl3fU/bJ1wBDGy1B1sCI3rR991Y5Tc3PxoAoGCCqGSM49AwEHoUQDQgAE49Glku3VecPBJsdLKW7NXAHPsyHzX+9jG1lFSHgE3jBHeN3rfU7Eh3/SuUONSRjp3NuU+sup3QYAZYvC8t0X5w==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8a1b:95f2:83ef:8849:2ca6/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.cloudflareaccess.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      }
+    },
+    {
+      "protocol": "masque",
+      "tag": "H3 | 美国 IPv6 | 2a14:7583:f764:64::a29f:c601 | 443 | MASQUE导航",
+      "settings": {
+        "address": "2a14:7583:f764:64::a29f:c601",
+        "port": 443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIMOnF6NCOZ2gl3fU/bJ1wBDGy1B1sCI3rR991Y5Tc3PxoAoGCCqGSM49AwEHoUQDQgAE49Glku3VecPBJsdLKW7NXAHPsyHzX+9jG1lFSHgE3jBHeN3rfU7Eh3/SuUONSRjp3NuU+sup3QYAZYvC8t0X5w==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8a1b:95f2:83ef:8849:2ca6/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.cloudflareaccess.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      }
+    },
+    {
+      "protocol": "masque",
+      "tag": "H3 | 美国 IPv6 | 2a14:7583:f764:64::a29f:c602 | 443 | MASQUE导航",
+      "settings": {
+        "address": "2a14:7583:f764:64::a29f:c602",
+        "port": 443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIMOnF6NCOZ2gl3fU/bJ1wBDGy1B1sCI3rR991Y5Tc3PxoAoGCCqGSM49AwEHoUQDQgAE49Glku3VecPBJsdLKW7NXAHPsyHzX+9jG1lFSHgE3jBHeN3rfU7Eh3/SuUONSRjp3NuU+sup3QYAZYvC8t0X5w==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8a1b:95f2:83ef:8849:2ca6/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.cloudflareaccess.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      }
+    },
+    {
+      "protocol": "masque",
+      "tag": "H3 | 美国 IPv6 | 2a14:7583:f764:64::a29f:c701 | 443 | MASQUE导航",
+      "settings": {
+        "address": "2a14:7583:f764:64::a29f:c701",
+        "port": 443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIMOnF6NCOZ2gl3fU/bJ1wBDGy1B1sCI3rR991Y5Tc3PxoAoGCCqGSM49AwEHoUQDQgAE49Glku3VecPBJsdLKW7NXAHPsyHzX+9jG1lFSHgE3jBHeN3rfU7Eh3/SuUONSRjp3NuU+sup3QYAZYvC8t0X5w==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8a1b:95f2:83ef:8849:2ca6/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.cloudflareaccess.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      }
+    },
+    {
+      "protocol": "masque",
+      "tag": "H3 | 美国 IPv6 | 2a14:7583:f764:64::a29f:c702 | 443 | MASQUE导航",
+      "settings": {
+        "address": "2a14:7583:f764:64::a29f:c702",
+        "port": 443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIMOnF6NCOZ2gl3fU/bJ1wBDGy1B1sCI3rR991Y5Tc3PxoAoGCCqGSM49AwEHoUQDQgAE49Glku3VecPBJsdLKW7NXAHPsyHzX+9jG1lFSHgE3jBHeN3rfU7Eh3/SuUONSRjp3NuU+sup3QYAZYvC8t0X5w==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8a1b:95f2:83ef:8849:2ca6/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.cloudflareaccess.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      }
+    },
+    {
+      "protocol": "masque",
+      "tag": "H3 | 德国 IPv6 | de.v6.free.bestcf.eu.cc | 443 | MASQUE导航",
+      "settings": {
+        "address": "de.v6.free.bestcf.eu.cc",
+        "port": 443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIMOnF6NCOZ2gl3fU/bJ1wBDGy1B1sCI3rR991Y5Tc3PxoAoGCCqGSM49AwEHoUQDQgAE49Glku3VecPBJsdLKW7NXAHPsyHzX+9jG1lFSHgE3jBHeN3rfU7Eh3/SuUONSRjp3NuU+sup3QYAZYvC8t0X5w==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8a1b:95f2:83ef:8849:2ca6/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.cloudflareaccess.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      }
+    },
+    {
+      "protocol": "masque",
+      "tag": "H3 | 德国 IPv6 | 2001:67c:2960:6464::a29f:c601 | 443 | MASQUE导航",
+      "settings": {
+        "address": "2001:67c:2960:6464::a29f:c601",
+        "port": 443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIMOnF6NCOZ2gl3fU/bJ1wBDGy1B1sCI3rR991Y5Tc3PxoAoGCCqGSM49AwEHoUQDQgAE49Glku3VecPBJsdLKW7NXAHPsyHzX+9jG1lFSHgE3jBHeN3rfU7Eh3/SuUONSRjp3NuU+sup3QYAZYvC8t0X5w==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8a1b:95f2:83ef:8849:2ca6/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.cloudflareaccess.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      }
+    },
+    {
+      "protocol": "masque",
+      "tag": "H3 | 德国 IPv6 | 2001:67c:2960:6464::a29f:c602 | 443 | MASQUE导航",
+      "settings": {
+        "address": "2001:67c:2960:6464::a29f:c602",
+        "port": 443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIMOnF6NCOZ2gl3fU/bJ1wBDGy1B1sCI3rR991Y5Tc3PxoAoGCCqGSM49AwEHoUQDQgAE49Glku3VecPBJsdLKW7NXAHPsyHzX+9jG1lFSHgE3jBHeN3rfU7Eh3/SuUONSRjp3NuU+sup3QYAZYvC8t0X5w==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8a1b:95f2:83ef:8849:2ca6/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.cloudflareaccess.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      }
+    },
+    {
+      "protocol": "masque",
+      "tag": "H3 | 德国 IPv6 | 2001:67c:2960:6464::a29f:c701 | 443 | MASQUE导航",
+      "settings": {
+        "address": "2001:67c:2960:6464::a29f:c701",
+        "port": 443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIMOnF6NCOZ2gl3fU/bJ1wBDGy1B1sCI3rR991Y5Tc3PxoAoGCCqGSM49AwEHoUQDQgAE49Glku3VecPBJsdLKW7NXAHPsyHzX+9jG1lFSHgE3jBHeN3rfU7Eh3/SuUONSRjp3NuU+sup3QYAZYvC8t0X5w==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8a1b:95f2:83ef:8849:2ca6/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.cloudflareaccess.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      }
+    },
+    {
+      "protocol": "masque",
+      "tag": "H3 | 德国 IPv6 | 2001:67c:2960:6464::a29f:c702 | 443 | MASQUE导航",
+      "settings": {
+        "address": "2001:67c:2960:6464::a29f:c702",
+        "port": 443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIMOnF6NCOZ2gl3fU/bJ1wBDGy1B1sCI3rR991Y5Tc3PxoAoGCCqGSM49AwEHoUQDQgAE49Glku3VecPBJsdLKW7NXAHPsyHzX+9jG1lFSHgE3jBHeN3rfU7Eh3/SuUONSRjp3NuU+sup3QYAZYvC8t0X5w==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8a1b:95f2:83ef:8849:2ca6/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.cloudflareaccess.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      }
+    },
+    {
+      "protocol": "masque",
+      "tag": "H3 | 芬兰 IPv6 | fi.v6.free.bestcf.eu.cc | 443 | MASQUE导航",
+      "settings": {
+        "address": "fi.v6.free.bestcf.eu.cc",
+        "port": 443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIMOnF6NCOZ2gl3fU/bJ1wBDGy1B1sCI3rR991Y5Tc3PxoAoGCCqGSM49AwEHoUQDQgAE49Glku3VecPBJsdLKW7NXAHPsyHzX+9jG1lFSHgE3jBHeN3rfU7Eh3/SuUONSRjp3NuU+sup3QYAZYvC8t0X5w==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8a1b:95f2:83ef:8849:2ca6/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.cloudflareaccess.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      }
+    },
+    {
+      "protocol": "masque",
+      "tag": "H3 | 芬兰 IPv6 | 2001:67c:2b0:db32::a29f:c601 | 443 | MASQUE导航",
+      "settings": {
+        "address": "2001:67c:2b0:db32::a29f:c601",
+        "port": 443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIMOnF6NCOZ2gl3fU/bJ1wBDGy1B1sCI3rR991Y5Tc3PxoAoGCCqGSM49AwEHoUQDQgAE49Glku3VecPBJsdLKW7NXAHPsyHzX+9jG1lFSHgE3jBHeN3rfU7Eh3/SuUONSRjp3NuU+sup3QYAZYvC8t0X5w==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8a1b:95f2:83ef:8849:2ca6/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.cloudflareaccess.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      }
+    },
+    {
+      "protocol": "masque",
+      "tag": "H3 | 芬兰 IPv6 | 2001:67c:2b0:db32::a29f:c602 | 443 | MASQUE导航",
+      "settings": {
+        "address": "2001:67c:2b0:db32::a29f:c602",
+        "port": 443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIMOnF6NCOZ2gl3fU/bJ1wBDGy1B1sCI3rR991Y5Tc3PxoAoGCCqGSM49AwEHoUQDQgAE49Glku3VecPBJsdLKW7NXAHPsyHzX+9jG1lFSHgE3jBHeN3rfU7Eh3/SuUONSRjp3NuU+sup3QYAZYvC8t0X5w==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8a1b:95f2:83ef:8849:2ca6/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.cloudflareaccess.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      }
+    },
+    {
+      "protocol": "masque",
+      "tag": "H3 | 芬兰 IPv6 | 2001:67c:2b0:db32::a29f:c701 | 443 | MASQUE导航",
+      "settings": {
+        "address": "2001:67c:2b0:db32::a29f:c701",
+        "port": 443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIMOnF6NCOZ2gl3fU/bJ1wBDGy1B1sCI3rR991Y5Tc3PxoAoGCCqGSM49AwEHoUQDQgAE49Glku3VecPBJsdLKW7NXAHPsyHzX+9jG1lFSHgE3jBHeN3rfU7Eh3/SuUONSRjp3NuU+sup3QYAZYvC8t0X5w==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8a1b:95f2:83ef:8849:2ca6/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.cloudflareaccess.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      }
+    },
+    {
+      "protocol": "masque",
+      "tag": "H3 | 芬兰 IPv6 | 2001:67c:2b0:db32::a29f:c702 | 443 | MASQUE导航",
+      "settings": {
+        "address": "2001:67c:2b0:db32::a29f:c702",
+        "port": 443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIMOnF6NCOZ2gl3fU/bJ1wBDGy1B1sCI3rR991Y5Tc3PxoAoGCCqGSM49AwEHoUQDQgAE49Glku3VecPBJsdLKW7NXAHPsyHzX+9jG1lFSHgE3jBHeN3rfU7Eh3/SuUONSRjp3NuU+sup3QYAZYvC8t0X5w==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8a1b:95f2:83ef:8849:2ca6/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.cloudflareaccess.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      }
+    },
+    {
+      "protocol": "masque",
+      "tag": "H3 | 预备 | masque1.bestcf.eu.cc | 443 | MASQUE导航",
+      "settings": {
+        "address": "masque1.bestcf.eu.cc",
+        "port": 443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIMOnF6NCOZ2gl3fU/bJ1wBDGy1B1sCI3rR991Y5Tc3PxoAoGCCqGSM49AwEHoUQDQgAE49Glku3VecPBJsdLKW7NXAHPsyHzX+9jG1lFSHgE3jBHeN3rfU7Eh3/SuUONSRjp3NuU+sup3QYAZYvC8t0X5w==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8a1b:95f2:83ef:8849:2ca6/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.cloudflareaccess.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      }
+    },
+    {
+      "protocol": "masque",
+      "tag": "H3 | 预备 | masque2.bestcf.eu.cc | 443 | MASQUE导航",
+      "settings": {
+        "address": "masque2.bestcf.eu.cc",
+        "port": 443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIMOnF6NCOZ2gl3fU/bJ1wBDGy1B1sCI3rR991Y5Tc3PxoAoGCCqGSM49AwEHoUQDQgAE49Glku3VecPBJsdLKW7NXAHPsyHzX+9jG1lFSHgE3jBHeN3rfU7Eh3/SuUONSRjp3NuU+sup3QYAZYvC8t0X5w==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8a1b:95f2:83ef:8849:2ca6/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.cloudflareaccess.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      }
+    },
+    {
+      "protocol": "masque",
+      "tag": "H3 | 预备 | masque3.bestcf.eu.cc | 443 | MASQUE导航",
+      "settings": {
+        "address": "masque3.bestcf.eu.cc",
+        "port": 443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIMOnF6NCOZ2gl3fU/bJ1wBDGy1B1sCI3rR991Y5Tc3PxoAoGCCqGSM49AwEHoUQDQgAE49Glku3VecPBJsdLKW7NXAHPsyHzX+9jG1lFSHgE3jBHeN3rfU7Eh3/SuUONSRjp3NuU+sup3QYAZYvC8t0X5w==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8a1b:95f2:83ef:8849:2ca6/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.cloudflareaccess.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      }
+    },
+    {
+      "protocol": "masque",
+      "tag": "H3 | 预备 | masque4.bestcf.eu.cc | 443 | MASQUE导航",
+      "settings": {
+        "address": "masque4.bestcf.eu.cc",
+        "port": 443,
+        "remoteDNS": [
+          "1.1.1.1",
+          "8.8.8.8"
+        ]
+      },
+      "streamSettings": {
+        "method": "masque",
+        "masqueSettings": {
+          "warp": {
+            "privateKey": "MHcCAQEEIMOnF6NCOZ2gl3fU/bJ1wBDGy1B1sCI3rR991Y5Tc3PxoAoGCCqGSM49AwEHoUQDQgAE49Glku3VecPBJsdLKW7NXAHPsyHzX+9jG1lFSHgE3jBHeN3rfU7Eh3/SuUONSRjp3NuU+sup3QYAZYvC8t0X5w==",
+            "publicKey": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEIaU7MToJm9NKp8YfGxR6r+/h4mcG7SxI8tsW8OR1A5tv/zCzVbCRRh2t87/kxnP6lAy0lkr7qYwu+ox+k3dr6w==",
+            "address": [
+              "172.16.0.2/32",
+              "2606:4700:110:8a1b:95f2:83ef:8849:2ca6/128"
+            ]
+          }
+        },
+        "security": "tls",
+        "tlsSettings": {
+          "serverName": "www.cloudflareaccess.com",
+          "alpn": [
+            "h3"
+          ]
+        }
+      }
+    }
+  ]
+}
