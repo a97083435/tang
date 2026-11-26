@@ -1,0 +1,106 @@
+/**
+ * @name 青听音源
+ * @description 关注微信公众号: 元力菌
+ * @version 1.1
+ * @author 微信公众号: 元力菌
+ * @mail 微信公众号: 元力菌
+ * @homepage 微信公众号: 元力菌
+ */
+{
+  "lines": [
+    {
+      "id": "kw",
+      "name": "小窝源",
+      "enabled": true,
+      "searchApi": "fetchSearchMusic",
+      "detailApi": "fetchMusicDetail",
+      "levels": [
+        "standard",
+        "exhigh",
+        "lossless",
+        "atmos",
+        "atmos_plus",
+        "master"
+      ]
+    },
+    {
+      "id": "kg",
+      "name": "小狗源",
+      "enabled": true,
+      "searchApi": "kgSearchMusic",
+      "detailApi": "kgMusicDetail",
+      "levels": [
+        "standard",
+        "exhigh",
+        "lossless",
+        "hires",
+        "atmos",
+        "clear"
+      ]
+    },
+    {
+      "id": "wy",
+      "name": "小云源",
+      "enabled": true,
+      "searchApi": "wySearchMusic",
+      "detailApi": "wyMusicDetail",
+      "levels": [
+        "standard",
+        "exhigh",
+        "lossless",
+        "hires",
+        "sky",
+        "jyeffect",
+        "jymaster"
+      ]
+    },
+    {
+      "id": "tx",
+      "name": "小Q源",
+      "enabled": true,
+      "searchApi": "txSearchMusic",
+      "detailApi": "txMusicDetail",
+      "levels": [
+        "standard",
+        "exhigh",
+        "lossless",
+        "sur",
+        "jymaster"
+      ]
+    },
+    {
+      "id": "qs",
+      "name": "汽水源",
+      "enabled": true,
+      "searchApi": "searchQsMusic",
+      "detailApi": "qsMusicDetail",
+      "levels": [
+        "standard",
+        "exhigh",
+        "lossless",
+        "hires",
+        "atmos"
+      ]
+    },
+    {
+      "id": "bili",
+      "name": "哔哩哔哩",
+      "searchApi": "biliSearchMusic",
+      "detailApi": "biliMusicDetail",
+      "levels": [
+        "bili192"
+      ],
+      "enabled": true
+    },
+    {
+      "id": "mg",
+      "name": "小粉源",
+      "enabled": true,
+      "searchApi": "mgSearchMusic",
+      "detailApi": "mgMusicDetail",
+      "levels": [
+        "standard"
+      ]
+    }
+  ]
+}
